@@ -41,19 +41,17 @@ const GTS_V = [
 ];
 
 const GTS_VI = [
-  "GT01 — Matemática na Educação Infantil e nos Anos Iniciais do Ensino Fundamental",
-  "GT02 — Educação Matemática nos Anos Finais do Ensino Fundamental",
-  "GT03 — Educação Matemática no Ensino Médio",
-  "GT04 — Educação Matemática no Ensino Superior",
-  "GT05 — História da Matemática e Cultura",
-  "GT06 — Educação Matemática: Novas Tecnologias e Educação a Distância",
-  "GT07 — Formação de Professores que Ensinam Matemática",
-  "GT08 — Avaliação em Educação Matemática",
-  "GT09 — Processos Cognitivos e Linguísticos em Educação Matemática",
-  "GT10 — Modelagem Matemática",
-  "GT11 — Filosofia da Educação Matemática",
-  "GT12 — Ensino de Probabilidade e Estatística",
-  "GT13 — Diferença, Inclusão e Educação Matemática"
+  {name:"GT01 — Matemática na Educação Infantil e nos Anos Iniciais do Ensino Fundamental",coordination:"Rute Elizabete de Souza Rosa Borba (UFPE); vice-coordenação: Clélia Maria Ignatius Nogueira (UEM–CESUMAR)"},
+  {name:"GT02 — Educação Matemática nos Anos Finais do Ensino Fundamental",coordination:"Claudia Lisete Oliveira Groenwald (ULBRA); vice-coordenação: José Luiz Magalhães de Freitas (UFMS)"},
+  {name:"GT03 — Educação Matemática no Ensino Médio",coordination:"Márcio Antônio da Silva (UFMS); vice-coordenação: Nelson Pirola (UNESP)"},
+  {name:"GT04 — Educação Matemática no Ensino Superior",coordination:"Barbara Lutaif Bianchini; vice-coordenação: José Carlos Pinto Leivas"},
+  {name:"GT05 — História da Matemática e Cultura",coordination:"Cristiane Coppe de Oliveira (UFU); vice-coordenação: Wagner Rodrigues Valente (UNIFESP)"},
+  {name:"GT06 — Educação Matemática: novas tecnologias e educação a distância",coordination:"Rúbia Barcelos do Amaral (UNESP); vice-coordenação: Maria Madalena Dullius (UNIVATES)"},
+  {name:"GT07 — Formação de professores que ensinam Matemática",coordination:"Ana Cristina Ferreira (UFOP); vice-coordenação: Celi Espasandin Lopes (UNICSUL) e Armando Traldi Jr. (IFSP)"},
+  {name:"GT08 — Avaliação em Educação Matemática",coordination:"Maria Isabel Ramalho Ortigão (UERJ); vice-coordenação: Maria Tereza Carneiro Soares (UFPR)"},
+  {name:"GT09 — Processos cognitivos e linguísticos em Educação Matemática",coordination:"Airton Carrião (UFMG); vice-coordenação: Sintria Lautert (UFPE)"},
+  {name:"GT10 — Modelagem Matemática",coordination:"Ana Paula dos Santos Malheiros (UNESP); vice-coordenação: Tiago Emanuel Klüber (UNIOESTE) e Lourdes Maria Werle de Almeida (UEL)"},
+  {name:"GT11 — Filosofia da Educação Matemática",coordination:"Renata C. G. Meneghetti (USP); vice-coordenação: Denise Silva Vilela (UFSCar)"}
 ];
 
 const GTS_VII = [
