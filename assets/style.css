@@ -34,8 +34,8 @@ main{max-width:var(--max);margin:0 auto;padding:0 28px}
 .history-intro p:last-child{max-width:690px;margin:16px auto 0;color:var(--muted);font-size:1.08rem}
 .edition-timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .edition-card{min-height:390px;padding:27px 25px 25px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;background:#fff}
-.edition-mark{height:78px;display:flex;align-items:center;margin-bottom:22px}
-.edition-mark img{width:100%;max-width:190px;height:72px;object-fit:contain;object-position:left center}
+.edition-mark{height:108px;display:flex;align-items:center;margin-bottom:22px}
+.edition-mark img{width:100%;max-width:230px;height:100px;object-fit:contain;object-position:left center}
 .edition-seal{display:grid;place-items:center;width:64px;height:64px;border:1px solid var(--green);border-radius:50%;color:var(--green-dark);font-family:"Literata",Georgia,serif;font-size:1.35rem;font-weight:600}
 .edition-copy{display:flex;flex:1;flex-direction:column}
 .edition-heading{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
