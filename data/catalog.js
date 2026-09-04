@@ -1,14 +1,14 @@
 const GTS_I = [
-  {name:"GT01 — Educação Matemática nas séries iniciais do Ensino Fundamental",coordination:"Regina Pavanello*, Sandra Magina e Christiano Alberto Muniz",responsibilityLabel:"Comissão responsável"},
-  {name:"GT02 — Educação Matemática nas séries finais do Ensino Fundamental",coordination:"Célia Pires*, Estela Kaufmann e Antônio José Lopes",responsibilityLabel:"Comissão responsável"},
-  {name:"GT03 — Educação Matemática no Ensino Médio",coordination:"Maria Ignez Muniz* e Ruy Madsen Barbosa",responsibilityLabel:"Comissão responsável"},
-  {name:"GT04 — Educação Matemática no Ensino Superior",coordination:"Lilian Nasser*, Cristina Barufi e Antônio Baldino",responsibilityLabel:"Comissão responsável"},
-  {name:"GT05 — História da Matemática e Cultura",coordination:"Ubiratan D’Ambrosio* e Circe Dynnikov",responsibilityLabel:"Comissão responsável"},
-  {name:"GT06 — Educação Matemática: Novas Tecnologias e Ensino a Distância",coordination:"Marcelo Borba*, Marilena Bittar e Ana Paula Jahn",responsibilityLabel:"Comissão responsável"},
-  {name:"GT07 — Formação de Professores que ensinam Matemática",coordination:"Tânia Campos*, Dario Fiorentini e Maria Auxiliadora Paiva",responsibilityLabel:"Comissão responsável"},
-  {name:"GT08 — Avaliação em Educação Matemática",coordination:"Regina Buriasco*, Vânia Santos e Salete Binenbengut",responsibilityLabel:"Comissão responsável"},
-  {name:"GT09 — Processos Cognitivos e Linguísticos na Educação Matemática",coordination:"Mônica Rabello de Castro*, Rômulo Lins e Jorge Falcão",responsibilityLabel:"Comissão responsável"},
-  {name:"GT10 — Modelagem Matemática",coordination:"João Francisco Meyer*, Maria do Carmo Domici Mendonça e Geraldo Pompeu",responsibilityLabel:"Comissão responsável"}
+  {name:"GT01 — Educação Matemática nas séries iniciais do Ensino Fundamental",coordination:"Regina Pavanello, Sandra Magina e Christiano Alberto Muniz"},
+  {name:"GT02 — Educação Matemática nas séries finais do Ensino Fundamental",coordination:"Célia Pires, Estela Kaufmann e Antônio José Lopes"},
+  {name:"GT03 — Educação Matemática no Ensino Médio",coordination:"Maria Ignez Muniz e Ruy Madsen Barbosa"},
+  {name:"GT04 — Educação Matemática no Ensino Superior",coordination:"Lilian Nasser, Cristina Barufi e Antônio Baldino"},
+  {name:"GT05 — História da Matemática e Cultura",coordination:"Ubiratan D’Ambrosio e Circe Dynnikov"},
+  {name:"GT06 — Educação Matemática: Novas Tecnologias e Ensino a Distância",coordination:"Marcelo Borba, Marilena Bittar e Ana Paula Jahn"},
+  {name:"GT07 — Formação de Professores que ensinam Matemática",coordination:"Tânia Campos, Dario Fiorentini e Maria Auxiliadora Paiva"},
+  {name:"GT08 — Avaliação em Educação Matemática",coordination:"Regina Buriasco, Vânia Santos e Salete Binenbengut"},
+  {name:"GT09 — Processos Cognitivos e Linguísticos na Educação Matemática",coordination:"Mônica Rabello de Castro, Rômulo Lins e Jorge Falcão"},
+  {name:"GT10 — Modelagem Matemática",coordination:"João Francisco Meyer, Maria do Carmo Domici Mendonça e Geraldo Pompeu"}
 ];
 
 const GTS_II_V = [
