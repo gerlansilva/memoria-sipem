@@ -27,7 +27,8 @@ function renderEditions() {
         ${edition.gts?.length ? `<details class="edition-gts"><summary>Ver GTs desta edição</summary><ol>${edition.gts.map(gt => {
           const name = typeof gt === "string" ? gt : gt.name;
           const coordination = typeof gt === "string" ? "" : gt.coordination;
-          return `<li><span>${esc(name)}</span>${coordination ? `<small><strong>Coordenação:</strong> ${esc(coordination)}</small>` : ""}</li>`;
+          const responsibilityLabel = typeof gt === "string" ? "Coordenação" : (gt.responsibilityLabel || "Coordenação");
+          return `<li><span>${esc(name)}</span>${coordination ? `<small><strong>${esc(responsibilityLabel)}:</strong> ${esc(coordination)}</small>` : ""}</li>`;
         }).join("")}</ol></details>` : ""}
         ${action}
       </div>
