@@ -51,7 +51,9 @@ const GTS_VI = [
   {name:"GT08 — Avaliação em Educação Matemática",coordination:"Maria Isabel Ramalho Ortigão (UERJ); vice-coordenação: Maria Tereza Carneiro Soares (UFPR)"},
   {name:"GT09 — Processos cognitivos e linguísticos em Educação Matemática",coordination:"Airton Carrião (UFMG); vice-coordenação: Sintria Lautert (UFPE)"},
   {name:"GT10 — Modelagem Matemática",coordination:"Ana Paula dos Santos Malheiros (UNESP); vice-coordenação: Tiago Emanuel Klüber (UNIOESTE) e Lourdes Maria Werle de Almeida (UEL)"},
-  {name:"GT11 — Filosofia da Educação Matemática",coordination:"Renata C. G. Meneghetti (USP); vice-coordenação: Denise Silva Vilela (UFSCar)"}
+  {name:"GT11 — Filosofia da Educação Matemática",coordination:"Renata C. G. Meneghetti (USP); vice-coordenação: Denise Silva Vilela (UFSCar)"},
+  {name:"GT12 — Ensino de Probabilidade e Estatística",coordination:"Irene Cazorla (UESC); vice-coordenação: Verônica Kataoka (UESC)"},
+  {name:"GT13 — Diferença, Inclusão e Educação Matemática",coordination:"Lulu Healy (UNIAN); vice-coordenação: Miriam Godoy Penteado (UNESP)"}
 ];
 
 const GTS_VII = [
