@@ -10,7 +10,7 @@ body{margin:0;background:#fff;color:var(--ink);font-family:"Source Sans 3",syste
 main{max-width:var(--max);margin:0 auto;padding:0 28px}
 .catalog-intro{max-width:var(--reading);padding:58px 0 34px}
 .edition{margin:0 0 12px;display:flex;align-items:center;gap:9px;color:var(--green);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.edition img{width:42px;height:42px;object-fit:contain;border-radius:50%}
+.edition img{width:96px;height:42px;object-fit:contain;object-position:left center}
 .catalog-intro h1{margin:0;font-family:"Literata",Georgia,serif;font-size:clamp(2.15rem,5vw,3.7rem);font-weight:600;line-height:1.13;letter-spacing:-.035em}
 .intro{max-width:650px;margin:14px 0 0;color:var(--muted);font-size:1.08rem}
 .search{height:58px;margin-top:30px;display:flex;align-items:center;border:1px solid #aab4af;border-radius:7px;background:#fff;transition:border-color .15s,box-shadow .15s}

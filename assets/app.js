@@ -27,7 +27,9 @@ function articleTemplate(record) {
 function render() {
   const query = norm($("#query").value);
   const gt = $("#gt").value;
+  const edition = $("#edition-filter").value;
   const results = data.records.filter(record =>
+    (!edition || String(record.edition) === edition) &&
     (!gt || record.gt === gt) &&
     (!query || norm([record.id, record.title, ...(record.authors || []), record.abstract, ...(record.keywords || []), record.gt].join(" ")).includes(query))
   );
@@ -38,14 +40,45 @@ function render() {
     : `<div class="empty"><strong>Nenhum trabalho encontrado</strong><span>Retire um filtro ou tente outro termo.</span></div>`;
 }
 
-["query", "gt"].forEach(id => {
+function updateEditionHeading() {
+  const edition = $("#edition-filter").value;
+  const logo = $("#edition-logo");
+  const label = $("#edition-label");
+  const heading = $("#catalogo-titulo");
+  const source = $("#source-link");
+  if (edition === "8") {
+    logo.hidden = false;
+    logo.src = "assets/logo-viii-sipem.webp?v=20260904";
+    label.textContent = "VIII SIPEM · On-line · 2021";
+    heading.textContent = "Trabalhos do VIII SIPEM";
+    source.href = "https://www.even3.com.br/anais/viiisipemvs2021/";
+  } else if (edition === "9") {
+    logo.hidden = false;
+    logo.src = "assets/logo-ix-sipem.png?v=20260904-2";
+    label.textContent = "IX SIPEM · Natal · 2024";
+    heading.textContent = "Trabalhos do IX SIPEM";
+    source.href = "https://www.sbembrasil.org.br/eventos/index.php/sipem/issue/view/39";
+  } else {
+    logo.hidden = true;
+    label.textContent = "VIII e IX SIPEM · 2021–2024";
+    heading.textContent = "Acervo de trabalhos do SIPEM";
+    source.href = "https://www.sbembrasil.org.br/sipem";
+  }
+}
+
+["query", "gt", "edition-filter"].forEach(id => {
   $("#" + id).addEventListener(id === "query" ? "input" : "change", render);
 });
+
+$("#edition-filter").addEventListener("change", updateEditionHeading);
 
 $("#clear").addEventListener("click", () => {
   $("#query").value = "";
   $("#gt").value = "";
+  $("#edition-filter").value = "";
+  updateEditionHeading();
   render();
 });
 
+updateEditionHeading();
 setup();

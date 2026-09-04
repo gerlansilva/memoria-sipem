@@ -10,5 +10,8 @@ window.MEMORIA_SIPEM = {
     {id:8,roman:"VIII",year:2021,place:"On-line",theme:"Educação Matemática, pandemia, pós-pandemia e a atualidade",url:"https://www.even3.com.br/e/viiisipemvs2021-87265",status:"inventário"},
     {id:9,roman:"IX",year:2024,place:"Natal (RN)",theme:"Anais do IX SIPEM",url:"https://www.sbembrasil.org.br/eventos/index.php/sipem/issue/view/39",status:"inventário"}
   ],
-  records: window.SIPEM_RECORDS_IX_2024 || []
+  records: [
+    ...(window.SIPEM_RECORDS_VIII_2021 || []),
+    ...(window.SIPEM_RECORDS_IX_2024 || [])
+  ]
 };

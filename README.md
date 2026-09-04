@@ -7,6 +7,7 @@ Catálogo estático e progressivo dos Anais do Seminário Internacional de Pesqu
 - `index.html`: interface pública;
 - `assets/`: estilos e busca local;
 - `data/catalog.js`: edições e registros bibliográficos;
+- `data/records-viii-2021.js`: índice completo do VIII SIPEM (226 trabalhos);
 - `data/records-ix-2024.js`: índice importado do IX SIPEM;
 - `scripts/import_ix_sipem.py`: importador reproduzível da página oficial;
 - PDFs: armazenados externamente no Google Drive, mantendo também o link da fonte oficial.
