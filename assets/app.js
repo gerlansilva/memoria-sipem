@@ -4,9 +4,7 @@ const norm = value => (value || "").normalize("NFD").replace(/[\u0300-\u036f]/g,
 const esc = value => String(value || "").replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[character]));
 
 function setup() {
-  [...new Set(data.records.map(record => record.gt).filter(Boolean))].sort().forEach(gt => {
-    $("#gt").insertAdjacentHTML("beforeend", `<option>${esc(gt)}</option>`);
-  });
+  updateGtOptions();
   render();
   renderEditions();
   showView(location.hash === "#anais" ? "archives" : "history");
@@ -17,7 +15,7 @@ function renderEditions() {
     const mark = edition.logo
       ? `<img src="${esc(edition.logo)}" alt="Logo do ${esc(edition.roman)} SIPEM">`
       : `<span class="edition-seal" aria-hidden="true">${esc(edition.roman)}</span>`;
-    const action = edition.id >= 8
+    const action = data.records.some(record => Number(record.edition) === edition.id)
       ? `<a href="#anais" class="edition-action" data-open-edition="${edition.id}">Pesquisar nos anais <span aria-hidden="true">→</span></a>`
       : `<a href="${esc(edition.url)}" class="edition-action" target="_blank" rel="noopener">Consultar anais <span aria-hidden="true">↗</span></a>`;
     return `<article class="edition-card">
@@ -25,7 +23,12 @@ function renderEditions() {
       <div class="edition-copy">
         <div class="edition-heading"><h2>${esc(edition.roman)} SIPEM</h2><span>${esc(edition.year)}</span></div>
         <p class="edition-theme">${esc(edition.theme)}</p>
-        <dl><div><dt>Local</dt><dd>${esc(edition.place)}</dd></div><div><dt>Data</dt><dd>${esc(edition.dates)}</dd></div><div><dt>Trabalhos</dt><dd>${esc(edition.works)}</dd></div></dl>
+        <dl><div><dt>Local</dt><dd>${esc(edition.place)}</dd></div><div><dt>Data</dt><dd>${esc(edition.dates)}</dd></div><div><dt>Trabalhos</dt><dd>${esc(edition.works)}</dd></div><div><dt>GTs</dt><dd>${esc(edition.gts?.length || "Não informado")}</dd></div></dl>
+        ${edition.gts?.length ? `<details class="edition-gts"><summary>Ver GTs desta edição</summary><ol>${edition.gts.map(gt => {
+          const name = typeof gt === "string" ? gt : gt.name;
+          const coordination = typeof gt === "string" ? "" : gt.coordination;
+          return `<li><span>${esc(name)}</span>${coordination ? `<small><strong>Coordenação:</strong> ${esc(coordination)}</small>` : ""}</li>`;
+        }).join("")}</ol></details>` : ""}
         ${action}
       </div>
     </article>`;
@@ -34,8 +37,25 @@ function renderEditions() {
   document.querySelectorAll("[data-open-edition]").forEach(link => link.addEventListener("click", () => {
     $("#edition-filter").value = link.dataset.openEdition;
     updateEditionHeading();
+    updateGtOptions();
     render();
   }));
+}
+
+function updateGtOptions() {
+  const edition = $("#edition-filter").value;
+  const selected = $("#gt").value;
+  const records = data.records.filter(record => !edition || String(record.edition) === edition);
+  const groups = new Map();
+  records.forEach(record => {
+    if (record.gt) groups.set(record.gt, record.section || record.gt);
+  });
+  $("#gt").innerHTML = `<option value="">Todos os GTs desta seleção</option>`
+    + [...groups.entries()]
+      .sort(([a], [b]) => a.localeCompare(b, "pt-BR", {numeric: true}))
+      .map(([gt, label]) => `<option value="${esc(gt)}">${esc(label)}</option>`)
+      .join("");
+  if (groups.has(selected)) $("#gt").value = selected;
 }
 
 function showView(view) {
@@ -84,7 +104,12 @@ function updateEditionHeading() {
   const logo = $("#edition-logo");
   const label = $("#edition-label");
   const heading = $("#catalogo-titulo");
-  if (edition === "8") {
+  if (edition === "6") {
+    logo.hidden = false;
+    logo.src = "assets/logo-vi-sipem.png?v=20260904";
+    label.textContent = "VI SIPEM · Pirenópolis · 2015";
+    heading.textContent = "Trabalhos do VI SIPEM";
+  } else if (edition === "8") {
     logo.hidden = false;
     logo.src = "assets/logo-viii-sipem.webp?v=20260904";
     label.textContent = "VIII SIPEM · On-line · 2021";
@@ -96,7 +121,7 @@ function updateEditionHeading() {
     heading.textContent = "Trabalhos do IX SIPEM";
   } else {
     logo.hidden = true;
-    label.textContent = "VIII e IX SIPEM · 2021–2024";
+    label.textContent = "VI, VIII e IX SIPEM · 2015–2024";
     heading.textContent = "Acervo de trabalhos do SIPEM";
   }
 }
@@ -105,13 +130,18 @@ function updateEditionHeading() {
   $("#" + id).addEventListener(id === "query" ? "input" : "change", render);
 });
 
-$("#edition-filter").addEventListener("change", updateEditionHeading);
+$("#edition-filter").addEventListener("change", () => {
+  updateEditionHeading();
+  updateGtOptions();
+  render();
+});
 
 $("#clear").addEventListener("click", () => {
   $("#query").value = "";
   $("#gt").value = "";
   $("#edition-filter").value = "";
   updateEditionHeading();
+  updateGtOptions();
   render();
 });
 
