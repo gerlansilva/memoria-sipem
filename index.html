@@ -3,63 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Catálogo integrado dos Anais do Seminário Internacional de Pesquisa em Educação Matemática.">
+  <meta name="description" content="Acervo dos trabalhos apresentados no Seminário Internacional de Pesquisa em Educação Matemática.">
   <title>Memória SIPEM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header class="masthead">
-    <a class="brand" href="#" aria-label="Memória SIPEM — início">
-      <span class="brand-mark" aria-hidden="true">MS</span>
+  <header class="site-header">
+    <a class="identity" href="#inicio" aria-label="Memória SIPEM — início">
+      <img src="assets/logo-ix-sipem.png" alt="Logo do IX SIPEM" width="82" height="82">
       <span><strong>Memória SIPEM</strong><small>Anais da pesquisa em Educação Matemática</small></span>
     </a>
-    <nav><a href="#edicoes">Edições</a><a href="#sobre">Sobre</a></nav>
+    <a class="source-link" href="https://www.sbembrasil.org.br/eventos/index.php/sipem/issue/view/39" target="_blank" rel="noopener">Fonte oficial ↗</a>
   </header>
 
-  <main>
-    <section class="search-shell" aria-labelledby="catalogo-titulo">
-      <div class="eyebrow">2000—2024 · I ao IX SIPEM</div>
-      <h1 id="catalogo-titulo">Encontre pesquisas nos Anais do SIPEM</h1>
-      <p>Pesquise por título, autoria, resumo, palavra-chave ou Grupo de Trabalho.</p>
+  <main id="inicio">
+    <section class="catalog-intro" aria-labelledby="catalogo-titulo">
+      <p class="edition">IX SIPEM · Natal · 2024</p>
+      <h1 id="catalogo-titulo">Trabalhos do IX SIPEM</h1>
+      <p class="intro">Pesquise nos títulos, autorias, resumos e palavras-chave dos trabalhos.</p>
       <label class="search">
-        <span class="sr-only">Pesquisar no acervo</span>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m2.3-5.2a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
-        <input id="query" type="search" placeholder="Ex.: formação de professores, modelagem, Regina Grando">
+        <span class="sr-only">Pesquisar no acervo</span>
+        <input id="query" type="search" placeholder="Título, autoria, tema ou palavra-chave" autocomplete="off">
       </label>
       <div class="filters">
         <select id="edition" aria-label="Filtrar por edição"><option value="">Todas as edições</option></select>
         <select id="gt" aria-label="Filtrar por Grupo de Trabalho"><option value="">Todos os GTs</option></select>
         <select id="type" aria-label="Filtrar por tipo de documento"><option value="">Todos os documentos</option></select>
-        <button id="clear" type="button">Limpar filtros</button>
+        <button id="clear" type="button">Limpar</button>
       </div>
     </section>
 
-    <section class="catalog-grid">
-      <aside aria-label="Resumo do acervo">
-        <div class="summary"><strong id="edition-count">9</strong><span>edições registradas</span></div>
-        <div class="summary"><strong id="record-count">0</strong><span>documentos catalogados</span></div>
-        <div class="summary"><strong>24 anos</strong><span>de produção reunida</span></div>
-        <p class="status"><span></span> Catalogação em andamento</p>
-      </aside>
-      <section aria-live="polite">
-        <div class="result-head"><h2>Documentos</h2><span id="result-label"></span></div>
-        <div id="results"></div>
-      </section>
-    </section>
-
-    <section id="edicoes" class="editions">
-      <div class="section-head"><div><span class="eyebrow">Percurso histórico</span><h2>Edições do SIPEM</h2></div><p>Consulte as fontes originais enquanto a descrição individual dos trabalhos é incorporada.</p></div>
-      <div id="edition-list" class="edition-list"></div>
-    </section>
-
-    <section id="sobre" class="about">
-      <span class="eyebrow">Sobre o projeto</span>
-      <h2>Um índice unificado para uma produção dispersa</h2>
-      <p>O Memória SIPEM organiza metadados e caminhos de acesso aos documentos do Seminário Internacional de Pesquisa em Educação Matemática. O catálogo preserva o vínculo com a fonte oficial e informa quando uma descrição ainda está incompleta.</p>
+    <section class="catalog" aria-live="polite">
+      <div class="result-head"><h2>Resultados</h2><span id="result-label"></span></div>
+      <div id="results"></div>
     </section>
   </main>
 
-  <footer><span>Memória SIPEM</span><span>Projeto independente de organização e preservação bibliográfica.</span></footer>
+  <footer><strong>Memória SIPEM</strong><span>Projeto independente de preservação e acesso aos Anais do SIPEM.</span></footer>
   <script src="data/records-ix-2024.js"></script>
   <script src="data/catalog.js"></script>
   <script src="assets/app.js"></script>
