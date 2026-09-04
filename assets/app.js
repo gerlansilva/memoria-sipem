@@ -8,6 +8,45 @@ function setup() {
     $("#gt").insertAdjacentHTML("beforeend", `<option>${esc(gt)}</option>`);
   });
   render();
+  renderEditions();
+  showView(location.hash === "#anais" ? "archives" : "history");
+}
+
+function renderEditions() {
+  $("#edition-timeline").innerHTML = data.editions.map(edition => {
+    const mark = edition.logo
+      ? `<img src="${esc(edition.logo)}" alt="Logo do ${esc(edition.roman)} SIPEM">`
+      : `<span class="edition-seal" aria-hidden="true">${esc(edition.roman)}</span>`;
+    const action = edition.id >= 8
+      ? `<a href="#anais" class="edition-action" data-open-edition="${edition.id}">Pesquisar nos anais <span aria-hidden="true">→</span></a>`
+      : `<a href="${esc(edition.url)}" class="edition-action" target="_blank" rel="noopener">Consultar anais <span aria-hidden="true">↗</span></a>`;
+    return `<article class="edition-card">
+      <div class="edition-mark">${mark}</div>
+      <div class="edition-copy">
+        <div class="edition-heading"><h2>${esc(edition.roman)} SIPEM</h2><span>${esc(edition.year)}</span></div>
+        <p class="edition-theme">${esc(edition.theme)}</p>
+        <dl><div><dt>Local</dt><dd>${esc(edition.place)}</dd></div><div><dt>Data</dt><dd>${esc(edition.dates)}</dd></div><div><dt>Trabalhos</dt><dd>${esc(edition.works)}</dd></div></dl>
+        ${action}
+      </div>
+    </article>`;
+  }).join("");
+
+  document.querySelectorAll("[data-open-edition]").forEach(link => link.addEventListener("click", () => {
+    $("#edition-filter").value = link.dataset.openEdition;
+    updateEditionHeading();
+    render();
+  }));
+}
+
+function showView(view) {
+  const archives = view === "archives";
+  $("#history-view").hidden = archives;
+  $("#archives-view").hidden = !archives;
+  document.querySelectorAll("[data-view]").forEach(link => {
+    const active = link.dataset.view === view;
+    link.classList.toggle("active", active);
+    if (active) link.setAttribute("aria-current", "page"); else link.removeAttribute("aria-current");
+  });
 }
 
 function articleTemplate(record) {
@@ -81,4 +120,6 @@ $("#clear").addEventListener("click", () => {
 });
 
 updateEditionHeading();
+document.querySelectorAll("[data-view]").forEach(link => link.addEventListener("click", () => showView(link.dataset.view)));
+window.addEventListener("hashchange", () => showView(location.hash === "#anais" ? "archives" : "history"));
 setup();
