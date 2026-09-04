@@ -84,24 +84,20 @@ function updateEditionHeading() {
   const logo = $("#edition-logo");
   const label = $("#edition-label");
   const heading = $("#catalogo-titulo");
-  const source = $("#source-link");
   if (edition === "8") {
     logo.hidden = false;
     logo.src = "assets/logo-viii-sipem.webp?v=20260904";
     label.textContent = "VIII SIPEM · On-line · 2021";
     heading.textContent = "Trabalhos do VIII SIPEM";
-    source.href = "https://www.even3.com.br/anais/viiisipemvs2021/";
   } else if (edition === "9") {
     logo.hidden = false;
     logo.src = "assets/logo-ix-sipem.png?v=20260904-2";
     label.textContent = "IX SIPEM · Natal · 2024";
     heading.textContent = "Trabalhos do IX SIPEM";
-    source.href = "https://www.sbembrasil.org.br/eventos/index.php/sipem/issue/view/39";
   } else {
     logo.hidden = true;
     label.textContent = "VIII e IX SIPEM · 2021–2024";
     heading.textContent = "Acervo de trabalhos do SIPEM";
-    source.href = "https://www.sbembrasil.org.br/sipem";
   }
 }
 
