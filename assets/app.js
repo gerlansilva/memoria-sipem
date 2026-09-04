@@ -1,4 +1,64 @@
-const data=window.MEMORIA_SIPEM;const $=s=>document.querySelector(s);const norm=s=>(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
-function setup(){data.editions.forEach(e=>$("#edition").insertAdjacentHTML("beforeend",`<option value="${e.id}">${e.roman} SIPEM · ${e.year}</option>`));[...new Set(data.records.map(r=>r.gt).filter(Boolean))].sort().forEach(v=>$("#gt").insertAdjacentHTML("beforeend",`<option>${v}</option>`));[...new Set(data.records.map(r=>r.type).filter(Boolean))].sort().forEach(v=>$("#type").insertAdjacentHTML("beforeend",`<option>${v}</option>`));$("#edition-list").innerHTML=data.editions.map(e=>`<article class="edition-card"><span class="number">${e.roman}</span><h3>${e.roman} SIPEM · ${e.year}</h3><p>${e.place}</p><p>${e.theme}</p><a href="${e.url}" target="_blank" rel="noopener">Consultar fonte oficial ↗</a></article>`).join("");$("#record-count").textContent=data.records.length;render()}
-function render(){const q=norm($("#query").value),ed=$("#edition").value,gt=$("#gt").value,type=$("#type").value;const out=data.records.filter(r=>(!ed||String(r.edition)===ed)&&(!gt||r.gt===gt)&&(!type||r.type===type)&&(!q||norm([r.id,r.title,(r.authors||[]).join(" "),r.abstract,(r.keywords||[]).join(" "),r.gt].join(" ")).includes(q)));$("#result-label").textContent=`${out.length} resultado${out.length===1?"":"s"}`;$("#results").innerHTML=out.length?out.map(r=>{const access=r.drivePdf||r.pdf||r.officialUrl;return `<article class="record"><div><span class="tag">${r.gt||"Documento"}</span><span class="tag">${data.editions.find(e=>e.id===r.edition)?.roman||""} SIPEM</span></div><h3><a href="${access}" target="_blank" rel="noopener">${r.title}</a></h3><div class="authors">${(r.authors||[]).join("; ")}</div><div class="meta">${r.year} · ${r.type||"Trabalho"} · ${r.id}${r.drivePdf?" · PDF preservado no Drive":" · PDF não disponível"}</div></article>`}).join(""):`<div class="empty"><strong>${data.records.length?"Nenhum documento encontrado":"O catálogo individual está sendo preparado"}</strong><span>${data.records.length?"Tente retirar um filtro ou usar outro termo.":"As nove edições já foram registradas. Os trabalhos aparecerão aqui após a extração e a conferência dos metadados."}</span></div>`}
-["query","edition","gt","type"].forEach(id=>$("#"+id).addEventListener(id==="query"?"input":"change",render));$("#clear").addEventListener("click",()=>{$("#query").value="";$("#edition").value="";$("#gt").value="";$("#type").value="";render()});setup();
+const data = window.MEMORIA_SIPEM;
+const $ = selector => document.querySelector(selector);
+const norm = value => (value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const esc = value => String(value || "").replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[character]));
+
+function setup() {
+  data.editions.forEach(edition => {
+    $("#edition").insertAdjacentHTML("beforeend", `<option value="${edition.id}">${edition.roman} SIPEM · ${edition.year}</option>`);
+  });
+  [...new Set(data.records.map(record => record.gt).filter(Boolean))].sort().forEach(gt => {
+    $("#gt").insertAdjacentHTML("beforeend", `<option>${esc(gt)}</option>`);
+  });
+  [...new Set(data.records.map(record => record.type).filter(Boolean))].sort().forEach(type => {
+    $("#type").insertAdjacentHTML("beforeend", `<option>${esc(type)}</option>`);
+  });
+  render();
+}
+
+function articleTemplate(record) {
+  const access = record.drivePdf || record.pdf || record.officialUrl;
+  const abstract = record.abstract && !/^não encontrado$/i.test(record.abstract) ? record.abstract : "Resumo não disponível.";
+  const keywords = (record.keywords || []).filter(keyword => keyword && !/^não encontrad/i.test(keyword));
+  return `<article class="record">
+    <div class="record-top"><span class="gt">${esc(record.gt)}</span><span>·</span><span>${esc(record.year)}</span><span>·</span><span>${esc(record.id)}</span></div>
+    <h3><a href="${esc(access)}" target="_blank" rel="noopener">${esc(record.title)}</a></h3>
+    ${record.authors?.length ? `<div class="authors">${record.authors.map(esc).join("; ")}</div>` : ""}
+    <p class="abstract">${esc(abstract)}</p>
+    ${keywords.length ? `<div class="keywords" aria-label="Palavras-chave">${keywords.map(keyword => `<span class="keyword">${esc(keyword)}</span>`).join("")}</div>` : ""}
+    <div class="record-actions">${record.drivePdf ? `<a class="pdf-link" href="${esc(record.drivePdf)}" target="_blank" rel="noopener">Abrir PDF <span aria-hidden="true">↗</span></a>` : `<span class="unavailable">PDF não disponível</span>`}</div>
+  </article>`;
+}
+
+function render() {
+  const query = norm($("#query").value);
+  const edition = $("#edition").value;
+  const gt = $("#gt").value;
+  const type = $("#type").value;
+  const results = data.records.filter(record =>
+    (!edition || String(record.edition) === edition) &&
+    (!gt || record.gt === gt) &&
+    (!type || record.type === type) &&
+    (!query || norm([record.id, record.title, ...(record.authors || []), record.abstract, ...(record.keywords || []), record.gt].join(" ")).includes(query))
+  );
+
+  $("#result-label").textContent = `${results.length} trabalho${results.length === 1 ? "" : "s"}`;
+  $("#results").innerHTML = results.length
+    ? results.map(articleTemplate).join("")
+    : `<div class="empty"><strong>Nenhum trabalho encontrado</strong><span>Retire um filtro ou tente outro termo.</span></div>`;
+}
+
+["query", "edition", "gt", "type"].forEach(id => {
+  $("#" + id).addEventListener(id === "query" ? "input" : "change", render);
+});
+
+$("#clear").addEventListener("click", () => {
+  $("#query").value = "";
+  $("#edition").value = "";
+  $("#gt").value = "";
+  $("#type").value = "";
+  render();
+});
+
+setup();
+
