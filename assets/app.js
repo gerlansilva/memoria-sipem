@@ -80,7 +80,7 @@ function articleTemplate(record) {
     ${record.authors?.length ? `<div class="authors">${record.authors.map(esc).join("; ")}</div>` : ""}
     <p class="abstract">${esc(abstract)}</p>
     ${keywords.length ? `<div class="keywords" aria-label="Palavras-chave">${keywords.map(keyword => `<span class="keyword">${esc(keyword)}</span>`).join("")}</div>` : ""}
-    <div class="record-actions">${record.drivePdf ? `<a class="pdf-link" href="${esc(record.drivePdf)}" target="_blank" rel="noopener">Abrir PDF <span aria-hidden="true">↗</span></a>` : `<span class="unavailable">PDF não disponível</span>`}</div>
+    <div class="record-actions">${access ? `<a class="pdf-link" href="${esc(access)}" target="_blank" rel="noopener">Abrir PDF <span aria-hidden="true">↗</span></a>` : `<span class="unavailable">PDF não disponível</span>`}</div>
   </article>`;
 }
 
