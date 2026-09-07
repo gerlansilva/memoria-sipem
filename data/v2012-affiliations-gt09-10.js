@@ -1,0 +1,31 @@
+// V SIPEM (2012) — filiações GT09-10 preservadas conforme os PDFs.
+window.SIPEM_V2012_AFFILIATIONS = window.SIPEM_V2012_AFFILIATIONS || {};
+Object.assign(window.SIPEM_V2012_AFFILIATIONS, {
+  "CC00440245923_A.pdf": [["Fábio Alexandre Borges","Universidade Estadual do Paraná, Brasil"],["Clélia Maria Ignatius Nogueira","Universidade Estadual de Maringá, Brasil"]],
+  "CC00596629800_A.pdf": [["Odalea Aparecida Viana","Universidade Federal de Uberlândia , Brasil"]],
+  "CC01046092065_A.pdf": [["Débora da Silva Soares","Unesp, Rio Claro, Brasil"],["Marcelo de Carvalho Borba","Unesp, Rio Claro, Brasil"]],
+  "CC01217645675_A.pdf": [["Marco Aurélio Kistemann Jr","Universidade Federal de Juiz de Fora, Brasil"]],
+  "CC01425475817_A.pdf": [["Solange Hassan Ahmad Ali Fernandes","Universidade Bandeirante de São Paulo, Brasil"],["Lulu Healy","Universidade Bandeirante de São Paulo, Brasil"],["Ana Paula Albieri Serino","Universidade Bandeirante de São Paulo, Brasil"]],
+  "CC01515418928_A.pdf": [["Rodolfo Eduardo Vertuan","Universidade Tecnológica Federal do Paraná, Brasil"],["Adriana Helena Borssoi","Universidade Tecnológica Federal do Paraná, Brasil"],["Lourdes Maria Werle de Almeida","Universidade Estadual de Londrina, Brasil"]],
+  "CC01942151560_A.pdf": [["Maiana Santana da Silva","Universidade Federal da Bahia/Universidade Estadual de Feira de Santana, Brasil"],["Thaine Souza Santana","Universidade Federal da Bahia/Universidade Estadual de Feira de Santana, Brasil"]],
+  "CC02045371930_A.pdf": [["Michele Regiane Dias Veronez","Universidade Estadual do Paraná, Brasil"],["Lourdes Maria Werle de Almeida","Universidade Estadual de Londrina, Brasil"]],
+  "CC02580726527_A.pdf": [["Lilian Aragão da Silva","Universidade Federal da Bahia e Universidade Estadual de Feira de Santana, Brasil"],["Andreia Maria Pereira De Oliveira","Universidade Estadual de Feira de Santana, Brasil"]],
+  "CC02789645833_A.pdf": [["Deire Lúcia de Oliveira","Secretaria de Educação do Distrito Federal, Brasil"],["Leila Cunha de Albuquerque","Secretaria de Educação do Distrito Federal, Brasil"],["Cleyton Hércules Gontijo","Universidade de Brasília, Brasil"]],
+  "CC03372205570_A.pdf": [["Airam da Silva Prado","Universidade Federal da Bahia e Universidade Estadual de Feira de Santana, Brasil"],["Andreia Maria Pereira De Oliveira","Universidade Estadual de Feira de Santana, Brasil"]],
+  "CC04715655802_A.pdf": [["Airton Carrião Machado","Universidade Federal de Minas Gerais, Brasil"]],
+  "CC13244833004_A.pdf": [["Eleni Bisognin","Centro Universitário Franciscano, Brasil"],["Vanilde Bisognin","Centro Universitário Franciscano, Brasil"]],
+  "CC21284545814_A.pdf": [["Dale Bean","Universidade Federal de Ouro Preto"]],
+  "CC24744558844_A.pdf": [["Paulo Cesar Freire","Faculdade da Aldeia de Carapicuíba, Brasil"],["Rosana Nogueira de Lima","Universidade Bandeirante de São Paulo, Brasil"]],
+  "CC25941745800_A.pdf": [["Ana Paula dos Santos Malheiros","UNESP, Brasil"]],
+  "CC27495750871_A.pdf": [["Anne Carine Lopes","Pontifícia Universidade Católica-SP/SEE-SP;"],["Sandra Maria Pinto Magina","Universidade Estadual de Santa Cruz-Ba/PUC-SP;"]],
+  "CC36399183987_A.pdf": [["Dionísio Burak","Universidade Estadual do Centro-Oeste do Paraná, Brasil\nUniversidade Estadual de Ponta Grossa, Brasil"],["Celia Finck Brandt","Universidade Estadual de Ponta Grossa, Brasil"],["Tiago Emanuel Kluber","Universidade Estadual do Oeste do Paraná, Brasil"],["Carlos Roberto Ferreira","Universidade Estadual do Centro-Oeste do Paraná, Brasil"],["Marines Avila de Chaves Kaviatkovski","Secretaria de Educação de Curitiba, Brasil"]],
+  "CC40065731034_A.pdf": [["Sintria Labres Lautert","Universidade Federal de Pernambuco, Brasil"],["Alina Galvão Spinillo","Universidade Federal de Pernambuco, Brasil"]],
+  "CC51532921691_A.pdf": [["Maria Manuela Martins Soares David","Universidade Federal de Minas Gerais, Brasil"],["Vanessa Sena Tomaz","Universidade Federal de Minas Gerais, Brasil"]],
+  "CC52205991515_A.pdf": [["Flávia Cristina de Macêdo Santana","Universidade Estadual de Feira de Santana"]],
+  "CC58872787653_A.pdf": [["Edmilson Minoru Torisu","Universidade Federal de Minas Gerais (UFMG)"]],
+  "CC62296965504_A.pdf": [["Ana Virginia de Almeida Luna","Universidade Estadual de Feira de Santana, Brasil"],["Elizabeth Gomes Souza","Núcleo de Pesquisas em Modelagem Matemática, Brasil"],["Larissa Borges de Souza Lima","Escola Despertar- Grupo Despmat, Brasil"]],
+  "CC62913166920_A.pdf": [["Elaine Cristina Ferruzzi","Universidade Tecnológica Federal do Paraná, Brasil"]],
+  "CC74574329653_A.pdf": [["Jussara de Loiola Araújo","Universidade Federal de Minas Gerais, Brasil"],["Ilaine da Silva Campos","Universidade Federal de Minas Gerais, Brasil"],["Wanderley Sebastião De Freitas","Instituto Federal Minas Gerais e Universidade Federal de Minas Gerais"]],
+  "CC76752267715_A.pdf": [["Janete Bolite Frant","Universidade Bandeirante, UNIBAN, Brasil"]],
+  "CC94019932034_A.pdf": [["Rodrigo Dalla Vecchia","Universidade Luterana do Brasil, Brasil"],["Marcus Vinicius Maltempi","UNESP - Universidade Estadual Paulista, Brasil"]]
+});
