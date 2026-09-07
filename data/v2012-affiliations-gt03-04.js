@@ -1,0 +1,33 @@
+// V SIPEM (2012) — filiações GT03-04 preservadas conforme os PDFs.
+window.SIPEM_V2012_AFFILIATIONS = window.SIPEM_V2012_AFFILIATIONS || {};
+Object.assign(window.SIPEM_V2012_AFFILIATIONS, {
+  "CC001356680_A.pdf": [["Joseide Justin Dallemole","Universidade Luterana do Brasil, Brasil"],["Claudia Lisete Oliveira Groenwald","Universidade Luterana do Brasil, Brasil"]],
+  "CC01155158601_A.pdf": [["Cleusiane Vieira Silva","Universidade Estadual do Sudoeste da Bahia, Brasil"],["Ana Paula Perovano Dos Santos Silva","Universidade Estadual do Sudoeste da Bahia, Brasil"]],
+  "CC01233648411_A.pdf": [["Merise Maria Maciel","Universidade Federal do Rio Grande do Norte, Brasil"]],
+  "CC03937708693_A.pdf": [["Yara Patrícia Barral de Queiroz Guimarais","Pontifícia Universidade Católica de Minas Gerais, Brasil"],["Dimas Felipe de Miranda","Pontifícia Universidade Católica de Minas Gerais, Brasil"],["João Bosco Laudares","Pontifícia Universidade Católica de Minas Gerais, Brasil"]],
+  "CC07234546804_A.pdf": [["Célia Maria Carolino Pires","Pontifícia Universidade Católica de São Paulo, Brasil"]],
+  "CC07286285700_A.pdf": [["Roberta DAngela Menduni Bortoloti","Universidade Estadual do Sudoeste da Bahia/Universidade Federal da Bahia, Brasil"],["Juliana Rodrigues Ferreira","Universidade Estadual do Sudoeste da Bahia, Brasil"],["Vania Maria Pereira Santos-Wagner","Universidade Federal do Rio de Janeiro/Universidade Federal do Espírito Santo, Brasil"]],
+  "CC07604550827_A.pdf": [["Márcia Regina Ramos Costa Ribeiro","Rede pública de ensino do Estado de São Paulo"],["Armando Traldi Júnior","Instituto Federal de Ciências e Tecnologia de São Paulo, Brasil"]],
+  "CC09196498072_A.pdf": [["Helena Noronha Cury","Centro Universitário Franciscano, Brasil"],["Eleni Bisognin","Centro Universitário Franciscano, Brasil"],["Vanilde Bisognin","Centro Universitário Franciscano, Brasil"]],
+  "CC10024476668_A.pdf": [["Maria Clara Rezende Frota","Pontifícia Universidade Católica de Minas Gerais, Brasil"]],
+  "CC10992200687_A.pdf": [["Adilson Lopes De Oliveira","Pontifícia Universidade Católica de Minas Gerais, Brasil"],["Dimas Felipe de Miranda","Pontifícia Universidade Católica de Minas Gerais, Brasil"],["João Bosco Laudares","Pontifícia Universidade Católica de Minas Gerais, Brasil"]],
+  "CC14171090091_A.pdf": [["José Carlos P. Leivas","Centro Universitário Franciscano, Brasil"]],
+  "CC14888911843_A.pdf": [["Luciane Santos Rosenbaum","Pontifícia Universidade Católica de São Paulo, Brasil"]],
+  "CC15100115874_A.pdf": [["Marcio Antonio da Silva","Universidade Federal de Mato Grosso do Sul, Brasil"]],
+  "CC16516613591_A.pdf": [["Péricles César de Araújo","Universidade Estadual de Feira de Santana"],["Sonia Barbosa Camargo Igliori","Pontifícia Universidade Católica de São Paulo"]],
+  "CC17148187800_A.pdf": [["Joelma Iamac Nomura","Pontifícia Universidade Católica de São Paulo, Brasil"],["Barbara Lutaif Bianchini","Pontifícia Universidade Católica de São Paulo, Brasil"]],
+  "CC17161848865_A.pdf": [["Marcos Rogerio Neves","Universidade Estadual de Santa Cruz, Brasil"],["Diná da Silva Correia","Universidade Estadual de Santa Cruz, Brasil"]],
+  "CC18595006768_A.pdf": [["Lilian Nasser","Projeto Fundão, Universidade Federal do Rio de Janeiro e CETIQT/SENAI –\nBrasil"],["Geneci Alves de Sousa","Projeto Fundão, CETIQT/SENAI, UNIABEU, SEEDUC/RJ e SME/RJ – Brasil"],["Marcelo Andre Abrantes Torraca","Projeto Fundão, CETIQT/SENAI, UVA e SEEDUC/RJ – Brasil"]],
+  "CC21600767591_A.pdf": [["Graça Luzia Dominguez Santos","Universidade Federal da Bahia, Brasil"],["Jamille Vilas Boas de Souza","Instituto Federal da Bahia, Brasil"],["Jonei Cerqueira Barbosa","Universidade Federal da Bahia, Brasil"]],
+  "CC22407867874_A.pdf": [["Gabriel Loureiro de Lima","Pontifícia Universidade Católica de São Paulo, Brasil"],["Benedito Antonio da Silva","Pontifícia Universidade Católica de São Paulo, Brasil"]],
+  "CC29504694187_A.pdf": [["Karly Barbosa Alvarenga","Universidade Federal de Sergipe"]],
+  "CC33744809854_A.pdf": [["Carla Cristina Pompeu","Universidade de São Paulo"]],
+  "CC33752070854_A.pdf": [["Rosa Lucia Sverzut Baroni","Universidade Estadual Paulista, Brasil"],["Silvio Cesar Otero-Garcia","Universidade Estadual Paulista, Brasil"]],
+  "CC36570108824_A.pdf": [["Henrique Rizek Elias","Universidade Estadual de Londrina"],["Línlya Natássia Sachs Camerlengo de Barbosa","Instituto Federal de Educação, Ciência e Tecnologia de São Paulo"],["Angela Marta P D Savioli","Universidade Estadual de Londrina"]],
+  "CC42397162334_A.pdf": [["Francisco Regis Vieira Alves","Instituto Federal de Educação Ciência e Tecnologia do Estado do Ceará, Brasil"]],
+  "CC42397162334_B.pdf": [["Francisco Regis Vieira Alves","Instituto Federal de Educação Ciência e Tecnologia do Estado do Ceará, Brasil"]],
+  "CC43828108504_A.pdf": [["Maria Helena Fávero","Universidade de Brasília, Brasil"]],
+  "CC64107000168_A.pdf": [["Regina da Silva Pina Neves","Instituto Nacional de Estudos e Pesquisas Educacionais (INEP2), Brasil"],["Jhone Caldeira Silva","Instituto de Matemática e Estatística, Universidade Federal de Goiás, Brasil"],["Sandra Aparecida de Oliveira Baccarin","Universidade Federal Fluminense (Ead), Brasil"]],
+  "CC88044823891_A.pdf": [["Maria Eli Puga Beltrão","Faculdades Atibaia"],["Sonia Barbosa Camargo Igliori","PUC- São Paulo"]],
+  "CC89804600820_A.pdf": [["José Carlos Oliveira Costa","Centro Universitário da Fundação Santo André, Brasil"],["Vinicio de Macedo Santos","Universidade de São Paulo, Brasil"]]
+});
