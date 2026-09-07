@@ -91,7 +91,16 @@ function render() {
   const results = data.records.filter(record =>
     (!edition || String(record.edition) === edition) &&
     (!gt || record.gt === gt) &&
-    (!query || norm([record.id, record.title, ...(record.authors || []), record.abstract, ...(record.keywords || []), record.gt].join(" ")).includes(query))
+    (!query || norm([
+      record.id,
+      record.title,
+      ...(record.authors || []),
+      ...(record.authorNames || []),
+      ...(record.institutions || []),
+      record.abstract,
+      ...(record.keywords || []),
+      record.gt
+    ].join(" ")).includes(query))
   );
 
   $("#result-label").textContent = `${results.length} trabalho${results.length === 1 ? "" : "s"}`;
@@ -105,7 +114,12 @@ function updateEditionHeading() {
   const logo = $("#edition-logo");
   const label = $("#edition-label");
   const heading = $("#catalogo-titulo");
-  if (edition === "6") {
+  if (edition === "5") {
+    logo.hidden = false;
+    logo.src = "assets/logo-v-sipem.png?v=20260907";
+    label.textContent = "V SIPEM · Petrópolis · 2012";
+    heading.textContent = "Trabalhos do V SIPEM";
+  } else if (edition === "6") {
     logo.hidden = false;
     logo.src = "assets/logo-vi-sipem.png?v=20260904";
     label.textContent = "VI SIPEM · Pirenópolis · 2015";
@@ -122,7 +136,7 @@ function updateEditionHeading() {
     heading.textContent = "Trabalhos do IX SIPEM";
   } else {
     logo.hidden = true;
-    label.textContent = "VI, VIII e IX SIPEM · 2015–2024";
+    label.textContent = "V, VI, VIII e IX SIPEM · 2012–2024";
     heading.textContent = "Acervo de trabalhos do SIPEM";
   }
 }
