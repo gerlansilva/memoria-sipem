@@ -3,6 +3,45 @@ const $ = selector => document.querySelector(selector);
 const norm = value => (value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const esc = value => String(value || "").replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[character]));
 
+function formatI2000Title(value) {
+  const title = String(value || "").trim();
+  if (!title) return title;
+
+  const letters = [...title].filter(character => /[A-Za-zÀ-ÖØ-öø-ÿ]/.test(character));
+  const uppercaseLetters = letters.filter(character =>
+    character === character.toLocaleUpperCase("pt-BR") &&
+    character !== character.toLocaleLowerCase("pt-BR")
+  );
+
+  // Só intervém nos títulos do I SIPEM que vieram integralmente em caixa alta.
+  if (!letters.length || uppercaseLetters.length / letters.length < 0.78) return title;
+
+  let formatted = title.toLocaleLowerCase("pt-BR");
+
+  const protectedTerms = [
+    [/\bgpimem\b/giu, "GPIMEM"],
+    [/\bgpa-mat-ufrgs\b/giu, "GPA-MAT-UFRGS"],
+    [/\bufrgs\b/giu, "UFRGS"],
+    [/\bufpa\b/giu, "UFPA"],
+    [/\bunimep\b/giu, "UNIMEP"],
+    [/\bl'hospital\b/giu, "L'Hospital"],
+    [/\bcabri-géometre\b/giu, "Cabri-Géometre"],
+    [/\bcabri-géomètre\b/giu, "Cabri-Géomètre"],
+    [/\bbrasil\b/giu, "Brasil"],
+    [/\brio de janeiro\b/giu, "Rio de Janeiro"],
+    [/\brecife\b/giu, "Recife"],
+    [/\bsem-terra\b/giu, "Sem-Terra"],
+    [/\bteorema de tales\b/giu, "Teorema de Tales"],
+    [/\beducação matemática\b/giu, "Educação Matemática"]
+  ];
+
+  protectedTerms.forEach(([pattern, replacement]) => {
+    formatted = formatted.replace(pattern, replacement);
+  });
+
+  return formatted.replace(/[A-Za-zÀ-ÖØ-öø-ÿ]/, character => character.toLocaleUpperCase("pt-BR"));
+}
+
 function setup() {
   updateGtOptions();
   render();
@@ -75,9 +114,10 @@ function articleTemplate(record) {
   const abstract = record.abstract && !/^não encontrado$/i.test(record.abstract) ? record.abstract : "Resumo não disponível.";
   const keywords = (record.keywords || []).filter(keyword => keyword && !/^não encontrad/i.test(keyword));
   const accessLabel = record.accessLabel || "Abrir PDF";
+  const displayTitle = Number(record.edition) === 1 ? formatI2000Title(record.title) : record.title;
   return `<article class="record">
     <div class="record-top"><span class="gt">${esc(record.gt)}</span><span>·</span><span>${esc(record.year)}</span></div>
-    <h3><a href="${esc(access)}" target="_blank" rel="noopener">${esc(record.title)}</a></h3>
+    <h3><a href="${esc(access)}" target="_blank" rel="noopener">${esc(displayTitle)}</a></h3>
     ${record.authors?.length ? `<div class="authors">${record.authors.map(esc).join("; ")}</div>` : ""}
     <p class="abstract">${esc(abstract)}</p>
     ${keywords.length ? `<div class="keywords" aria-label="Palavras-chave">${keywords.map(keyword => `<span class="keyword">${esc(keyword)}</span>`).join("")}</div>` : ""}
