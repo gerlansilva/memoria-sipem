@@ -74,13 +74,14 @@ function articleTemplate(record) {
   const access = record.drivePdf || record.pdf || record.officialUrl;
   const abstract = record.abstract && !/^não encontrado$/i.test(record.abstract) ? record.abstract : "Resumo não disponível.";
   const keywords = (record.keywords || []).filter(keyword => keyword && !/^não encontrad/i.test(keyword));
+  const accessLabel = record.accessLabel || "Abrir PDF";
   return `<article class="record">
     <div class="record-top"><span class="gt">${esc(record.gt)}</span><span>·</span><span>${esc(record.year)}</span></div>
     <h3><a href="${esc(access)}" target="_blank" rel="noopener">${esc(record.title)}</a></h3>
     ${record.authors?.length ? `<div class="authors">${record.authors.map(esc).join("; ")}</div>` : ""}
     <p class="abstract">${esc(abstract)}</p>
     ${keywords.length ? `<div class="keywords" aria-label="Palavras-chave">${keywords.map(keyword => `<span class="keyword">${esc(keyword)}</span>`).join("")}</div>` : ""}
-    <div class="record-actions">${access ? `<a class="pdf-link" href="${esc(access)}" target="_blank" rel="noopener">Abrir PDF <span aria-hidden="true">↗</span></a>` : `<span class="unavailable">PDF não disponível</span>`}</div>
+    <div class="record-actions">${access ? `<a class="pdf-link" href="${esc(access)}" target="_blank" rel="noopener">${esc(accessLabel)} <span aria-hidden="true">↗</span></a>` : `<span class="unavailable">PDF não disponível</span>`}</div>
   </article>`;
 }
 
@@ -114,7 +115,12 @@ function updateEditionHeading() {
   const logo = $("#edition-logo");
   const label = $("#edition-label");
   const heading = $("#catalogo-titulo");
-  if (edition === "5") {
+  if (edition === "1") {
+    logo.hidden = false;
+    logo.src = "assets/logo-i-sipem.webp?v=20260908";
+    label.textContent = "I SIPEM · Serra Negra · 2000";
+    heading.textContent = "Trabalhos do I SIPEM";
+  } else if (edition === "5") {
     logo.hidden = false;
     logo.src = "assets/logo-v-sipem.png?v=20260907";
     label.textContent = "V SIPEM · Petrópolis · 2012";
@@ -136,7 +142,7 @@ function updateEditionHeading() {
     heading.textContent = "Trabalhos do IX SIPEM";
   } else {
     logo.hidden = true;
-    label.textContent = "V, VI, VIII e IX SIPEM · 2012–2024";
+    label.textContent = "I, V, VI, VIII e IX SIPEM · 2000–2024";
     heading.textContent = "Acervo de trabalhos do SIPEM";
   }
 }
