@@ -2,84 +2,25 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Acervo dos trabalhos apresentados no Seminário Internacional de Pesquisa em Educação Matemática.">
-  <title>Memória SIPEM</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=20260908-acervo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#852337">
+  <meta name="description" content="História, edições e trabalhos do Seminário Internacional de Pesquisa em Educação Matemática.">
+  <title>Memória SIPEM — História e anais</title>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="identity" href="#inicio" aria-label="Memória SIPEM — início">
-      <img src="assets/logo-memoria-sipem.svg?v=20260908-acervo" alt="Memória SIPEM" width="290" height="70">
-    </a>
-    <nav class="main-nav" aria-label="Seções principais">
-      <a href="#historia" data-view="history">História do SIPEM</a>
-      <a href="#anais" data-view="archives">Anais do SIPEM</a>
-    </nav>
+  <a class="skip" href="#main">Ir ao conteúdo</a>
+  <header class="masthead wrap">
+    <a class="wordmark" href="#historia" aria-label="Memória SIPEM — início"><svg class="brand-mark" viewBox="0 0 96 92" role="img" aria-label="Símbolo Memória SIPEM"><path class="memory-trace trace-one" d="M8 70C11 36 25 22 40 43c10 14 14 27 23 20 10-8 11-28 25-47"/><path class="memory-trace trace-two" d="M18 78c3-28 13-36 24-20 11 16 17 24 26 16 9-8 13-24 20-34"/><path class="memory-trace trace-three" d="M30 80c2-13 7-18 13-11 8 9 14 14 22 6 7-7 12-16 17-21"/><circle class="trace-index" cx="8" cy="70" r="4"/></svg><span class="wordmark-text"><span class="memory">memória</span><span class="sipem">SIPEM</span></span></a>
+    <p class="event-name">Seminário Internacional<br>de Pesquisa em<br><strong>Educação Matemática</strong></p>
+    <nav class="main-nav" aria-label="Navegação principal"><a href="#historia" data-view="history">História do SIPEM</a><a href="#anais" data-view="archives">Anais do SIPEM</a></nav>
   </header>
-
-  <main id="inicio">
-    <section id="history-view" class="view history-view" aria-labelledby="history-title">
-      <div class="history-intro">
-        <p class="eyebrow">2000–2024 · nove edições</p>
-        <h1 id="history-title">História do SIPEM</h1>
-        <p>Criado pela Sociedade Brasileira de Educação Matemática em 2000, o SIPEM consolidou um espaço nacional de encontro, debate e intercâmbio entre pesquisadores da Educação Matemática. A composição e a denominação dos Grupos de Trabalho mudaram ao longo das edições, acompanhando a criação e a reorganização de áreas de pesquisa.</p>
-      </div>
-      <div id="edition-timeline" class="edition-timeline"></div>
-      <p class="history-source">Datas e quantitativos das edições I a VIII: <a href="https://www.sbembrasil.org.br/eventos/index.php/sipem/historico" target="_blank" rel="noopener">histórico oficial da SBEM ↗</a>. No IX SIPEM, o total corresponde aos trabalhos disponíveis nos anais.</p>
-    </section>
-
-    <section id="archives-view" class="view" aria-labelledby="catalogo-titulo" hidden>
-    <div class="catalog-intro">
-      <p class="edition"><img id="edition-logo" src="assets/logo-i-sipem.webp?v=20260908" alt="Marca da edição selecionada" width="96" height="42"><span id="edition-label">I, V, VI, VIII e IX SIPEM · 2000–2024</span></p>
-      <h1 id="catalogo-titulo">Acervo de trabalhos do SIPEM</h1>
-      <p class="intro">Pesquise nos títulos, autorias, filiações, resumos e palavras-chave dos trabalhos.</p>
-      <label class="search">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m2.3-5.2a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
-        <span class="sr-only">Pesquisar no acervo</span>
-        <input id="query" type="search" placeholder="Título, autoria, filiação, tema ou palavra-chave" autocomplete="off">
-      </label>
-      <div class="filters">
-        <select id="edition-filter" aria-label="Filtrar por edição">
-          <option value="">I, V, VI, VIII e IX SIPEM</option>
-          <option value="1">I SIPEM · 2000</option>
-          <option value="5">V SIPEM · 2012</option>
-          <option value="6">VI SIPEM · 2015</option>
-          <option value="8">VIII SIPEM · 2021</option>
-          <option value="9">IX SIPEM · 2024</option>
-        </select>
-        <select id="gt" aria-label="Filtrar por Grupo de Trabalho"><option value="">Todos os GTs</option></select>
-        <button id="clear" type="button">Limpar</button>
-      </div>
-    </div>
-
-    <div class="catalog" aria-live="polite">
-      <div class="result-head"><h2>Resultados</h2><span id="result-label"></span></div>
-      <div id="results"></div>
-    </div>
-    </section>
+  <main id="main" class="wrap" tabindex="-1">
+    <div class="page-heading"><div><p class="section-label" id="section-label">2000 — 2024</p><h1 id="page-title">História do SIPEM</h1></div><p id="page-intro">Nove edições de encontros e pesquisa<br>em Educação Matemática.</p></div>
+    <div class="workspace"><aside class="edition-index" aria-label="Índice de edições"><h2>Edições</h2><nav id="edition-list" aria-label="Selecionar edição"></nav><p class="index-note">Um acervo em construção.<br>Uma história compartilhada.</p></aside><section id="surface" aria-label="Conteúdo da edição"><p role="status">Carregando o acervo…</p></section></div>
   </main>
-
-  <footer><strong>Memória SIPEM</strong><span>Projeto independente de preservação e acesso aos Anais do SIPEM.</span></footer>
-  <script src="data/records-i-2000.js?v=20260908-autoria-ies"></script>
-  <script src="data/records-i-2000-corrections.js?v=20260908-revisao"></script>
-  <script src="data/records-v-2012-v2.js?v=20260906-planilha-oficial"></script>
-  <script src="data/records-v-2012-corrections.js?v=20260907-validado"></script>
-  <script src="data/v2012-affiliations-gt01-02.js?v=20260907-filiacoes"></script>
-  <script src="data/v2012-affiliations-gt03-04.js?v=20260907-filiacoes"></script>
-  <script src="data/v2012-affiliations-gt05-06.js?v=20260907-filiacoes"></script>
-  <script src="data/v2012-affiliations-gt07-08.js?v=20260907-filiacoes"></script>
-  <script src="data/v2012-affiliations-gt09-10.js?v=20260907-filiacoes"></script>
-  <script src="data/v2012-affiliations-gt11-12.js?v=20260907-filiacoes"></script>
-  <script src="data/records-v-2012-affiliations.js?v=20260907-filiacoes-autor-ies"></script>
-  <script src="data/records-vi-2015-v3.js?v=20260904-keywords"></script>
-  <script src="data/records-viii-2021.js?v=20260904-drive-root"></script>
-  <script src="data/records-ix-2024.js?v=20260904-drive-root"></script>
-  <script src="data/catalog.js?v=20260908-acervo"></script>
-  <script src="data/catalog-i-2000-extend.js?v=20260908"></script>
-  <script src="assets/app.js?v=20260908-acervo"></script>
+  <footer class="footer wrap"><a class="footer-brand" href="#historia" aria-label="Voltar ao início"><svg class="brand-mark" viewBox="0 0 96 92" aria-hidden="true"><path class="memory-trace trace-one" d="M8 70C11 36 25 22 40 43c10 14 14 27 23 20 10-8 11-28 25-47"/><path class="memory-trace trace-two" d="M18 78c3-28 13-36 24-20 11 16 17 24 26 16 9-8 13-24 20-34"/><path class="memory-trace trace-three" d="M30 80c2-13 7-18 13-11 8 9 14 14 22 6 7-7 12-16 17-21"/><circle class="trace-index" cx="8" cy="70" r="4"/></svg><span>Memória SIPEM</span></a><p>Projeto independente de preservação e acesso aos anais.</p><a href="https://gerlansilva.github.io/memoria-sipem/" target="_blank" rel="noopener">Acervo de origem ↗</a></footer>
 </body>
 </html>

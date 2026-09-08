@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 128" role="img" aria-labelledby="title desc">
-  <title id="title">Memória SIPEM</title>
-  <desc id="desc">Marca da Memória SIPEM, formada por camadas de memória e registros do acervo.</desc>
-  <g transform="translate(4 22)">
-    <path d="M8 70C11 36 25 22 40 43c10 14 14 27 23 20 10-8 11-28 25-47" fill="none" stroke="#18201d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M18 78c3-28 13-36 24-20 11 16 17 24 26 16 9-8 13-24 20-34" fill="none" stroke="#4f5752" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M30 80c2-13 7-18 13-11 8 9 14 14 22 6 7-7 12-16 17-21" fill="none" stroke="#a33a49" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="8" cy="70" r="4" fill="#a33a49"/>
-  </g>
-  <text x="126" y="51" fill="#18201d" font-family="Literata, Georgia, serif" font-size="42" font-weight="500" letter-spacing="-1.2">memória</text>
-  <text x="124" y="112" fill="#087653" font-family="Source Sans 3, Arial, sans-serif" font-size="72" font-weight="700" letter-spacing="8">SIPEM</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 92" role="img" aria-labelledby="title"><title id="title">Memória SIPEM</title><path d="M8 70C11 36 25 22 40 43c10 14 14 27 23 20 10-8 11-28 25-47" fill="none" stroke="#242326" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 78c3-28 13-36 24-20 11 16 17 24 26 16 9-8 13-24 20-34" fill="none" stroke="#514b51" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 80c2-13 7-18 13-11 8 9 14 14 22 6 7-7 12-16 17-21" fill="none" stroke="#852337" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="70" r="4" fill="#852337"/></svg>
