@@ -157,27 +157,27 @@ function updateEditionHeading() {
   const heading = $("#catalogo-titulo");
   if (edition === "1") {
     logo.hidden = false;
-    logo.src = "assets/logo-i-sipem.webp?v=20260908";
+    logo.src = "assets/edition-01-logo.png?v=20260908";
     label.textContent = "I SIPEM · Serra Negra · 2000";
     heading.textContent = "Trabalhos do I SIPEM";
   } else if (edition === "5") {
     logo.hidden = false;
-    logo.src = "assets/logo-v-sipem.png?v=20260907";
+    logo.src = "assets/edition-05-logo.png?v=20260907";
     label.textContent = "V SIPEM · Petrópolis · 2012";
     heading.textContent = "Trabalhos do V SIPEM";
   } else if (edition === "6") {
     logo.hidden = false;
-    logo.src = "assets/logo-vi-sipem.png?v=20260904";
+    logo.src = "assets/edition-06-logo.png?v=20260904";
     label.textContent = "VI SIPEM · Pirenópolis · 2015";
     heading.textContent = "Trabalhos do VI SIPEM";
   } else if (edition === "8") {
     logo.hidden = false;
-    logo.src = "assets/logo-viii-sipem.webp?v=20260904";
+    logo.src = "assets/edition-08-logo.png?v=20260904";
     label.textContent = "VIII SIPEM · On-line · 2021";
     heading.textContent = "Trabalhos do VIII SIPEM";
   } else if (edition === "9") {
     logo.hidden = false;
-    logo.src = "assets/logo-ix-sipem.png?v=20260904-2";
+    logo.src = "assets/edition-09-logo.png?v=20260904-2";
     label.textContent = "IX SIPEM · Natal · 2024";
     heading.textContent = "Trabalhos do IX SIPEM";
   } else {
