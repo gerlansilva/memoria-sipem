@@ -7,4 +7,8 @@
   const existingIds = new Set(catalog.records.map(record => record.id));
   const missing = records.filter(record => !existingIds.has(record.id));
   catalog.records = [...missing, ...catalog.records];
+
+  // Mantém o quantitativo histórico informado pela fonte e explicita o corpus preservado.
+  const edition = catalog.editions?.find(item => Number(item.id) === 1);
+  if (edition) edition.works = "97 (histórico oficial) · 106 registros preservados";
 })();
