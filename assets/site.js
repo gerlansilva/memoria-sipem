@@ -24,7 +24,7 @@ function history(){
 }
 function archives(){
  const e=editionById(selected);const groups=new Map();recordsFor(selected).forEach(r=>{if(r.gt)groups.set(r.gt,r.section||r.gt)});if(!groups.has(group))group='';
- $('#surface').innerHTML=`<div class="archive-title"><div><h2>${e?e.roman+' SIPEM':'Todas as edições'}</h2><p>${e?escapeHTML(e.place)+' · '+e.year:'I, V, VI, VIII e IX SIPEM · trabalhos indexados'}</p></div>${e?`<img src="${escapeHTML(e.logo)}" alt="Marca do ${e.roman} SIPEM" width="110" height="64">`:''}</div>
+ $('#surface').innerHTML=`<div class="archive-title"><div><h2>${e?e.roman+' SIPEM':'Todas as edições'}</h2><p>${e?escapeHTML(e.place)+' · '+e.year:'Edições com trabalhos indexados'}</p></div>${e?`<img src="${escapeHTML(e.logo)}" alt="Marca do ${e.roman} SIPEM" width="110" height="64">`:''}</div>
  <form class="search-form" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg><input id="search" type="search" aria-label="Pesquisar títulos, autorias, instituições, resumos e palavras-chave" placeholder="O que você procura no acervo?" value="${escapeHTML(query)}"><button type="submit">Buscar</button></form>
  <div class="filter-row"><div class="filter-control"><label for="gt">Grupo de Trabalho</label><select id="gt"><option value="">Todos os GTs</option>${[...groups].sort((a,b)=>a[0].localeCompare(b[0],'pt-BR',{numeric:true})).map(([k,v])=>`<option value="${escapeHTML(k)}" ${k===group?'selected':''}>${escapeHTML(v)}</option>`).join('')}</select></div><button class="text-button" id="reset">Limpar busca</button></div>
  <div class="result-head"><h3 id="result-count" role="status" aria-live="polite"></h3><select id="sort" aria-label="Ordenar trabalhos"><option value="recent">Mais recentes</option><option value="oldest">Mais antigos</option><option value="title">Título: A–Z</option></select></div><div id="results"></div><div id="pagination"></div>`;
@@ -56,4 +56,14 @@ function navigate(){
  $('#page-title').textContent=view==='history'?'História do SIPEM':'Anais do SIPEM';$('#section-label').textContent=view==='history'?'2000 — 2024':'ACERVO DE TRABALHOS';$('#page-intro').innerHTML=view==='history'?'Nove edições de encontros e pesquisa<br>em Educação Matemática.':'Títulos, autorias, instituições,<br>resumos e palavras-chave.';
  document.title=(view==='history'?'História':'Anais')+' — Memória SIPEM';index();view==='history'?history():archives();
 }
-fetch('data/acervo.json').then(r=>{if(!r.ok)throw Error('Acervo indisponível');return r.json()}).then(d=>{data=d;data.records.forEach(r=>r.searchText=normalize([r.id,r.title,...(r.authors||[]),...(r.authorNames||[]),...(r.institutions||[]),r.abstract,...(r.keywords||[]),r.gt,r.section].join(' ')));navigate();window.addEventListener('hashchange',navigate)}).catch(()=>{$('#surface').innerHTML='<p>Não foi possível carregar o acervo. <a href="">Recarregar a página</a>.</p>'});
+const VII_FILES = ["records-vii-2018-gt01.json","records-vii-2018-gt02.json","vii-2018-gt03-a.json","vii-2018-gt03-b.json","vii-2018-gt04.json","vii-2018-gt05.json","vii-2018-gt06.json","vii-2018-gt07-a.json","vii-2018-gt07-b.json","vii-2018-gt08.json","vii-2018-gt09.json","vii-2018-gt10.json","vii-2018-gt11.json","vii-2018-gt12.json","vii-2018-gt13.json","vii-2018-gt14.json","vii-2018-gt15.json"];
+Promise.all([
+ fetch('data/acervo.json').then(r=>{if(!r.ok)throw Error('Acervo indisponível');return r.json()}),
+ ...VII_FILES.map(file=>fetch('data/'+file).then(r=>{if(!r.ok)throw Error('Dados do VII SIPEM indisponíveis: '+file);return r.json()}))
+]).then(([base,...groups])=>{
+ data=base;
+ const existing=new Set(data.records.map(r=>r.id));
+ for(const record of groups.flat())if(!existing.has(record.id)){data.records.push(record);existing.add(record.id)}
+ data.records.forEach(r=>r.searchText=normalize([r.id,r.title,...(r.authors||[]),...(r.authorNames||[]),...(r.institutions||[]),r.abstract,...(r.keywords||[]),r.gt,r.section].join(' ')));
+ navigate();window.addEventListener('hashchange',navigate);
+}).catch(err=>{console.error(err);$('#surface').innerHTML='<p>Não foi possível carregar o acervo. <a href="">Recarregar a página</a>.</p>'});
