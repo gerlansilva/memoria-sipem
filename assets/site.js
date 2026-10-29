@@ -36,7 +36,7 @@ function archives(){
  $('#reset').addEventListener('click',()=>{query='';group='';page=1;$('#search').value='';$('#gt').value='';results();$('#search').focus()});results();
 }
 function article(r){
- const url=safeURL(r.drivePdf||r.pdf||r.officialUrl);const e=editionById(r.edition);
+ const url=safeURL(Number(r.edition)===7?r.drivePdf:(r.drivePdf||r.pdf||r.officialUrl));const e=editionById(r.edition);
  const keywords=(r.keywords||[]).filter(k=>k&&!/^não encontrad/i.test(k));const institutions=r.institutions||[];
  return `<article class="record"><div><div class="record-meta"><span class="gt">${escapeHTML(r.gt)}</span><span>${e.roman} SIPEM · ${r.year}</span></div><h3>${url?`<a href="${url}" target="_blank" rel="noopener">${escapeHTML(r.title)}</a>`:escapeHTML(r.title)}</h3><p class="authors">${(r.authors||[]).map(escapeHTML).join('; ')||'Autoria não informada no registro.'}</p><details class="record-details"><summary>Resumo e informações</summary>${r.abstract&&!/^não encontrado$/i.test(r.abstract)?`<p class="abstract">${escapeHTML(r.abstract)}</p>`:'<p class="abstract">Resumo não disponível neste registro.</p>'}${institutions.length?`<p class="affiliations">${institutions.map(escapeHTML).join('; ')}</p>`:''}<p class="affiliations">${escapeHTML(r.section||r.gt)}</p>${keywords.length?`<p class="keywords"><strong>Palavras-chave</strong> · ${keywords.map(escapeHTML).join('; ')}</p>`:''}</details></div>${url?`<a class="download" href="${url}" target="_blank" rel="noopener" aria-label="Abrir documento: ${escapeHTML(r.title)}">${downloadIcon}<span>${/pdf/i.test(r.accessLabel||'')||r.drivePdf||r.pdf?'PDF':'Abrir'}</span></a>`:'<span class="unavailable">Sem PDF</span>'}</article>`;
 }
@@ -57,13 +57,29 @@ function navigate(){
  document.title=(view==='history'?'História':'Anais')+' — Memória SIPEM';index();view==='history'?history():archives();
 }
 const VII_FILES = ["records-vii-2018-gt01.json","records-vii-2018-gt02.json","vii-2018-gt03-a.json","vii-2018-gt03-b.json","vii-2018-gt04.json","vii-2018-gt05.json","vii-2018-gt06.json","vii-2018-gt07-a.json","vii-2018-gt07-b.json","vii-2018-gt08.json","vii-2018-gt09.json","vii-2018-gt10.json","vii-2018-gt11.json","vii-2018-gt12.json","vii-2018-gt13.json","vii-2018-gt14.json","vii-2018-gt15.json"];
-Promise.all([
- fetch('data/acervo.json').then(r=>{if(!r.ok)throw Error('Acervo indisponível');return r.json()}),
- ...VII_FILES.map(file=>fetch('data/'+file).then(r=>{if(!r.ok)throw Error('Dados do VII SIPEM indisponíveis: '+file);return r.json()}))
-]).then(([base,...groups])=>{
- data=base;
+// A versão do catálogo acompanha o commit da atualização do VII SIPEM.
+// Cache-busting evita exibir versões anteriores do acervo no GitHub Pages.
+const catalogVersion='vii-2018-20261029-2';
+const loadJSON=async file=>{
+ const response=await fetch('data/'+file+'?v='+catalogVersion,{cache:'no-store'});
+ if(!response.ok)throw Error('Não foi possível carregar '+file+' ('+response.status+')');
+ return response.json();
+};
+Promise.allSettled([loadJSON('acervo.json'),...VII_FILES.map(loadJSON)]).then(results=>{
+ if(results[0].status!=='fulfilled')throw results[0].reason;
+ data=results[0].value;
  const existing=new Set(data.records.map(r=>r.id));
- for(const record of groups.flat())if(!existing.has(record.id)){data.records.push(record);existing.add(record.id)}
+ let failures=[];
+ results.slice(1).forEach((item,i)=>{
+   if(item.status==='rejected'){failures.push(VII_FILES[i]);return;}
+   item.value.forEach(r=>{
+     if(!r.drivePdf||!/^https:\/\/drive\.google\.com\/file\/d\//.test(r.drivePdf)){
+       console.warn('Registro VII SIPEM sem URL de PDF válida:',r.id);return;
+     }
+     if(!existing.has(r.id)){data.records.push(r);existing.add(r.id)}
+   });
+ });
+ if(failures.length)console.error('Grupos não carregados:',failures);
  data.records.forEach(r=>r.searchText=normalize([r.id,r.title,...(r.authors||[]),...(r.authorNames||[]),...(r.institutions||[]),r.abstract,...(r.keywords||[]),r.gt,r.section].join(' ')));
  navigate();window.addEventListener('hashchange',navigate);
 }).catch(err=>{console.error(err);$('#surface').innerHTML='<p>Não foi possível carregar o acervo. <a href="">Recarregar a página</a>.</p>'});
