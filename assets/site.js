@@ -455,14 +455,13 @@ function article(record) {
         ${Number(record.edition) === 2 ? '<span class="tag soft">Resumo</span>' : ''}
       </div>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
-      <p class="authors">${(record.authors || []).map(authorHTML).join('; ') || 'Autoria não informada no registro.'}</p>
+      <p class="affiliations">${escapeHTML(record.section || record.gt || '')}</p>
+      ${(record.authors || []).length ? `<div class="chips">${record.authors.map(author => `<span class="chip author">${authorHTML(author)}</span>`).join('')}</div>` : '<p class="authors">Autoria não informada no registro.</p>'}
       <details class="record-details">
         <summary>Resumo e informações</summary>
         ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo não disponível neste registro.</p>'}
-        ${institutions.length ? `<p class="affiliations">${institutions.map(iesTag).join('; ')}</p>` : ''}
-        <p class="affiliations">${escapeHTML(record.section || record.gt || '')}</p>
-        ${keywords.length ? `<p class="keywords"><strong>Palavras-chave</strong> · ${keywords.map(escapeHTML).join('; ')}</p>` : (Number(record.edition) === 2 ? '<p class="keywords"><strong>Palavras-chave</strong> · Não identificadas automaticamente; ausência no original ainda não confirmada.</p>' : '')}
-        ${Number(record.edition) === 2 ? '<p class="affiliations">Registro preliminar. Título, autores e palavras-chave estão em revisão.</p>' : ''}
+        ${institutions.length ? `<div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>` : ''}
+        ${keywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${keywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : (Number(record.edition) === 2 ? '<p class="keywords"><strong>Palavras-chave</strong> · Não identificadas automaticamente; ausência no original ainda não confirmada.</p>' : '')}
       </details>
     </div>
     ${url

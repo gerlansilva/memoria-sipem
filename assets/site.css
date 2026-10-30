@@ -1094,6 +1094,34 @@ h1, h2, h3, p { text-wrap: pretty; }
   line-height: 1.55;
 }
 .keywords strong { color: var(--ink-soft); font-weight: 600; }
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 0;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+  line-height: 1.4;
+}
+.chip.author { background: #fff; }
+.chip.inst { background: var(--accent-soft); border-color: transparent; color: var(--accent); font-weight: 600; }
+.chip.kw { background: transparent; color: var(--muted); }
+.chip abbr { text-decoration: none; border: 0; }
+.chips-label {
+  align-self: center;
+  margin-right: 2px;
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
 
 .download {
   align-self: start;
