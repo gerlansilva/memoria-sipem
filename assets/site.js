@@ -1,87 +1,574 @@
 'use strict';
-const $=s=>document.querySelector(s);
-const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const normalize=v=>String(v??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR');
-const safeURL=v=>/^https?:\/\//i.test(v||'')?escapeHTML(v):'';
-const downloadIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></svg>';
-let data,view='history',selected=1,query='',group='',sort='recent',page=1;
-const pageSize=12;
-const editionById=id=>data.editions.find(e=>e.id===Number(id));
-const recordsFor=id=>data.records.filter(r=>!id||Number(r.edition)===Number(id));
-const route=(v,id)=>'#'+(v==='history'?'historia':'anais')+(id?'?edicao='+id:'');
-function index(){
- $('#edition-list').innerHTML=(view==='archives'?`<a class="edition-link all" href="#anais" ${!selected?'aria-current="true"':''}>Todas as edições</a>`:'')+data.editions.map(e=>`<a href="${route(view,e.id)}" class="edition-link" ${e.id===selected?'aria-current="true"':''} aria-label="${e.roman} SIPEM, ${e.year}, ${escapeHTML(e.place)}"><span class="roman">${e.roman}</span><span class="year">${e.year}</span><small>${view==='history'?escapeHTML(e.place.match(/\(([^)]+)\)/)?.[1]||'On-line'):recordsFor(e.id).length?'('+recordsFor(e.id).length+')':'↗'}</small></a>`).join('');
-}
-function history(){
- const e=editionById(selected);const n=recordsFor(e.id).length;
- $('#surface').innerHTML=`<div class="edition-top"><h2>${e.roman} Seminário Internacional de Pesquisa em Educação Matemática</h2><span class="folio">${String(e.id).padStart(2,'0')} / 09</span></div>
- <div class="edition-display"><div class="edition-copy"><h3 class="place">${escapeHTML(e.place)}</h3><p class="dates">${escapeHTML(e.dates)}</p>${!e.theme.startsWith('Tema geral não')?`<p class="theme">${escapeHTML(e.theme)}</p>`:''}</div><figure class="edition-logo"><img src="${escapeHTML(e.logo)}" alt="Marca original do ${e.roman} SIPEM" width="320" height="230"></figure></div>
- <div class="edition-facts"><dl><div><dt>trabalhos na edição*</dt><dd>${e.works}</dd></div><div><dt>Grupos de Trabalho</dt><dd>${e.gts.length}</dd></div></dl>${n?`<a class="primary-link" href="${route('archives',e.id)}">Pesquisar nos anais <span aria-hidden="true">→</span></a>`:`<a class="primary-link" href="${safeURL(e.url)}" target="_blank" rel="noopener">Consultar anais <span aria-hidden="true">↗</span></a>`}</div>
- ${e.id===1?'<p class="history-description">Criado pela Sociedade Brasileira de Educação Matemática em 2000, o SIPEM consolidou um espaço de encontro, debate e intercâmbio entre pesquisadores da Educação Matemática.</p>':''}
- <details class="group-details"><summary>Grupos de Trabalho desta edição</summary><ol class="group-list">${e.gts.map(g=>`<li>${escapeHTML(typeof g==='string'?g:g.name)}${g.coordination?`<small>${escapeHTML(g.responsibilityLabel||'Coordenação')}: ${escapeHTML(g.coordination)}</small>`:''}</li>`).join('')}</ol></details>
- <p class="source-note">* Quantitativo histórico da edição, que pode diferir do número de trabalhos disponíveis nesta busca. ${n?`${n} registros desta edição estão indexados no acervo.`:'Os anais desta edição são consultados na fonte externa.'} Dados preservados do <a href="https://gerlansilva.github.io/memoria-sipem/#historia" target="_blank" rel="noopener">Memória SIPEM</a>; referência histórica: <a href="https://www.sbembrasil.org.br/eventos/index.php/sipem/historico" target="_blank" rel="noopener">SBEM</a>.</p>
- <nav class="edition-paging" aria-label="Percorrer edições">${e.id>1?`<a href="${route('history',e.id-1)}">← ${editionById(e.id-1).roman} SIPEM · ${editionById(e.id-1).year}</a>`:'<span></span>'}${e.id<9?`<a href="${route('history',e.id+1)}">${editionById(e.id+1).roman} SIPEM · ${editionById(e.id+1).year} →</a>`:''}</nav>`;
-}
-function archives(){
- const e=editionById(selected);const groups=new Map();recordsFor(selected).forEach(r=>{if(r.gt){const label=Number(selected)===7?({GT01:'GT01 — Matemática na Educação Infantil e nos Anos Iniciais do Ensino Fundamental',GT02:'GT02 — Educação Matemática nos Anos Finais do Ensino Fundamental e Ensino Médio',GT03:'GT03 — Currículo e Educação Matemática',GT04:'GT04 — Educação Matemática no Ensino Superior',GT05:'GT05 — História da Matemática e Cultura',GT06:'GT06 — Educação Matemática: Novas Tecnologias e Educação a Distância',GT07:'GT07 — Formação de Professores que Ensinam Matemática',GT08:'GT08 — Avaliação em Educação Matemática',GT09:'GT09 — Processos Cognitivos e Linguísticos em Educação Matemática',GT10:'GT10 — Modelagem Matemática',GT11:'GT11 — Filosofia da Educação Matemática',GT12:'GT12 — Ensino de Probabilidade e Estatística',GT13:'GT13 — Diferença, Inclusão e Educação Matemática',GT14:'GT14 — Didática da Matemática',GT15:'GT15 — História da Educação Matemática'})[r.gt]:(r.section||r.gt);groups.set(r.gt,label||r.section||r.gt)}});if(!groups.has(group))group='';
- $('#surface').innerHTML=`<div class="archive-title"><div><h2>${e?e.roman+' SIPEM':'Todas as edições'}</h2><p>${e?escapeHTML(e.place)+' · '+e.year:'Edições com trabalhos indexados'}</p></div>${e?`<img src="${escapeHTML(e.logo)}" alt="Marca do ${e.roman} SIPEM" width="110" height="64">`:''}</div>
- <form class="search-form" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg><input id="search" type="search" aria-label="Pesquisar títulos, autorias, instituições, resumos e palavras-chave" placeholder="O que você procura no acervo?" value="${escapeHTML(query)}"><button type="submit">Buscar</button></form>
- <div class="filter-row"><div class="filter-control"><label for="gt">Grupo de Trabalho</label><select id="gt"><option value="">Todos os GTs</option>${[...groups].sort((a,b)=>a[0].localeCompare(b[0],'pt-BR',{numeric:true})).map(([k,v])=>`<option value="${escapeHTML(k)}" ${k===group?'selected':''}>${escapeHTML(v)}</option>`).join('')}</select></div><button class="text-button" id="reset">Limpar busca</button></div>
- <div class="result-head"><h3 id="result-count" role="status" aria-live="polite"></h3><select id="sort" aria-label="Ordenar trabalhos"><option value="recent">Mais recentes</option><option value="oldest">Mais antigos</option><option value="title">Título: A–Z</option></select></div><div id="results"></div><div id="pagination"></div>`;
- $('#sort').value=sort;
- $('.search-form').addEventListener('submit',ev=>{ev.preventDefault();query=$('#search').value;page=1;results()});
- $('#search').addEventListener('input',()=>{query=$('#search').value;page=1;results()});
- $('#gt').addEventListener('change',()=>{group=$('#gt').value;page=1;results()});
- $('#sort').addEventListener('change',()=>{sort=$('#sort').value;page=1;results()});
- $('#reset').addEventListener('click',()=>{query='';group='';page=1;$('#search').value='';$('#gt').value='';results();$('#search').focus()});results();
-}
-function article(r){
- const url=safeURL([2,7].includes(Number(r.edition))?r.drivePdf:(r.drivePdf||r.pdf||r.officialUrl));const e=editionById(r.edition);
- const keywords=(r.keywords||[]).filter(k=>k&&!/^não encontrad/i.test(k));const institutions=r.institutions||[];
- return `<article class="record"><div><div class="record-meta"><span class="gt">${escapeHTML(r.gt)}</span><span>${e.roman} SIPEM · ${r.year}</span>${Number(r.edition)===2?'<span>Resumo</span>':''}</div><h3>${url?`<a href="${url}" target="_blank" rel="noopener">${escapeHTML(r.title)}</a>`:escapeHTML(r.title)}</h3><p class="authors">${(r.authors||[]).map(escapeHTML).join('; ')||'Autoria não informada no registro.'}</p><details class="record-details"><summary>Resumo e informações</summary>${r.abstract&&!/^não encontrado$/i.test(r.abstract)?`<p class="abstract">${escapeHTML(r.abstract)}</p>`:'<p class="abstract">Resumo não disponível neste registro.</p>'}${institutions.length?`<p class="affiliations">${institutions.map(escapeHTML).join('; ')}</p>`:''}<p class="affiliations">${escapeHTML(r.section||r.gt)}</p>${keywords.length?`<p class="keywords"><strong>Palavras-chave</strong> · ${keywords.map(escapeHTML).join('; ')}</p>`:(Number(r.edition)===2?'<p class="keywords"><strong>Palavras-chave</strong> · Não identificadas automaticamente; ausência no original ainda não confirmada.</p>':'')}${Number(r.edition)===2?'<p class="affiliations">Registro preliminar. Título, autores e palavras-chave estão em revisão.</p>':''}</details></div>${url?`<a class="download" href="${url}" target="_blank" rel="noopener" aria-label="Abrir documento: ${escapeHTML(r.title)}">${downloadIcon}<span>${/pdf/i.test(r.accessLabel||'')||r.drivePdf||r.pdf?'PDF':'Abrir'}</span></a>`:'<span class="unavailable">Sem PDF</span>'}</article>`;
-}
-function results(){
- const terms=normalize(query).trim().split(/\s+/).filter(Boolean);
- const rows=recordsFor(selected).filter(r=>(!group||r.gt===group)&&terms.every(t=>r.searchText.includes(t))).sort((a,b)=>sort==='title'?a.title.localeCompare(b.title,'pt-BR'):((sort==='oldest'?a.year-b.year:b.year-a.year)||a.title.localeCompare(b.title,'pt-BR')));
- const max=Math.max(1,Math.ceil(rows.length/pageSize));page=Math.min(page,max);
- $('#result-count').textContent=rows.length.toLocaleString('pt-BR')+' trabalho'+(rows.length===1?'':'s');
- const e=editionById(selected);
- $('#results').innerHTML=rows.length?rows.slice((page-1)*pageSize,page*pageSize).map(article).join(''):`<div class="empty"><h3>${selected&&!recordsFor(selected).length?'Anais disponíveis na fonte original':'Nenhum trabalho encontrado'}</h3><p>${selected&&!recordsFor(selected).length?'Esta edição ainda não possui trabalhos indexados na busca do acervo.':'Tente outro termo ou retire o filtro de Grupo de Trabalho.'}</p>${selected&&!recordsFor(selected).length?`<a class="primary-link" href="${safeURL(e.url)}" target="_blank" rel="noopener">Consultar anais do ${e.roman} SIPEM ↗</a>`:''}</div>`;
- $('#pagination').innerHTML=rows.length>pageSize?`<nav class="pagination" aria-label="Páginas de resultados"><button id="prev" ${page===1?'disabled':''}>← Anterior</button><span>Página ${page} de ${max}</span><button id="next" ${page===max?'disabled':''}>Próxima →</button></nav>`:'';
- $('#prev')?.addEventListener('click',()=>{page--;results();$('.result-head').scrollIntoView({block:'start'})});$('#next')?.addEventListener('click',()=>{page++;results();$('.result-head').scrollIntoView({block:'start'})});
-}
-function navigate(){
- const [path,params]=location.hash.slice(1).split('?');view=path==='anais'?'archives':'history';const id=Number(new URLSearchParams(params).get('edicao'));selected=editionById(id)?id:view==='history'?1:0;page=1;
- document.querySelectorAll('[data-view]').forEach(a=>{if(a.dataset.view===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
- $('#page-title').textContent=view==='history'?'História do SIPEM':'Anais do SIPEM';$('#section-label').textContent=view==='history'?'2000 — 2024':'ACERVO DE TRABALHOS';$('#page-intro').innerHTML=view==='history'?'Nove edições de encontros e pesquisa<br>em Educação Matemática.':'Títulos, autorias, instituições,<br>resumos e palavras-chave.';
- document.title=(view==='history'?'História':'Anais')+' — Memória SIPEM';index();view==='history'?history():archives();
-}
-const II_FILES = ["ii-2003-gt01.json","ii-2003-gt02-03.json","ii-2003-gt04.json","ii-2003-gt05.json","ii-2003-gt06.json","ii-2003-gt07.json","ii-2003-gt08.json","ii-2003-gt09.json","ii-2003-gt10.json","ii-2003-gt11.json","ii-2003-gt12.json"];
-const VII_FILES = ["records-vii-2018-gt01.json","records-vii-2018-gt02.json","vii-2018-gt03-a.json","vii-2018-gt03-b.json","vii-2018-gt04.json","vii-2018-gt05.json","vii-2018-gt06.json","vii-2018-gt07-a.json","vii-2018-gt07-b.json","vii-2018-gt08.json","vii-2018-gt09.json","vii-2018-gt10.json","vii-2018-gt11.json","vii-2018-gt12.json","vii-2018-gt13.json","vii-2018-gt14.json","vii-2018-gt15.json"];
-// A versão do catálogo acompanha o commit da atualização do VII SIPEM.
-// Cache-busting evita exibir versões anteriores do acervo no GitHub Pages.
-const catalogVersion='ii-2003-resumos-20261029-2';
-const loadJSON=async file=>{
- const response=await fetch('data/'+file+'?v='+catalogVersion,{cache:'no-store'});
- if(!response.ok)throw Error('Não foi possível carregar '+file+' ('+response.status+')');
- return response.json();
+
+const $ = (selector, context = document) => context.querySelector(selector);
+const $$ = (selector, context = document) => [...context.querySelectorAll(selector)];
+const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+const normalize = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR');
+const safeURL = value => (/^https?:\/\//i.test(value || '') ? escapeHTML(value) : '');
+const cityName = place => place.replace(/\s*\([^)]*\)\s*$/, '');
+const downloadIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></svg>';
+const handIcon = (direction = 'up') => {
+  const modifier = direction === 'right' ? ' hand-right' : direction === 'left' ? ' hand-left' : '';
+  return `<svg class="hand-icon${modifier}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12V4a2 2 0 0 1 4 0v8-2a2 2 0 0 1 4 0v2a2 2 0 0 1 4 0v5c0 3-2 5-5 5h-3c-2 0-3-1-4-3l-4-5a2 2 0 0 1 3-3l1 1"/><path d="M4 3 2 1M16 3l2-2M3 8H1"/></svg>`;
 };
-Promise.allSettled([loadJSON('acervo.json'),...VII_FILES.map(loadJSON),...II_FILES.map(loadJSON)]).then(results=>{
- if(results[0].status!=='fulfilled')throw results[0].reason;
- data=results[0].value;
- const existing=new Set(data.records.map(r=>r.id));
- let failures=[];
- const ALL_FILES=[...VII_FILES,...II_FILES];
- results.slice(1).forEach((item,i)=>{
-   if(item.status==='rejected'){failures.push(ALL_FILES[i]);return;}
-   item.value.forEach(r=>{
-     if(!r.drivePdf||!/^https:\/\/drive\.google\.com\/file\/d\//.test(r.drivePdf)){
-       console.warn('Registro VII SIPEM sem URL de PDF válida:',r.id);return;
-     }
-     if(!existing.has(r.id)){data.records.push(r);existing.add(r.id)}
-   });
- });
- if(failures.length)console.error('Grupos não carregados:',failures);
- data.records.forEach(r=>r.searchText=normalize([r.id,r.title,...(r.authors||[]),...(r.authorNames||[]),...(r.institutions||[]),r.abstract,...(r.keywords||[]),r.gt,r.section].join(' ')));
- navigate();window.addEventListener('hashchange',navigate);
-}).catch(err=>{console.error(err);$('#surface').innerHTML='<p>Não foi possível carregar o acervo. <a href="">Recarregar a página</a>.</p>'});
+
+const pageSize = 12;
+let data;
+let view = 'home';
+let selected = 1;
+let query = '';
+let group = '';
+let sort = 'recent';
+let page = 1;
+
+const editionById = id => data.editions.find(edition => edition.id === Number(id));
+const recordsFor = id => data.records.filter(record => !id || Number(record.edition) === Number(id));
+const GT07_LABELS = {
+  GT01: 'GT01 — Matemática na Educação Infantil e nos Anos Iniciais do Ensino Fundamental',
+  GT02: 'GT02 — Educação Matemática nos Anos Finais do Ensino Fundamental e Ensino Médio',
+  GT03: 'GT03 — Currículo e Educação Matemática',
+  GT04: 'GT04 — Educação Matemática no Ensino Superior',
+  GT05: 'GT05 — História da Matemática e Cultura',
+  GT06: 'GT06 — Educação Matemática: Novas Tecnologias e Educação a Distância',
+  GT07: 'GT07 — Formação de Professores que Ensinam Matemática',
+  GT08: 'GT08 — Avaliação em Educação Matemática',
+  GT09: 'GT09 — Processos Cognitivos e Linguísticos em Educação Matemática',
+  GT10: 'GT10 — Modelagem Matemática',
+  GT11: 'GT11 — Filosofia da Educação Matemática',
+  GT12: 'GT12 — Ensino de Probabilidade e Estatística',
+  GT13: 'GT13 — Diferença, Inclusão e Educação Matemática',
+  GT14: 'GT14 — Didática da Matemática',
+  GT15: 'GT15 — História da Educação Matemática'
+};
+const IES_SIGLAS = {
+  'pontificia universidade catolica de sao paulo': 'PUC-SP',
+  'pontificia universidade catolica de minas gerais': 'PUC Minas',
+  'pontificia universidade catolica do rio grande do sul': 'PUCRS',
+  'pontificia universidade catolica do rio de janeiro': 'PUC-Rio',
+  'pontificia universidade catolica de campinas': 'PUC-Campinas',
+  'universidade federal de pernambuco': 'UFPE',
+  'universidade federal rural de pernambuco': 'UFRPE',
+  'universidade de pernambuco': 'UPE',
+  'universidade federal de mato grosso do sul': 'UFMS',
+  'universidade estadual de mato grosso do sul': 'UEMS',
+  'universidade estadual de londrina': 'UEL',
+  'universidade federal de minas gerais': 'UFMG',
+  'universidade do estado de minas gerais': 'UEMG',
+  'universidade bandeirante de sao paulo': 'Uniban-SP',
+  'universidade anhanguera de sao paulo': 'Anhanguera-SP',
+  'universidade de sao paulo': 'USP',
+  'universidade luterana do brasil': 'ULBRA',
+  'universidade luterana do': 'ULBRA',
+  'universidade federal de ouro preto': 'UFOP',
+  'universidade federal de juiz de fora': 'UFJF',
+  'universidade estadual de feira de santana': 'UEFS',
+  'universidade estadual de santa cruz': 'UESC',
+  'universidade tecnologica federal do parana': 'UTFPR',
+  'universidade estadual paulista': 'UNESP',
+  'universidade estadual paulista julio de mesquita filho': 'UNESP',
+  'universidade de brasilia': 'UnB',
+  'universidade estadual de campinas': 'UNICAMP',
+  'universidade federal do rio de janeiro': 'UFRJ',
+  'universidade federal do rio janeiro': 'UFRJ',
+  'universidade federal rural do rio de janeiro': 'UFRRJ',
+  'universidade do estado do rio de janeiro': 'UERJ',
+  'universidade estadual do rio de janeiro': 'UERJ',
+  'universidade federal do estado do rio de janeiro': 'UNIRIO',
+  'centro universitario franciscano': 'UNIFRA',
+  'universidade federal do espirito santo': 'UFES',
+  'universidade santa ursula': 'USU',
+  'universidade federal de uberlandia': 'UFU',
+  'universidade federal de goias': 'UFG',
+  'universidade estadual de goias': 'UEG',
+  'universidade cruzeiro do sul': 'UNICSUL',
+  'universidade federal de sao carlos': 'UFSCar',
+  'universidade estadual de maringa': 'UEM',
+  'universidade federal do rio grande do sul': 'UFRGS',
+  'universidade federal do ceara': 'UFC',
+  'universidade sao francisco': 'USF',
+  'universidade estadual do oeste do parana': 'UNIOESTE',
+  'universidade estadual do centro-oeste do parana': 'UNICENTRO',
+  'universidade estadual do parana': 'UNESPAR',
+  'universidade estadual do sudoeste da bahia': 'UESB',
+  'universidade federal do rio grande do norte': 'UFRN',
+  'universidade federal da bahia': 'UFBA',
+  'universidade regional do noroeste do estado do rio grande do sul': 'UNIJUÍ',
+  'universidade estadual de ponta grossa': 'UEPG',
+  'universidade federal fluminense': 'UFF',
+  'universidade federal de sergipe': 'UFS',
+  'centro universitario la salle': 'UNILASALLE',
+  'universidade metodista de piracicaba': 'UNIMEP',
+  'universidade federal do para': 'UFPA',
+  'universidade federal do parana': 'UFPR',
+  'universidade regional de blumenau': 'FURB',
+  'universidade federal do rio grande': 'FURG',
+  'universidade estadual da paraiba': 'UEPB',
+  'universidade federal de alagoas': 'UFAL',
+  'universidade federal de sao paulo': 'UNIFESP',
+  'universidade federal do abc': 'UFABC',
+  'universidade nove de julho': 'UNINOVE',
+  'universidade federal de santa catarina': 'UFSC',
+  'universidade federal da grande dourados': 'UFGD',
+  'universidade federal do pampa': 'UNIPAMPA',
+  'universidade federal de santa maria': 'UFSM',
+  'universidade do vale do rio dos sinos': 'UNISINOS',
+  'instituto federal de educacao ciencia e tecnologia do estado do ceara': 'IFCE',
+  'instituto federal de minas gerais': 'IFMG',
+  'instituto federal de sao paulo': 'IFSP',
+  'instituto federal de santa catarina': 'IFSC',
+  'instituto federal do espirito santo': 'IFES',
+  'instituto federal da bahia': 'IFBA',
+  'instituto federal de mato grosso': 'IFMT',
+  'secretaria de educacao do distrito federal': 'SEEDF',
+  'prefeitura de juiz de fora': 'PJF',
+  'centro universitario fei': 'FEI',
+  'faculdades oswaldo cruz': 'FOC',
+  'inep': 'Inep',
+  'unesp': 'UNESP',
+  'universidade bandeirante': 'UNIBAN',
+  'anhanguera uniban': 'Anhanguera-Uniban',
+  'instituto federal de educacao ciencia e tecnologia do espirito santo': 'IFES',
+  'universidade federal de sao joao del-rei': 'UFSJ',
+  'instituto federal fluminense': 'IFF',
+  'instituto federal do parana': 'IFPR',
+  'secretaria de estado de educacao do rio de janeiro': 'SEEDUC-RJ',
+  'centro universitario de maringa': 'UNICESUMAR',
+  'centro universitario serra dos orgaos': 'UNIFESO',
+  'centro universitario da fundacao santo andre': 'FSA',
+  'centro federal de educacao tecnologica celso suckow da fonseca': 'CEFET-RJ',
+  'centro federal de educacao tecnologica': 'CEFET',
+  'faculdades integradas de vitoria': 'FDV',
+  'universidade regional integrada do alto uruguai e das missoes': 'URI',
+  'universidade comunitaria da regiao de chapeco': 'UNOCHAPECÓ',
+  'universidade severino sombra': 'USS',
+  'secretaria municipal de educacao do rio de janeiro': 'SME-RJ',
+  'instituto federal minas gerais': 'IFMG',
+  'instituto federal de educacao ciencia e tecnologia da paraiba': 'IFPB',
+  'instituto federal de educacao ciencia e tecnologia de sao paulo': 'IFSP',
+  'instituto federal de ciencia e tecnologia de sao paulo': 'IFSP',
+  'instituto federal de ciencias e tecnologia de sao paulo': 'IFSP',
+  'instituto federal do amapa': 'IFAP',
+  'instituto nacional de estudos e pesquisas educacionais': 'INEP',
+  'cederj': 'CEDERJ',
+  'centro de ensino superior anisio teixeira': 'CESAT',
+  'faculdades atibaia': 'FAT',
+  'faculdade da aldeia de carapicuiba': 'FAC',
+  'faculdades integradas hebraico-brasileiras renascenca': 'FIHR',
+  'faculdade de ciencias humanas de pedro leopoldo': 'FCHPL',
+  'faculdade de filosofia e letras de diamantina': 'FAFIDIA',
+  'faculdade cenecista nossa senhora dos anjos': 'FACENSA',
+  'senai cetiqt': 'SENAI/CETIQT',
+  'institute of education': 'IOE-UCL',
+  'western university': 'Western University',
+  'colegio de aplicacao joao xxiii': 'CAp-UFJF',
+  'colegio pedro ii': 'CPII',
+  'universidade de granada': 'UGR',
+  'universidade do sudoeste da bahia': 'UESB',
+  'universidade do vale do sapucai': 'UNIVAS',
+  'puc': 'PUC-SP',
+  'puc sao paulo': 'PUC-SP',
+  'unicesumar': 'UNICESUMAR',
+  'secretaria de educacao do estado de roraima': 'SEED-RR',
+  'secretaria de educacao do estado de pernambuco': 'SEE-PE',
+  'secretaria de educacao do rio de janeiro': 'SEEDUC-RJ',
+  'secretaria de estado da educacao do parana': 'SEED-PR',
+  'secretaria de educacao de curitiba': 'SME-Curitiba',
+  'secretaria municipal de educacao de barreiras': 'SME-Barreiras',
+  'pontificia universidade catolica do parana': 'PUCPR',
+  'universidade federal de mato grosso': 'UFMT',
+  'universidade do grande abc': 'UniABC',
+  'universidade do vale do itajai': 'UNIVALI',
+  'universidade do estado do para': 'UEPA',
+  'universidade do estado de mato grosso': 'UNEMAT',
+  'universidade estadual do ceara': 'UECE',
+  'universidade de passo fundo': 'UPF',
+  'universidade sao judas tadeu': 'USJT',
+  'universidade estadual do rio grande do sul': 'UERGS',
+  'universidade paulista': 'UNIP',
+  'universidade catolica do salvador': 'UCSAL',
+  'centro universitario de belo horizonte': 'UNI-BH',
+  'faculdades jorge amado': 'FJA',
+  'universidade do oeste paulista': 'UNOESTE',
+  'faculdade de educacao da universidade estadual de campinas': 'FE-UNICAMP',
+  'faculdade de educacao da universidade de sao paulo': 'FEUSP',
+  'faculdade de educacao da universidade federal de minas gerais': 'FAE-UFMG',
+  'faculdades integradas toledo de aracatuba': 'FITA',
+};
+const iesKey = name => String(name).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[,.“”"]/g, '').replace(/\s+/g, ' ').trim();
+const iesOne = part => {
+  const clean = part.replace(/\(.*?\)/g, ' ').trim();
+  const candidates = [clean, clean.split(/\s*[-–—]\s*/)[0], ...clean.split(',').map(s => s.trim())];
+  const found = candidates.map(c => IES_SIGLAS[iesKey(c)]).find(Boolean);
+  return found || part.trim();
+};
+const iesSigla = name => String(name).split(/\s*[\/;]\s*|\s+e\s+(?=(?:Universidade|Instituto|Faculdade|Centro)\b)/).map(iesOne).join(' / ');
+const iesTag = name => `<abbr title="${escapeHTML(name)}">${escapeHTML(iesSigla(name))}</abbr>`;
+const authorHTML = author => {
+  const match = String(author).match(/^(.*?)\s*\(([^()]+)\)\s*$/);
+  return match ? `${escapeHTML(match[1])} (${iesTag(match[2])})` : escapeHTML(author);
+};
+const groupLabel = record => Number(record.edition) === 7 ? (GT07_LABELS[record.gt] || record.gt) : (record.section || record.gt || '');
+const route = (target, id) => '#' + ({ history: 'historia', archives: 'anais' }[target] || 'inicio') + (id ? '?edicao=' + id : '');
+const themeOf = edition => edition.theme && !edition.theme.startsWith('Tema geral não') ? edition.theme : '';
+const editionLabel = edition => `${edition.roman} SIPEM · ${edition.year}`;
+
+const II_FILES = ['ii-2003-gt01.json', 'ii-2003-gt02-03.json', 'ii-2003-gt04.json', 'ii-2003-gt05.json', 'ii-2003-gt06.json', 'ii-2003-gt07.json', 'ii-2003-gt08.json', 'ii-2003-gt09.json', 'ii-2003-gt10.json', 'ii-2003-gt11.json', 'ii-2003-gt12.json'];
+const VII_FILES = ['records-vii-2018-gt01.json', 'records-vii-2018-gt02.json', 'vii-2018-gt03-a.json', 'vii-2018-gt03-b.json', 'vii-2018-gt04.json', 'vii-2018-gt05.json', 'vii-2018-gt06.json', 'vii-2018-gt07-a.json', 'vii-2018-gt07-b.json', 'vii-2018-gt08.json', 'vii-2018-gt09.json', 'vii-2018-gt10.json', 'vii-2018-gt11.json', 'vii-2018-gt12.json', 'vii-2018-gt13.json', 'vii-2018-gt14.json', 'vii-2018-gt15.json'];
+const extraFiles = [...VII_FILES, ...II_FILES];
+
+// A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
+const catalogVersion = 'ii-2003-resumos-20261029-3';
+const loadJSON = async file => {
+  const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
+  if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
+  return response.json();
+};
+
+function indexList() {
+  const all = view === 'archives'
+    ? `<a class="edition-link all" href="#anais" ${!selected ? 'aria-current="true"' : ''}><span class="edition-name">Todas as edições</span><small>Acervo completo</small></a>`
+    : '';
+  return all + data.editions.map(edition => {
+    const count = recordsFor(edition.id).length;
+    const meta = view === 'history'
+      ? cityName(edition.place)
+      : count ? count.toLocaleString('pt-BR') + ' trabalhos' : 'Fonte externa';
+    return `<a class="edition-link" href="${route(view, edition.id)}" ${edition.id === selected ? 'aria-current="true"' : ''}>
+      <span class="edition-name"><span class="roman">${edition.roman}<span class="sr-only"> SIPEM</span></span><span class="year">${edition.year}</span></span>
+      <small>${escapeHTML(meta)}</small>
+    </a>`;
+  }).join('');
+}
+
+function home() {
+  const total = data.records.length;
+  const indexed = data.editions.filter(edition => recordsFor(edition.id).length).length;
+  const timeline = data.editions.map(edition => {
+    const count = recordsFor(edition.id).length;
+    const action = count
+      ? `<a class="timeline-count" href="${route('archives', edition.id)}">${count.toLocaleString('pt-BR')} trabalhos ${handIcon()}</a>`
+      : `<a class="timeline-count muted" href="${safeURL(edition.url)}" target="_blank" rel="noopener">Fonte oficial ${handIcon()}<span class="sr-only"> (abre em nova aba)</span></a>`;
+    return `<li class="timeline-item">
+      <span class="timeline-year">${edition.year}</span>
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <a class="timeline-card" href="${route('history', edition.id)}">
+        <span class="timeline-roman">${edition.roman} SIPEM</span>
+        <span class="timeline-place">${escapeHTML(edition.place)}</span>
+        ${themeOf(edition) ? `<span class="timeline-theme">${escapeHTML(themeOf(edition))}</span>` : ''}
+      </a>
+      ${action}
+    </li>`;
+  }).join('');
+
+  $('#home-view').innerHTML = `
+  <section class="hero">
+    <svg class="hero-trace" viewBox="0 0 96 92" aria-hidden="true"><path class="memory-trace trace-one" d="M8 70C11 36 25 22 40 43c10 14 14 27 23 20 10-8 11-28 25-47"/><path class="memory-trace trace-two" d="M18 78c3-28 13-36 24-20 11 16 17 24 26 16 9-8 13-24 20-34"/><path class="memory-trace trace-three" d="M30 80c2-13 7-18 13-11 8 9 14 14 22 6 7-7 12-16 17-21"/></svg>
+    <p class="eyebrow">Acervo digital · 2000 — 2024</p>
+    <h1>Memória do <em>SIPEM</em></h1>
+    <p class="hero-lede">História, edições e anais do Seminário Internacional de Pesquisa em Educação Matemática — um acervo aberto para consulta, pesquisa e preservação.</p>
+    <form class="hero-search" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg>
+      <input id="home-search" type="search" aria-label="Pesquisar títulos, autorias, instituições, resumos e palavras-chave" placeholder="Busque por título, autoria, instituição ou palavra-chave">
+      <button type="submit">Buscar no acervo</button>
+    </form>
+    <div class="hero-actions">
+      <a class="button primary" href="#anais">Explorar os anais ${handIcon()}</a>
+      <a class="button ghost" href="#historia">Conhecer a história</a>
+    </div>
+    <dl class="hero-stats">
+      <div><dt>Edições</dt><dd>${data.editions.length}</dd></div>
+      <div><dt>Trabalhos indexados</dt><dd>${total.toLocaleString('pt-BR')}</dd></div>
+      <div><dt>Período</dt><dd>2000–2024</dd></div>
+    </dl>
+  </section>
+
+  <section class="section">
+    <header class="section-head">
+      <div>
+        <p class="eyebrow">Linha do tempo</p>
+        <h2>Nove edições, uma trajetória</h2>
+      </div>
+      <p>De Serra Negra a Natal, o SIPEM acompanhou a consolidação da pesquisa em Educação Matemática no Brasil.</p>
+    </header>
+    <ol class="timeline">${timeline}</ol>
+    <p class="timeline-note">${indexed} edições possuem trabalhos indexados neste acervo. As edições III (2006) e IV (2009) podem ser consultadas na fonte oficial da SBEM.</p>
+  </section>
+
+  <section class="section about">
+    <header class="section-head">
+      <div>
+        <p class="eyebrow">Sobre o acervo</p>
+        <h2>Um catálogo feito para consulta</h2>
+      </div>
+    </header>
+    <div class="about-grid">
+      <article class="about-card">
+        <span class="about-number">01</span>
+        <h3>Registros bibliográficos</h3>
+        <p>Títulos, autorias, instituições, resumos e palavras-chave reunidos edição por edição, com busca local em todo o acervo.</p>
+      </article>
+      <article class="about-card">
+        <span class="about-number">02</span>
+        <h3>Fontes preservadas</h3>
+        <p>Cada trabalho mantém o vínculo com o documento original e com os anais oficiais, preservando a origem da informação.</p>
+      </article>
+      <article class="about-card">
+        <span class="about-number">03</span>
+        <h3>Acervo em construção</h3>
+        <p>Os índices são ampliados e revisados progressivamente. Metadados ausentes não são inventados: permanecem identificados.</p>
+      </article>
+    </div>
+  </section>`;
+
+  $('.hero-search').addEventListener('submit', event => {
+    event.preventDefault();
+    const term = event.target.elements[0].value.trim();
+    location.hash = '#anais' + (term ? '?busca=' + encodeURIComponent(term) : '');
+  });
+}
+
+function history() {
+  const edition = editionById(selected);
+  const count = recordsFor(edition.id).length;
+  const theme = themeOf(edition);
+  const facts = [
+    { value: edition.works, label: 'trabalhos na edição' },
+    { value: edition.gts.length, label: 'grupos de trabalho' },
+    { value: count ? count.toLocaleString('pt-BR') : '—', label: 'registros no acervo' }
+  ];
+
+  $('#surface').innerHTML = `
+  <article class="edition-hero">
+    <div class="edition-copy">
+      <p class="eyebrow">${edition.roman} SIPEM · ${edition.year}</p>
+      <h2 class="place">${escapeHTML(edition.place)}</h2>
+      <p class="dates">${escapeHTML(edition.dates)}</p>
+      ${theme ? `<p class="theme">${escapeHTML(theme)}</p>` : ''}
+      <div class="edition-actions">
+        ${count
+          ? `<a class="button primary" href="${route('archives', edition.id)}">Pesquisar nos anais ${handIcon()}</a>`
+          : `<a class="button primary" href="${safeURL(edition.url)}" target="_blank" rel="noopener">Consultar anais na fonte ${handIcon()}<span class="sr-only"> (abre em nova aba)</span></a>`}
+      </div>
+    </div>
+    <figure class="edition-logo">
+      <span class="logo-halo" aria-hidden="true"></span>
+      <img src="${escapeHTML(edition.logo)}" alt="Marca original do ${edition.roman} SIPEM" width="320" height="230">
+    </figure>
+  </article>
+
+  <dl class="fact-strip">
+    ${facts.map(fact => `<div class="fact"><dd>${escapeHTML(String(fact.value))}</dd><dt>${fact.label}</dt></div>`).join('')}
+  </dl>
+
+  ${edition.id === 1 ? '<p class="history-description">Criado pela Sociedade Brasileira de Educação Matemática em 2000, o SIPEM consolidou um espaço de encontro, debate e intercâmbio entre pesquisadores da Educação Matemática.</p>' : ''}
+
+  <details class="group-details">
+    <summary>Grupos de Trabalho desta edição <span>${edition.gts.length}</span></summary>
+    <ol class="group-list">
+      ${edition.gts.map(gt => `<li><span>${escapeHTML(typeof gt === 'string' ? gt : gt.name)}</span>${gt.coordination ? `<small>${escapeHTML(gt.responsibilityLabel || 'Coordenação')}: ${escapeHTML(gt.coordination)}</small>` : ''}</li>`).join('')}
+    </ol>
+  </details>
+
+  <p class="source-note">* O quantitativo histórico da edição pode diferir do número de trabalhos disponíveis nesta busca. ${count ? `${count.toLocaleString('pt-BR')} registros desta edição estão indexados no acervo.` : 'Os anais desta edição são consultados na fonte externa.'} Dados preservados do <a href="https://gerlansilva.github.io/memoria-sipem/#historia" target="_blank" rel="noopener">Memória SIPEM</a>; referência histórica: <a href="https://www.sbembrasil.org.br/eventos/index.php/sipem/historico" target="_blank" rel="noopener">SBEM</a>.</p>
+
+  <nav class="edition-paging" aria-label="Percorrer edições">
+    ${edition.id > 1 ? `<a href="${route('history', edition.id - 1)}"><span>${handIcon('left')} Edição anterior</span><strong>${editionLabel(editionById(edition.id - 1))}</strong></a>` : '<span></span>'}
+    ${edition.id < data.editions.length ? `<a class="next" href="${route('history', edition.id + 1)}"><span>Próxima edição ${handIcon('right')}</span><strong>${editionLabel(editionById(edition.id + 1))}</strong></a>` : ''}
+  </nav>`;
+}
+
+function archives() {
+  const edition = editionById(selected);
+  const groups = new Map();
+  recordsFor(selected).forEach(record => {
+    if (!record.gt) return;
+    const label = groupLabel(record);
+    groups.set(label, label);
+  });
+  if (!groups.has(group)) group = '';
+
+  $('#surface').innerHTML = `
+  <header class="archive-head">
+    <div>
+      <h2>${edition ? `${edition.roman} SIPEM · ${edition.year}` : 'Todas as edições'}</h2>
+      <p class="archive-sub">${edition ? `${escapeHTML(edition.place)} · ${edition.dates}` : 'Edições com trabalhos indexados'}</p>
+    </div>
+    ${edition ? `<img class="archive-logo" src="${escapeHTML(edition.logo)}" alt="Marca do ${edition.roman} SIPEM" width="110" height="64">` : ''}
+  </header>
+
+  <div class="search-panel">
+    <form class="search-form" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg>
+      <input id="search" type="search" aria-label="Pesquisar títulos, autorias, instituições, resumos e palavras-chave" placeholder="O que você procura no acervo?" value="${escapeHTML(query)}">
+      <button type="submit">Buscar</button>
+    </form>
+    <div class="filter-row">
+      <label class="select-field" for="gt"><span>Grupo de Trabalho</span>
+        <select id="gt">
+          <option value="">Todos os GTs</option>
+          ${[...groups].sort((a, b) => a[0].localeCompare(b[0], 'pt-BR', { numeric: true })).map(([key, label]) => `<option value="${escapeHTML(key)}" ${key === group ? 'selected' : ''}>${escapeHTML(label)}</option>`).join('')}
+        </select>
+      </label>
+      <button class="text-button" id="reset" type="button">Limpar busca</button>
+    </div>
+  </div>
+
+  <div class="result-head">
+    <h3 id="result-count" role="status" aria-live="polite"></h3>
+    <label class="select-field sort-field" for="sort"><span>Ordenar</span>
+      <select id="sort" aria-label="Ordenar trabalhos">
+        <option value="recent">Mais recentes</option>
+        <option value="oldest">Mais antigos</option>
+        <option value="title">Título: A–Z</option>
+      </select>
+    </label>
+  </div>
+  <div id="results" class="results"></div>
+  <div id="pagination"></div>`;
+
+  $('#sort').value = sort;
+  $('.search-form').addEventListener('submit', event => { event.preventDefault(); query = $('#search').value; page = 1; results(); });
+  $('#search').addEventListener('input', () => { query = $('#search').value; page = 1; results(); });
+  $('#gt').addEventListener('change', () => { group = $('#gt').value; page = 1; results(); });
+  $('#sort').addEventListener('change', () => { sort = $('#sort').value; page = 1; results(); });
+  $('#reset').addEventListener('click', () => {
+    query = ''; group = ''; page = 1;
+    $('#search').value = ''; $('#gt').value = '';
+    results(); $('#search').focus();
+  });
+  results();
+}
+
+function article(record) {
+  const url = safeURL([2, 7].includes(Number(record.edition)) ? record.drivePdf : (record.drivePdf || record.pdf || record.officialUrl));
+  const edition = editionById(record.edition);
+  const keywords = (record.keywords || []).filter(keyword => keyword && !/^não encontrad/i.test(keyword));
+  const institutions = record.institutions || [];
+  const hasAbstract = record.abstract && !/^não encontrado$/i.test(record.abstract);
+  const accessLabel = /pdf/i.test(record.accessLabel || '') || record.drivePdf || record.pdf ? 'PDF' : 'Abrir';
+
+  return `<article class="record">
+    <div class="record-body">
+      <div class="record-meta">
+        <span class="tag">${escapeHTML(record.gt || 'SIPEM')}</span>
+        <span>${edition ? `${edition.roman} SIPEM · ${record.year}` : record.year}</span>
+        ${Number(record.edition) === 2 ? '<span class="tag soft">Resumo</span>' : ''}
+      </div>
+      <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
+      <p class="authors">${(record.authors || []).map(authorHTML).join('; ') || 'Autoria não informada no registro.'}</p>
+      <details class="record-details">
+        <summary>Resumo e informações</summary>
+        ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo não disponível neste registro.</p>'}
+        ${institutions.length ? `<p class="affiliations">${institutions.map(iesTag).join('; ')}</p>` : ''}
+        <p class="affiliations">${escapeHTML(record.section || record.gt || '')}</p>
+        ${keywords.length ? `<p class="keywords"><strong>Palavras-chave</strong> · ${keywords.map(escapeHTML).join('; ')}</p>` : (Number(record.edition) === 2 ? '<p class="keywords"><strong>Palavras-chave</strong> · Não identificadas automaticamente; ausência no original ainda não confirmada.</p>' : '')}
+        ${Number(record.edition) === 2 ? '<p class="affiliations">Registro preliminar. Título, autores e palavras-chave estão em revisão.</p>' : ''}
+      </details>
+    </div>
+    ${url
+      ? `<a class="download" href="${url}" target="_blank" rel="noopener" aria-label="${accessLabel} — ${escapeHTML(record.title)}">${downloadIcon}<span>${accessLabel}</span></a>`
+      : '<span class="unavailable">Sem PDF</span>'}
+  </article>`;
+}
+
+function results() {
+  const terms = normalize(query).trim().split(/\s+/).filter(Boolean);
+  const rows = recordsFor(selected)
+    .filter(record => (!group || groupLabel(record) === group) && terms.every(term => record.searchText.includes(term)))
+    .sort((a, b) => sort === 'title'
+      ? a.title.localeCompare(b.title, 'pt-BR')
+      : ((sort === 'oldest' ? a.year - b.year : b.year - a.year) || a.title.localeCompare(b.title, 'pt-BR')));
+  const max = Math.max(1, Math.ceil(rows.length / pageSize));
+  page = Math.min(page, max);
+
+  $('#result-count').textContent = rows.length.toLocaleString('pt-BR') + ' trabalho' + (rows.length === 1 ? '' : 's');
+  const edition = editionById(selected);
+
+  $('#results').innerHTML = rows.length
+    ? rows.slice((page - 1) * pageSize, page * pageSize).map(article).join('')
+    : `<div class="empty">
+        <p class="eyebrow">Sem resultados</p>
+        <h3>${selected && !recordsFor(selected).length ? 'Anais disponíveis na fonte original' : 'Nenhum trabalho encontrado'}</h3>
+        <p>${selected && !recordsFor(selected).length ? 'Esta edição ainda não possui trabalhos indexados na busca do acervo.' : 'Tente outro termo ou retire o filtro de Grupo de Trabalho.'}</p>
+        ${selected && !recordsFor(selected).length ? `<a class="button primary" href="${safeURL(edition.url)}" target="_blank" rel="noopener">Consultar anais do ${edition.roman} SIPEM ${handIcon()}<span class="sr-only"> (abre em nova aba)</span></a>` : ''}
+      </div>`;
+
+  $('#pagination').innerHTML = rows.length > pageSize
+    ? `<nav class="pagination" aria-label="Páginas de resultados">
+        <button id="prev" ${page === 1 ? 'disabled' : ''}>${handIcon('left')} Anterior</button>
+        <span>Página ${page} de ${max}</span>
+        <button id="next" ${page === max ? 'disabled' : ''}>Próxima ${handIcon('right')}</button>
+      </nav>`
+    : '';
+  $('#prev')?.addEventListener('click', () => { page--; results(); $('.result-head').scrollIntoView({ block: 'start', behavior: 'smooth' }); });
+  $('#next')?.addEventListener('click', () => { page++; results(); $('.result-head').scrollIntoView({ block: 'start', behavior: 'smooth' }); });
+}
+
+function navigate() {
+  const [path, params] = (location.hash.slice(1) || 'inicio').split('?');
+  const search = new URLSearchParams(params || '');
+  view = path === 'anais' ? 'archives' : path === 'historia' ? 'history' : path === 'sobre' ? 'about' : 'home';
+  const id = Number(search.get('edicao'));
+  selected = editionById(id) ? id : (view === 'archives' ? 0 : 1);
+  const term = search.get('busca');
+  if (term !== null) query = term;
+  page = 1;
+  group = '';
+
+  document.body.dataset.view = view;
+  $$('.main-nav [data-view]').forEach(link => {
+    if (link.dataset.view === view) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+
+  const homeView = $('#home-view');
+  const catalogView = $('#catalog-view');
+  const aboutView = $('#about-view');
+  homeView.hidden = view !== 'home';
+  aboutView.hidden = view !== 'about';
+  catalogView.hidden = view === 'home' || view === 'about';
+
+  if (view === 'home') {
+    document.title = 'Memória SIPEM — História e anais';
+    home();
+  } else if (view === 'about') {
+    document.title = 'Sobre — Memória SIPEM';
+  } else {
+    document.title = (view === 'history' ? 'História' : 'Anais') + ' — Memória SIPEM';
+    $('#page-title').textContent = view === 'history' ? 'História do SIPEM' : 'Anais do SIPEM';
+    $('#section-label').textContent = view === 'history' ? '2000 — 2024' : 'Acervo de trabalhos';
+    $('#page-intro').innerHTML = view === 'history'
+      ? 'Nove edições de encontros e pesquisa <br>em Educação Matemática.'
+      : 'Títulos, autorias, instituições, <br>resumos e palavras-chave.';
+    $('#edition-list').innerHTML = indexList();
+    view === 'history' ? history() : archives();
+  }
+}
+
+Promise.allSettled([loadJSON('acervo.json'), ...extraFiles.map(loadJSON)]).then(outcomes => {
+  if (outcomes[0].status !== 'fulfilled') throw outcomes[0].reason;
+  data = outcomes[0].value;
+  const existing = new Set(data.records.map(record => record.id));
+  const failures = [];
+  outcomes.slice(1).forEach((outcome, position) => {
+    if (outcome.status === 'rejected') { failures.push(extraFiles[position]); return; }
+    outcome.value.forEach(record => {
+      if (!record.drivePdf && !record.pdf && !record.officialUrl) {
+        console.warn('Registro sem link de documento:', record.id);
+        return;
+      }
+      if (!existing.has(record.id)) { data.records.push(record); existing.add(record.id); }
+    });
+  });
+  if (failures.length) console.error('Grupos não carregados:', failures);
+  data.records.forEach(record => {
+    record.searchText = normalize([record.id, record.title, ...(record.authors || []), ...(record.authorNames || []), ...(record.institutions || []), record.abstract, ...(record.keywords || []), record.gt, record.section].join(' '));
+  });
+  navigate();
+  window.addEventListener('hashchange', navigate);
+}).catch(error => {
+  console.error(error);
+  const message = '<p class="loading">Não foi possível carregar o acervo. <a href="">Recarregar a página</a>.</p>';
+  $('#home-view').innerHTML = message;
+  $('#surface').innerHTML = message;
+});
