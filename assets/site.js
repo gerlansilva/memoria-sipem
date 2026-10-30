@@ -263,68 +263,25 @@ function home() {
   $('#home-view').innerHTML = `
   <section class="hero">
     <svg class="hero-trace" viewBox="0 0 96 92" aria-hidden="true"><path class="memory-trace trace-one" d="M8 70C11 36 25 22 40 43c10 14 14 27 23 20 10-8 11-28 25-47"/><path class="memory-trace trace-two" d="M18 78c3-28 13-36 24-20 11 16 17 24 26 16 9-8 13-24 20-34"/><path class="memory-trace trace-three" d="M30 80c2-13 7-18 13-11 8 9 14 14 22 6 7-7 12-16 17-21"/></svg>
-    <p class="eyebrow">Acervo digital · 2000 — 2024</p>
     <h1>Memória do <em>SIPEM</em></h1>
-    <p class="hero-lede">História, edições e anais do Seminário Internacional de Pesquisa em Educação Matemática — um acervo aberto para consulta, pesquisa e preservação.</p>
-    <form class="hero-search" role="search">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg>
-      <input id="home-search" type="search" aria-label="Pesquisar títulos, autorias, instituições, resumos e palavras-chave" placeholder="Busque por título, autoria, instituição ou palavra-chave">
-      <button type="submit">Buscar no acervo</button>
-    </form>
+    <p class="hero-lede">O SIPEM reúne a produção de pesquisadores em Educação Matemática ao longo de mais de duas décadas. Preservar seus anais é preservar a memória da área: temas, métodos e debates que moldaram a pesquisa brasileira. O Memória SIPEM existe para que essa produção não se perca e possa ser consultada, comparada e continuada.</p>
     <div class="hero-actions">
       <a class="button primary" href="#anais">Explorar os anais ${handIcon()}</a>
       <a class="button ghost" href="#historia">Conhecer a história</a>
     </div>
-    <dl class="hero-stats">
-      <div><dt>Edições</dt><dd>${data.editions.length}</dd></div>
-      <div><dt>Trabalhos indexados</dt><dd>${total.toLocaleString('pt-BR')}</dd></div>
-      <div><dt>Período</dt><dd>2000–2024</dd></div>
-    </dl>
   </section>
 
   <section class="section">
     <header class="section-head">
       <div>
         <p class="eyebrow">Linha do tempo</p>
-        <h2>Nove edições, uma trajetória</h2>
+        <h2>Edições</h2>
       </div>
-      <p>De Serra Negra a Natal, o SIPEM acompanhou a consolidação da pesquisa em Educação Matemática no Brasil.</p>
     </header>
     <ol class="timeline">${timeline}</ol>
-    <p class="timeline-note">${indexed} edições possuem trabalhos indexados neste acervo. As edições III (2006) e IV (2009) podem ser consultadas na fonte oficial da SBEM.</p>
   </section>
 
-  <section class="section about">
-    <header class="section-head">
-      <div>
-        <p class="eyebrow">Sobre o acervo</p>
-        <h2>Um catálogo feito para consulta</h2>
-      </div>
-    </header>
-    <div class="about-grid">
-      <article class="about-card">
-        <span class="about-number">01</span>
-        <h3>Registros bibliográficos</h3>
-        <p>Títulos, autorias, instituições, resumos e palavras-chave reunidos edição por edição, com busca local em todo o acervo.</p>
-      </article>
-      <article class="about-card">
-        <span class="about-number">02</span>
-        <h3>Fontes preservadas</h3>
-        <p>Cada trabalho mantém o vínculo com o documento original e com os anais oficiais, preservando a origem da informação.</p>
-      </article>
-      <article class="about-card">
-        <span class="about-number">03</span>
-        <h3>Acervo em construção</h3>
-        <p>Os índices são ampliados e revisados progressivamente. Metadados ausentes não são inventados: permanecem identificados.</p>
-      </article>
-    </div>
-  </section>`;
-
-  $('.hero-search').addEventListener('submit', event => {
-    event.preventDefault();
-    const term = event.target.elements[0].value.trim();
-    location.hash = '#anais' + (term ? '?busca=' + encodeURIComponent(term) : '');
-  });
+  `;
 }
 
 function history() {
@@ -369,7 +326,6 @@ function history() {
     </ol>
   </details>
 
-  <p class="source-note">* O quantitativo histórico da edição pode diferir do número de trabalhos disponíveis nesta busca. ${count ? `${count.toLocaleString('pt-BR')} registros desta edição estão indexados no acervo.` : 'Os anais desta edição são consultados na fonte externa.'} Dados preservados do <a href="https://gerlansilva.github.io/memoria-sipem/#historia" target="_blank" rel="noopener">Memória SIPEM</a>; referência histórica: <a href="https://www.sbembrasil.org.br/eventos/index.php/sipem/historico" target="_blank" rel="noopener">SBEM</a>.</p>
 
   <nav class="edition-paging" aria-label="Percorrer edições">
     ${edition.id > 1 ? `<a href="${route('history', edition.id - 1)}"><span>${handIcon('left')} Edição anterior</span><strong>${editionLabel(editionById(edition.id - 1))}</strong></a>` : '<span></span>'}
@@ -452,11 +408,9 @@ function article(record) {
       <div class="record-meta">
         <span class="tag">${escapeHTML(record.gt || 'SIPEM')}</span>
         <span>${edition ? `${edition.roman} SIPEM · ${record.year}` : record.year}</span>
-        ${Number(record.edition) === 2 ? '<span class="tag soft">Resumo</span>' : ''}
       </div>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
-      <p class="affiliations">${escapeHTML(record.section || record.gt || '')}</p>
-      ${(record.authors || []).length ? `<div class="chips">${record.authors.map(author => `<span class="chip author">${authorHTML(author)}</span>`).join('')}</div>` : '<p class="authors">Autoria não informada no registro.</p>'}
+      ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(', ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
       <details class="record-details">
         <summary>Resumo e informações</summary>
         ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo não disponível neste registro.</p>'}
