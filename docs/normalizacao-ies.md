@@ -58,3 +58,14 @@ Foram examinados os arquivos de GTs do II SIPEM (2003) e do VII SIPEM (2018). O 
 
 ### Limites
 O estado `equivalencia_cadastrada` do CSV significa apenas que a grafia foi mapeada no software: **não** confirma a revisão individual do PDF e da página oficial. Registros sem mapeamento são mantidos para conferência. O catálogo continuará apresentando aviso de resultados preliminares até a auditoria integral.
+
+## Conferência documental adicional — VII SIPEM (2026-11-01)
+
+**VII-2018-210 (GT15)** — A versão catalogada continha `Brasil` como instituição e, na lista de autores, o texto `Instituto Federal de Educação, Ciência e Tecnologia de São Paulo — Campus Birigui`. O relatório oficial do VII SIPEM, publicado pela SBEM, identifica como autores **Adriana de Bortoli** e **Zionice Garbelini Martos Rodrigues**. O arquivo `data/vii-2018-gt15.json` foi corrigido. O vínculo à FATEC Lins / IFSP Birigui é corroborado pela literatura acadêmica, mas a distribuição individual dos vínculos deve ser confrontada com o PDF de origem. Fontes: https://www.sbembrasil.org.br/files/relatorio_viisipem.pdf ; https://www.revistaparadigma.com.br/index.php/paradigma/article/download/775/831/1328
+
+**VII-2018-112 (GT07)** — O catálogo registra `Universidade Tecnológica Federal do Pará` associada ao trabalho de Miguel Ribeiro e colaboradores. Fontes acadêmicas contemporâneas associam Marlova Caldatto à **UTFPR**, mas a afiliação no PDF do evento ainda não foi verificada. Permanece pendente, sem substituir a informação original. Fontes: https://ciespmat.wixsite.com/ciespmat/copia-seminarios ; https://educa.fcc.org.br/scielo.php?pid=S2177-60592021000103006&script=sci_arttext
+
+**VII-2018-009 (GT01)** — O campo de instituição inclui o nome de uma pessoa, `Tânia Maria Mendonça Campos`. Pendente de conferência no PDF original; não atribuir instituição por inferência.
+
+### Situação
+Conferência de fontes públicas **não substitui** a inspeção direta dos PDFs originais. A normalização completa do corpus continua em curso, com identificação explícita dos registros não resolvidos.
