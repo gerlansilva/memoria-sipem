@@ -52,3 +52,11 @@ Nenhum trabalho pode ser considerado concluído sem documentação do confronto 
 ## Remoção de páginas não acadêmicas (01/11/2026)
 
 Foram inspecionados visualmente os PDFs individuais de oito registros indevidos. Os arquivos exibem páginas vazias, versos de páginas ou artefatos do material editorial, sem um trabalho acadêmico. Excluídos da listagem pública: II-2003-GT02-03-022, II-2003-GT04-016, II-2003-GT05-002, II-2003-GT06-015, II-2003-GT07-033, II-2003-GT08-012, II-2003-GT09-013 e II-2003-GT10-011. Os registros e seus links originais foram preservados em `auditoria/ii-sipem-2003-registros-nao-trabalhos.json`. Total de registros nos arquivos complementares da edição: **179 antes; 171 após exclusão**. A planilha inicial `auditoria/ii-sipem-2003-revisao.csv` reflete o inventário anterior à limpeza e deve ser tratada como histórico. **Não** excluir entradas cujo título contenha acidentalmente a expressão 'Resumos Seminário...' quando houver efetivamente um trabalho na página.
+
+## Verificação visual de três PDFs — GT01 (01/11/2026)
+
+- **II-2003-GT01-002:** conferidos título, autora Regina Maria Pavanello, UEM, resumo e quatro palavras-chave.
+- **II-2003-GT01-003:** título revisado pela imagem do PDF; autora Ana Virginia de Almeida Luna; vínculo escrito como Faculdades Jorge Amado (SSA/BA); resumo e quatro palavras-chave presentes.
+- **II-2003-GT01-004:** erro de classificação da autoria: *Francisca Terezinha Oliveira Alves* é autora, enquanto *Arlete de Jesus Brito* aparece como **orientadora**. A afiliação PPGED/UFRN está vinculada à indicação da orientadora, não foi atribuída automaticamente à autora. Resumo presente; palavras-chave não observadas na página recortada.
+
+Fonte: PDFs recortados do GT01 disponibilizados no Drive, inspecionados como imagens; resultados gravados em `data/ii-2003-gt01.json`.
