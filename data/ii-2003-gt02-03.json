@@ -595,24 +595,5 @@
     "type": "Resumo",
     "abstractStatus": "Resumo extraído do PDF; conferir no original",
     "authorStatus": "Autoria extraída do PDF; instituições por posição, conferir"
-  },
-  {
-    "id": "II-2003-GT02-03-022",
-    "edition": 2,
-    "year": 2003,
-    "gt": "GT02-03",
-    "section": "GT02-03 — Educação Matemática nas séries finais e Ensino Médio",
-    "title": "Resumos Seminário Internacional de Pesquisa em Educação Matemática",
-    "authors": [],
-    "institutions": [],
-    "abstract": "Ciencias Pedagógicas (ICCP) Cuba. Foi realizado o estudo das tendências internacionais sobre a elaboração de currículos e, para isso, foram utilizadas análises e sínteses assim como generalizações. Foram analisados os avanços e retrocessos nesse campo, selecionando-se o que era significativo para o contexto histórico cultural e sócioeconômico do Brasil. Para determinar a via de trabalho a ser utilizada, foram consideradas diferentes fontes relacionadas com o desenho curricular: Foram analisadas diferentes conceituações de currículo e tendências do desenho curricular; culminando com a proposta da via a seguir no trabalho, e com a elaboração de uma concepção curricular própria, Em seguida, foram determinados os indicadores para comparação de currículos e esta foi realizada. A partir daí, o currículo da UFOP foi comparado com o resultado obtido da comparação. Um aprofundamento na literatura a partir da década de 80, possibilitou obter conclusões sobre o desenvolvimento curricular no Brasil. Foram estabelecidas as exigências para a formação do professor a partir dos estudos teóricos realizados e das condições sociais atuais do Brasil. Os resultados permitiram formular o perfil do profe",
-    "keywords": [],
-    "drivePdf": "https://drive.google.com/file/d/16A6aviFFFbsJqZFXGvmD64ZjBMMslOUI/view?usp=drivesdk",
-    "sourceFileName": "II_SIPEM_GT02-03_trabalho_022.pdf",
-    "metadataStatus": "OCR revisado (Tesseract, português); conferir no original",
-    "keywordStatus": "Sem palavras-chave identificadas no PDF",
-    "type": "Resumo",
-    "abstractStatus": "Resumo do livro de resumos (OCR); conferir no original",
-    "pdfStatus": "PDF sem conteúdo de trabalho (capa de seção)"
   }
 ]
