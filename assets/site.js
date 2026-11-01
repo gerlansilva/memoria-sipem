@@ -486,10 +486,80 @@ function results() {
   $('#next')?.addEventListener('click', () => { page++; results(); $('.result-head').scrollIntoView({ block: 'start', behavior: 'smooth' }); });
 }
 
+function panorama() {
+  const counts = data.editions.map(edition => ({
+    edition,
+    rows: recordsFor(edition.id),
+  }));
+  const total = data.records.length;
+  const indexed = counts.filter(item => item.rows.length);
+  const max = Math.max(1, ...counts.map(item => item.rows.length));
+  const selector = '<option value="all">Todas as edições indexadas</option>' +
+    indexed.map(({edition}) => `<option value="${edition.id}">${edition.roman} SIPEM · ${edition.year}</option>`).join('');
+
+  $('#panorama-view').innerHTML = `
+    <header class="panorama-heading">
+      <p class="eyebrow">Panorama da produção científica</p>
+      <h1 id="panorama-title">O SIPEM em dados</h1>
+      <p>Um retrato provisório dos trabalhos disponíveis no Memória SIPEM. O levantamento e a conferência dos documentos continuam em andamento.</p>
+      <span class="panorama-status">Acervo em construção · indicadores parciais</span>
+    </header>
+    <div class="panorama-stats">
+      <div><strong>${data.editions.length}</strong><span>edições do evento</span></div>
+      <div><strong>${total.toLocaleString('pt-BR')}</strong><span>registros atualmente indexados</span></div>
+      <div><strong>${indexed.length}</strong><span>edições com registros pesquisáveis</span></div>
+    </div>
+    <section class="panorama-section" aria-labelledby="panorama-editions-heading">
+      <h2 id="panorama-editions-heading">Registros por edição</h2>
+      <p>Estes números indicam a quantidade de documentos indexados no catálogo, não necessariamente o total de trabalhos apresentados em cada edição.</p>
+      <div class="panorama-bars">
+        ${counts.map(({edition, rows}) => `<div class="panorama-bar-row">
+          <span class="panorama-edition">${edition.roman} · ${edition.year}</span>
+          <div class="panorama-bar-track" aria-hidden="true"><span style="width:${(rows.length / max * 100).toFixed(1)}%"></span></div>
+          <span class="panorama-bar-value">${rows.length ? rows.length.toLocaleString('pt-BR') : 'Pendente'}</span>
+          ${rows.length ? `<a href="${route('archives', edition.id)}" aria-label="Ver trabalhos do ${edition.roman} SIPEM">Ver trabalhos</a>` : '<span class="panorama-pending">Não indexado</span>'}
+        </div>`).join('')}
+      </div>
+    </section>
+    <section class="panorama-section" aria-labelledby="panorama-gt-heading">
+      <h2 id="panorama-gt-heading">Distribuição por Grupo de Trabalho</h2>
+      <p>Selecione uma edição para observar a distribuição dos registros entre seus GTs. Os números não devem ser comparados entre edições sem considerar possíveis mudanças na organização e nas denominações dos grupos.</p>
+      <label class="panorama-filter">Edição <select id="panorama-edition-filter">${selector}</select></label>
+      <div id="panorama-gt-results" aria-live="polite"></div>
+    </section>
+    <section class="panorama-section panorama-method" aria-labelledby="panorama-method-heading">
+      <h2 id="panorama-method-heading">Sobre os dados</h2>
+      <p>Os indicadores são calculados a partir dos registros carregados no catálogo digital. Edições sem registros não são tratadas como edições sem produção. Metadados e documentos seguem em revisão; por isso, os totais podem mudar à medida que o acervo for ampliado e conferido.</p>
+      <p>Esta etapa apresenta um panorama descritivo da cobertura documental. Análises de autoria, instituições, colaboração e temas dependerão de normalização e validação dos metadados.</p>
+    </section>`;
+  const filter = $('#panorama-edition-filter');
+  const renderGT = () => {
+    const id = filter.value;
+    const rows = id === 'all' ? data.records : recordsFor(Number(id));
+    const byGT = new Map();
+    rows.forEach(record => {
+      const gt = (record.gt || '').trim() || 'GT não informado';
+      byGT.set(gt, (byGT.get(gt) || 0) + 1);
+    });
+    const groups = [...byGT].sort((a,b) => b[1] - a[1] || a[0].localeCompare(b[0], 'pt-BR'));
+    const maxGT = Math.max(1, ...groups.map(item => item[1]));
+    $('#panorama-gt-results').innerHTML = groups.length
+      ? `<p class="panorama-count">${rows.length.toLocaleString('pt-BR')} registros · ${groups.length} categorias de GT identificadas</p>
+        <div class="panorama-gt-list">${groups.map(([gt,number]) => `<div class="panorama-gt-row">
+          <span>${escapeHTML(gt)}</span>
+          <div class="panorama-bar-track" aria-hidden="true"><span style="width:${(number / maxGT * 100).toFixed(1)}%"></span></div>
+          <strong>${number}</strong>
+        </div>`).join('')}</div>`
+      : '<p>Não há registros nesta seleção.</p>';
+  };
+  filter.addEventListener('change', renderGT);
+  renderGT();
+}
+
 function navigate() {
   const [path, params] = (location.hash.slice(1) || 'inicio').split('?');
   const search = new URLSearchParams(params || '');
-  view = path === 'anais' ? 'archives' : path === 'historia' ? 'history' : path === 'sobre' ? 'about' : 'home';
+  view = path === 'anais' ? 'archives' : path === 'historia' ? 'history' : path === 'sobre' ? 'about' : path === 'panorama' ? 'panorama' : 'home';
   const id = Number(search.get('edicao'));
   selected = editionById(id) ? id : (view === 'archives' ? 0 : 1);
   const term = search.get('busca');
@@ -506,13 +576,18 @@ function navigate() {
   const homeView = $('#home-view');
   const catalogView = $('#catalog-view');
   const aboutView = $('#about-view');
+  const panoramaView = $('#panorama-view');
   homeView.hidden = view !== 'home';
   aboutView.hidden = view !== 'about';
-  catalogView.hidden = view === 'home' || view === 'about';
+  panoramaView.hidden = view !== 'panorama';
+  catalogView.hidden = view === 'home' || view === 'about' || view === 'panorama';
 
   if (view === 'home') {
     document.title = 'Memória SIPEM — História e anais';
     home();
+  } else if (view === 'panorama') {
+    document.title = 'Panorama — Memória SIPEM';
+    panorama();
   } else if (view === 'about') {
     document.title = 'Sobre — Memória SIPEM';
   } else {
