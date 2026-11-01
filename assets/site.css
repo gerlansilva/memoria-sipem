@@ -1350,3 +1350,63 @@ h1, h2, h3, p { text-wrap: pretty; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* Cartões editoriais do acervo — novembro de 2026 */
+.results { gap: 12px; }
+.record {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 18px 20px 0;
+  border-radius: 10px;
+  background: var(--surface);
+}
+.record:hover { background: var(--surface); }
+.record-body { min-width: 0; }
+.record-meta { margin-bottom: 10px; }
+.record h3 { margin-bottom: 8px; }
+.record .authors { font-size: var(--fs-small); }
+.record-details { margin-top: 14px; }
+.record-details summary {
+  padding: 0 0 14px;
+  min-height: 28px;
+}
+.record-details summary::after {
+  content: '+';
+  border-color: var(--line);
+  font-weight: 500;
+}
+.record-details[open] summary::after { content: '−'; }
+.record-details .details-close { display: none; }
+.record-details[open] .details-open { display: none; }
+.record-details[open] .details-close { display: inline; }
+.record-expanded {
+  padding: 5px 0 18px;
+  border-top: 1px solid var(--line);
+}
+.record-expanded h4 {
+  margin: 16px 0 4px;
+  font: 600 var(--fs-small)/1.5 var(--sans);
+  color: var(--ink);
+}
+.record-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  border-top: 1px solid var(--line);
+}
+.record-action-hint { color: var(--muted); font-size: var(--fs-micro); }
+.record-actions .download {
+  align-self: center;
+  padding: 10px 0;
+  color: var(--accent);
+}
+.record-actions .unavailable { align-self: center; }
+@media (max-width: 640px) {
+  .record { padding: 16px 16px 0; }
+  .record-action-hint { display: none; }
+  .record-actions { justify-content: flex-end; }
+}
