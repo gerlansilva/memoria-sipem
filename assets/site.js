@@ -581,12 +581,11 @@ function panorama() {
       <div id="panorama-gt-results" class="panorama-gt-panels" aria-live="polite"></div>
     </section>
     <section class="panorama-section" aria-labelledby="panorama-ies-heading">
-      <div class="panorama-ies-heading-row"><h2 id="panorama-ies-heading">Instituições de Ensino Superior (IES)</h2><button type="button" id="panorama-export-ies" class="panorama-export-small" title="Exportar auditoria institucional em CSV" aria-label="Exportar auditoria institucional em CSV">Exportar CSV</button></div>
-      <label class="panorama-filter">Edição <select id="panorama-ies-filter">${selector}</select></label>
+      <div class="panorama-ies-heading-row"><h2 id="panorama-ies-heading">Instituições de Ensino Superior (IES)</h2><div class="panorama-heading-actions"><label class="panorama-filter panorama-filter-compact"><span class="sr-only">Filtrar IES por edição</span><select id="panorama-ies-filter" aria-label="Filtrar instituições por edição">${selector}</select></label><button type="button" id="panorama-export-ies" class="panorama-export-small" title="Exportar auditoria institucional em CSV" aria-label="Exportar auditoria institucional em CSV">CSV</button></div></div>
       <div id="panorama-ies-results" aria-live="polite"></div>
     </section>
     <section class="panorama-explore" aria-labelledby="panorama-explore-heading">
-      <div class="panorama-explore-head"><div><p class="eyebrow">Explorar os dados</p><h2 id="panorama-explore-heading">Produção, pesquisadores e temáticas</h2></div><label class="panorama-filter">Edição <select id="panorama-explore-filter">${selector}</select></label></div>
+      <div class="panorama-explore-head"><div><p class="eyebrow">Explorar os dados</p><h2 id="panorama-explore-heading">Produção, pesquisadores e temáticas</h2></div><label class="panorama-filter panorama-filter-compact"><span class="sr-only">Filtrar cartões por edição</span><select id="panorama-explore-filter" aria-label="Filtrar análises por edição">${selector}</select></label></div>
       <div class="panorama-dashboard-grid">
         <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Temáticas dos trabalhos</h3><span>Classificação exploratória</span></div><p>Distribuição por assuntos identificados em títulos e palavras-chave. Não equivale à codificação temática documental.</p><div id="panorama-topics-results" aria-live="polite"></div></article>
         <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Produção por pesquisador</h3><span>Participações em trabalhos</span></div><p>Cada autor conta uma vez por registro. Variações de nomes ainda podem dividir uma mesma autoria.</p><div id="panorama-authors-results" aria-live="polite"></div></article>
