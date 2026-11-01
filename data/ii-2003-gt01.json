@@ -49,11 +49,11 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/1zhVkJarl2WNZIUHwwbz43294hdYImNO_/view?usp=drivesdk",
     "sourceFileName": "II_SIPEM_GT01_trabalho_002.pdf",
-    "metadataStatus": "OCR revisado (Tesseract, português); conferir no original",
-    "keywordStatus": "Palavras-chave extraídas do PDF; conferir no original",
+    "metadataStatus": "Título, autora, IES, resumo e palavras-chave conferidos visualmente no PDF individual",
+    "keywordStatus": "Quatro palavras-chave presentes no PDF original",
     "type": "Resumo",
-    "abstractStatus": "Resumo extraído do PDF; conferir no original",
-    "authorStatus": "Autoria extraída do PDF; instituições por posição, conferir"
+    "abstractStatus": "Presente no PDF original",
+    "authorStatus": "Conferido visualmente: Regina Maria Pavanello (UEM)"
   },
   {
     "id": "II-2003-GT01-003",
@@ -61,12 +61,12 @@
     "year": 2003,
     "gt": "GT01",
     "section": "GT01 — Educação Matemática nas séries iniciais",
-    "title": "À mediação no ensino-aprendizagem da resolução de problemas aditivos na 2º série: uma questão de prevenção |",
+    "title": "A mediação no ensino-aprendizagem da resolução de problemas aditivos na 2ª série: uma questão de prevenção",
     "authors": [
       "Ana Virginia de Almeida Luna (FJA)"
     ],
     "institutions": [
-      "FJA"
+      "Faculdades Jorge Amado"
     ],
     "abstract": "O presente estudo está dirigido à compreensão de aspectos envolvidos no processo de ensino-aprendizagem de problemas no campo aditivo. O objetivo da investigação foi a aplicação através da mediação professor-aluno e aluno-aluno de um programa com uma sequência de atividades elaboradas para propiciar e verificar o desempenho final na resolução de problemas envolvendo as idéias aditivas para prevenção de dificuldades de aprendizagem. Utilizou-se no trabalho empírico o método Experimento Formativo Pedagógico. A população investigada foi de 31 sujeitos, a maioria entre 9 e | | anos. Todos os sujeitos foram avaliados por intermédio de um pré-teste para o diagnóstico inicial e de um pós-teste, para tornar possível a validação do programa. Os resultados confirmam no grupo experimental a hipótese de que é mediante um programa com uma sequência de atividades envolvendo a resolução de problemas matemáticos com as estruturas aditivas, baseado na categorização de Vergnaud (1986), com a mediação professor-aluno e aluno-aluno, que se efetivará a aprendizagem desses problemas nas séries iniciais do ensino fundamental,",
     "keywords": [
@@ -77,11 +77,11 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/1IpGdkoCWFa8dXM2L1UUhWgjdj7aGi7qp/view?usp=drivesdk",
     "sourceFileName": "II_SIPEM_GT01_trabalho_003.pdf",
-    "metadataStatus": "OCR revisado (Tesseract, português); conferir no original",
-    "keywordStatus": "Palavras-chave extraídas do PDF; conferir no original",
+    "metadataStatus": "Título, autora, instituição, resumo e palavras-chave conferidos visualmente no PDF; sinal final semelhante a I não integra título",
+    "keywordStatus": "Quatro palavras-chave presentes no PDF original",
     "type": "Resumo",
-    "abstractStatus": "Resumo extraído do PDF; conferir no original",
-    "authorStatus": "Autoria extraída do PDF; instituições por posição, conferir"
+    "abstractStatus": "Presente no PDF original",
+    "authorStatus": "Conferido visualmente: Ana Virginia de Almeida Luna"
   },
   {
     "id": "II-2003-GT01-004",
@@ -91,21 +91,21 @@
     "section": "GT01 — Educação Matemática nas séries iniciais",
     "title": "À reelaboração do saber profissional de docentes a partir da leitura dos parâmetros curriculares nacionais de Matemática",
     "authors": [
-      "Francisca Terezinha Oliveira Alves (UFRN)",
-      "Arlete de Jesus Brito (UFRN)"
+      "Francisca Terezinha Oliveira Alves"
     ],
     "institutions": [
-      "UFRN"
+      "PPGED/UFRN"
     ],
     "abstract": "Este artigo apresenta resultado parcial de uma pesquisa sobre a reelaboração do saber profissional de uma professora que trabalha com Matemática no 2º ciclo do ensino fundamental, a partir da inserção dos Parâmetros Curriculares Nacionais de Matemática na realidade escolar; A finalidade do estudo é investigar se há reelaboração do saber de uma professora, tendo como subsídio, a leitura feita aos Parâmetros Curriculares Nacionais de Matemática de |º e 2º ciclos. À pesquisa tem uma abordagem qualitativa com aplicação de estudo de caso, visando observar e analisar a prática da professora depois da leitura dos PCN e consta de quatro momentos distintos: caracterização da escola; entrevista semi-estruturada; observação das aulas e um retorno para a professora, das aulas gravadas e transcritas.",
     "keywords": [],
     "drivePdf": "https://drive.google.com/file/d/1C6-gWGKcgQH-tpALrb2CkeQ9IbHNU7RL/view?usp=drivesdk",
     "sourceFileName": "II_SIPEM_GT01_trabalho_004.pdf",
-    "metadataStatus": "OCR revisado (Tesseract, português); conferir no original",
-    "keywordStatus": "Sem palavras-chave identificadas no PDF",
+    "metadataStatus": "Conferido visualmente no PDF: Francisca é autora; Arlete de Jesus Brito está explicitamente identificada como orientadora; resumo presente",
+    "keywordStatus": "Palavras-chave não observadas na página recortada; não confirmar ausência na publicação completa",
     "type": "Resumo",
-    "abstractStatus": "Resumo extraído do PDF (primeiro bloco após a autoria); conferir no original",
-    "authorStatus": "Autoria extraída do PDF; instituições por posição, conferir"
+    "abstractStatus": "Resumo presente no PDF original",
+    "authorStatus": "Autora e orientadora distinguidas por inspeção visual",
+    "advisor": "Arlete de Jesus Brito"
   },
   {
     "id": "II-2003-GT01-005",
