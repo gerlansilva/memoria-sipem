@@ -31,3 +31,30 @@ Tabela preliminar de equivalências implementada em `assets/site.js`. Esta atual
 - Revisar manualmente casos ambíguos antes de afirmar que o processo está concluído.
 
 A contagem do Panorama é provisória e deve continuar identificada como tal.
+
+## Auditoria adicional dos índices complementares (2026-11-01)
+
+Foram examinados os arquivos de GTs do II SIPEM (2003) e do VII SIPEM (2018). O catálogo continua incompleto e a auditoria dos PDFs não está concluída.
+
+### Ocorrências que exigem validação no documento
+- `Universidade Tecnológica Federal do Pará`: denominação problemática; não presumir que significa UFPA ou UTFPR.
+- `Tânia Maria Mendonça Campos`, `Luis Rolando Padilla`, `Lilian Nohemy López`, `Evelin Johana Lagos`, `Josué Alejandro Izaguirre`: nomes de pessoas inseridos no campo institucional.
+- `Brasil`, `Educação Matemática`: conteúdo não institucional.
+- `Instituto de Educação Rangel Pestana – SEEDUC/RJ`, `Escola Despertar/NEEMFS`, `Colégio Estadual de Planalto`: organizações de ensino básico, não IES.
+- `FEUSP`, `FFCLRP/USP`, `Instituto de Matemática e Estatística - USP`: unidades da USP.
+- `PEMAT/UFRJ`, `Projeto Fundão/UFRJ`: iniciativas/unidades relacionadas à UFRJ.
+- `UFRRJ/UCAM/FAETEC`, `UFU/FEUSP`, `UFG e SEEDF`: múltiplas organizações exigem separação por vínculo, sem presumir equivalência institucional.
+- `UNESP - Rio Claro IBILCE`: possível conflito entre campus e unidade, exige cotejo com o PDF.
+- `Universidade Estadual da Bahia`: conferir se a designação corresponde à UNEB.
+- `UNIAN`, `UNIBAN`, `Anhanguera`: verificar continuidade e nomenclatura conforme a data do trabalho.
+- `CEDERJ`, `INEP`, secretarias, escolas e prefeituras: manter vínculo documental e classificar como categoria específica, não como IES.
+
+### Correções realizadas no site
+- Remoção de sufixos de países usuais na visualização estatística.
+- Agrupamentos conservadores para universidades e institutos com nomes completos reconhecíveis.
+- Exclusão preliminar de algumas organizações não-IES do gráfico.
+- Exportação CSV por registro com afiliação original, forma agregada e situação provisória.
+- Dados originais preservados nos arquivos documentais.
+
+### Limites
+O estado `equivalencia_cadastrada` do CSV significa apenas que a grafia foi mapeada no software: **não** confirma a revisão individual do PDF e da página oficial. Registros sem mapeamento são mantidos para conferência. O catálogo continuará apresentando aviso de resultados preliminares até a auditoria integral.
