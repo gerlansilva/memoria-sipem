@@ -274,7 +274,7 @@ const VII_FILES = ['records-vii-2018-gt01.json', 'records-vii-2018-gt02.json', '
 const extraFiles = [...VII_FILES, ...II_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'longitudinal-20261101-1';
+const catalogVersion = 'gt-panels-20261101-1';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -581,9 +581,8 @@ function panorama() {
     </section>
     <section class="panorama-section" aria-labelledby="panorama-gt-heading">
       <h2 id="panorama-gt-heading">Distribuição por Grupo de Trabalho</h2>
-      <p>Selecione uma edição para observar a distribuição dos registros entre seus GTs. Os números não devem ser comparados entre edições sem considerar possíveis mudanças na organização e nas denominações dos grupos.</p>
-      <label class="panorama-filter">Edição <select id="panorama-edition-filter">${selector}</select></label>
-      <div id="panorama-gt-results" aria-live="polite"></div>
+      <p>Um gráfico para cada edição, com as contagens dos trabalhos indexados por GT. As denominações e os agrupamentos dos GTs variaram historicamente; os gráficos preservam os códigos registrados no acervo.</p>
+      <div id="panorama-gt-results" class="panorama-gt-panels" aria-live="polite"></div>
     </section>
     <section class="panorama-section" aria-labelledby="panorama-ies-heading">
       <h2 id="panorama-ies-heading">Instituições de Ensino Superior (IES)</h2>
@@ -614,28 +613,31 @@ function panorama() {
       <p>Os indicadores são calculados a partir dos registros carregados no catálogo digital. Edições sem registros não são tratadas como edições sem produção. Metadados e documentos seguem em revisão; por isso, os totais podem mudar à medida que o acervo for ampliado e conferido.</p>
       <p>Esta etapa apresenta um panorama descritivo da cobertura documental. As informações institucionais exibidas são preliminares e podem conter variantes de siglas ou denominações. A análise histórica da colaboração e a padronização completa de autoria e temas permanecem em desenvolvimento.</p>
     </section>`;
-  const filter = $('#panorama-edition-filter');
-  const renderGT = () => {
-    const id = filter.value;
-    const rows = id === 'all' ? data.records : recordsFor(Number(id));
+  const panels = data.editions.map(edition => {
+    const rows = recordsFor(edition.id);
+    if (!rows.length) return `<article class="panorama-gt-panel panorama-gt-panel-empty">
+      <header><h3>${escapeHTML(edition.roman)} SIPEM <span>${edition.year}</span></h3><span class="panorama-pending">Indexação pendente</span></header>
+      <p>Não há trabalhos catalogados nesta edição.</p></article>`;
     const byGT = new Map();
     rows.forEach(record => {
-      const gt = (record.gt || '').trim() || 'GT não informado';
+      const gt = String(record.gt || 'GT não informado').trim();
       byGT.set(gt, (byGT.get(gt) || 0) + 1);
     });
-    const groups = [...byGT].sort((a,b) => b[1] - a[1] || a[0].localeCompare(b[0], 'pt-BR'));
-    const maxGT = Math.max(1, ...groups.map(item => item[1]));
-    $('#panorama-gt-results').innerHTML = groups.length
-      ? `<p class="panorama-count">${rows.length.toLocaleString('pt-BR')} registros · ${groups.length} categorias de GT identificadas</p>
-        <div class="panorama-gt-list">${groups.map(([gt,number]) => `<div class="panorama-gt-row">
-          <span>${escapeHTML(gt)}</span>
-          <div class="panorama-bar-track" aria-hidden="true"><span style="width:${(number / maxGT * 100).toFixed(1)}%"></span></div>
-          <strong>${number}</strong>
-        </div>`).join('')}</div>`
-      : '<p>Não há registros nesta seleção.</p>';
-  };
-  filter.addEventListener('change', renderGT);
-  renderGT();
+    const groups = [...byGT].sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0],'pt-BR',{numeric:true}));
+    const biggest = Math.max(1,...groups.map(g=>g[1]));
+    return `<article class="panorama-gt-panel">
+      <header><h3>${escapeHTML(edition.roman)} SIPEM <span>${edition.year}</span></h3><strong>${rows.length.toLocaleString('pt-BR')} trabalhos</strong></header>
+      <p class="panorama-count">${groups.length} GTs/categorias no índice</p>
+      <div class="panorama-gt-chart" role="img" aria-label="Distribuição de ${rows.length} trabalhos nos grupos da edição de ${edition.year}">
+        ${groups.map(([gt,count]) => `<div class="panorama-gt-chart-row">
+          <span title="${escapeHTML(gt)}">${escapeHTML(gt)}</span>
+          <div class="panorama-bar-track" aria-hidden="true"><span style="width:${(count/biggest*100).toFixed(1)}%"></span></div>
+          <strong>${count}</strong></div>`).join('')}
+      </div>
+      <a class="panorama-gt-panel-link" href="${route('archives',edition.id)}">Consultar trabalhos da edição</a>
+    </article>`;
+  }).join('');
+  $('#panorama-gt-results').innerHTML = panels;
 
   const exploratoryFilter = $('#panorama-explore-filter');
   const topicRules = [
