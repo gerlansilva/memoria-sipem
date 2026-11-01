@@ -14,11 +14,26 @@
       "Faculdade de Tecnologia Professor Antonio Seabra — FATEC Lins",
       "Instituto Federal de São Paulo — Campus Birigui"
     ],
-    "abstract": "Este texto apresenta os resultados do desenvolvimento de um projeto de pesquisa sobre o conceito \r\nde área no Ensino Fundamental (Ciclo II) e também no Ensino Médio, cujas questões de \r\ninvestigação são: Como se torna possível o uso da História da Matemática e da História da \r\nEducação Matemática na formação do professor que ensina Matemática? De que ponto de vista é \r\nrelevante a",
-    "keywords": [],
+    "abstract": "Este texto apresenta os resultados do desenvolvimento de um projeto de pesquisa sobre o conceito de área no Ensino Fundamental (Ciclo II) e também no Ensino Médio, cujas questões de investigação são: Como se torna possível o uso da História da Matemática e da História da Educação Matemática na formação do professor que ensina Matemática? De que ponto de vista é relevante a introdução da História da Matemática nos cursos de formação de professores? O projeto foi proposto, a quatro professores que ensinam Matemática, pelo viés metodológico da História da Matemática que tem como ponto de partida um problema contido no papiro Rhind (1650 a.C.) de número 48 e, também, pelo viés da Educação Matemática, uma vez que reúne a execução de tais conceitos matemáticos por meio de materiais curriculares educativos, apresentados por um professor de Matemática, Ruy Madsen Barbosa. Por opção das pesquisadoras/autoras, tais materiais são viabilizados por ferramentas das Tecnologias da Informação e Comunicação. Assim, o jogo poliminó é associado ao software Geogebra e ao motor gráfico Unreal Engine 4. Como resultados, apresentamos as discussões de possibilidades de propor a História da Matemática e da Educação Matemática ao professor de Matemática de rede estadual paulista em exercício.",
+    "keywords": [
+      "área",
+      "história da educação matemática",
+      "ensino e aprendizagem",
+      "tecnologias da informação"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1sLcp5giaVBbxI2UB9xJQJXX-g_OFEGxM/view?usp=drivesdk",
     "sourceFileName": "p210.pdf",
-    "metadataStatus": "Autoria conferida no relatório do VII SIPEM (SBEM); vínculos corroborados por publicação acadêmica posterior; confrontar com PDF original"
+    "metadataStatus": "Autoria e afiliações conferidas diretamente no PDF original",
+    "authorAffiliations": [
+      {
+        "author": "Adriana de Bortoli",
+        "institution": "Faculdade de Tecnologia Professor Antonio Seabra — FATEC Lins"
+      },
+      {
+        "author": "Zionice Garbelini Martos Rodrigues",
+        "institution": "Instituto Federal de São Paulo — Campus Birigui"
+      }
+    ]
   },
   {
     "id": "VII-2018-211",
