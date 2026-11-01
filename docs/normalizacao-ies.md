@@ -69,3 +69,15 @@ O estado `equivalencia_cadastrada` do CSV significa apenas que a grafia foi mape
 
 ### Situação
 Conferência de fontes públicas **não substitui** a inspeção direta dos PDFs originais. A normalização completa do corpus continua em curso, com identificação explícita dos registros não resolvidos.
+
+## Atualização operacional — 1º de novembro de 2026
+
+**Fontes de autoridade:** Cadastro e-MEC (https://emec.mec.gov.br/), documentação oficial de cada instituição e documento de época. O cadastro e-MEC é a referência oficial para IES, inclusive extintas, mas **não basta para atribuir afiliação a um autor**.
+
+**Arquivos examinados nesta rodada:** onze arquivos de GT do II SIPEM (2003) e dezessete do VII SIPEM (2018), além dos índices de código do site. As fontes recuperadas apresentaram grafias divergentes, múltiplas organizações num mesmo campo, fragmentos de nomes de autores e instituições erroneamente atribuídas.
+
+**Melhorias no código:** limpeza de país entre parênteses ou travessões, agrupamento de denominações institucionais reconhecíveis e exclusão de termos não institucionais na apuração. Mantidos os dados originais nos registros, exceto correção individual explicitamente registrada.
+
+**Casos que continuam pendentes:** `Universidade Tecnológica Federal do Pará`, denominações genéricas, `UNIBAN/UNIAN/Anhanguera` e afiliações que precisam ser atribuídas individualmente por autor. A UTFPR informa oficialmente que a forma correta é *Universidade Tecnológica Federal do Paraná* (https://www.utfpr.edu.br/servidores/site/mural/ordem-de-servico-normatiza-uso-do-nome-da-utfpr), mas isso não demonstra, isoladamente, que essa instituição seja a do autor no trabalho.
+
+**Limite da conclusão:** o processo **não está finalizado**. Uma auditoria exaustiva exige acesso e inspeção dos PDFs individuais de cada trabalho, comparação com o registro do evento, revisão dos nomes institucionais e validação dos vínculos. Não há base suficiente para marcar todos os registros como verificados.
