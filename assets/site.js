@@ -527,10 +527,16 @@ function panorama() {
       <label class="panorama-filter">Edição <select id="panorama-edition-filter">${selector}</select></label>
       <div id="panorama-gt-results" aria-live="polite"></div>
     </section>
+    <section class="panorama-section" aria-labelledby="panorama-ies-heading">
+      <h2 id="panorama-ies-heading">Instituições de Ensino Superior (IES)</h2>
+      <p>Participação institucional identificada nos metadados dos trabalhos. Um trabalho com duas instituições contribui uma vez para cada IES; portanto, a soma das participações pode superar o número de documentos.</p>
+      <label class="panorama-filter">Edição <select id="panorama-ies-filter">${selector}</select></label>
+      <div id="panorama-ies-results" aria-live="polite"></div>
+    </section>
     <section class="panorama-section panorama-method" aria-labelledby="panorama-method-heading">
       <h2 id="panorama-method-heading">Sobre os dados</h2>
       <p>Os indicadores são calculados a partir dos registros carregados no catálogo digital. Edições sem registros não são tratadas como edições sem produção. Metadados e documentos seguem em revisão; por isso, os totais podem mudar à medida que o acervo for ampliado e conferido.</p>
-      <p>Esta etapa apresenta um panorama descritivo da cobertura documental. Análises de autoria, instituições, colaboração e temas dependerão de normalização e validação dos metadados.</p>
+      <p>Esta etapa apresenta um panorama descritivo da cobertura documental. As informações institucionais exibidas são preliminares e podem conter variantes de siglas ou denominações. A análise histórica da colaboração e a padronização completa de autoria e temas permanecem em desenvolvimento.</p>
     </section>`;
   const filter = $('#panorama-edition-filter');
   const renderGT = () => {
@@ -554,6 +560,49 @@ function panorama() {
   };
   filter.addEventListener('change', renderGT);
   renderGT();
+
+  const iesFilter = $('#panorama-ies-filter');
+  const extractIES = record => {
+    const raw = [
+      ...(Array.isArray(record.institutions) ? record.institutions : []),
+      ...(Array.isArray(record.authors) ? record.authors.map(author => {
+        const match = String(author).match(/\\(([^()]+)\\)\\s*$/);
+        return match ? match[1] : '';
+      }) : [])
+    ];
+    return [...new Set(raw.flatMap(value => String(value || '').split(/\\s*[;/]\\s*/))
+      .map(value => value.trim()).filter(Boolean)
+      .map(value => iesSigla(value).trim()).filter(Boolean))];
+  };
+  const renderIES = () => {
+    const id = iesFilter.value;
+    const rows = id === 'all' ? data.records : recordsFor(Number(id));
+    const byIES = new Map();
+    let without = 0;
+    rows.forEach(record => {
+      const names = extractIES(record);
+      if (!names.length) without++;
+      names.forEach(name => {
+        const key = normalize(name).replace(/\\s+/g, ' ').trim();
+        const existing = byIES.get(key);
+        byIES.set(key, { label: existing ? existing.label : name, count: (existing ? existing.count : 0) + 1 });
+      });
+    });
+    const ordered = [...byIES.values()].sort((a,b) => b.count - a.count || a.label.localeCompare(b.label,'pt-BR'));
+    const top = ordered.slice(0, 20);
+    const biggest = Math.max(1, ...top.map(item => item.count));
+    $('#panorama-ies-results').innerHTML =
+      `<p class="panorama-count">${rows.length.toLocaleString('pt-BR')} registros · ${ordered.length} denominações institucionais identificadas · ${without} sem IES identificada</p>` +
+      (top.length ? `<div class="panorama-gt-list">
+        ${top.map(item => `<div class="panorama-ies-row">
+          <span title="${escapeHTML(item.label)}">${escapeHTML(item.label)}</span>
+          <div class="panorama-bar-track" aria-hidden="true"><span style="width:${(item.count / biggest * 100).toFixed(1)}%"></span></div>
+          <strong>${item.count}</strong>
+        </div>`).join('')}
+      </div><p class="panorama-count">Exibindo até 20 denominações. Contagens provisórias, sujeitas à conferência das afiliações.</p>` : '<p class="panorama-count">Não há instituições identificadas nesta seleção.</p>');
+  };
+  iesFilter.addEventListener('change', renderIES);
+  renderIES();
 }
 
 function navigate() {
