@@ -566,11 +566,11 @@ function panorama() {
     const raw = [
       ...(Array.isArray(record.institutions) ? record.institutions : []),
       ...(Array.isArray(record.authors) ? record.authors.map(author => {
-        const match = String(author).match(/\\(([^()]+)\\)\\s*$/);
+        const match = String(author).match(/\(([^()]+)\)\s*$/);
         return match ? match[1] : '';
       }) : [])
     ];
-    return [...new Set(raw.flatMap(value => String(value || '').split(/\\s*[;/]\\s*/))
+    return [...new Set(raw.flatMap(value => String(value || '').split(/\s*[;/]\s*/))
       .map(value => value.trim()).filter(Boolean)
       .map(value => iesSigla(value).trim()).filter(Boolean))];
   };
@@ -583,7 +583,7 @@ function panorama() {
       const names = extractIES(record);
       if (!names.length) without++;
       names.forEach(name => {
-        const key = normalize(name).replace(/\\s+/g, ' ').trim();
+        const key = normalize(name).replace(/\s+/g, ' ').trim();
         const existing = byIES.get(key);
         byIES.set(key, { label: existing ? existing.label : name, count: (existing ? existing.count : 0) + 1 });
       });
