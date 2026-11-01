@@ -268,12 +268,14 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/1yGOtmpc-MzkJ6JZqMmU1BlRQQ5D36-vx/view?usp=drivesdk",
     "sourceFileName": "II_SIPEM_GT01_trabalho_010.pdf",
-    "metadataStatus": "OCR revisado (Tesseract, português); conferir no original",
-    "keywordStatus": "Palavras-chave extraídas do PDF; conferir no original",
+    "metadataStatus": "Título, autoria, resumo e palavras-chave conferidos no original; afiliações não informadas na página",
+    "keywordStatus": "Três palavras-chave conferidas no original",
     "type": "Resumo",
-    "authorStatus": "Autoria conferida no OCR do PDF; conferir no original",
+    "authorStatus": "Dois autores confirmados no original: Pedro Franco de Sá; John Andrew Fossa",
     "titleOriginalCatalog": "Uma proposta de distinção entre problemas aritméticos e algébricos Pedro Franco de Sá John Andrew Fossa",
-    "titleStatus": "Título separado de nomes de autores identificados no mesmo registro; confirmação visual do PDF pendente"
+    "titleStatus": "Título separado de nomes de autores identificados no mesmo registro; confirmação visual do PDF pendente",
+    "abstract": "O presente trabalho apresenta uma distinção entre problemas verbais aritméticos e problemas verbais algébricos em termos do seu uso ou não, na sua resolução, das propriedades aditivas e/ou multiplicativas da igualdade. Em seguida, mostra que o grau de dificuldade de um problema aditivo é maior para problemas algébricos, no sentido definido, do que para problemas aritméticos.",
+    "abstractStatus": "Conferido na reprodução do original e no Livro de Resumos da SBEM (p. 25)"
   },
   {
     "id": "II-2003-GT01-011",
