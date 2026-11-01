@@ -1581,3 +1581,27 @@ h1, h2, h3, p { text-wrap: pretty; }
 .review-notice strong { color: var(--ink); }
 .review-notice a { color: var(--accent); font-weight: 600; }
 @media(max-width:600px){ .review-notice {text-align:left;} }
+
+/* Panorama — painel editorial de indicadores */
+.panorama-explore { margin: 32px 0 40px; }
+.panorama-explore-head { display:flex; align-items:end; justify-content:space-between; flex-wrap:wrap; gap:20px; margin-bottom:20px; }
+.panorama-explore-head h2 { margin:0; font-size:clamp(1.5rem,2.3vw,2rem); font-weight:650; }
+.panorama-explore-head .eyebrow { margin-bottom:7px; }
+.panorama-dashboard-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.panorama-dashboard-card { border:1px solid var(--line); border-radius:14px; background:#fff; padding:23px 24px; min-width:0; box-shadow:var(--shadow-sm); }
+.panorama-dashboard-card:first-child { grid-column:1/-1; }
+.panorama-dashboard-card-head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; }
+.panorama-dashboard-card h3 { margin:0; font-size:1.14rem; font-weight:700; }
+.panorama-dashboard-card-head span { font-size:.75rem; color:var(--muted); }
+.panorama-dashboard-card > p { margin:7px 0 17px; color:var(--muted); font-size:.86rem; line-height:1.55; }
+.panorama-dashboard-card .panorama-count { font-size:.77rem; color:var(--muted); margin-bottom:13px; }
+.panorama-ranking { display:grid; gap:11px; }
+.panorama-ranking-item { display:grid; grid-template-columns:25px minmax(0,1fr) auto; align-items:center; gap:6px 10px; }
+.panorama-rank-index { color:var(--muted); font-size:.75rem; text-align:right; font-variant-numeric:tabular-nums; }
+.panorama-rank-name { font-size:.86rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.panorama-rank-number { font-size:.82rem; font-weight:700; font-variant-numeric:tabular-nums; }
+.panorama-rank-meter { grid-column:2/4; height:5px; background:#edf1f5; border-radius:9px; overflow:hidden; }
+.panorama-rank-meter span { display:block; background:var(--accent); height:100%; border-radius:9px; }
+.panorama-explore-note { margin:15px 0 0; color:var(--muted); font-size:.8rem; line-height:1.6; }
+@media(max-width:800px) { .panorama-dashboard-grid { grid-template-columns:1fr; } .panorama-dashboard-card:first-child { grid-column:auto; } }
+@media(max-width:540px) { .panorama-dashboard-card { padding:18px 15px; } .panorama-explore-head { align-items:start; } }
