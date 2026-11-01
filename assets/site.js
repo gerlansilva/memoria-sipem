@@ -677,7 +677,7 @@ function panorama() {
     ['universidade federal do para', 'UFPA'],
     ['universidade federal do parana', 'UFPR']
   ];
-  const NORMALIZACAO_PENDENTE = /universidade tecnologica federal do para|^brasil$|^educacao matematica$|^instituto de educacao$|^centro de educacao matematica$|^instituto superior de educacao de sao paulo$/i;
+  const NORMALIZACAO_PENDENTE = /universidade tecnologica federal do para|^brasil$|^educacao matematica$|^instituto de educacao$|^centro de educacao matematica$|^instituto superior de educacao de sao paulo$|^tania maria mendonca campos$|^luis rolando padilla$|^lilian nohemy lopez$|^evelin johana lagos$|^josue alejandro izaguirre$/i;
   const canonicalName = raw => {
     const cleaned = String(raw || '').trim().replace(/\s*[–—-]\s*(?:Brasil|Brazil|Portugal|Espanha|Spain|Argentina|Suécia|Sweden|Chile|Colômbia|Colombia)\s*$/i, '').trim();
     const key = iesKey(cleaned);
@@ -689,7 +689,7 @@ function panorama() {
     if (/^UNIAN\b/i.test(cleaned)) return 'UNIAN';
     return iesSigla(cleaned);
   };
-  const NON_IES = /^(?:INEP|SEEDF|SEED(?:UC)?(?:-|$)|SEE-|SME-|PJF|CEDERJ|SENAI|CAp-|CPII|Colegio|Colégio|Prefeitura|Secretaria|Instituto Nacional de Estudos)/i;
+  const NON_IES = /^(?:FAETEC|INEP|SEEDF|SEED(?:UC)?(?:-|$)|SEE-|SME-|PJF|CEDERJ|SENAI|CAp-|CPII|Colegio|Colégio|Prefeitura|Secretaria|Instituto Nacional de Estudos)/i;
   const extractIES = record => {
     const raw = [
       ...(Array.isArray(record.institutions) ? record.institutions : []),
