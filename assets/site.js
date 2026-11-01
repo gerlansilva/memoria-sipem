@@ -678,10 +678,23 @@ function panorama() {
     ['universidade federal do parana', 'UFPR']
   ];
   const NORMALIZACAO_PENDENTE = /universidade tecnologica federal do para|^brasil$|^educacao matematica$|^instituto de educacao$|^centro de educacao matematica$|^instituto superior de educacao de sao paulo$|^tania maria mendonca campos$|^luis rolando padilla$|^lilian nohemy lopez$|^evelin johana lagos$|^josue alejandro izaguirre$/i;
+  const VALIDACAO_HISTORICA = new Set(['UNIBAN','UNIAN','Anhanguera-SP','Anhanguera-Uniban','UNIVASSOURAS','UFN']);
+  const EXTRA_VINCULOS = [
+    [/^universidade federal do rio de janeiro.*col[eé]gio de aplica[cç][aã]o/i,'UFRJ'],
+    [/^universidade estadual paulista/i,'UNESP'],
+    [/^universidade federal de pernambuco/i,'UFPE'],
+    [/^universidade federal de s[aã]o carlos/i,'UFSCar'],
+    [/^universidade estadual de campinas/i,'UNICAMP'],
+    [/^universidade tecnol[oó]gica federal do paran[aá]/i,'UTFPR'],
+    [/^universidade federal de mato grosso do sul/i,'UFMS'],
+    [/^instituto federal de s[aã]o paulo/i,'IFSP']
+  ];
   const canonicalName = raw => {
-    const cleaned = String(raw || '').trim().replace(/\s*[–—-]\s*(?:Brasil|Brazil|Portugal|Espanha|Spain|Argentina|Suécia|Sweden|Chile|Colômbia|Colombia)\s*$/i, '').trim();
+    const cleaned = String(raw || '').trim().replace(/\s*[–—-]\s*(?:Brasil|Brazil|Portugal|Espanha|Spain|Argentina|Suécia|Sweden|Chile|Colômbia|Colombia)\s*$/i, '').replace(/\s*\((?:Brasil|Brazil|Portugal|Espanha|Spain)\)\s*$/i,'').trim();
     const key = iesKey(cleaned);
     if (!key || NORMALIZACAO_PENDENTE.test(key)) return '';
+    const named = EXTRA_VINCULOS.find(([pattern]) => pattern.test(cleaned));
+    if (named) return named[1];
     const known = IES_PADROES.find(([name]) => key.startsWith(name) && (key.length === name.length || /[\s,(/–—-]/.test(key.charAt(name.length))));
     if (known) return known[1];
     if (/^(?:FEUSP|FAE-UFMG|FFCLRP)\b/i.test(cleaned)) return cleaned.startsWith('FAE') ? 'UFMG' : 'USP';
