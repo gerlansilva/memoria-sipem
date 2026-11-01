@@ -589,6 +589,7 @@ function panorama() {
       <p>Participação institucional identificada nos metadados dos trabalhos. Um trabalho com duas instituições contribui uma vez para cada IES; portanto, a soma das participações pode superar o número de documentos.</p>
       <label class="panorama-filter">Edição <select id="panorama-ies-filter">${selector}</select></label>
       <div id="panorama-ies-results" aria-live="polite"></div>
+      <p class="panorama-export"><button type="button" id="panorama-export-ies" class="button ghost">Exportar auditoria institucional (CSV)</button></p>
     </section>
     <section class="panorama-section panorama-method" aria-labelledby="panorama-method-heading">
       <h2 id="panorama-method-heading">Sobre os dados</h2>
@@ -659,6 +660,28 @@ function panorama() {
         </div>`).join('')}
       </div><p class="panorama-count">Exibindo até 20 denominações. Contagens provisórias, sujeitas à conferência das afiliações.</p>` : '<p class="panorama-count">Não há instituições identificadas nesta seleção.</p>');
   };
+  $('#panorama-export-ies').addEventListener('click', () => {
+    const quote = value => '"' + String(value ?? '').replace(/"/g, '""') + '"';
+    const lines = [['registro','edicao','ano','gt','afiliacao_original','instituicao_normalizada','situacao']];
+    data.records.forEach(record => {
+      const raw = [...(record.institutions || []), ...(record.authors || []).map(a => String(a).match(/\(([^()]+)\)\s*$/)?.[1] || '').filter(Boolean)];
+      if (!raw.length) lines.push([record.id,record.edition,record.year,record.gt,'','','sem_afiliacao']);
+      else [...new Set(raw)].forEach(value => {
+        const normalized = extractIES({...record, institutions:[value], authors:[]});
+        const key = iesKey(value);
+        const status = !normalized.length ? (IES_AMBIGUAS.has(key) ? 'ambiguo' : 'nao_ies_ou_nao_identificada')
+          : (IES_SIGLAS[key] ? 'equivalencia_cadastrada' : 'revisar_fonte');
+        lines.push([record.id,record.edition,record.year,record.gt,value,normalized.join(' | '),status]);
+      });
+    });
+    const csv = '\uFEFF' + lines.map(row=>row.map(quote).join(';')).join('\r\n');
+    const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href=url;link.download='memoria-sipem-auditoria-ies.csv';
+    document.body.appendChild(link);link.click();link.remove();
+    URL.revokeObjectURL(url);
+  });
   iesFilter.addEventListener('change', renderIES);
   renderIES();
 }
