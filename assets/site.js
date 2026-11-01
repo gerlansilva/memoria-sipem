@@ -689,14 +689,14 @@ function panorama() {
   exploratoryFilter.addEventListener('change',renderExploratory);
   renderExploratory();
 
-  const normalizeAuthor = value => normalize(String(value||'').replace(/\\s*\\([^)]*\\)\\s*$/,'').replace(/\\s+/g,' ').trim());
+  const normalizeAuthor = value => normalize(String(value||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+/g,' ').trim());
   const repetition = new Map();
   data.records.forEach(rec => {
     const seen=new Set();
     (Array.isArray(rec.authors)?rec.authors:[]).forEach(value=>{
-      const original=String(value||'').replace(/\\s*\\([^)]*\\)\\s*$/,'').trim();
+      const original=String(value||'').replace(/\s*\([^)]*\)\s*$/,'').trim();
       const key=normalizeAuthor(value);
-      if(!key || original.split(/\\s+/).length<2 || /@/.test(original)||seen.has(key))return;
+      if(!key || original.split(/\s+/).length<2 || /@/.test(original)||seen.has(key))return;
       seen.add(key);
       let obj=repetition.get(key);
       if(!obj){obj={name:original,editions:new Set(),works:0,gts:new Set()};repetition.set(key,obj);}
@@ -711,7 +711,7 @@ function panorama() {
   const gtRows=new Map();
   editionsWithData.forEach(ed=>recordsFor(ed.id).forEach(rec=>{
     const gt=String(rec.gt||'Não informado').trim();
-    const key=gt.toUpperCase().replace(/\\s+/g,'');
+    const key=gt.toUpperCase().replace(/\s+/g,'');
     if(!gtRows.has(key))gtRows.set(key,{gt,values:new Map()});
     const item=gtRows.get(key);item.values.set(ed.id,(item.values.get(ed.id)||0)+1);
   }));
