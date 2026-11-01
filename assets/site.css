@@ -1672,3 +1672,8 @@ h1, h2, h3, p { text-wrap: pretty; }
 .panorama-dashboard-card {box-shadow:none}
 .panorama-heading .panorama-status {background:#EFF4F3;color:#455E61;border:1px solid #DDE8E5}
 @media (prefers-reduced-motion:reduce){.button,.main-nav a,.timeline-card{transition:none}}
+
+/* Corrige corte do ranking: rolagem apenas na tabela de GTs */
+.panorama-repeat-list {max-height:none !important;height:auto !important;overflow:visible !important;}
+.panorama-dashboard-card:has(#panorama-repeat-authors) {align-self:start;overflow:visible;}
+.panorama-dashboard-card:has(#panorama-repeat-authors) .panorama-repeat-row {min-height:0;}
