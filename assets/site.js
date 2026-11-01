@@ -581,10 +581,9 @@ function panorama() {
       <div id="panorama-gt-results" class="panorama-gt-panels" aria-live="polite"></div>
     </section>
     <section class="panorama-section" aria-labelledby="panorama-ies-heading">
-      <h2 id="panorama-ies-heading">Instituições de Ensino Superior (IES)</h2>
+      <div class="panorama-ies-heading-row"><h2 id="panorama-ies-heading">Instituições de Ensino Superior (IES)</h2><button type="button" id="panorama-export-ies" class="panorama-export-small" title="Exportar auditoria institucional em CSV" aria-label="Exportar auditoria institucional em CSV">Exportar CSV</button></div>
       <label class="panorama-filter">Edição <select id="panorama-ies-filter">${selector}</select></label>
       <div id="panorama-ies-results" aria-live="polite"></div>
-      <p class="panorama-export"><button type="button" id="panorama-export-ies" class="button ghost">Exportar auditoria institucional (CSV)</button></p>
     </section>
     <section class="panorama-explore" aria-labelledby="panorama-explore-heading">
       <div class="panorama-explore-head"><div><p class="eyebrow">Explorar os dados</p><h2 id="panorama-explore-heading">Produção, pesquisadores e temáticas</h2></div><label class="panorama-filter">Edição <select id="panorama-explore-filter">${selector}</select></label></div>
