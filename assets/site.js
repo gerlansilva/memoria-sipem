@@ -274,7 +274,7 @@ const VII_FILES = ['records-vii-2018-gt01.json', 'records-vii-2018-gt02.json', '
 const extraFiles = [...VII_FILES, ...II_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'ii2003-visual-check-20261101-2';
+const catalogVersion = 'dashboard-20261101-1';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -592,6 +592,15 @@ function panorama() {
       <div id="panorama-ies-results" aria-live="polite"></div>
       <p class="panorama-export"><button type="button" id="panorama-export-ies" class="button ghost">Exportar auditoria institucional (CSV)</button></p>
     </section>
+    <section class="panorama-explore" aria-labelledby="panorama-explore-heading">
+      <div class="panorama-explore-head"><div><p class="eyebrow">Explorar os dados</p><h2 id="panorama-explore-heading">Produção, pesquisadores e temáticas</h2></div><label class="panorama-filter">Edição <select id="panorama-explore-filter">${selector}</select></label></div>
+      <div class="panorama-dashboard-grid">
+        <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Temáticas dos trabalhos</h3><span>Classificação exploratória</span></div><p>Distribuição por assuntos identificados em títulos e palavras-chave. Não equivale à codificação temática documental.</p><div id="panorama-topics-results" aria-live="polite"></div></article>
+        <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Produção por pesquisador</h3><span>Participações em trabalhos</span></div><p>Cada autor conta uma vez por registro. Variações de nomes ainda podem dividir uma mesma autoria.</p><div id="panorama-authors-results" aria-live="polite"></div></article>
+        <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Palavras-chave mais frequentes</h3><span>Frequência documental</span></div><p>Uma palavra-chave conta uma vez por trabalho. Acentuação, maiúsculas e espaços são normalizados; sinônimos não são reunidos.</p><div id="panorama-keywords-results" aria-live="polite"></div></article>
+      </div>
+      <p class="panorama-explore-note">Os indicadores consideram apenas os metadados atualmente disponíveis no acervo. A conferência de autoria, palavras-chave e resumos do II SIPEM permanece em andamento.</p>
+    </section>
     <section class="panorama-section panorama-method" aria-labelledby="panorama-method-heading">
       <h2 id="panorama-method-heading">Sobre os dados</h2>
       <p>Os indicadores são calculados a partir dos registros carregados no catálogo digital. Edições sem registros não são tratadas como edições sem produção. Metadados e documentos seguem em revisão; por isso, os totais podem mudar à medida que o acervo for ampliado e conferido.</p>
@@ -619,6 +628,58 @@ function panorama() {
   };
   filter.addEventListener('change', renderGT);
   renderGT();
+
+  const exploratoryFilter = $('#panorama-explore-filter');
+  const topicRules = [
+    ['Formação de professores', /forma[cç][aã]o (?:de |do |dos )?profess|desenvolvimento profissional|saberes docentes|pr[aá]tica docente|licenciatura|professor que ensina/],
+    ['Tecnologias digitais', /tecnologia|software|computador|internet|geogebra|ambiente virtual|inform[aá]tica|programa[cç][aã]o|digital/],
+    ['Ensino e aprendizagem', /ensino.aprendizagem|aprendizagem|sala de aula|resolu[cç][aã]o de problemas|did[aá]tica|atividades de ensino/],
+    ['Currículo e materiais', /curr[ií]culo|livro did[aá]tico|material did[aá]tico|pcn|bncc|proposta curricular/],
+    ['História e filosofia', /hist[oó]ria da matem[aá]tica|hist[oó]ria da educa[cç][aã]o|filosofia da|epistemologia|hist[oó]rico.filos[oó]fica/],
+    ['Avaliação', /avalia[cç][aã]o|provas|exame|desempenho escolar/],
+    ['Geometria e medidas', /geometria|geom[eé]tric|espa[cç]o|[aá]rea|volume|medidas|trigonometria/],
+    ['Álgebra e funções', /[aá]lgebra|alg[eé]bric|fun[cç][aã]o|fun[cç][oõ]es|equa[cç][aã]o|inequa[cç][aã]o/],
+    ['Estatística e probabilidade', /estat[ií]stic|probabil|combinat[oó]ria|gr[aá]fic|dados estat[ií]sticos/],
+    ['Números e operações', /n[uú]meros?|numera[cç][aã]o|aritm[eé]tic|opera[cç][oõ]es|fra[cç][oõ]es|proporcionalidade/],
+    ['Inclusão e diversidade', /inclus[aã]o|defici[eê]ncia|surdo|cego|educa[cç][aã]o especial|etnomatem[aá]tica|educa[cç][aã]o ind[ií]gena/],
+    ['Pesquisa e metodologia', /pesquisa em educa[cç][aã]o|metodologia|estado da arte|investiga[cç][aã]o|mapeamento da pesquisa/]
+  ];
+  const normalizeTerm = value => normalize(String(value || '').replace(/\s+/g,' ').trim()).replace(/[‐‑–—]/g,'-');
+  const rankList = (items, cap=12) => {
+    const selected = items.slice(0,cap), largest=Math.max(1,...selected.map(x=>x[1]));
+    return selected.length ? '<div class="panorama-ranking">'+selected.map(([name,n],i)=>
+      '<div class="panorama-ranking-item"><span class="panorama-rank-index">'+(i+1)+'</span><span class="panorama-rank-name" title="'+escapeHTML(name)+'">'+escapeHTML(name)+'</span><span class="panorama-rank-number">'+n+'</span><div class="panorama-rank-meter"><span style="width:'+(100*n/largest).toFixed(1)+'%"></span></div></div>'
+    ).join('')+'</div>' : '<p class="panorama-count">Não há dados suficientes nessa seleção.</p>';
+  };
+  const displayRanking = (element, items, coverage, total) => {
+    element.innerHTML='<p class="panorama-count">'+coverage.toLocaleString('pt-BR')+' de '+total.toLocaleString('pt-BR')+' registros com dados utilizáveis</p>'+rankList(items);
+  };
+  const renderExploratory = () => {
+    const selected=exploratoryFilter.value;
+    const rows=selected==='all'?data.records:recordsFor(Number(selected));
+    const topics=new Map(),authors=new Map(),keywords=new Map();
+    let coveredAuthors=0,coveredKeywords=0,coveredThemes=0;
+    rows.forEach(record=>{
+      const cleanAuthors=new Set((Array.isArray(record.authors)?record.authors:[]).map(author=>String(author).replace(/\s*\([^)]*\)\s*$/,'').trim()).filter(author=>author && !/@/.test(author) && author.split(/\s+/).length>=2));
+      if(cleanAuthors.size)coveredAuthors++;
+      cleanAuthors.forEach(name=>{const key=normalizeTerm(name);const old=authors.get(key);authors.set(key,{label:old?.label||name,n:(old?.n||0)+1});});
+      const original=(Array.isArray(record.keywords)?record.keywords:[]).flatMap(kw=>String(kw||'').split(/\s*;\s*/)).map(x=>x.trim()).filter(Boolean);
+      const termMap=new Map();
+      original.forEach(term=>{const key=normalizeTerm(term).replace(/[.;,]+$/,'');if(key.length>2 && key.length<95 && !/resumos semin[aá]rio|semin[aá]rio internacional de pesquisa|^palavras.chave$/.test(key))termMap.set(key,termMap.get(key)||term.replace(/[.;,]+$/,''));});
+      if(termMap.size)coveredKeywords++;
+      termMap.forEach((label,key)=>{const old=keywords.get(key);keywords.set(key,{label:old?.label||label,n:(old?.n||0)+1});});
+      const raw=[record.title||'',...original].join(' ').toLocaleLowerCase('pt-BR');
+      const matches=topicRules.filter(([,re])=>re.test(raw)).map(([label])=>label);
+      if(matches.length)coveredThemes++;
+      [...new Set(matches)].forEach(name=>topics.set(name,(topics.get(name)||0)+1));
+    });
+    const sorted=map=>[...map.values()].sort((a,b)=>b.n-a.n||a.label.localeCompare(b.label,'pt-BR')).map(x=>[x.label,x.n]);
+    displayRanking($('#panorama-topics-results'),[...topics].sort((a,b)=>b[1]-a[1]),coveredThemes,rows.length);
+    displayRanking($('#panorama-authors-results'),sorted(authors),coveredAuthors,rows.length);
+    displayRanking($('#panorama-keywords-results'),sorted(keywords),coveredKeywords,rows.length);
+  };
+  exploratoryFilter.addEventListener('change',renderExploratory);
+  renderExploratory();
 
   const iesFilter = $('#panorama-ies-filter');
   const IES_PADROES = [
