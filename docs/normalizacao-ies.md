@@ -91,3 +91,15 @@ Conferidos via arquivos PDF preservados no Google Drive:
 - **VII-2018-210 (GT15):** https://drive.google.com/file/d/1sLcp5giaVBbxI2UB9xJQJXX-g_OFEGxM/view — autoria e afiliações de Adriana de Bortoli (FATEC Lins) e Zionice Garbelini Martos Rodrigues (IFSP Birigui) confirmadas no documento. Resumo e quatro palavras-chave recuperados do original.
 
 Essas três conferências não representam validação dos demais registros. A indicação de instituição original divergente do nome em outras fontes deve permanecer visível na auditoria.
+
+## II SIPEM — revisão editorial incremental (2026-11-01)
+
+A triagem sistemática dos 179 registros do II SIPEM identificou 104 com apenas um autor cadastrado, 114 sem palavras-chave e 13 com resumo ausente/curto. São **sinais de prioridade**, não provas de ausência no original.
+
+PDFs vinculados aos exemplos do II SIPEM foram consultados no Google Drive, mas a leitura textual retornou vazia nesta interface: **não foi realizada conferência visual das páginas**.
+
+Foram corrigidos provisoriamente três campos de título, separando nomes já registrados como autores: II-2003-GT01-009 (Tereza de Jesus Ferreira Scheide), II-2003-GT01-010 (Pedro Franco de Sá e John Andrew Fossa), II-2003-GT02-03-014 (Gratuliano Erigoi Alves da Silva e Francisco Peregrino Rodrigues Neto). Os valores originais foram preservados no campo `titleOriginalCatalog` e o status indica conferência visual pendente.
+
+O registro II-2003-GT04-010 tem `José Garcia Martins` no título mas apenas `Silvia Dias Alcântara Machado` na autoria. **Não corrigir automaticamente**: cabe verificar se o nome faltante é segundo autor, organizador, contato ou ruído de extração.
+
+A lista integral para inspeção e a política de verificação estão em `auditoria/ii-sipem-2003-revisao.csv` e `auditoria/protocolo-ii-sipem.md`.
