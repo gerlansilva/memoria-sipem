@@ -274,7 +274,7 @@ const VII_FILES = ['records-vii-2018-gt01.json', 'records-vii-2018-gt02.json', '
 const extraFiles = [...VII_FILES, ...II_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'ii-2003-resumos-20261029-3';
+const catalogVersion = 'ies-revisao-20261101-1';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
