@@ -619,17 +619,18 @@ function panorama() {
   renderGT();
 
   const iesFilter = $('#panorama-ies-filter');
+  const NON_IES = /^(?:INEP|SEEDF|SEED(?:UC)?(?:-|$)|SEE-|SME-|PJF|CEDERJ|SENAI|CAp-|CPII|Colegio|Colégio|Prefeitura|Secretaria|Instituto Nacional de Estudos)/i;
   const extractIES = record => {
     const raw = [
       ...(Array.isArray(record.institutions) ? record.institutions : []),
-      ...(Array.isArray(record.authors) ? record.authors.map(author => {
-        const match = String(author).match(/\(([^()]+)\)\s*$/);
-        return match ? match[1] : '';
-      }) : [])
+      ...(Array.isArray(record.authors) ? record.authors.map(author =>
+        String(author).match(/\(([^()]+)\)\s*$/)?.[1] || '') : [])
     ];
     return [...new Set(raw.flatMap(value => String(value || '').split(/\s*[;/]\s*/))
       .map(value => value.trim()).filter(Boolean)
-      .map(value => iesSigla(value).trim()).filter(value => value && value !== 'Instituição não identificada'))];
+      .map(value => value.replace(/\s+[–—-]\s+(?:Brasil|Brazil|Portugal|Espanha|Spain|Argentina|Suécia|Sweden|Chile|Colômbia|Colombia)\s*$/i, '').trim())
+      .map(value => iesSigla(value).trim())
+      .filter(value => value && value !== 'Instituição não identificada' && !NON_IES.test(value)))];
   };
   const renderIES = () => {
     const id = iesFilter.value;
