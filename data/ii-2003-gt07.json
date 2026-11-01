@@ -305,25 +305,6 @@
     "authorStatus": "Autoria extraída do PDF; instituições por posição, conferir"
   },
   {
-    "id": "II-2003-GT07-033",
-    "edition": 2,
-    "year": 2003,
-    "gt": "GT07",
-    "section": "GT07 — Formação de professores que ensinam Matemática",
-    "title": "Seminário Internacional de Pesqui a em Educa cio Matemática Resumos",
-    "authors": [],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
-    "drivePdf": "https://drive.google.com/file/d/1lPBOHzQnHOTGs2fiNwgHyfMZi3KMUsSk/view?usp=drivesdk",
-    "sourceFileName": "II_SIPEM_GT07_trabalho_033.pdf",
-    "metadataStatus": "OCR revisado (Tesseract, português); conferir no original",
-    "keywordStatus": "Sem palavras-chave identificadas no PDF",
-    "type": "Resumo",
-    "abstractStatus": "PDF sem resumo identificado (texto completo)",
-    "pdfStatus": "PDF sem conteúdo de trabalho (capa de seção)"
-  },
-  {
     "id": "II-2003-GT07-001",
     "edition": 2,
     "year": 2003,
