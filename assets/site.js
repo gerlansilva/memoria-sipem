@@ -261,26 +261,49 @@ function home() {
   }).join('');
 
   $('#home-view').innerHTML = `
-  <section class="hero">
-    <svg class="hero-trace" viewBox="0 0 96 92" aria-hidden="true"><path class="memory-trace trace-one" d="M8 70C11 36 25 22 40 43c10 14 14 27 23 20 10-8 11-28 25-47"/><path class="memory-trace trace-two" d="M18 78c3-28 13-36 24-20 11 16 17 24 26 16 9-8 13-24 20-34"/><path class="memory-trace trace-three" d="M30 80c2-13 7-18 13-11 8 9 14 14 22 6 7-7 12-16 17-21"/></svg>
-    <h1>Memória do <em>SIPEM</em></h1>
-    <p class="hero-lede">O SIPEM reúne a produção de pesquisadores em Educação Matemática ao longo de mais de duas décadas. Preservar seus anais é preservar a memória da área: temas, métodos e debates que moldaram a pesquisa brasileira. O Memória SIPEM existe para que essa produção não se perca e possa ser consultada, comparada e continuada.</p>
-    <div class="hero-actions">
-      <a class="button primary" href="#anais">Explorar os anais ${handIcon()}</a>
-      <a class="button ghost" href="#historia">Conhecer a história</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <header class="section-head">
-      <div>
-        <p class="eyebrow">Linha do tempo</p>
-        <h2>Edições</h2>
+    <section class="landing-hero" aria-labelledby="landing-title">
+      <div class="landing-intro">
+        <p class="eyebrow">Acervo de pesquisa em Educação Matemática</p>
+        <h1 id="landing-title">Memória do <em>SIPEM</em></h1>
+        <p class="landing-lede">Um espaço dedicado à preservação, organização e consulta da produção científica do Seminário Internacional de Pesquisa em Educação Matemática.</p>
+        <div class="landing-actions">
+          <a class="button primary" href="#anais">Explorar o acervo <span aria-hidden="true">↗</span></a>
+          <a class="button ghost" href="#historia">Conhecer as edições</a>
+        </div>
       </div>
-    </header>
-    <ol class="timeline">${timeline}</ol>
-  </section>
+      <aside class="landing-feature" aria-label="Sobre o acervo">
+        <span class="landing-feature-label">PESQUISAR · CONSULTAR · PRESERVAR</span>
+        <p>Uma memória científica construída a partir dos trabalhos, debates e trajetórias que integram a história do SIPEM.</p>
+        <a href="#sobre">Sobre o projeto <span aria-hidden="true">↗</span></a>
+      </aside>
+    </section>
 
+    <section class="landing-numbers" aria-label="Números do acervo">
+      <div><strong>${data.editions.length}</strong><span>edições realizadas</span></div>
+      <div><strong>${total.toLocaleString('pt-BR')}</strong><span>registros indexados</span></div>
+      <div><strong>${indexed}</strong><span>edições com trabalhos pesquisáveis</span></div>
+      <div><strong>${data.editions[0].year}–${data.editions[data.editions.length - 1].year}</strong><span>período documentado</span></div>
+    </section>
+
+    <section class="landing-discover" aria-labelledby="discover-title">
+      <div>
+        <p class="eyebrow">Consulta ao acervo</p>
+        <h2 id="discover-title">Encontre pesquisas do SIPEM</h2>
+        <p>Busque trabalhos por título, autoria, instituição, resumo ou palavras-chave e refine os resultados por edição e Grupo de Trabalho.</p>
+      </div>
+      <a class="landing-discover-link" href="#anais">Acessar pesquisa de trabalhos <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="section landing-editions" aria-labelledby="landing-editions-title">
+      <header class="section-head">
+        <div>
+          <p class="eyebrow">Linha do tempo</p>
+          <h2 id="landing-editions-title">As edições do SIPEM</h2>
+        </div>
+        <p>Explore a trajetória do seminário e consulte os trabalhos disponíveis de cada edição.</p>
+      </header>
+      <ol class="timeline">${timeline}</ol>
+    </section>
   `;
 }
 
