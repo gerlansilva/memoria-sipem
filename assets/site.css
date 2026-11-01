@@ -1637,3 +1637,21 @@ h1, h2, h3, p { text-wrap: pretty; }
  .panorama-dashboard-grid,.panorama-explore .panorama-dashboard-grid:has(#panorama-repeat-authors) {grid-template-columns:minmax(0,1fr);}
  .panorama-dashboard-card {padding:18px 16px;}
 }
+
+/* Distribuição por GT — painéis por edição */
+.panorama-gt-panels {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px;align-items:start}
+.panorama-gt-panel {min-width:0;border:1px solid var(--line);border-radius:12px;background:#fff;padding:20px 21px;box-shadow:var(--shadow-sm)}
+.panorama-gt-panel>header {display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 14px}
+.panorama-gt-panel h3 {font-size:1.06rem;margin:0;font-weight:700}
+.panorama-gt-panel h3 span {font-weight:450;color:var(--muted)}
+.panorama-gt-panel>header>strong {font-size:.85rem;color:var(--accent);font-variant-numeric:tabular-nums}
+.panorama-gt-panel .panorama-count {font-size:.76rem;color:var(--muted);margin:7px 0 16px}
+.panorama-gt-chart {display:grid;gap:10px}
+.panorama-gt-chart-row {display:grid;grid-template-columns:74px minmax(0,1fr) 32px;gap:9px;align-items:center}
+.panorama-gt-chart-row>span {font-size:.8rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.panorama-gt-chart-row>strong {font-size:.79rem;text-align:right;font-variant-numeric:tabular-nums}
+.panorama-gt-chart-row .panorama-bar-track {height:9px}
+.panorama-gt-panel-link {display:inline-block;margin-top:18px;color:var(--accent);font-size:.8rem;font-weight:650}
+.panorama-gt-panel-empty {background:#fbfcfe}
+.panorama-gt-panel-empty>p {font-size:.85rem;color:var(--muted);margin:12px 0 0}
+@media(max-width:760px){.panorama-gt-panels{grid-template-columns:1fr}.panorama-gt-panel{padding:18px 16px}}
