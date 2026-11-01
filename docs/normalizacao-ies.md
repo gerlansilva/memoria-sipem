@@ -81,3 +81,13 @@ Conferência de fontes públicas **não substitui** a inspeção direta dos PDFs
 **Casos que continuam pendentes:** `Universidade Tecnológica Federal do Pará`, denominações genéricas, `UNIBAN/UNIAN/Anhanguera` e afiliações que precisam ser atribuídas individualmente por autor. A UTFPR informa oficialmente que a forma correta é *Universidade Tecnológica Federal do Paraná* (https://www.utfpr.edu.br/servidores/site/mural/ordem-de-servico-normatiza-uso-do-nome-da-utfpr), mas isso não demonstra, isoladamente, que essa instituição seja a do autor no trabalho.
 
 **Limite da conclusão:** o processo **não está finalizado**. Uma auditoria exaustiva exige acesso e inspeção dos PDFs individuais de cada trabalho, comparação com o registro do evento, revisão dos nomes institucionais e validação dos vínculos. Não há base suficiente para marcar todos os registros como verificados.
+
+## Verificação direta dos PDFs originais — três registros do VII SIPEM
+
+Conferidos via arquivos PDF preservados no Google Drive:
+
+- **VII-2018-009 (GT01):** https://drive.google.com/file/d/19o2IXVFFiEjFb04P72VQOEnlpf0t5m86/view — autoria confirmada: Angélica da Fontoura Garcia Silva (Universidade Anhanguera de São Paulo), Sandra Cristina Lopes (Centro Universitário de Volta Redonda), Ruy Cesar Pietropaolo (Universidade Anhanguera de São Paulo), Tânia Maria Mendonça Campos (**sem afiliação indicada no original**). O endereço eletrônico incorretamente catalogado como autor foi removido. As palavras-chave originais foram separadas em três itens.
+- **VII-2018-112 (GT07):** https://drive.google.com/file/d/18eNZKk3aSVpMAcL99U3YU7GaqjXr3Abc/view — as cinco afiliações foram conferidas no original. O PDF apresenta literalmente `Universidade Tecnológica Federal do Pará` para Marlova Caldatto; fontes externas indicam UTFPR, mas a divergência **não foi resolvida por substituição automática**. Vinculação individual de cada autor adicionada.
+- **VII-2018-210 (GT15):** https://drive.google.com/file/d/1sLcp5giaVBbxI2UB9xJQJXX-g_OFEGxM/view — autoria e afiliações de Adriana de Bortoli (FATEC Lins) e Zionice Garbelini Martos Rodrigues (IFSP Birigui) confirmadas no documento. Resumo e quatro palavras-chave recuperados do original.
+
+Essas três conferências não representam validação dos demais registros. A indicação de instituição original divergente do nome em outras fontes deve permanecer visível na auditoria.
