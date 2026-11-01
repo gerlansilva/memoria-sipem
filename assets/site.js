@@ -620,6 +620,75 @@ function panorama() {
   renderGT();
 
   const iesFilter = $('#panorama-ies-filter');
+  const IES_PADROES = [
+    ['universidade estadual paulista', 'UNESP'], ['unesp', 'UNESP'],
+    ['faculdade de educacao - usp', 'USP'], ['feusp', 'USP'], ['ffclrp/usp', 'USP'], ['instituto de matematica e estatistica -usp', 'USP'],
+    ['universidade de sao paulo', 'USP'],
+    ['faculdade de educacao, universidade estadual de campinas', 'UNICAMP'],
+    ['universidade estadual de campinas', 'UNICAMP'], ['faculdade de educacao da universidade estadual de campinas', 'UNICAMP'],
+    ['universidade estadual de santa cruz', 'UESC'],
+    ['universidade federal do rio de janeiro', 'UFRJ'],
+    ['projeto fundao', 'UFRJ'], ['pemat', 'UFRJ'],
+    ['universidade do vale do taquari', 'UNIVATES'],
+    ['universidade federal do estado do rio de janeiro', 'UNIRIO'],
+    ['universidade federal rural do rio de janeiro', 'UFRRJ'],
+    ['universidade federal de mato grosso do sul', 'UFMS'],
+    ['universidade federal do mato grosso do sul', 'UFMS'],
+    ['universidade federal de pernambuco', 'UFPE'],
+    ['universidade estadual de maringa', 'UEM'],
+    ['universidade franciscana', 'UFN'],
+    ['universidade de brasilia', 'UnB'],
+    ['universidade luterana do brasil', 'ULBRA'],
+    ['universidade cruzeiro do sul', 'UNICSUL'],
+    ['universidade tecnologica federal do parana', 'UTFPR'],
+    ['instituto federal do rio de janeiro', 'IFRJ'],
+    ['instituto federal de sao paulo', 'IFSP'],
+    ['instituto federal de educacao ciencia e tecnologia de sao paulo', 'IFSP'],
+    ['instituto federal do norte de minas gerais', 'IFNMG'],
+    ['instituto federal norte de minas gerais', 'IFNMG'],
+    ['instituto federal de goias', 'IFG'],
+    ['instituto federal do mato grosso do sul', 'IFMS'],
+    ['instituto federal do sul de minas', 'IFSULDEMINAS'],
+    ['instituto federal sul de minas', 'IFSULDEMINAS'],
+    ['instituto federal farroupilha', 'IFFar'],
+    ['instituto federal catarinense', 'IFC'],
+    ['instituto federal de brasilia', 'IFB'],
+    ['centro federal de educacao tecnologica de minas gerais', 'CEFET-MG'],
+    ['universidade federal de alfenas', 'UNIFAL-MG'],
+    ['universidade federal do reconcavo da bahia', 'UFRB'],
+    ['universidade federal do sul e sudeste do para', 'UNIFESSPA'],
+    ['universidade federal da integracao latino-americana', 'UNILA'],
+    ['universidade estadual do norte do parana', 'UENP'],
+    ['universidade estadual de montes claros', 'UNIMONTES'],
+    ['universidade do estado de santa catarina', 'UDESC'],
+    ['universidade estadual da bahia', 'UNEB'],
+    ['universidade do estado do mato grosso', 'UNEMAT'],
+    ['universidade vale do taquari', 'UNIVATES'],
+    ['instituto federal de educacao ciencia e tecnologia fluminense', 'IFF'],
+    ['instituto federal do espirito santo', 'IFES'],
+    ['universidade federal de pelotas', 'UFPel'],
+    ['universidade federal do triangulo mineiro', 'UFTM'],
+    ['universidade federal da fronteira sul', 'UFFS'],
+    ['universidade federal da grande dourados', 'UFGD'],
+    ['universidade federal de santa catarina', 'UFSC'],
+    ['universidade federal de sao carlos', 'UFSCar'],
+    ['universidade federal de sao paulo', 'UNIFESP'],
+    ['universidade estadual do oeste do parana', 'UNIOESTE'],
+    ['universidade federal do para', 'UFPA'],
+    ['universidade federal do parana', 'UFPR']
+  ];
+  const NORMALIZACAO_PENDENTE = /universidade tecnologica federal do para|^brasil$|^educacao matematica$|^instituto de educacao$|^centro de educacao matematica$|^instituto superior de educacao de sao paulo$/i;
+  const canonicalName = raw => {
+    const cleaned = String(raw || '').trim().replace(/\s*[–—-]\s*(?:Brasil|Brazil|Portugal|Espanha|Spain|Argentina|Suécia|Sweden|Chile|Colômbia|Colombia)\s*$/i, '').trim();
+    const key = iesKey(cleaned);
+    if (!key || NORMALIZACAO_PENDENTE.test(key)) return '';
+    const known = IES_PADROES.find(([name]) => key.startsWith(name) && (key.length === name.length || /[\s,(/–—-]/.test(key.charAt(name.length))));
+    if (known) return known[1];
+    if (/^(?:FEUSP|FAE-UFMG|FFCLRP)\b/i.test(cleaned)) return cleaned.startsWith('FAE') ? 'UFMG' : 'USP';
+    if (/^UNESP\b/i.test(cleaned)) return 'UNESP';
+    if (/^UNIAN\b/i.test(cleaned)) return 'UNIAN';
+    return iesSigla(cleaned);
+  };
   const NON_IES = /^(?:INEP|SEEDF|SEED(?:UC)?(?:-|$)|SEE-|SME-|PJF|CEDERJ|SENAI|CAp-|CPII|Colegio|Colégio|Prefeitura|Secretaria|Instituto Nacional de Estudos)/i;
   const extractIES = record => {
     const raw = [
@@ -630,7 +699,7 @@ function panorama() {
     return [...new Set(raw.flatMap(value => String(value || '').split(/\s*[;/]\s*/))
       .map(value => value.trim()).filter(Boolean)
       .map(value => value.replace(/\s+[–—-]\s+(?:Brasil|Brazil|Portugal|Espanha|Spain|Argentina|Suécia|Sweden|Chile|Colômbia|Colombia)\s*$/i, '').trim())
-      .map(value => iesSigla(value).trim())
+      .map(value => canonicalName(value).trim())
       .filter(value => value && value !== 'Instituição não identificada' && !NON_IES.test(value)))];
   };
   const renderIES = () => {
