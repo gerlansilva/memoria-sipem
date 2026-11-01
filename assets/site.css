@@ -1690,3 +1690,11 @@ h1, h2, h3, p { text-wrap: pretty; }
 .panorama-repeat-toggle:focus-visible {outline:2px solid var(--focus);outline-offset:3px;}
 
 .panorama-ies-heading-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.panorama-ies-heading-row h2{margin:0}.panorama-export-small{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:6px;padding:5px 9px;font-size:.75rem;font-weight:600;line-height:1.4;box-shadow:none}.panorama-export-small:hover{color:var(--accent);border-color:var(--line-strong);background:var(--accent-tint)}
+
+/* Filtros integrados aos cabeçalhos dos painéis */
+.panorama-heading-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.panorama-filter-compact{margin:0!important;display:inline-flex;align-items:center;gap:0}
+.panorama-filter-compact select{max-width:225px;min-width:155px;padding:7px 29px 7px 11px;font-size:.78rem;border:1px solid var(--line);border-radius:7px;background-color:#fff;color:var(--ink-soft);font-weight:600}
+.panorama-filter-compact select:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.panorama-explore-head{align-items:center}
+@media(max-width:560px){.panorama-ies-heading-row,.panorama-explore-head{align-items:flex-start}.panorama-heading-actions{width:100%}.panorama-filter-compact select{max-width:100%;min-width:0}}
