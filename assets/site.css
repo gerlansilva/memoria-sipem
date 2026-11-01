@@ -1576,3 +1576,8 @@ h1, h2, h3, p { text-wrap: pretty; }
 .panorama-ies-row > span { overflow-wrap: anywhere; }
 .panorama-ies-row strong { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
 @media(max-width:650px) { .panorama-ies-row { grid-template-columns: 100px minmax(0,1fr) 38px; gap: 8px; } }
+
+.review-notice { padding: 16px 19px; margin: 18px 0 24px; background: #f7f9fc; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; color: var(--ink-soft); font-size: .89rem; line-height: 1.65; text-align: justify; }
+.review-notice strong { color: var(--ink); }
+.review-notice a { color: var(--accent); font-weight: 600; }
+@media(max-width:600px){ .review-notice {text-align:left;} }
