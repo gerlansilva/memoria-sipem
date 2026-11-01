@@ -1490,3 +1490,41 @@ h1, h2, h3, p { text-wrap: pretty; }
   .landing-discover { margin-top: 48px; padding: 24px 20px; }
   .landing-discover-link { width: 100%; text-align: center; }
 }
+
+
+/* Hierarquia editorial: títulos centrais e textos corridos justificados */
+.landing-intro .eyebrow,
+.landing-intro h1 { text-align: center; }
+.landing-lede {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.landing-actions { justify-content: center; }
+.landing-feature p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+.landing-numbers div { align-items: center; text-align: center; }
+.landing-discover h2,
+.landing-discover .eyebrow { text-align: center; }
+.landing-discover p:not(.eyebrow) {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+.landing-editions .section-head h2,
+.landing-editions .section-head .eyebrow { text-align: center; }
+.landing-editions .section-head > p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+@media (max-width: 540px) {
+  .landing-feature p { text-align: left; }
+  .landing-lede, .landing-discover p:not(.eyebrow) { text-align: left; }
+}
