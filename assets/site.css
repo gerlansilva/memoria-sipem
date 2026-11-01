@@ -1677,3 +1677,8 @@ h1, h2, h3, p { text-wrap: pretty; }
 .panorama-repeat-list {max-height:none !important;height:auto !important;overflow:visible !important;}
 .panorama-dashboard-card:has(#panorama-repeat-authors) {align-self:start;overflow:visible;}
 .panorama-dashboard-card:has(#panorama-repeat-authors) .panorama-repeat-row {min-height:0;}
+
+/* Cabeçalhos objetivos nas abas internas; textos de contexto ficam nas seções pertinentes. */
+.catalog-view > .page-heading .page-intro {display:none;}
+.catalog-view > .page-heading {padding-bottom:18px;}
+.panorama-heading {padding-bottom:18px;}
