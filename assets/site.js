@@ -702,8 +702,19 @@ function panorama() {
   });
   const repeated=[...repetition.values()].filter(x=>x.editions.size>=2).sort((a,b)=>b.editions.size-a.editions.size||b.works-a.works||a.name.localeCompare(b.name,'pt-BR'));
   $('#panorama-repeat-authors').innerHTML= repeated.length ?
-    '<p class="panorama-count">'+repeated.length+' nomes normalizados aparecem em pelo menos duas edições</p><div class="panorama-repeat-list">'+repeated.slice(0,25).map((x,i)=>'<div class="panorama-repeat-row"><span>'+(i+1)+'. '+escapeHTML(x.name)+'</span><strong>'+x.editions.size+' edições</strong><small>'+x.works+' trabalhos · '+[...x.editions].sort((a,b)=>a-b).map(id=>{const ed=data.editions.find(e=>e.id===id);return ed?ed.year:id;}).join(', ')+'</small></div>').join('')+'</div>':
+    '<p class="panorama-count">'+repeated.length+' nomes normalizados aparecem em pelo menos duas edições</p><div class="panorama-repeat-list">'+repeated.slice(0,25).map((x,i)=>'<div class="panorama-repeat-row"><span>'+(i+1)+'. '+escapeHTML(x.name)+'</span><strong>'+x.editions.size+' edições</strong><small>'+x.works+' trabalhos · '+[...x.editions].sort((a,b)=>a-b).map(id=>{const ed=data.editions.find(e=>e.id===id);return ed?ed.year:id;}).join(', ')+'</small></div>').join('')+'</div><button type="button" id="panorama-repeat-toggle" class="panorama-repeat-toggle" aria-expanded="false" aria-controls="panorama-repeat-authors">Expandir ranking</button>':
     '<p class="panorama-count">Ainda não há autores identificados em duas edições no catálogo carregado.</p>';
+  const rankingContainer = $('#panorama-repeat-authors');
+  const rankingToggle = $('#panorama-repeat-toggle');
+  if (rankingToggle) {
+    const applyRankingState = expanded => {
+      rankingContainer.classList.toggle('is-expanded', expanded);
+      rankingToggle.setAttribute('aria-expanded', String(expanded));
+      rankingToggle.textContent = expanded ? 'Recolher ranking' : 'Expandir ranking';
+    };
+    applyRankingState(false);
+    rankingToggle.addEventListener('click', () => applyRankingState(rankingToggle.getAttribute('aria-expanded') !== 'true'));
+  }
   const editionsWithData=data.editions.filter(e=>recordsFor(e.id).length);
   const gtRows=new Map();
   editionsWithData.forEach(ed=>recordsFor(ed.id).forEach(rec=>{
