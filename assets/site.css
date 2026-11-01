@@ -1528,3 +1528,44 @@ h1, h2, h3, p { text-wrap: pretty; }
   .landing-feature p { text-align: left; }
   .landing-lede, .landing-discover p:not(.eyebrow) { text-align: left; }
 }
+
+
+/* Panorama documental — dados parciais do acervo em construção */
+.panorama-view { padding: clamp(42px,6vw,78px) 0 40px; max-width: 1050px; margin: 0 auto; }
+.panorama-heading { text-align: center; }
+.panorama-heading h1 { margin: 0; font: 400 clamp(2.7rem,5vw,4.3rem)/1.14 var(--serif); letter-spacing: -.035em; }
+.panorama-heading > p:not(.eyebrow) { max-width: 700px; margin: 18px auto 14px; color: var(--ink-soft); line-height: 1.7; text-align: justify; hyphens: auto; }
+.panorama-status { display: inline-block; padding: 7px 13px; color: var(--ink-soft); background: #f3f5f7; border-radius: 100px; font-size: .8rem; }
+.panorama-stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 25px; margin: 52px 0 60px; padding: 27px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.panorama-stats div { display: flex; align-items: center; flex-direction: column; gap: 6px; text-align: center; }
+.panorama-stats strong { font: 400 clamp(1.9rem,3vw,2.65rem)/1.2 var(--serif); }
+.panorama-stats span { color: var(--muted); font-size: .85rem; }
+.panorama-section { margin-top: 62px; }
+.panorama-section h2 { margin: 0 0 14px; text-align: center; font: 400 clamp(1.8rem,3vw,2.45rem)/1.2 var(--serif); }
+.panorama-section > p { max-width: 800px; margin: 0 auto 28px; color: var(--ink-soft); line-height: 1.7; text-align: justify; hyphens: auto; }
+.panorama-bars, .panorama-gt-list { border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; background: #fff; }
+.panorama-bar-row { display: grid; grid-template-columns: 110px minmax(0,1fr) 75px 110px; align-items: center; gap: 15px; padding: 11px 0; font-size: .88rem; }
+.panorama-bar-row + .panorama-bar-row, .panorama-gt-row + .panorama-gt-row { border-top: 1px solid #f0f1f3; }
+.panorama-edition { font-weight: 600; }
+.panorama-bar-track { height: 11px; overflow: hidden; border-radius: 30px; background: #eff3f7; }
+.panorama-bar-track span { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+.panorama-bar-value { font-variant-numeric: tabular-nums; text-align: right; }
+.panorama-bar-row a { color: var(--accent); font-weight: 600; text-decoration: none; text-align: right; font-size: .8rem; }
+.panorama-bar-row a:hover { text-decoration: underline; }
+.panorama-pending { color: var(--muted); text-align: right; font-size: .75rem; }
+.panorama-filter { display: flex; gap: 14px; align-items: center; justify-content: center; margin: 25px 0; font-size: .86rem; font-weight: 600; }
+.panorama-filter select { max-width: 320px; border: 1px solid var(--line); border-radius: 24px; background: #fff; padding: 10px 15px; color: var(--ink); }
+.panorama-count { color: var(--muted); text-align: center; margin: 12px 0 18px; font-size: .84rem; }
+.panorama-gt-row { display: grid; grid-template-columns: 90px minmax(0,1fr) 60px; gap: 15px; align-items: center; padding: 10px 0; font-size: .87rem; }
+.panorama-gt-row strong { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.panorama-method { border-top: 1px solid var(--line); padding-top: 38px; }
+@media(max-width:650px) {
+  .panorama-heading > p:not(.eyebrow), .panorama-section > p { text-align: left; }
+  .panorama-stats { gap: 12px; }
+  .panorama-stats strong { font-size: 1.7rem; }
+  .panorama-stats span { font-size: .73rem; }
+  .panorama-bars, .panorama-gt-list { padding: 12px; }
+  .panorama-bar-row { grid-template-columns: 78px minmax(0,1fr) 53px; gap: 8px; }
+  .panorama-bar-row a, .panorama-pending { grid-column: 2 / 4; text-align: right; }
+  .panorama-gt-row { grid-template-columns: 66px minmax(0,1fr) 42px; gap: 8px; }
+}
