@@ -1569,3 +1569,10 @@ h1, h2, h3, p { text-wrap: pretty; }
   .panorama-bar-row a, .panorama-pending { grid-column: 2 / 4; text-align: right; }
   .panorama-gt-row { grid-template-columns: 66px minmax(0,1fr) 42px; gap: 8px; }
 }
+
+
+.panorama-ies-row { display: grid; grid-template-columns: minmax(125px, 210px) minmax(0,1fr) 60px; gap: 15px; align-items: center; padding: 10px 0; font-size: .87rem; }
+.panorama-ies-row + .panorama-ies-row { border-top: 1px solid #f0f1f3; }
+.panorama-ies-row > span { overflow-wrap: anywhere; }
+.panorama-ies-row strong { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+@media(max-width:650px) { .panorama-ies-row { grid-template-columns: 100px minmax(0,1fr) 38px; gap: 8px; } }
