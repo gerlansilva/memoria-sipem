@@ -274,7 +274,7 @@ const VII_FILES = ['records-vii-2018-gt01.json', 'records-vii-2018-gt02.json', '
 const extraFiles = [...VII_FILES, ...II_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'dashboard-20261101-1';
+const catalogVersion = 'longitudinal-20261101-1';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -601,6 +601,14 @@ function panorama() {
       </div>
       <p class="panorama-explore-note">Os indicadores consideram apenas os metadados atualmente disponíveis no acervo. A conferência de autoria, palavras-chave e resumos do II SIPEM permanece em andamento.</p>
     </section>
+    <section class="panorama-explore" aria-labelledby="panorama-cross-heading">
+      <div class="panorama-explore-head"><div><p class="eyebrow">Análise longitudinal</p><h2 id="panorama-cross-heading">Pesquisadores e evolução dos GTs</h2></div></div>
+      <div class="panorama-dashboard-grid">
+        <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Quem aparece em mais edições?</h3><span>Ranking por edições distintas</span></div><p>O critério principal é a presença em edições diferentes; a quantidade de trabalhos resolve empates. Participação significa autoria em trabalho indexado, não inscrição ou presença física no evento.</p><div id="panorama-repeat-authors" aria-live="polite"></div></article>
+        <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>GTs por edição</h3><span>Denominação original</span></div><p>Os números representam trabalhos catalogados em cada GT e edição; grupos agregados permanecem separados dos grupos de outras edições.</p><div id="panorama-gt-matrix" aria-live="polite"></div></article>
+      </div>
+      <p class="panorama-explore-note">A equivalência histórica entre GTs deve ser curada manualmente. Esta tabela não presume que GT01, GT02 etc. representem sempre a mesma linha temática ao longo dos anos.</p>
+    </section>
     <section class="panorama-section panorama-method" aria-labelledby="panorama-method-heading">
       <h2 id="panorama-method-heading">Sobre os dados</h2>
       <p>Os indicadores são calculados a partir dos registros carregados no catálogo digital. Edições sem registros não são tratadas como edições sem produção. Metadados e documentos seguem em revisão; por isso, os totais podem mudar à medida que o acervo for ampliado e conferido.</p>
@@ -681,6 +689,34 @@ function panorama() {
   exploratoryFilter.addEventListener('change',renderExploratory);
   renderExploratory();
 
+  const normalizeAuthor = value => normalize(String(value||'').replace(/\\s*\\([^)]*\\)\\s*$/,'').replace(/\\s+/g,' ').trim());
+  const repetition = new Map();
+  data.records.forEach(rec => {
+    const seen=new Set();
+    (Array.isArray(rec.authors)?rec.authors:[]).forEach(value=>{
+      const original=String(value||'').replace(/\\s*\\([^)]*\\)\\s*$/,'').trim();
+      const key=normalizeAuthor(value);
+      if(!key || original.split(/\\s+/).length<2 || /@/.test(original)||seen.has(key))return;
+      seen.add(key);
+      let obj=repetition.get(key);
+      if(!obj){obj={name:original,editions:new Set(),works:0,gts:new Set()};repetition.set(key,obj);}
+      obj.editions.add(rec.edition);obj.works++;if(rec.gt)obj.gts.add(rec.gt);
+    });
+  });
+  const repeated=[...repetition.values()].filter(x=>x.editions.size>=2).sort((a,b)=>b.editions.size-a.editions.size||b.works-a.works||a.name.localeCompare(b.name,'pt-BR'));
+  $('#panorama-repeat-authors').innerHTML= repeated.length ?
+    '<p class="panorama-count">'+repeated.length+' nomes normalizados aparecem em pelo menos duas edições</p><div class="panorama-repeat-list">'+repeated.slice(0,25).map((x,i)=>'<div class="panorama-repeat-row"><span>'+(i+1)+'. '+escapeHTML(x.name)+'</span><strong>'+x.editions.size+' edições</strong><small>'+x.works+' trabalhos · '+[...x.editions].sort((a,b)=>a-b).map(id=>{const ed=data.editions.find(e=>e.id===id);return ed?ed.year:id;}).join(', ')+'</small></div>').join('')+'</div>':
+    '<p class="panorama-count">Ainda não há autores identificados em duas edições no catálogo carregado.</p>';
+  const editionsWithData=data.editions.filter(e=>recordsFor(e.id).length);
+  const gtRows=new Map();
+  editionsWithData.forEach(ed=>recordsFor(ed.id).forEach(rec=>{
+    const gt=String(rec.gt||'Não informado').trim();
+    const key=gt.toUpperCase().replace(/\\s+/g,'');
+    if(!gtRows.has(key))gtRows.set(key,{gt,values:new Map()});
+    const item=gtRows.get(key);item.values.set(ed.id,(item.values.get(ed.id)||0)+1);
+  }));
+  const gtSorted=[...gtRows.values()].sort((a,b)=>a.gt.localeCompare(b.gt,'pt-BR',{numeric:true}));
+  $('#panorama-gt-matrix').innerHTML='<div class="panorama-cross-table-wrap"><table class="panorama-cross-table"><thead><tr><th scope="col">GT original</th>'+editionsWithData.map(ed=>'<th scope="col">'+ed.year+'</th>').join('')+'<th scope="col">Total</th></tr></thead><tbody>'+gtSorted.map(item=>'<tr><th scope="row">'+escapeHTML(item.gt)+'</th>'+editionsWithData.map(ed=>'<td>'+(item.values.get(ed.id)||'—')+'</td>').join('')+'<td><strong>'+[...item.values.values()].reduce((a,b)=>a+b,0)+'</strong></td></tr>').join('')+'</tbody></table></div>';
   const iesFilter = $('#panorama-ies-filter');
   const IES_PADROES = [
     ['universidade estadual paulista', 'UNESP'], ['unesp', 'UNESP'],
