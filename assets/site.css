@@ -22,7 +22,7 @@
   --radius: 8px;
   --radius-sm: 6px;
   --sans: 'Open Sans', 'Inter', system-ui, -apple-system, sans-serif;
-  --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --serif: 'Open Sans', system-ui, sans-serif;
   --fs-title: 1.16rem;
   --fs-body: .95rem;
   --fs-small: .84rem;
