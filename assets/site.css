@@ -1,27 +1,27 @@
 :root {
-  --ink: #1f2937;
-  --ink-soft: #374151;
-  --muted: #6b7280;
-  --accent: #0b4b96;
-  --accent-dark: #073d85;
-  --accent-soft: #e6f0fa;
-  --accent-tint: #f2f7fd;
-  --accent-secondary: #009a91;
-  --accent-secondary-soft: #e6f6f5;
-  --accent-tertiary: #08bfd9;
-  --accent-warm: #ffb21b;
-  --accent-hot: #fe5238;
-  --focus: #08bfd9;
-  --paper: #ffffff;
-  --surface: #ffffff;
-  --line: #e5e7eb;
-  --line-strong: #d1d5db;
+  --ink: #243443;
+  --ink-soft: #455362;
+  --muted: #657481;
+  --accent: #2D4156;
+  --accent-dark: #243548;
+  --accent-soft: #E9F0F3;
+  --accent-tint: #F5F8F9;
+  --accent-secondary: #6DA79B;
+  --accent-secondary-soft: #EAF3F0;
+  --accent-tertiary: #8FAFC2;
+  --accent-warm: #C7B7A2;
+  --accent-hot: #9D807B;
+  --focus: #577D91;
+  --paper: #FFFFFF;
+  --surface: #FFFFFF;
+  --line: #E3E8E9;
+  --line-strong: #C8D3D7;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .03);
   --shadow-md: 0 2px 6px rgba(0, 0, 0, .06);
   --radius-lg: 12px;
   --radius: 8px;
   --radius-sm: 6px;
-  --sans: 'Inter', 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans: 'Open Sans', 'Inter', system-ui, -apple-system, sans-serif;
   --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --fs-title: 1.16rem;
   --fs-body: .95rem;
@@ -1655,3 +1655,20 @@ h1, h2, h3, p { text-wrap: pretty; }
 .panorama-gt-panel-empty {background:#fbfcfe}
 .panorama-gt-panel-empty>p {font-size:.85rem;color:var(--muted);margin:12px 0 0}
 @media(max-width:760px){.panorama-gt-panels{grid-template-columns:1fr}.panorama-gt-panel{padding:18px 16px}}
+
+/* Identidade Memória SIPEM 2026: marca original, cromia mineral */
+.brand-memory {font-family:var(--sans);font-style:italic;font-weight:400;letter-spacing:-.045em;font-size:1.03rem}
+.brand-sipem {font-family:var(--sans);font-weight:800;letter-spacing:.075em;color:var(--ink)}
+.brand-text {border-left-color:#2D4156}
+.memory-trace {stroke:#2D4156}
+.trace-two {stroke:#6DA79B}
+.trace-three {stroke:#8FAFC2}
+.trace-index {fill:#2D4156}
+.brand-mark {width:49px;height:47px}
+.site-header {background:rgba(255,255,255,.96);border-bottom-color:#E3E8E9}
+.main-nav a[aria-current] {background:#2D4156;color:#fff}
+.panorama-bar-track>span,.panorama-rank-meter>span {background:#6DA79B}
+.panorama-stats>div,.panorama-dashboard-card,.panorama-gt-panel {background:#fff;border-color:#E3E8E9}
+.panorama-dashboard-card {box-shadow:none}
+.panorama-heading .panorama-status {background:#EFF4F3;color:#455E61;border:1px solid #DDE8E5}
+@media (prefers-reduced-motion:reduce){.button,.main-nav a,.timeline-card{transition:none}}
