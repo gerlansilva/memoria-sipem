@@ -411,6 +411,9 @@ function article(record) {
       </div>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
       ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(', ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
+
+    </div>
+    <div class="record-actions">
       <details class="record-details">
         <summary><span class="details-open">Ver detalhes</span><span class="details-close">Ocultar detalhes</span></summary>
         <div class="record-expanded">
@@ -420,9 +423,6 @@ function article(record) {
           ${keywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${keywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : (Number(record.edition) === 2 ? '<p class="keywords"><strong>Palavras-chave</strong> · Não identificadas automaticamente; ausência no original ainda não confirmada.</p>' : '')}
         </div>
       </details>
-    </div>
-    <div class="record-actions">
-      <span class="record-action-hint">Consulte o resumo e os metadados do trabalho</span>
       ${url
         ? `<a class="download" href="${url}" target="_blank" rel="noopener" aria-label="${accessLabel === 'PDF' ? 'Acessar PDF' : 'Abrir documento'} — ${escapeHTML(record.title)}">${downloadIcon}<span>${accessLabel === 'PDF' ? 'Acessar PDF' : 'Abrir documento'}</span></a>`
         : '<span class="unavailable">Documento indisponível</span>'}
