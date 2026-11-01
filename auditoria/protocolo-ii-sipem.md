@@ -41,3 +41,10 @@ Todos esses são **candidatos à correção**, não correções validadas. Consu
 ## Critério para encerrar a revisão
 
 Nenhum trabalho pode ser considerado concluído sem documentação do confronto com seu PDF. A edição completa somente estará validada quando os 179 registros tiverem checklist por campo, correspondência correta de autores/IES, revisão de resumos e palavras-chave e registro das ausências reais. Manter indicador de cobertura e lista de pendências no site até essa condição.
+
+## Conferências documentais confirmadas (01/11/2026)
+
+- **II-2003-GT01-010** — título e dois autores confirmados por inspeção do PDF individual; resumo e três palavras-chave conferidos na reprodução e no Livro de Resumos da SBEM (p. 25). IES não indicadas na página do evento; não importar afiliações de publicações posteriores. https://www.sbembrasil.org.br/files/sipemII.pdf
+- **II-2003-GT07-001** — Livro de Resumos oficial (p. 112) identifica **Arlete de Jesus Brito** e **Bernadete Barbosa Morey**, ambas UFRN, e contém resumo. Corrigida autoria anteriormente incompleta e recuperado resumo. Palavras-chave não identificadas na transcrição consultada; ausência ainda requer validação visual. https://www.sbembrasil.org.br/files/sipemII.pdf
+
+**Observação importante:** o Livro de Resumos oficial é uma fonte primária com texto recuperável. Ele deve ser utilizado junto aos PDFs recortados para revisar sistematicamente o II SIPEM, evitando OCR como fonte exclusiva. Não reaproveitar como resumo do SIPEM os resumos de artigos posteriormente publicados.
