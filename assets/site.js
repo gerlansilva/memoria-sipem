@@ -629,7 +629,7 @@ function panorama() {
     ];
     return [...new Set(raw.flatMap(value => String(value || '').split(/\s*[;/]\s*/))
       .map(value => value.trim()).filter(Boolean)
-      .map(value => iesSigla(value).trim()).filter(Boolean))];
+      .map(value => iesSigla(value).trim()).filter(value => value && value !== 'Instituição não identificada'))];
   };
   const renderIES = () => {
     const id = iesFilter.value;
