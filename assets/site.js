@@ -74,7 +74,7 @@ const IES_SIGLAS = {
   'universidade do estado do rio de janeiro': 'UERJ',
   'universidade estadual do rio de janeiro': 'UERJ',
   'universidade federal do estado do rio de janeiro': 'UNIRIO',
-  'centro universitario franciscano': 'UNIFRA',
+  'centro universitario franciscano': 'UFN',
   'universidade federal do espirito santo': 'UFES',
   'universidade santa ursula': 'USU',
   'universidade federal de uberlandia': 'UFU',
@@ -140,7 +140,7 @@ const IES_SIGLAS = {
   'faculdades integradas de vitoria': 'FDV',
   'universidade regional integrada do alto uruguai e das missoes': 'URI',
   'universidade comunitaria da regiao de chapeco': 'UNOCHAPECÓ',
-  'universidade severino sombra': 'USS',
+  'universidade severino sombra': 'UNIVASSOURAS',
   'secretaria municipal de educacao do rio de janeiro': 'SME-RJ',
   'instituto federal minas gerais': 'IFMG',
   'instituto federal de educacao ciencia e tecnologia da paraiba': 'IFPB',
@@ -165,7 +165,6 @@ const IES_SIGLAS = {
   'universidade de granada': 'UGR',
   'universidade do sudoeste da bahia': 'UESB',
   'universidade do vale do sapucai': 'UNIVAS',
-  'puc': 'PUC-SP',
   'puc sao paulo': 'PUC-SP',
   'unicesumar': 'UNICESUMAR',
   'secretaria de educacao do estado de roraima': 'SEED-RR',
@@ -194,12 +193,70 @@ const IES_SIGLAS = {
   'faculdade de educacao da universidade federal de minas gerais': 'FAE-UFMG',
   'faculdades integradas toledo de aracatuba': 'FITA',
 };
+/* Equivalências identificadas por fontes institucionais e registros históricos.
+   A forma original permanece preservada nos metadados de cada documento. */
+Object.assign(IES_SIGLAS, {
+  'universidade franciscana': 'UFN',
+  'unifra': 'UFN',
+  'ufn': 'UFN',
+  'universidade la salle': 'UNILASALLE',
+  'unilasalle': 'UNILASALLE',
+  'universidade de vassouras': 'UNIVASSOURAS',
+  'univassouras': 'UNIVASSOURAS',
+  'uss': 'UNIVASSOURAS',
+  'centro universitario serra dos orgaos': 'UNIFESO',
+  'unifeso': 'UNIFESO',
+  'pontificia universidade catolica de sao paulo': 'PUC-SP',
+  'puc sp': 'PUC-SP',
+  'puc-sp': 'PUC-SP',
+  'pontificia universidade catolica de minas gerais': 'PUC Minas',
+  'puc minas': 'PUC Minas',
+  'pontificia universidade catolica do rio de janeiro': 'PUC-Rio',
+  'puc rio': 'PUC-Rio',
+  'pontificia universidade catolica do rio grande do sul': 'PUCRS',
+  'puc rs': 'PUCRS',
+  'pontificia universidade catolica do parana': 'PUCPR',
+  'puc pr': 'PUCPR',
+  'pontificia universidade catolica de campinas': 'PUC-Campinas',
+  'puc campinas': 'PUC-Campinas',
+  'universidade de brasilia': 'UnB',
+  'unb': 'UnB',
+  'usp': 'USP',
+  'ufscar': 'UFSCar',
+  'unicamp': 'UNICAMP',
+  'unesp': 'UNESP',
+  'ufmg': 'UFMG',
+  'ufpe': 'UFPE',
+  'ufsc': 'UFSC',
+  'ufrj': 'UFRJ',
+  'ufrgs': 'UFRGS',
+  'ufpa': 'UFPA',
+  'ufpb': 'UFPB',
+  'universidade federal da paraiba': 'UFPB',
+  'universidade estadual da paraiba': 'UEPB',
+  'uepb': 'UEPB',
+  'instituto federal da paraiba': 'IFPB',
+  'ifpb': 'IFPB',
+  'universidade federal do triangulo mineiro': 'UFTM',
+  'uftm': 'UFTM',
+  'universidade federal de pelotas': 'UFPel',
+  'ufpel': 'UFPel',
+  'universidade do estado de santa catarina': 'UDESC',
+  'udesc': 'UDESC',
+  'universidade federal da fronteira sul': 'UFFS',
+  'uffs': 'UFFS',
+  'universidade federal do oeste do para': 'UFOPA',
+  'ufopa': 'UFOPA',
+  'universidade estadual de maringa': 'UEM',
+  'uem': 'UEM'
+});
+const IES_AMBIGUAS = new Set(['puc', 'universidade catolica', 'universidade federal', 'universidade estadual', 'universidade', 'instituto federal', 'cefet']);
 const iesKey = name => String(name).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[,.“”"]/g, '').replace(/\s+/g, ' ').trim();
 const iesOne = part => {
   const clean = part.replace(/\(.*?\)/g, ' ').trim();
   const candidates = [clean, clean.split(/\s*[-–—]\s*/)[0], ...clean.split(',').map(s => s.trim())];
   const found = candidates.map(c => IES_SIGLAS[iesKey(c)]).find(Boolean);
-  return found || part.trim();
+  return found || (IES_AMBIGUAS.has(iesKey(clean)) ? 'Instituição não identificada' : part.trim());
 };
 const iesSigla = name => String(name).split(/\s*[\/;]\s*|\s+e\s+(?=(?:Universidade|Instituto|Faculdade|Centro)\b)/).map(iesOne).join(' / ');
 const iesTag = name => `<abbr title="${escapeHTML(name)}">${escapeHTML(iesSigla(name))}</abbr>`;
