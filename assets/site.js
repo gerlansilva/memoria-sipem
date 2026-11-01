@@ -274,7 +274,7 @@ const VII_FILES = ['records-vii-2018-gt01.json', 'records-vii-2018-gt02.json', '
 const extraFiles = [...VII_FILES, ...II_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'gt-panels-20261101-1';
+const catalogVersion = 'compact-intros-20261101-1';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -346,8 +346,7 @@ function home() {
       <div>
         <p class="eyebrow">Consulta ao acervo</p>
         <h2 id="discover-title">Encontre pesquisas do SIPEM</h2>
-        <p>Busque trabalhos por título, autoria, instituição, resumo ou palavras-chave e refine os resultados por edição e Grupo de Trabalho.</p>
-      </div>
+        </div>
       <a class="landing-discover-link" href="#anais">Acessar pesquisa de trabalhos <span aria-hidden="true">↗</span></a>
     </section>
 
@@ -559,7 +558,6 @@ function panorama() {
     <header class="panorama-heading">
       <p class="eyebrow">Panorama da produção científica</p>
       <h1 id="panorama-title">O SIPEM em dados</h1>
-      <p>Um retrato provisório dos trabalhos disponíveis no Memória SIPEM. O levantamento e a conferência dos documentos continuam em andamento.</p>
       <span class="panorama-status">Acervo em construção · indicadores parciais</span>
     </header>
     <div class="panorama-stats">
@@ -569,7 +567,6 @@ function panorama() {
     </div>
     <section class="panorama-section" aria-labelledby="panorama-editions-heading">
       <h2 id="panorama-editions-heading">Registros por edição</h2>
-      <p>Estes números indicam a quantidade de documentos indexados no catálogo, não necessariamente o total de trabalhos apresentados em cada edição.</p>
       <div class="panorama-bars">
         ${counts.map(({edition, rows}) => `<div class="panorama-bar-row">
           <span class="panorama-edition">${edition.roman} · ${edition.year}</span>
@@ -581,12 +578,10 @@ function panorama() {
     </section>
     <section class="panorama-section" aria-labelledby="panorama-gt-heading">
       <h2 id="panorama-gt-heading">Distribuição por Grupo de Trabalho</h2>
-      <p>Um gráfico para cada edição, com as contagens dos trabalhos indexados por GT. As denominações e os agrupamentos dos GTs variaram historicamente; os gráficos preservam os códigos registrados no acervo.</p>
       <div id="panorama-gt-results" class="panorama-gt-panels" aria-live="polite"></div>
     </section>
     <section class="panorama-section" aria-labelledby="panorama-ies-heading">
       <h2 id="panorama-ies-heading">Instituições de Ensino Superior (IES)</h2>
-      <p>Participação institucional identificada nos metadados dos trabalhos. Um trabalho com duas instituições contribui uma vez para cada IES; portanto, a soma das participações pode superar o número de documentos.</p>
       <label class="panorama-filter">Edição <select id="panorama-ies-filter">${selector}</select></label>
       <div id="panorama-ies-results" aria-live="polite"></div>
       <p class="panorama-export"><button type="button" id="panorama-export-ies" class="button ghost">Exportar auditoria institucional (CSV)</button></p>
