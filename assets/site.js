@@ -46,6 +46,7 @@ const IES_SIGLAS = {
   'pontificia universidade catolica do rio grande do sul': 'PUCRS',
   'pontificia universidade catolica do rio de janeiro': 'PUC-Rio',
   'pontificia universidade catolica de campinas': 'PUC-Campinas',
+  'universidade catolica dom bosco': 'UCDB',
   'universidade federal de pernambuco': 'UFPE',
   'universidade federal rural de pernambuco': 'UFRPE',
   'universidade de pernambuco': 'UPE',
