@@ -432,6 +432,7 @@ function archives() {
     ${edition ? `<img class="archive-logo" src="${escapeHTML(edition.logo)}" alt="Marca do ${edition.roman} SIPEM" width="110" height="64">` : ''}
   </header>
 
+  ${selected === 4 ? `<aside class="review-notice" aria-label="Aviso de conferência do IV SIPEM"><strong>IV SIPEM (2009): metadados em revisão.</strong> Os 199 PDFs individuais estão disponíveis no Google Drive. Autores, instituições, resumos e descritores foram transcritos preliminarmente e podem conter imprecisões. A ausência de um campo não comprova sua ausência no documento original.</aside>` : ''}
   ${selected === 2 ? `<aside class="review-notice" aria-label="Aviso sobre a conferência documental"><strong>II SIPEM (2003): revisão documental em andamento.</strong> Títulos, autorias, instituições, resumos e palavras-chave ainda estão sendo confrontados com os PDFs originais. A ausência de metadados no catálogo não significa ausência no documento. <a href="https://github.com/gerlansilva/memoria-sipem/blob/main/auditoria/protocolo-ii-sipem.md" target="_blank" rel="noopener">Consultar o protocolo de revisão</a>.</aside>` : ''}
   <div class="search-panel">
     <form class="search-form" role="search">
@@ -480,6 +481,8 @@ function article(record) {
   const url = safeURL([2, 7].includes(Number(record.edition)) ? record.drivePdf : (record.drivePdf || record.pdf || record.officialUrl));
   const edition = editionById(record.edition);
   const keywords = (record.keywords || []).filter(keyword => keyword && !/^não encontrad/i.test(keyword));
+  const isIV = Number(record.edition) === 4;
+  const showKeywords = isIV ? keywords.map(keyword => String(keyword).replace(/\\s+(?=(?:BASIC EDUCATION|LEARNING DIFICULTIES|LISTENING TO APPRENTICES|THE COMPREHENSION OF|ANALYSIS OF THE CONVERSION)[^;]*$)/i, ' ').trim()).filter(Boolean) : keywords;
   const institutions = record.institutions || [];
   const hasAbstract = record.abstract && !/^não encontrado$/i.test(record.abstract);
   const accessLabel = /pdf/i.test(record.accessLabel || '') || record.drivePdf || record.pdf ? 'PDF' : 'Abrir';
@@ -491,7 +494,7 @@ function article(record) {
         <span>${edition ? `${edition.roman} SIPEM · ${record.year}` : record.year}</span>
       </div>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
-      ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(', ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
+      ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
 
     </div>
     <div class="record-actions">
@@ -500,8 +503,8 @@ function article(record) {
         <div class="record-expanded">
           <h4>Resumo</h4>
           ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo não disponível neste registro.</p>'}
-          ${institutions.length ? `<div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>` : ''}
-          ${keywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${keywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : (Number(record.edition) === 2 ? '<p class="keywords"><strong>Palavras-chave</strong> · Não identificadas automaticamente; ausência no original ainda não confirmada.</p>' : '')}
+          ${institutions.length ? `<div class="record-institutions"><h4>Instituições e vínculos informados</h4><div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>${isIV ? '<p class="record-document-note">Vínculos transcritos do caderno; a associação individual entre autor e instituição ainda está em revisão.</p>' : ''}</div>` : ''}
+          ${showKeywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${showKeywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : (Number(record.edition) === 2 ? '<p class="keywords"><strong>Palavras-chave</strong> · Não identificadas automaticamente; ausência no original ainda não confirmada.</p>' : '')}
         </div>
       </details>
       ${url
