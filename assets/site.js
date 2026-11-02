@@ -74,7 +74,7 @@ const IES_SIGLAS = {
   'universidade do estado do rio de janeiro': 'UERJ',
   'universidade estadual do rio de janeiro': 'UERJ',
   'universidade federal do estado do rio de janeiro': 'UNIRIO',
-  'centro universitario franciscano': 'UFN',
+  'centro universitario franciscano': 'UNIFRA',
   'universidade federal do espirito santo': 'UFES',
   'universidade santa ursula': 'USU',
   'universidade federal de uberlandia': 'UFU',
@@ -140,7 +140,7 @@ const IES_SIGLAS = {
   'faculdades integradas de vitoria': 'FDV',
   'universidade regional integrada do alto uruguai e das missoes': 'URI',
   'universidade comunitaria da regiao de chapeco': 'UNOCHAPECÓ',
-  'universidade severino sombra': 'UNIVASSOURAS',
+  'universidade severino sombra': 'USS',
   'secretaria municipal de educacao do rio de janeiro': 'SME-RJ',
   'instituto federal minas gerais': 'IFMG',
   'instituto federal de educacao ciencia e tecnologia da paraiba': 'IFPB',
@@ -254,6 +254,12 @@ const IES_AMBIGUAS = new Set(['puc', 'universidade catolica', 'universidade fede
 const iesKey = name => String(name).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[,.“”"]/g, '').replace(/\s+/g, ' ').trim();
 const IES_EXTRA = {
   'instituto federal goiano': 'IF Goiano',
+  'centro universitario franciscano': 'UNIFRA',
+  'universidade severino sombra': 'USS',
+  'instituto federal goiano - campus urutai': 'IF Goiano',
+  'universidade estadual do norte fluminense darcy ribeiro': 'UENF',
+  'instituto federal de educacao ciencia e tecnologia goiano': 'IF Goiano',
+  'centro universitario de volta redonda': 'UNIFOA',
   'instituto federal goiano campus urutai': 'IF Goiano',
   'instituto federal de goias': 'IFG',
   'universidade federal de campina grande': 'UFCG',
@@ -274,6 +280,9 @@ const iesOne = part => {
   const prefixes = Object.keys(names).sort((a,b) => b.length - a.length);
   const match = prefixes.find(k => key === k || key.startsWith(k + ' ') || key.startsWith(k + ' -') || key.startsWith(k + ' –'));
   if (match) return names[match];
+  // Quando há nomes extensos de instituições, reconhecer a IES sem os detalhes de campus.
+  const citedName = prefixes.find(k => k.length > 12 && key.includes(k));
+  if (citedName) return names[citedName];
   const uppercase = original.match(/\b(?:U[A-Z]{2,8}|IF[A-Z]{1,8}|CEFET(?:-[A-Z]{2})?|PUC(?:-[A-Z]{2,})?|UNESP|UNICAMP|UNIBAN|UNIFRA|UNICSUL|FURG|FURB|UE[A-Z]{1,5})\b/g);
   if (uppercase?.length) return [...new Set(uppercase)].join(' / ');
   if (IES_AMBIGUAS.has(key)) return 'IES não identificada';
@@ -514,7 +523,7 @@ function article(record) {
   const isIV = Number(record.edition) === 4;
   const showKeywords = isIV ? keywords.map(keyword => String(keyword).replace(/\\s+(?=(?:BASIC EDUCATION|LEARNING DIFICULTIES|LISTENING TO APPRENTICES|THE COMPREHENSION OF|ANALYSIS OF THE CONVERSION)[^;]*$)/i, ' ').trim()).filter(Boolean) : keywords;
   const institutions = record.institutions || [];
-  const cardIES = [...new Set([...institutions.map(iesSigla), ...(record.authors || []).map(authorAffiliation)].filter(Boolean))];
+  const cardIES = [...new Set([...institutions.map(iesSigla), ...(record.authors || []).map(authorAffiliation)].flatMap(value => value.split(' / ').map(s => s.trim())).filter(Boolean))];
   const hasAbstract = record.abstract && !/^não encontrado$/i.test(record.abstract);
   const accessLabel = /pdf/i.test(record.accessLabel || '') || record.drivePdf || record.pdf ? 'PDF' : 'Abrir';
 
