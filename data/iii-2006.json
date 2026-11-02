@@ -662,7 +662,7 @@
     "institutions": [
       "Universidade Federal de Pernambuco"
     ],
-    "abstract": "Neste trabalho, estamos dando continuidade a uma pesquisa sobre as recreações matemáticas, a partir dos textos, tanto reais quanto virtuais, e do material concreto existente, acessados sobre o assunto, buscando uma classificação que permita sistematizar mais efetivamente o trabalho com jogos no LACAPE. Embora não seja possível abranger todas as recreações matemáticas que a humanidade já produziu, já dispomos de um acervo considerável sobre jogos, tanto já existentes no LACAPE, quanto na literatura acessada, o que permitirá atender a todas as necessidades referentes aos jogos ou recreações matemáticas no âmbito daquele laboratório. Esta pesquisa está organizada da seguinte forma: fazer um levantamento dos jogos existentes a partir do acervo inicial disponível para o LACAPE e dos jogos já utilizados no mesmo, organizar os jogos em categorias referentes aos níveis de dificuldade, às sub-áreas do conhecimento matemático, às séries escolares e a estruturação e ainda organizar um banco de dados para registrar os jogos matemáticos de acordo com a classificação feita. O banco tem permitido realizar atividades e divulgação junto a instituições e escolas voltadas para o ensino-aprendizagem de matemática. Acreditamos estar dando uma contribuição no sentido de difundir o lugar das recreações matemáticas como no contexto matemático por excelência.",
+    "abstract": "Neste trabalho, estamos dando continuidade a uma pesquisa sobre as recreações matemáticas, a partir dos textos, tanto reais quanto virtuais, e do material concreto existente, acessados sobre o assunto, buscando uma classificação que permita sistematizar mais efetivamente o trabalho com jogos no LACAPE. Embora não seja possível abranger todas as recreações matemáticas que a humanidade já produziu, já dispomos de um acervo considerável sobre jogos, tanto já existentes no LACAPE, quanto na literatura acessada, o que permitirá atender a todas as necessidades referentes aos jogos ou recreações matemáticas no âmbito daquele laboratório. Esta pesquisa está organizada da seguinte forma: fazer um levantamento dos jogos existentes a partir do acervo inicial disponível para o LACAPE e dos jogos já utilizados no mesmo, organizar os jogos em categorias referentes aos níveis de dificuldade, às sub-áreas do conhecimento matemático, às séries escolares e à estruturação e ainda organizar um banco de dados para registrar os jogos matemáticos de acordo com a classificação feita. O banco tem permitido realizar atividades e divulgação junto a instituições e escolas voltadas para o ensino-aprendizagem de matemática. Acreditamos estar dando uma contribuição no sentido de difundir o lugar das recreações matemáticas como no contexto matemático por excelência.",
     "keywords": [
       "jogos matemáticos",
       "classificação",
@@ -671,8 +671,10 @@
     "drivePdf": "https://drive.google.com/file/d/1eUfxPixoFmGCd7GmamoZAiCueG_M4iAI/view",
     "type": "Resumo",
     "accessLabel": "Imagem original",
-    "metadataStatus": "TRANSCRITO_DA_IMAGEM",
-    "pdfStatus": "PDF_NA_PASTA_GT03_2026_11_02"
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL",
+    "pdfStatus": "PDF_NA_PASTA_GT03_2026_11_02",
+    "abstractType": "Transcrição do original",
+    "abstractProvenance": "Transcrição da captura original"
   },
   {
     "id": "III-2006-GT03-002",
