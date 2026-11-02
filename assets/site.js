@@ -525,9 +525,9 @@ function archives() {
   });
   if (selected === 3) {
     const target = $('#iii-identified-66-73');
-    if (target) fetch('data/iii-2006-paginas-66-73-trabalhos-identificados.json?v=20261102-1', {cache:'no-store'})
+    if (target) fetch('data/iii-2006-paginas-66-73-trabalhos-identificados.json?v=20261102-2', {cache:'no-store'})
       .then(response => { if (!response.ok) throw Error('Dados indisponíveis'); return response.json(); })
-      .then(rows => { target.innerHTML = rows.map(row => `<p><strong>${escapeHTML(row.title)}</strong> — ${row.authors.length ? escapeHTML(row.authors.join('; ')) : 'Autoria em conferência'} · Página ${row.page} · <a href="${safeURL(row.sourcePdf)}" target="_blank" rel="noopener">Anais originais</a></p>`).join(''); })
+      .then(rows => { target.innerHTML = rows.map(row => `<p><strong>${escapeHTML(row.title)}</strong> — ${row.authors.length ? escapeHTML(row.authors.join('; ')) : 'Autoria em conferência'} · Página ${row.page} · <a href="${safeURL(row.preliminaryDrivePdf || row.sourcePdf)}" target="_blank" rel="noopener">${row.preliminaryDrivePdf ? "PDF individual preliminar" : "Anais originais"}</a></p>`).join(''); })
       .catch(() => { target.textContent = 'Dados temporariamente indisponíveis.'; });
   }
   if (selected === 3) {
