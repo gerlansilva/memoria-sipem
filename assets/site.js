@@ -495,6 +495,7 @@ function article(record) {
       </div>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
       ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
+      ${institutions.length ? `<p class="record-ies-inline"><span class="record-ies-label">IES / vínculos:</span> ${[...new Set(institutions.map(name => String(name).trim()).filter(Boolean))].map(name => iesTag(name)).join(' · ')}</p>` : ''}
 
     </div>
     <div class="record-actions">
