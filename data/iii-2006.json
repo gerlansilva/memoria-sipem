@@ -1913,21 +1913,20 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "FORMAÇÃO DE PROFESSORES E ETNOMATEMÁTICA: COMPREENDENDO PARA PEDIR MUDANÇAS",
+    "title": "A CONTRIBUIÇÃO DA HISTÓRIA DA MATEMÁTICA PARA O ENSINO DA MATEMÁTICA NA 2ª CRE",
     "authors": [
-      "Maria do Carmo S. Domite"
+      "Arno Bayer",
+      "Silvio Luiz Martins Brito"
     ],
     "institutions": [
-      "Universidade de São Paulo"
+      "Universidade Luterana do Brasil"
     ],
-    "abstract": "O propósito desta pesquisa está em deslocar a discussão que aí está posta - com muita seriedade - sobre formação de professores (de matemática) de uma perspectiva quase somente centrada no processo formativo dos(as) professores(as) enquanto sujeito social/intelectual de suas ações para uma perspectiva aliada à cultura que cada educando traz dentro de si. Neste sentido, a formação de professores aqui refletida - numa perspectiva da etnomatemática - pode ser reconhecida como um meio para gerar uma mudança estrutural no âmbito da formação de professores - ou, ao menos, denunciar que o educando não tem estado de todo fora das propostas de formação de professores, mas também não está dentro.",
-    "keywords": [
-      "formação de professores",
-      "conhecimento do educando",
-      "etnomatemática"
-    ],
+    "abstract": "Investigação sobre o uso da História da Matemática como recurso de motivação e apoio ao processo de ensino e aprendizagem de Matemática, considerando experiências de docentes vinculados à 2ª CRE.",
+    "keywords": [],
     "drivePdf": "https://drive.google.com/file/d/12ePpFma9flP2xXFmMz75dcobTqd_vqll/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese editorial, requer conferência integral",
+    "metadataStatus": "TITULO_E_AUTORIA_CONFERIDOS_NA_CAPTURA_2026_11_02"
   },
   {
     "id": "III-2006-GT05-016",
@@ -2099,6 +2098,24 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
+    "title": "UM ESTUDO SOBRE O PROCESSO DE OBSOLESCÊNCIA DE UMA PRÁTICA CULTURAL: A PROVA DOS NOVE",
+    "authors": [
+      "Antonio Miguel"
+    ],
+    "institutions": [],
+    "abstract": "Investigação histórica sobre a prática cultural de verificação de cálculos conhecida como prova dos nove e seu processo de desuso.",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/1BDsWGvLLpfz4dTqWJTB8rIpD7Qx5cFkO/view",
+    "type": "Resumo",
+    "abstractType": "Síntese editorial baseada no título; conferir original",
+    "metadataStatus": "TITULO_CONFERIDO_NO_PDF_2026_11_02"
+  },
+  {
+    "id": "III-2006-GT05-025",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
     "title": "A NATURALIZAÇÃO DA PRÁTICA SOCIAL DO CÁLCULO ESCRITO NA INSTITUIÇÃO ESCOLAR: A HISTÓRIA COMO POSSIBILIDADE DE PENSAR QUESTÕES DO PRESENTE",
     "authors": [
       "Eliane da Silva Souza"
@@ -2113,36 +2130,39 @@
       "Algoritmos das operações aritméticas elementares",
       "Prática social do cálculo escrito"
     ],
-    "drivePdf": "https://drive.google.com/file/d/1BDsWGvLLpfz4dTqWJTB8rIpD7Qx5cFkO/view",
+    "drivePdf": "https://drive.google.com/file/d/1wRZF4hDonEO4iXQ_v8_wqSsU_UH4iKdj/view",
     "type": "Resumo",
-    "abstractType": "Transcrição do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "REASSOCIADO_POR_CABECALHO_DA_CAPTURA_2026_11_02"
   },
   {
-    "id": "III-2006-GT05-025",
+    "id": "III-2006-GT05-027",
     "edition": 3,
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "UNIDADES DE MEDIDA COTIDIANAS EM ASSENTAMENTOS SERGIPANOS: VARAS, TAREFAS E CELAMINS",
+    "title": "UM ESTUDO EM EDUCAÇÃO MATEMÁTICA SOBRE A CADES: UMA PESQUISA EM CONSTITUIÇÃO",
     "authors": [
-      "Marlene Santos"
+      "Ivete Maria Baraldi",
+      "Rosinete Gaertner"
     ],
     "institutions": [
-      "Universidade Federal de Sergipe"
+      "Universidade do Sagrado Coração",
+      "Universidade Regional de Blumenau"
     ],
-    "abstract": "Nos assentamentos Santana dos Frades e Santaninha, localizados na região nordeste do estado de Sergipe, os trabalhadores e as trabalhadoras utilizam práticas sociais nas quais está presente um conjunto de unidades de medida que se diferem das utilizadas no sistema métrico oficial. Para construção de cada unidade de medida os camponeses e as camponesas utilizam o corpo ou parte deste como referência. A prática social de medir terra é uma das práticas mais utilizadas na cultura desses trabalhadores. Nessa prática social eles e elas utilizam a vara como unidade de medida – que equivale a 2,20m; a tarefa – que equivale a 25 varas quadradas e o celamim para medir os produtos agrícolas colhidos. Essa medida é uma caixa quadrada de madeira que, geralmente, tem 9 cm de largura e 8 cm de altura. A prática social de medir terra foi uma das práticas sociais por mim analisadas nesses assentamentos quando da realização da parte empírica da pesquisa que desenvolvi no mestrado.",
+    "abstract": "Este trabalho enfoca uma pesquisa em desenvolvimento, multi-institucional (FURB/Blumenau e USC/Bauru), que pretende colaborar com elementos para uma configuração mais plena do que, como tendência de pesquisa em constituição, é denominada de “História da Educação Matemática Brasileira”. A pesquisa em questão faz o aprofundamento das investigações de Baraldi (2003) e Gaertner (2004), nas quais, de maneira breve, foi abordada a formação do professor de matemática por meio da CADES – Campanha de Aperfeiçoamento e Difusão do Ensino Secundário. Dois procedimentos metodológicos são utilizados: a História Oral e a pesquisa bibliográfica e documental. Através da História Oral são entrevistados professores formadores e formados, além daqueles que foram entrevistados para os estudos de doutorado, visando constituir elementos de compreensão sobre a Campanha e sua importância para a educação secundária brasileira. Com a pesquisa bibliográfica e documental pretende-se identificar e fornecer referenciais e fontes, por intermédio da recuperação de obras e coleta de documentos sobre a legislação, os programas curriculares, os catálogos de editoras e a produção didática publicada pela Campanha de Aperfeiçoamento e Difusão do Ensino Secundário.",
     "keywords": [
-      "saberes populares",
-      "Currículo",
-      "Unidades de medida",
-      "Cultura"
+      "CADES",
+      "História da Educação Matemática",
+      "Formação de Professores"
     ],
-    "drivePdf": "https://drive.google.com/file/d/1wRZF4hDonEO4iXQ_v8_wqSsU_UH4iKdj/view",
+    "drivePdf": "https://drive.google.com/file/d/11IeGZBAcLPqfAeVEamU1dmdwKt1_dvpa/view",
     "type": "Resumo",
-    "abstractType": "Transcrição do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "REASSOCIADO_POR_CABECALHO_DA_CAPTURA_2026_11_02"
   },
   {
-    "id": "III-2006-GT05-027",
+    "id": "III-2006-GT05-028",
     "edition": 3,
     "year": 2006,
     "gt": "GT05",
@@ -2161,37 +2181,33 @@
       "Saber militar",
       "Geometria"
     ],
-    "drivePdf": "https://drive.google.com/file/d/11IeGZBAcLPqfAeVEamU1dmdwKt1_dvpa/view",
+    "drivePdf": "https://drive.google.com/file/d/1f0HTIbGUkdJ_PF043gngCF7n0yOdPBp8/view",
     "type": "Resumo",
-    "abstractType": "Transcrição do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "REASSOCIADO_POR_CABECALHO_DA_CAPTURA_2026_11_02"
   },
   {
-    "id": "III-2006-GT05-028",
+    "id": "III-2006-GT05-031",
     "edition": 3,
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "A TESSITURA DE UMA PERSPECTIVA TEÓRICA PARA ESTUDOS QUE TOMEM COMO FOCO O PENSAMENTO LÓGICO/MATEMÁTICO E O MÍTICO",
+    "title": "O DISCURSO PEDAGÓGICO DE MALBA TAHAN NA REVISTA AL-KARISMI: REFLEXÕES PARA A EDUCAÇÃO MATEMÁTICA BRASILEIRA",
     "authors": [
-      "Wanderleya Nara Gonçalves Costa"
+      "Cristiane Coppe de Oliveira"
     ],
     "institutions": [
-      "Universidade Federal de Mato Grosso"
+      "Universidade de São Paulo"
     ],
-    "abstract": "Esse trabalho focaliza um problema presente nas pesquisas que consideram as especificidades culturais dos afro-brasileiros e indígenas: a relação entre o pensamento lógico/matemático e o mítico. A questão de pesquisa abordada pode ser assim anunciada: “qual perspectiva teórica poderá dar suporte a pesquisas que se propõe a tomar o mito enquanto fonte de informação sobre a diversidade das idéias lógico/matemáticas?”. Como o conceito de símbolo é central para a compreensão do pensamento humano e, notadamente, para a discussão das relações entre o pensamento científico e o pensamento mítico, propõe-se a sua utilização a partir da articulação entre idéias da antropologia e da psicanálise. Por outro lado, reconhecendo que olhar para os sistemas simbólicos sem considerar a questão da identidade e das redes de forças sócio-históricas e as relações de poder que os atravessam pode se revelar um instrumento de manutenção de determinada conformação de poder, as idéias de Hall e Foucault também são utilizadas. Esse trabalho trata, pois, da exposição dos resultados de uma pesquisa bibliográfica que ao final propõe a utilização de uma perspectiva teórica que poderá contribuir, em especial, com pesquisadores etnomatemáticos cujos sujeitos de pesquisa partilhem uma cultura marcada pelo respeito aos mitos e ritos.",
-    "keywords": [
-      "Pensamento científico e mítico",
-      "Símbolos",
-      "Identidade",
-      "Relações de poder",
-      "Etnomatemática indígena e afro-brasileira"
-    ],
-    "drivePdf": "https://drive.google.com/file/d/1f0HTIbGUkdJ_PF043gngCF7n0yOdPBp8/view",
+    "abstract": "Estudo histórico do discurso pedagógico de Malba Tahan na revista Al-Karismi, considerando as contribuições dos textos publicados para compreender a Educação Matemática brasileira.",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/1cWK49xJFvZEbmfUunuUp9rt6nyUmQQaz/view",
     "type": "Resumo",
-    "abstractType": "Transcrição do original"
+    "abstractType": "Síntese editorial baseada no título; conferir original",
+    "metadataStatus": "TITULO_E_AUTORIA_CONFERIDOS_NA_CAPTURA_2026_11_02"
   },
   {
-    "id": "III-2006-GT05-031",
+    "id": "III-2006-GT05-032",
     "edition": 3,
     "year": 2006,
     "gt": "GT05",
@@ -2210,13 +2226,13 @@
       "Ateneu",
       "Matemática"
     ],
-    "drivePdf": "https://drive.google.com/file/d/1cWK49xJFvZEbmfUunuUp9rt6nyUmQQaz/view",
+    "drivePdf": "https://drive.google.com/file/d/1fdGs2XwUsrJDSkyJRq04FE772CHM5Ltp/view",
     "type": "Resumo",
     "abstractType": "Síntese do texto original",
-    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
+    "metadataStatus": "REASSOCIADO_POR_CABECALHO_DA_CAPTURA_2026_11_02"
   },
   {
-    "id": "III-2006-GT05-032",
+    "id": "III-2006-GT05-033",
     "edition": 3,
     "year": 2006,
     "gt": "GT05",
@@ -2234,34 +2250,10 @@
       "Simetria",
       "Software"
     ],
-    "drivePdf": "https://drive.google.com/file/d/1fdGs2XwUsrJDSkyJRq04FE772CHM5Ltp/view",
-    "type": "Resumo",
-    "abstractType": "Síntese do texto original",
-    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
-  },
-  {
-    "id": "III-2006-GT05-033",
-    "edition": 3,
-    "year": 2006,
-    "gt": "GT05",
-    "section": "GT05",
-    "title": "VIRADA DO SÉCULO XVIII PARA O XIX",
-    "authors": [
-      "Flávia Soares"
-    ],
-    "institutions": [
-      "Pontifícia Universidade Católica do Rio de Janeiro"
-    ],
-    "abstract": "O texto discute aspectos da história do ensino de Matemática no Brasil na passagem do século XVIII para o XIX, considerando normas de recrutamento e seleção de professores de primeiras letras após as Reformas pombalinas. Analisa exames realizados no Rio de Janeiro, as exigências para o exercício do magistério e os conteúdos de Matemática presentes nas provas, compreendendo os concursos como instrumento de avaliação e caracterização da profissão docente.",
-    "keywords": [
-      "Instrução Pública",
-      "seleção de professores",
-      "ensino de Matemática"
-    ],
     "drivePdf": "https://drive.google.com/file/d/1WWWv120Ik7ZqnJN8w0rYpoapVyWXZd25/view",
     "type": "Resumo",
     "abstractType": "Síntese do texto original",
-    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
+    "metadataStatus": "REASSOCIADO_POR_CABECALHO_DA_CAPTURA_2026_11_02"
   },
   {
     "id": "III-2006-GT05-034",
@@ -2284,8 +2276,8 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/1KRbkzEDPfokBmnvcPO9TJj4j0SS5vSxr/view",
     "type": "Resumo",
-    "abstractType": "Síntese conferida na captura",
-    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
+    "abstractType": "Síntese do texto original",
+    "metadataStatus": "REASSOCIADO_POR_CABECALHO_DA_CAPTURA_2026_11_02"
   },
   {
     "id": "III-2006-GT05-035",
@@ -2437,27 +2429,53 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "UM ESTUDO EM EDUCAÇÃO MATEMÁTICA SOBRE A CADES: UMA PESQUISA EM CONSTITUIÇÃO",
+    "title": "UNIDADES DE MEDIDA COTIDIANAS EM ASSENTAMENTOS SERGIPANOS: VARAS, TAREFAS E CELAMINS",
     "authors": [
-      "Ivete Maria Baraldi",
-      "Rosinete Gaertner"
+      "Marlene Santos"
     ],
     "institutions": [
-      "Universidade do Sagrado Coração",
-      "Universidade Regional de Blumenau"
+      "Universidade Federal de Sergipe"
     ],
-    "abstract": "Este trabalho enfoca uma pesquisa em desenvolvimento, multi-institucional (FURB/Blumenau e USC/Bauru), que pretende colaborar com elementos para uma configuração mais plena do que, como tendência de pesquisa em constituição, é denominada de “História da Educação Matemática Brasileira”. A pesquisa em questão faz o aprofundamento das investigações de Baraldi (2003) e Gaertner (2004), nas quais, de maneira breve, foi abordada a formação do professor de matemática por meio da CADES – Campanha de Aperfeiçoamento e Difusão do Ensino Secundário. Dois procedimentos metodológicos são utilizados: a História Oral e a pesquisa bibliográfica e documental. Através da História Oral são entrevistados professores formadores e formados, além daqueles que foram entrevistados para os estudos de doutorado, visando constituir elementos de compreensão sobre a Campanha e sua importância para a educação secundária brasileira. Com a pesquisa bibliográfica e documental pretende-se identificar e fornecer referenciais e fontes, por intermédio da recuperação de obras e coleta de documentos sobre a legislação, os programas curriculares, os catálogos de editoras e a produção didática publicada pela Campanha de Aperfeiçoamento e Difusão do Ensino Secundário.",
+    "abstract": "Nos assentamentos Santana dos Frades e Santaninha, localizados na região nordeste do estado de Sergipe, os trabalhadores e as trabalhadoras utilizam práticas sociais nas quais está presente um conjunto de unidades de medida que se diferem das utilizadas no sistema métrico oficial. Para construção de cada unidade de medida os camponeses e as camponesas utilizam o corpo ou parte deste como referência. A prática social de medir terra é uma das práticas mais utilizadas na cultura desses trabalhadores. Nessa prática social eles e elas utilizam a vara como unidade de medida – que equivale a 2,20m; a tarefa – que equivale a 25 varas quadradas e o celamim para medir os produtos agrícolas colhidos. Essa medida é uma caixa quadrada de madeira que, geralmente, tem 9 cm de largura e 8 cm de altura. A prática social de medir terra foi uma das práticas sociais por mim analisadas nesses assentamentos quando da realização da parte empírica da pesquisa que desenvolvi no mestrado.",
     "keywords": [
-      "CADES",
-      "História da Educação Matemática",
-      "Formação de Professores"
+      "saberes populares",
+      "Currículo",
+      "Unidades de medida",
+      "Cultura"
     ],
     "drivePdf": "https://drive.google.com/file/d/17N2EC_FmTZqUY7oVczITFISrJMnYSzcS/view",
     "type": "Resumo",
-    "abstractType": "Transcrição do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "REASSOCIADO_POR_CABECALHO_DA_CAPTURA_2026_11_02"
   },
   {
     "id": "III-2006-GT05-029",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
+    "title": "A TESSITURA DE UMA PERSPECTIVA TEÓRICA PARA ESTUDOS QUE TOMEM COMO FOCO O PENSAMENTO LÓGICO/MATEMÁTICO E O MÍTICO",
+    "authors": [
+      "Wanderleya Nara Gonçalves Costa"
+    ],
+    "institutions": [
+      "Universidade Federal de Mato Grosso"
+    ],
+    "abstract": "Esse trabalho focaliza um problema presente nas pesquisas que consideram as especificidades culturais dos afro-brasileiros e indígenas: a relação entre o pensamento lógico/matemático e o mítico. A questão de pesquisa abordada pode ser assim anunciada: “qual perspectiva teórica poderá dar suporte a pesquisas que se propõe a tomar o mito enquanto fonte de informação sobre a diversidade das idéias lógico/matemáticas?”. Como o conceito de símbolo é central para a compreensão do pensamento humano e, notadamente, para a discussão das relações entre o pensamento científico e o pensamento mítico, propõe-se a sua utilização a partir da articulação entre idéias da antropologia e da psicanálise. Por outro lado, reconhecendo que olhar para os sistemas simbólicos sem considerar a questão da identidade e das redes de forças sócio-históricas e as relações de poder que os atravessam pode se revelar um instrumento de manutenção de determinada conformação de poder, as idéias de Hall e Foucault também são utilizadas. Esse trabalho trata, pois, da exposição dos resultados de uma pesquisa bibliográfica que ao final propõe a utilização de uma perspectiva teórica que poderá contribuir, em especial, com pesquisadores etnomatemáticos cujos sujeitos de pesquisa partilhem uma cultura marcada pelo respeito aos mitos e ritos.",
+    "keywords": [
+      "Pensamento científico e mítico",
+      "Símbolos",
+      "Identidade",
+      "Relações de poder",
+      "Etnomatemática indígena e afro-brasileira"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1xhz5F5AjX28vRzczS5F_IJp0QX-HBIYb/view",
+    "type": "Resumo",
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "REASSOCIADO_POR_CABECALHO_DA_CAPTURA_2026_11_02"
+  },
+  {
+    "id": "III-2006-GT05-030",
     "edition": 3,
     "year": 2006,
     "gt": "GT05",
@@ -2476,33 +2494,10 @@
       "história da matemática",
       "formação do educando"
     ],
-    "drivePdf": "https://drive.google.com/file/d/1xhz5F5AjX28vRzczS5F_IJp0QX-HBIYb/view",
-    "type": "Resumo",
-    "abstractType": "Transcrição do original"
-  },
-  {
-    "id": "III-2006-GT05-030",
-    "edition": 3,
-    "year": 2006,
-    "gt": "GT05",
-    "section": "GT05",
-    "title": "O PAPEL DA HISTÓRIA DA MATEMÁTICA NO PROCESSO DE ENSINO E APRENDIZAGEM",
-    "authors": [
-      "Tereza de Jesus Ferreira Scheide"
-    ],
-    "institutions": [
-      "Universidade do Oeste Paulista"
-    ],
-    "abstract": "O trabalho analisa as contribuições da História da Matemática para melhorar o ensino e a aprendizagem e favorecer a formação crítica dos estudantes. Emprega pesquisa qualitativa, com estudos teóricos, pesquisa documental e pesquisa-ação em escola pública de Presidente Prudente, examinando planos de ensino, produções dos alunos e entrevistas. Discute mudanças metodológicas e relata atitudes positivas de aprendizagem em atividades apoiadas na história da disciplina.",
-    "keywords": [
-      "ensino",
-      "matemática",
-      "história da matemática",
-      "formação do educando"
-    ],
     "drivePdf": "https://drive.google.com/file/d/1wEPT2uxalZEiRidHphrqEaca2UY3xlIh/view",
     "type": "Resumo",
-    "abstractType": "Síntese conferida na imagem original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "REASSOCIADO_POR_CABECALHO_DA_CAPTURA_2026_11_02"
   },
   {
     "id": "III-2006-GT05-037",
