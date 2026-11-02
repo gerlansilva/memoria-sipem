@@ -19,3 +19,6 @@ Foram delimitadas as páginas digitais 76–83, entre a abertura G6 (75) e G7 (8
 12. Uma abordagem de ensino-aprendizagem da geometria esférica através do computador
 
 Fonte: [Anais originais](https://drive.google.com/file/d/1WL3GNBoZHg2A5kR9rSdbAW7iEEOg41f8/view).
+
+## Conferência visual das autorias (02/11/2026)
+Foi inspecionado o cabeçalho de cada um dos 12 PDFs preliminares. Identificações de autoria e IES estão em planilha CSV entregue na conversa `III_SIPEM_GT06_12_autorias_IES_conferidas_visualmente.csv`. Alguns recortes contêm cauda do trabalho anterior antes do título. Assim, a revisão bibliográfica de nomes ainda é necessária, e os PDFs não foram enviados ao Drive nem publicados no catálogo. Esta conferência não autoriza a marcação da edição como completa.
