@@ -2027,13 +2027,20 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "UNIDADES DE MEDIDA COTIDIANAS EM ASSENTAMENTOS: ESPERANÇA, VASAS, TARTARUGA E CALAMAR",
+    "title": "UNIDADES DE MEDIDA COTIDIANAS EM ASSENTAMENTOS SERGIPANOS: VARAS, TAREFAS E CELAMINS",
     "authors": [
-      "Marlene S. de Oliveira"
+      "Marlene Santos"
     ],
-    "institutions": [],
+    "institutions": [
+      "Universidade Federal de Sergipe"
+    ],
     "abstract": "",
-    "keywords": [],
+    "keywords": [
+      "saberes populares",
+      "Currículo",
+      "Unidades de medida",
+      "Cultura"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1wRZF4hDonEO4iXQ_v8_wqSsU_UH4iKdj/view",
     "type": "Resumo"
   },
@@ -2059,9 +2066,13 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "A TEXTURA DE UMA PERSPECTIVA TEÓRICA PARA ESTUDAR UM ENSINO HISTÓRICO E FRAGMENTO",
-    "authors": [],
-    "institutions": [],
+    "title": "A TESSITURA DE UMA PERSPECTIVA TEÓRICA PARA ESTUDOS QUE TOMEM COMO FOCO O PENSAMENTO LÓGICO/MATEMÁTICO E O MÍTICO",
+    "authors": [
+      "Wanderleya Nara Gonçalves Costa"
+    ],
+    "institutions": [
+      "Universidade Federal de Mato Grosso"
+    ],
     "abstract": "",
     "keywords": [],
     "drivePdf": "https://drive.google.com/file/d/1f0HTIbGUkdJ_PF043gngCF7n0yOdPBp8/view",
@@ -2161,6 +2172,190 @@
     "abstract": "",
     "keywords": [],
     "drivePdf": "https://drive.google.com/file/d/1epppk8tuZib7649NuCSV5oj_TynYM0Dp/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT05-009",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
+    "title": "“ASSISTINDO” O CURSO DE ANÁLISE MATEMÁTICA COM UBIRATAN D’AMBROSIO",
+    "authors": [
+      "Maria Cristina Araújo de Oliveira"
+    ],
+    "institutions": [
+      "Pontifícia Universidade Católica de São Paulo"
+    ],
+    "abstract": "",
+    "keywords": [
+      "História da Educação Matemática",
+      "Formação de professores de Matemática",
+      "arquivos pessoais"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1baYj-uTPRQ465krtKzBqPjaJhvyuSjhI/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT05-010",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
+    "title": "ARTICULAÇÃO ENTRE ETNOMATEMÁTICA E EDUCAÇÃO MATEMÁTICA CRÍTICA: ALGUMAS CONTRIBUIÇÕES PARA A SALA DE AULA DE MATEMÁTICA",
+    "authors": [
+      "Caroline Mendes dos Passos"
+    ],
+    "institutions": [
+      "Universidade Federal de Minas Gerais"
+    ],
+    "abstract": "",
+    "keywords": [
+      "Etnomatemática",
+      "Educação Matemática Crítica",
+      "articulação",
+      "sala de aula"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1_uWtGs2E9GGkv6GwKTX9oul63mEN36xA/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT05-014",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
+    "title": "DESENVOLVIMENTO DA MATEMÁTICA NO RIO DE JANEIRO – A CONTRIBUIÇÃO DA FACULDADE NACIONAL DE FILOSOFIA",
+    "authors": [
+      "Maria Laura Mouzinho Leite Lopes"
+    ],
+    "institutions": [
+      "Universidade Federal do Rio de Janeiro"
+    ],
+    "abstract": "",
+    "keywords": [
+      "Matemática",
+      "Universidade do Distrito Federal",
+      "Faculdade Nacional de Filosofia",
+      "Instituto de Matemática da Universidade Federal do Rio de Janeiro"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1f0S8sB47zczq6Q9fXK_JGLXh2-XYMZVP/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT05-018",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
+    "title": "ETNOMATEMÁTICA E PRÁTICA DOCENTE: LEGITIMANDO SABERES",
+    "authors": [
+      "Maria Cecília de Castello Branco Fantinato",
+      "Rosana Kelly dos Santos"
+    ],
+    "institutions": [
+      "Universidade Federal Fluminense"
+    ],
+    "abstract": "",
+    "keywords": [
+      "educação matemática de jovens e adultos",
+      "etnomatemática",
+      "formação de professores de EJA"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1QzzM5ELeRIyaKunt0f4ST1quzMqBXyhj/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT05-026",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
+    "title": "UNIDADES DE MEDIDA COTIDIANAS EM ASSENTAMENTOS SERGIPANOS: VARAS, TAREFAS E CELAMINS",
+    "authors": [
+      "Marlene Santos"
+    ],
+    "institutions": [
+      "Universidade Federal de Sergipe"
+    ],
+    "abstract": "",
+    "keywords": [
+      "saberes populares",
+      "Currículo",
+      "Unidades de medida",
+      "Cultura"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/17N2EC_FmTZqUY7oVczITFISrJMnYSzcS/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT05-029",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
+    "title": "A TESSITURA DE UMA PERSPECTIVA TEÓRICA PARA ESTUDOS QUE TOMEM COMO FOCO O PENSAMENTO LÓGICO/MATEMÁTICO E O MÍTICO",
+    "authors": [
+      "Wanderleya Nara Gonçalves Costa"
+    ],
+    "institutions": [
+      "Universidade Federal de Mato Grosso"
+    ],
+    "abstract": "",
+    "keywords": [
+      "Pensamento científico e mítico",
+      "Símbolos",
+      "Identidade",
+      "Relações de poder",
+      "Etnomatemática indígena e afro-brasileira"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1xhz5F5AjX28vRzczS5F_IJp0QX-HBIYb/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT05-030",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
+    "title": "O PAPEL DA HISTÓRIA DA MATEMÁTICA NO PROCESSO DE ENSINO E APRENDIZAGEM",
+    "authors": [
+      "Tereza de Jesus Ferreira Scheide"
+    ],
+    "institutions": [
+      "Universidade do Oeste Paulista"
+    ],
+    "abstract": "",
+    "keywords": [
+      "ensino",
+      "matemática",
+      "história da matemática",
+      "formação do educando"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1wEPT2uxalZEiRidHphrqEaca2UY3xlIh/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT05-037",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
+    "title": "O OLHAR DE EDUCADORES MATEMÁTICOS SOBRE A OBRA DE PAULO FREIRE",
+    "authors": [
+      "Régis Forner",
+      "Jairo de Araújo Lopes"
+    ],
+    "institutions": [
+      "Pontifícia Universidade Católica de Campinas"
+    ],
+    "abstract": "",
+    "keywords": [
+      "Pedagogia de Paulo Freire",
+      "Educação Matemática",
+      "formação de professores"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1U0V71am4j328m4w3nEAO_4tiwt1fz6ZG/view",
     "type": "Resumo"
   }
 ]
