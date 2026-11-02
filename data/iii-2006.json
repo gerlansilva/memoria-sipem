@@ -812,5 +812,100 @@
     ],
     "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02",
     "documentVersion": "Versão com duas autoras (imagem original 06)"
+  },
+  {
+    "id": "III-2006-GT02-005",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT02",
+    "section": "GT02",
+    "title": "EDUCAÇÃO ALGÉBRICA",
+    "authors": [
+      "Lucia Arruda de Albuquerque Tinoco"
+    ],
+    "institutions": [
+      "Projeto Fundão IM/UFRJ",
+      "Universidade Federal do Rio de Janeiro"
+    ],
+    "abstract": "O ensino de Álgebra praticado na maioria das escolas do ensino básico incomoda professores e é objeto de pesquisas que apontam a sua variedade de papéis, em contraste com a estreita experiência dos alunos com esse tópico da Matemática. Os alunos em geral não atribuem significado à Álgebra, cujo ensino mecanizado desrespeita o ritmo do desenvolvimento da linguagem algébrica dos mesmos. Faltam também a tais alunos experiências que permitam a construção das noções de igualdade e de variável, básicas na atividade algébrica. Por meio de entrevistas e testes por escrito, observamos como alunos de 6ª a 8ª série do ensino fundamental reconhecem e utilizam a noção de variável. Alguns deles compreendem situações envolvendo proporcionalidade e usam o conceito de divisão para resolver equação não padronizada. Entretanto, outros parecem não admitir que o resultado de uma contagem ou de uma medição seja uma expressão algébrica e substituem a variável por valor numérico. Há respostas típicas do estágio sincopado do desenvolvimento da linguagem algébrica, o que exige atenção especial. Erros que podem ser classificados como de cálculo algébrico foram frequentes. Tais resultados indicam a necessidade de mudança de postura no ensino.",
+    "keywords": [
+      "Álgebra",
+      "Variável",
+      "Aprendizagem Significativa"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1c7jDHNYoWdqTMjRMAT5ZbZUQMCuHMhgO/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT02-006",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT02",
+    "section": "GT02",
+    "title": "O DESEMPENHO DE ALUNOS FORMANDOS E RECÉM EGRESSOS DO ENSINO FUNDAMENTAL EM PROBLEMAS ENVOLVENDO O CONCEITO DE ÁREA",
+    "authors": [
+      "Andréia Aparecida da Silva Brito",
+      "Hugo Leandro do Nascimento",
+      "Nelson Antonio Pirola"
+    ],
+    "institutions": [
+      "Universidade Estadual Paulista Júlio de Mesquita Filho",
+      "Rede Pública de Ensino de São Paulo"
+    ],
+    "abstract": "O presente estudo procurou investigar se os alunos formandos e recém egressos do Ensino Fundamental apresentavam os conhecimentos declarativos e procedimentais necessários para a resolução de alguns problemas do SARESP (Sistema de Avaliação do Rendimento Escolar do Estado de São Paulo), que abordavam especificamente o conceito de área. Para tanto, foi utilizada como instrumento uma prova matemática contendo 10 questões extraídas da prova de Matemática do SARESP de 2005 e distribuídas entre os conteúdos de Números e Operações; Espaço e Forma; e Grandezas e Medidas. Foi utilizado como fundamentação a teoria de Sternberg sobre resolução de problemas. A análise dos dados mostrou que muitos estudantes que participaram da pesquisa utilizaram o conceito de perímetro para calcular área de figuras, mostrando haver confusão entre esses dois conceitos. Além disso, apresentaram um desempenho muito aquém das expectativas. A análise mostrou que, de uma maneira geral, esses alunos estarão dando prosseguimento à sua formação escolar no Ensino Médio, sem o conhecimento elementar do conceito de área.",
+    "keywords": [
+      "Resolução de Problemas",
+      "Educação Matemática",
+      "Área de figuras",
+      "SARESP"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1R-Mq1rHxEzoqu9Q0moMW08RIjRtmu0Rg/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT02-007",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT02",
+    "section": "GT02",
+    "title": "UM ESTUDO SOBRE O DESEMPENHO DE ALUNOS DO ENSINO FUNDAMENTAL EM TAREFAS ENVOLVENDO OS CONCEITOS DE EQUAÇÕES E EXPRESSÕES ALGÉBRICAS",
+    "authors": [
+      "Luciane de Castro Quintiliano",
+      "Márcia Regina Ferreira de Brito"
+    ],
+    "institutions": [
+      "Universidade Estadual de Campinas"
+    ],
+    "abstract": "Tendo em vista a importância da solução de problemas na aprendizagem dos conteúdos da Matemática escolar, particularmente nos conceitos de equação e expressão algébrica, um dos objetivos deste estudo foi investigar se os estudantes conseguiriam traduzir sentenças da linguagem corrente para a linguagem simbólica da matemática. Os participantes foram 96 alunos da última série do Ensino Fundamental de 2 escolas da rede Pública de Ensino em Bauru. Os dados foram coletados através de um questionário informativo, e ainda 2 provas: uma contendo questões envolvendo o conceito de equação e expressão algébrica, variável e incógnita, bem como a diferenciação entre exemplos e não exemplos desses conceitos, e outra, com questões contendo problemas que permitiam e requeriam a utilização de procedimentos algébricos. A análise dos dados permitiu constatar que, onde se solicitava ao aluno reconhecer qual era a equação ou a expressão que representava o problema, a maioria dos alunos não conseguiu identificá-las, e por este motivo a maioria dos participantes solucionaram os problemas através de procedimentos aritméticos. Conclui-se, portanto que o ensino da álgebra deve estar articulado com os conceitos aritméticos, para permitir ao aluno o desenvolvimento do pensamento abstrato e a capacidade para generalizar os conceitos nas séries mais avançadas.",
+    "keywords": [
+      "álgebra",
+      "aritmética",
+      "solução de problemas",
+      "desempenho"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1Pk5FGpuFguD9yOj8qx_OxCTQgrZincvK/view",
+    "type": "Resumo"
+  },
+  {
+    "id": "III-2006-GT02-008",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT02",
+    "section": "GT02",
+    "title": "UBIRATAN D’AMBROSIO E A MATEMÁTICA MODERNA NO ENSINO SECUNDÁRIO BRASILEIRO",
+    "authors": [
+      "Rosimeire Aparecida Soares Borges"
+    ],
+    "institutions": [
+      "Universidade do Vale do Sapucaí"
+    ],
+    "abstract": "O presente trabalho apresenta os resultados da dissertação “A Matemática Moderna no Brasil: as primeiras experiências e propostas de seu ensino”, que teve como objetivo estudar o Movimento da Matemática Moderna (MMM) sob um novo ângulo, o das obras do professor D’Ambrosio relativas ao ensino de Matemática. Esses artigos integram o Arquivo Pessoal Ubiratan D’Ambrosio - APUA. Como subsídio nessa pesquisa, foram, ainda, estudados alguns trabalhos relevantes referentes ao MMM e realizadas várias entrevistas com o professor D’Ambrosio. A escolha desse professor como participante dessa pesquisa se deve ao fato de ele ter exercido o magistério no ensino de Matemática secundário, no período que antecedeu o Movimento. A sustentação teórica foi buscada nas ideias de autores, como Freitas (2000) e Prochasson (1998). A intersecção desses estudos propiciou-nos investigar as possibilidades pedagógicas na disciplina Matemática, nesse período. Isso nos permitiu inferir que tanto as propostas do MMM, como as do professor D’Ambrosio tinham intenções iniciais muito próximas e poderiam contribuir com as mudanças do ensino/aprendizagem da Matemática. Entretanto, essas ideias vieram a se distanciar no nível de propostas de práticas pedagógicas.",
+    "keywords": [
+      "Movimento da Matemática Moderna",
+      "Ensino de Matemática",
+      "Entrevistas"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1kXT91PsILCuvu99tdT9Oz6IYLrj94Ykh/view",
+    "type": "Resumo"
   }
 ]
