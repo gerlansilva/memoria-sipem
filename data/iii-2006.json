@@ -954,14 +954,20 @@
       "Universidade Estadual Paulista"
     ],
     "sourcePages": "76–77",
-    "abstract": "",
-    "keywords": [],
+    "abstract": "O objetivo deste trabalho é apresentar algumas reflexões sobre como os alunos relacionam o que fazem na sala de aula, quando utilizam lápis e papel, com o que fazem no laboratório de informática, quando estão utilizando o computador na resolução de problemas fechados. O conteúdo matemático estudado foi funções. A pesquisa foi desenvolvida seguindo a abordagem qualitativa e a coleta de dados foi feita, essencialmente, por observação-participante em aula. A proposta didática foi levar os alunos a resolver problemas utilizando o software gráfico Winplot. Problemas, no laboratório, parecidos com os resolvidos em sala de aula, permitiram estabelecer um paralelo entre os procedimentos e conhecimentos que os alunos utilizaram quando estavam sem o computador e quando estavam com ele.",
+    "keywords": [
+      "Resolução de problemas",
+      "Computadores",
+      "Funções"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1uYcnshyPtU1IhOcevMi1XTqVnMKIg751/view",
-    "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "metadataStatus": "CONFERIDO_NO_ORIGINAL",
+    "pdfStatus": "RECORTE_CORRIGIDO_LOCAL_AGUARDA_ENVIO_DRIVE",
     "type": "Resumo",
     "publicationStatus": "PRELIMINAR_EM_REVISAO",
-    "accessLabel": "PDF preliminar"
+    "accessLabel": "PDF preliminar",
+    "keywordsStatus": "CONFERIDAS_NO_ORIGINAL",
+    "abstractStatus": "TRANSCRITO_E_CONFERIDO_VISUALMENTE"
   },
   {
     "id": "III-2006-GT06-003",
