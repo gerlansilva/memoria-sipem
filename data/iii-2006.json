@@ -2171,11 +2171,20 @@
     "authors": [
       "Liliane dos Santos Gutierre"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade Federal do Rio Grande do Norte"
+    ],
+    "abstract": "O Ateneu Norte-rio-grandense foi fundado em Natal em 1834. A pesquisa investiga sua contribuição para a história da Educação Matemática no Rio Grande do Norte, com atenção aos caminhos percorridos pelo ensino de Matemática no ensino secundário entre as décadas de 1930 e 1960, ao papel dos professores de Matemática e à implementação de reformas. O artigo apresenta conclusões parciais da investigação.",
+    "keywords": [
+      "História",
+      "Educação",
+      "Ateneu",
+      "Matemática"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1cWK49xJFvZEbmfUunuUp9rt6nyUmQQaz/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do texto original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
   },
   {
     "id": "III-2006-GT05-032",
@@ -2219,11 +2228,20 @@
     "authors": [
       "Arlete de Jesus Brito"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade Estadual Paulista Júlio de Mesquita Filho"
+    ],
+    "abstract": "O livro Geografia Geral (1650), de Varénio, foi concebido como livro de ensino de geografia. No século XVII, a geografia era definida como ramo da matemática. Isaac Newton realizou uma edição latina da obra em 1672; a segunda edição francesa é de 1755. O estudo explora os conhecimentos matemáticos e a concepção de ensino contidos no livro.",
+    "keywords": [
+      "História",
+      "Educação",
+      "Matemática",
+      "Geografia"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1KRbkzEDPfokBmnvcPO9TJj4j0SS5vSxr/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do texto original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
   },
   {
     "id": "III-2006-GT05-035",
@@ -2233,13 +2251,22 @@
     "section": "GT05",
     "title": "HISTÓRIA DA MATEMÁTICA NA EDUCAÇÃO MATEMÁTICA: ESPELHO OU PINTURA?",
     "authors": [
-      "Cíntia Lidia da Silva Bergo Mouta"
+      "Cristina Dalva Van Berghem Motta",
+      "Antonio Carlos Brolezzi"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade de São Paulo"
+    ],
+    "abstract": "O artigo apresenta pesquisa exploratória de revisão bibliográfica sobre fundamentos teórico-epistemológicos da integração da História da Matemática ao ensino da Matemática. Examina estudos críticos e concepções de aprendizagem de diferentes abordagens, bem como as justificativas de caráter internalista, determinista e indutivista para o uso da história. Discute o papel do professor e de sua formação nesse trabalho de integração.",
+    "keywords": [
+      "Educação Matemática",
+      "História da Matemática",
+      "formação de professores"
+    ],
     "drivePdf": "https://drive.google.com/file/d/14TyubKI8z3QwaDuxdaaBaJDPlBqUTUaN/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do texto original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
   },
   {
     "id": "III-2006-GT05-036",
