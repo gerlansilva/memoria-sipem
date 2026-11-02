@@ -1374,19 +1374,21 @@
     "section": "GT04",
     "title": "PROFESSORES DE MATEMÁTICA E SUAS PERCEPÇÕES SOBRE UM TRATAMENTO PARA OS NÚMEROS REAIS, VIA MEDIÇÃO, EM CURSOS DE FORMAÇÃO",
     "authors": [
-      "Regina Célia Grando Pasquini"
+      "Regina Célia Guapo Pasquini"
     ],
     "institutions": [
-      "Universidade de São Paulo"
+      "Universidade Estadual Paulista Júlio de Mesquita Filho",
+      "Universidade Estadual de Londrina"
     ],
-    "abstract": "Apresenta resultados preliminares de pesquisa com professores de Matemática sobre o tratamento dos números reais por meio da medição em cursos de formação, investigando possibilidades dessa abordagem para o ensino.",
+    "abstract": "A intenção deste trabalho é explicitar alguns resultados preliminares relacionados a uma pesquisa de doutorado junto ao Programa de Pós-Graduação em Educação Matemática pela UNESP de Rio Claro, sob orientação da Profa. Dra. Rosa L. S. Baroni. Este estudo é dedicado ao tema Números Reais e o seu tratamento em cursos de formação de professores. Estão sendo investigadas as possibilidades de ensino/aprendizagem de uma proposta de tratamento para os Números Reais, via medição de segmentos, e os resultados apresentados aqui, mesmo sendo parciais, refletem a relevância deste trabalho no campo da Educação Matemática.",
     "keywords": [
       "Números Reais",
       "formação de professores"
     ],
     "drivePdf": "https://drive.google.com/file/d/1IhlvDoO_aR-W3tjERq7Nyj-FMYDIbTA0/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL"
   },
   {
     "id": "III-2006-GT04-009",
@@ -1396,14 +1398,14 @@
     "section": "GT04",
     "title": "O DESENVOLVIMENTO DE UMA SEQUÊNCIA DIDÁTICA PARA A ABORDAGEM DO CONCEITO DE LIMITE",
     "authors": [
-      "Ivan Paulo Sechi",
-      "Miriam Buss Gonçalves",
-      "Nei Ferreira Brito Camacho"
+      "Ivanete Zuchi",
+      "Mirian Buss Gonçalves",
+      "Néri Terezinha Both Carvalho"
     ],
     "institutions": [
       "Universidade Federal de Santa Catarina"
     ],
-    "abstract": "Estudo sobre a concepção e aplicação de sequência didática para abordagem do conceito de limite no ensino superior, considerando atividades de aprendizagem, representações e dificuldades de estudantes.",
+    "abstract": "Nesse trabalho relata-se a concepção e aplicação de uma sequência didática para a abordagem do conceito de limite tendo como embasamento teórico a Teoria de Situações de Brousseau (1986). A sequência didática proposta teve como objetivo introduzir o conceito de limite pelo ponto de vista de aproximação. O diferencial mais importante presente nesta metodologia proposta é a idéia de explorar os conteúdos como funções e inequações modulares, em situações problemas, os quais serão importantes na formalização da definição de limite. Essa sequência foi aplicada no Centro Tecnológico da Universidade do Estado de Santa Catarina. A análise dos resultados da aplicação da sequência didática mostrou uma evolução positiva no entendimento do conceito de limite. A metodologia proposta propiciou um ambiente bastante rico de discussão entre as duplas e até mesmo entre a classe no momento da institucionalização do conteúdo em questão.",
     "keywords": [
       "Sequência Didática",
       "Limite",
@@ -1411,7 +1413,8 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/1aeZAqN40x0FDq9Bsc8-ef_13hWq2A6X0/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL"
   },
   {
     "id": "III-2006-GT04-010",
@@ -1426,14 +1429,13 @@
     "institutions": [
       "Universidade Federal de Minas Gerais"
     ],
-    "abstract": "Apresenta elementos teóricos da pesquisa de David Tall sobre o desenvolvimento do conhecimento matemático nos mundos corporificado, simbólico-proceptual e formal, discutindo a investigação de seus modos de operar e de resultados empíricos relacionados.",
-    "keywords": [
-      "Desenvolvimento matemático",
-      "Mundos matemáticos"
-    ],
+    "abstract": "Neste artigo discuto elementos teóricos que fundamentam alguns projetos e pesquisa de David Tall. Coloco em debate sua descrição do conhecimento matemático como constituído por categorias denominadas mundo corporificado, mundo simbólico-proceptual e mundo formal. Argumento em favor do poder de explicação da teoria quando se refere especificamente aos ‘modos de operar’ em cada um dos mundos. Discuto resultados de pesquisa empírica que fundamentam meus argumentos.",
+    "keywords": [],
     "drivePdf": "https://drive.google.com/file/d/1T0AHuDiH4yZVu2fmMG_ogMQBsH6xsiMJ/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL",
+    "keywordsStatus": "NÃO CONSTAM NA CAPTURA ORIGINAL"
   },
   {
     "id": "III-2006-GT04-011",
@@ -1443,20 +1445,21 @@
     "section": "GT04",
     "title": "CONCEPÇÕES DE FUTUROS PROFESSORES PARA A UTILIZAÇÃO DE JOGOS NO ENSINO DE MATEMÁTICA",
     "authors": [
-      "Luciana Ferreira"
+      "Fabiana Fiorezi de Marco"
     ],
     "institutions": [
-      "Universidade Federal de Minas Gerais"
+      "Universidade Federal de Uberlândia"
     ],
-    "abstract": "Apresenta concepções de futuros professores sobre o uso de jogos no ensino de Matemática e discute possibilidades pedagógicas, formação docente e critérios para utilização de atividades lúdicas nas aulas.",
+    "abstract": "Neste artigo apresentamos os resultados de uma pesquisa realizada com doze alunos do curso de Licenciatura em Matemática da UFU em que interpretamos suas concepções sobre a utilização de jogos no ensino de Matemática. Procurávamos compreender quais as concepções que futuros professores de Matemática manifestam após vivenciar situações de intervenção na utilização de jogos no processo de ensino e aprendizagem de Matemática. Nosso objetivo era propiciar novo olhar aos alunos para a utilização de jogos matemáticos no ensino e discutir possíveis intervenções pedagógicas. Fizemos um estudo interpretativo de extratos dos portfólios, elaborados pelos alunos da disciplina de Oficina de Prática Pedagógica 22, segundo as categorias: a importância de vivenciar as etapas do processo de intervenção pedagógica no trabalho com jogo; o papel do professor no trabalho com jogo; novas percepções sobre o trabalho pedagógico com jogos. Os resultados chamam a atenção para a necessidade da existência de discussões teóricas e práticas sobre o assunto nos cursos de Licenciatura para que futuros professores entendam que não é o jogo que ensina Matemática, mas as intervenções pedagógicas intencionalmente planejadas e mediadas pelo professor, no momento de jogo, que poderão contribuir para a melhoria do processo de ensinar e aprender Matemática.",
     "keywords": [
       "Ensino de Matemática",
-      "Jogos",
+      "Jogo",
       "Intervenções pedagógicas"
     ],
     "drivePdf": "https://drive.google.com/file/d/17yyfSLEaUKAG_sFKOvz-AmvX0p8D2eFK/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL"
   },
   {
     "id": "III-2006-GT04-012",
@@ -1471,15 +1474,16 @@
     "institutions": [
       "Pontifícia Universidade Católica do Rio Grande do Sul"
     ],
-    "abstract": "Pesquisa sobre desempenho de estudantes ingressantes em disciplinas de Matemática do ensino superior e sobre erros identificados em avaliações, analisando possíveis causas e implicações pedagógicas para o ensino.",
+    "abstract": "Neste trabalho, apresentamos uma pesquisa em andamento, desenvolvida com alunos calouros de nove Instituições de Ensino Superior do Rio Grande do Sul. Foi aplicado um teste com questões de múltipla escolha, sobre conteúdos matemáticos relacionados à Educação Básica; a produção escrita dos alunos foi analisada qualitativamente, sendo os erros categorizados e interpretados. As mesmas questões, abertas, foram respondidas por alunos de um curso de Licenciatura em Matemática, tendo suas respostas analisadas por colegas de semestre posterior do mesmo curso. Também se envolve no trabalho mestrandos de educação em Ciências e Matemática, que analisaram uma das questões do teste aplicado à amostra original. Todas as análises desta questão são apresentadas e, ao final, são apontadas conclusões provisórias e sugestões para próximos passos do projeto.",
     "keywords": [
-      "Avaliação de erros",
+      "Análise de erros",
       "Disciplinas matemáticas",
       "Calouros"
     ],
     "drivePdf": "https://drive.google.com/file/d/1fgCqIf26r_ra0hBWMb4ql1gfm8JtONw2/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL"
   },
   {
     "id": "III-2006-GT03-006",
