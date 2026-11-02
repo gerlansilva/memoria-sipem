@@ -534,8 +534,10 @@ function article(record) {
         <span>${edition ? `${edition.roman} SIPEM · ${record.year}` : record.year}</span>
       </div>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
-      ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
-      ${cardIES.length ? `<p class="record-ies-inline"><span class="record-ies-label">IES / vínculos:</span> ${cardIES.map(name => `<span>${escapeHTML(name)}</span>`).join(' · ')}</p>` : ''}
+      <div class="record-attribution">
+        ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
+        ${cardIES.length ? `<p class="record-ies-inline" aria-label="Instituições">${cardIES.map(name => `<span>${escapeHTML(name)}</span>`).join(' · ')}</p>` : ''}
+      </div>
 
     </div>
     <div class="record-actions">
