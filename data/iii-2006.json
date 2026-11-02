@@ -722,5 +722,30 @@
     "accessLabel": "Imagem original",
     "type": "Resumo",
     "metadataStatus": "TRANSCRITO_DA_IMAGEM"
+  },
+  {
+    "id": "III-2006-GT03-004",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT03",
+    "title": "EDUCAÇÃO MATEMÁTICA: UM PROCESSO DE PESQUISA EM SALA DE AULA",
+    "authors": [
+      "Neiva Ignês Grando",
+      "Sandra Mara Marasini"
+    ],
+    "institutions": [
+      "Universidade de Passo Fundo"
+    ],
+    "abstract": "Nesse texto apresentamos o relato de um processo de pesquisa entre universidade e educação básica cujo principal objetivo é contribuir com o avanço das discussões teóricas sobre a pesquisa em educação matemática. O processo vivenciado permite que se possa afirmar que estamos ampliando nossas concepções sobre pesquisa, na medida em que estamos possibilitando intervenções qualitativas no processo ensino-aprendizagem. O grupo, composto por pesquisadores da Universidade de Passo Fundo, professores de matemática de escolas públicas e bolsistas de iniciação científica, preocupou-se com a apropriação de significados geométricos e algébricos no ensino fundamental - 5ª à 8ª série. Dentre os aspectos mais relevantes destacamos a importância dada às interações que o trabalho em grupo possibilita, à elaboração de uma sequência metodológica que considere a formação de conceitos como sistemas de conhecimento e ao papel fundamental da aprendizagem no desenvolvimento do pensamento.",
+    "keywords": [
+      "Educação matemática",
+      "ensino fundamental",
+      "formação de conceitos científicos escolares",
+      "desenvolvimento do pensamento"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1MYZmlS7iFHAFt_NCYTJ0d40Qul8Gji5y/view",
+    "accessLabel": "Imagem original",
+    "type": "Resumo",
+    "metadataStatus": "TRANSCRITO_DA_IMAGEM"
   }
 ]
