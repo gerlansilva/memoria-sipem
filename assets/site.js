@@ -550,7 +550,7 @@ function article(record) {
         <div class="record-expanded">
           <h4>Resumo</h4>
           ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo não disponível neste registro.</p>'}
-          ${institutions.length ? `<div class="record-institutions"><h4>Instituições e vínculos informados</h4><div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>${isIV ? '<p class="record-document-note">Vínculos transcritos do caderno; a associação individual entre autor e instituição ainda está em revisão.</p>' : ''}</div>` : ''}
+          ${institutions.length ? `<div class="record-institutions"><h4>Instituições e vínculos informados</h4><div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>${isIV ? '' : ''}</div>` : ''}
           ${showKeywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${showKeywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : (Number(record.edition) === 2 ? '<p class="keywords"><strong>Palavras-chave</strong> · Não identificadas automaticamente; ausência no original ainda não confirmada.</p>' : '')}
         </div>
       </details>
