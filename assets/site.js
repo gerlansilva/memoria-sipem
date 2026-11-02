@@ -288,13 +288,12 @@ const iesTag = name => {
   const sigla = iesSigla(name);
   return sigla ? `<abbr title="${escapeHTML(name)}">${escapeHTML(sigla)}</abbr>` : '';
 };
-const authorHTML = author => {
-  const original = String(author);
-  const match = original.match(/^(.*?)\s*\(([^()]+)\)\s*$/);
-  if (!match) return escapeHTML(original);
-  const sigla = iesSigla(match[2]);
-  return escapeHTML(match[1]) + (sigla ? ' (' + escapeHTML(sigla) + ')' : '');
+const authorName = author => String(author).replace(/\s*\([^()]+\)\s*$/, '').trim();
+const authorAffiliation = author => {
+  const match = String(author).match(/\(([^()]+)\)\s*$/);
+  return match ? iesSigla(match[1]) : '';
 };
+const authorHTML = author => escapeHTML(authorName(author));
 const groupLabel = record => Number(record.edition) === 7 ? (GT07_LABELS[record.gt] || record.gt) : (record.section || record.gt || '');
 const route = (target, id) => '#' + ({ history: 'historia', archives: 'anais' }[target] || 'inicio') + (id ? '?edicao=' + id : '');
 const themeOf = edition => edition.theme && !edition.theme.startsWith('Tema geral não') ? edition.theme : '';
@@ -515,6 +514,7 @@ function article(record) {
   const isIV = Number(record.edition) === 4;
   const showKeywords = isIV ? keywords.map(keyword => String(keyword).replace(/\\s+(?=(?:BASIC EDUCATION|LEARNING DIFICULTIES|LISTENING TO APPRENTICES|THE COMPREHENSION OF|ANALYSIS OF THE CONVERSION)[^;]*$)/i, ' ').trim()).filter(Boolean) : keywords;
   const institutions = record.institutions || [];
+  const cardIES = [...new Set([...institutions.map(iesSigla), ...(record.authors || []).map(authorAffiliation)].filter(Boolean))];
   const hasAbstract = record.abstract && !/^não encontrado$/i.test(record.abstract);
   const accessLabel = /pdf/i.test(record.accessLabel || '') || record.drivePdf || record.pdf ? 'PDF' : 'Abrir';
 
@@ -526,7 +526,7 @@ function article(record) {
       </div>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
       ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
-      ${institutions.length ? `<p class="record-ies-inline"><span class="record-ies-label">IES / vínculos:</span> ${[...new Set(institutions.map(iesSigla).filter(Boolean))].map(name => `<abbr title="${escapeHTML(name)}">${escapeHTML(name)}</abbr>`).join(' · ')}</p>` : ''}
+      ${cardIES.length ? `<p class="record-ies-inline"><span class="record-ies-label">IES / vínculos:</span> ${cardIES.map(name => `<span>${escapeHTML(name)}</span>`).join(' · ')}</p>` : ''}
 
     </div>
     <div class="record-actions">
