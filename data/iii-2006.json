@@ -24,7 +24,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1hfHYoKhWQJ_t_8kaqDeu7O6btGUOXcHB/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-002",
@@ -53,7 +57,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1HNHckCvbI-ZrM2nsyRBBGFp-7m4dIq8N/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-003",
@@ -82,7 +90,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1AzBBwDi838RzOjS0ktOwkzZIHL3CBOTu/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-004",
@@ -108,7 +120,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1jvRcZ01dKaqW8JHtNsvEr3emVyZNYhuX/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-005",
@@ -144,7 +160,12 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": "Página digital 6",
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1ba86BY0THQpBkjmDhY2UfgkUtPoxY2SK/view",
+      "https://drive.google.com/file/d/1p5WUMrgnsGd6JPv_MWmxdG2S95-wzFgP/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-006",
@@ -172,7 +193,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1PtmasAuwLctrXTjEB1SeEMaUaVATobmX/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-007",
@@ -199,7 +224,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1ZMPre3SZoOotuKX8WfXlHm7sJXjmD9SG/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-008",
@@ -225,7 +254,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1FE4YhUouYHvnTMbghHghiMybzgxnU1jv/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-009",
@@ -253,7 +286,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/17urbav7ieDFa-iLZixLojtQaVYbgJaAg/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-010",
@@ -282,7 +319,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1VvxFOZDzL0dOSsNMh0igSXt_Cb-5o4bs/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-011",
@@ -310,7 +351,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1Br0KbNOXBkEuH1SCmOWeLr1W9MlsKsXf/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-012",
@@ -340,7 +385,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1XcyUmBP5DBUMpJ1iy6g6y5LNqQTMPpqp/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-013",
@@ -368,7 +417,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/13dioYnVyI093smAOfALF23D50VHKM9Bj/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-014",
@@ -395,7 +448,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/13SJKse7dI2frwioPEM5mLmnC_uHALbtk/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-015",
@@ -424,7 +481,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1HrSeziyR6xfObWNwM5n371xNQX0m10D6/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-016",
@@ -451,7 +512,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1ULYwCcrEsPjuoJJddSIxstPcnU_CEsT9/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT01-017",
@@ -479,7 +544,11 @@
     "metadataStatus": "SEGUNDA_CONFERENCIA_TEXTUAL_PENDENTE",
     "pdfStatus": "RECORTE_VISUAL_REVISADO_PENDENTE_VERIFICACAO_INTEGRAL",
     "errataReference": null,
-    "type": "Resumo"
+    "type": "Resumo",
+    "sourceImages": [
+      "https://drive.google.com/file/d/1Sva4YNA7V1r3UIYgXouVhli0oLGHBdMv/view"
+    ],
+    "sourceImagesStatus": "IMAGENS_ORIGINAIS_LOCALIZADAS_NO_DRIVE_2026-11-02"
   },
   {
     "id": "III-2006-GT12-001",
