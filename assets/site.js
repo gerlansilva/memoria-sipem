@@ -531,7 +531,7 @@ function article(record) {
   const institutions = record.institutions || [];
   const cardIES = [...new Set([...institutions.map(iesSigla), ...(record.authors || []).map(authorAffiliation)].flatMap(value => value.split(' / ').map(s => s.trim())).filter(Boolean))];
   const hasAbstract = record.abstract && !/^não encontrado$/i.test(record.abstract);
-  const accessLabel = record.publicationStatus === 'PRELIMINAR_EM_REVISAO' ? 'PDF preliminar' : (/pdf/i.test(record.accessLabel || '') || record.drivePdf || record.pdf ? 'PDF' : 'Abrir');
+  const accessLabel = record.accessLabel === 'Imagem original' ? 'Imagem original' : (record.publicationStatus === 'PRELIMINAR_EM_REVISAO' ? 'PDF preliminar' : (/pdf/i.test(record.accessLabel || '') || record.drivePdf || record.pdf ? 'PDF' : 'Abrir'));
 
   return `<article class="record">
     <div class="record-body">
