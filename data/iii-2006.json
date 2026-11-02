@@ -572,13 +572,14 @@
       "proporção",
       "erros"
     ],
-    "drivePdf": "https://drive.google.com/file/d/1I_aRbXZ3hsrEMshl2fAySjDvbUr-rTjK/view",
+    "drivePdf": "https://drive.google.com/file/d/17EbOCcRxwQFGGdHCYvC0dmyHqN7GooL4/view",
     "sourceImages": [
       "https://drive.google.com/file/d/1I_aRbXZ3hsrEMshl2fAySjDvbUr-rTjK/view"
     ],
-    "accessLabel": "Imagem original",
+    "accessLabel": "PDF",
     "type": "Resumo",
-    "metadataStatus": "CONFERIDO_VISUALMENTE_2026_11_02"
+    "metadataStatus": "CONFERIDO_VISUALMENTE_2026_11_02",
+    "pdfStatus": "PDF_CONVERTIDO_DA_IMAGEM_2026_11_02"
   },
   {
     "id": "III-2006-GT02-002",
@@ -605,13 +606,14 @@
       "jogos",
       "ensino por atividades"
     ],
-    "drivePdf": "https://drive.google.com/file/d/1TUvUq-1HIMkZWjoYW_jNz1oz0fcl1ZWZ/view",
+    "drivePdf": "https://drive.google.com/file/d/1WaNvIRrlipElYok8emaCcVBzSoVvYz_N/view",
     "sourceImages": [
       "https://drive.google.com/file/d/1TUvUq-1HIMkZWjoYW_jNz1oz0fcl1ZWZ/view"
     ],
-    "accessLabel": "Imagem original",
+    "accessLabel": "PDF",
     "type": "Resumo",
-    "metadataStatus": "CONFERIDO_VISUALMENTE_2026_11_02"
+    "metadataStatus": "CONFERIDO_VISUALMENTE_2026_11_02",
+    "pdfStatus": "PDF_CONVERTIDO_DA_IMAGEM_2026_11_02"
   },
   {
     "id": "III-2006-GT02-003",
@@ -634,13 +636,14 @@
       "Inclusão",
       "Matemática"
     ],
-    "drivePdf": "https://drive.google.com/file/d/19oht9jsoYDO8V2ocrFLdNkgXIWlg49Cg/view",
+    "drivePdf": "https://drive.google.com/file/d/1650USvsAXk1dCqRI392SKW9S23jl4KkZ/view",
     "sourceImages": [
       "https://drive.google.com/file/d/19oht9jsoYDO8V2ocrFLdNkgXIWlg49Cg/view"
     ],
-    "accessLabel": "Imagem original",
+    "accessLabel": "PDF",
     "type": "Resumo",
-    "metadataStatus": "CONFERIDO_VISUALMENTE_2026_11_02"
+    "metadataStatus": "CONFERIDO_VISUALMENTE_2026_11_02",
+    "pdfStatus": "PDF_CONVERTIDO_DA_IMAGEM_2026_11_02"
   },
   {
     "id": "III-2006-GT03-001",
