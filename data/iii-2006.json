@@ -1607,7 +1607,7 @@
     "institutions": [
       "Pontifícia Universidade Católica de São Paulo"
     ],
-    "abstract": "Estudo sobre o tratamento de registros de representação semiótica em livros didáticos de Álgebra Linear, com atenção às noções de independência linear e às conversões de registros utilizadas nas atividades de ensino e aprendizagem.",
+    "abstract": "Este artigo é parte de uma pesquisa desenvolvida no curso de mestrado acadêmico e tem por objetivo investigar nos livros didáticos de Álgebra Linear quais são os registros de representação semiótica mais utilizados no estudo das noções e atividades propostas sobre independência e dependência linear. Procurei diagnosticar quais são os registros de representação mais privilegiados, as articulações que são realizadas nos livros didáticos entre esses registros ao abordar essas noções nos exemplos e exercícios propostos e quais são as possíveis implicações didáticas dessas articulações. O livro didático é um recurso pedagógico muito utilizado pelos professores no seu trabalho, o qual apresenta muitos registros de representação e no nosso caso foram analisados qualitativamente. Para a análise, foram selecionados dois livros didáticos de Álgebra Linear em que se diagnosticou quais os registros de representação utilizados na definição, exemplos e exercícios propostos a respeito de independência e dependência linear. A teoria utilizada na análise dos livros didáticos foi dos Registros de Representação Semiótica de Raymond Duval (1999), que destaca a importância da mudança de registros na aprendizagem dos objetos matemáticos. Em cada obra, os registros foram classificados e analisados, bem como as possíveis transformações de registros realizadas na resolução dos exemplos e exercícios propostos. Espero que as considerações, conclusões e sugestões descritas deste artigo possam contribuir para o ensino-aprendizagem das noções de independência e dependência linear, no intuito de despertar nos professores, educadores e pesquisadores de Álgebra Linear a importância dos registros de representação semiótica nas atividades matemáticas e suas implicações didáticas.",
     "keywords": [
       "Ensino-Aprendizagem",
       "livros didáticos",
@@ -1615,7 +1615,8 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/1bLYjFxu5btlRd_pniyrBGqSBRTKLnRif/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL"
   },
   {
     "id": "III-2006-GT04-006",
