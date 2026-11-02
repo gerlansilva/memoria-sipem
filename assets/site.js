@@ -321,7 +321,7 @@ const III_FILES = ['iii-2006.json'];
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iii-sipem-20261102-2';
+const catalogVersion = 'iii-sipem-20261102-3';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -553,7 +553,7 @@ function article(record) {
           <h4>Resumo</h4>
           ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo não disponível neste registro.</p>'}
           ${institutions.length ? `<div class="record-institutions"><h4>Instituições e vínculos informados</h4><div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>${isIV ? '' : ''}</div>` : ''}
-          ${showKeywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${showKeywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : ([2, 3].includes(Number(record.edition)) ? '<p class="keywords"><strong>Palavras-chave</strong> · Não cadastradas; verificar no PDF original antes de afirmar que estão ausentes.</p>' : '')}
+          ${showKeywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${showKeywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : (record.keywordsStatus === 'AUSENTES_NO_ORIGINAL_VERIFICADO' ? '<p class="keywords"><strong>Palavras-chave</strong> · Não constam no documento original (conferência visual).</p>' : ([2, 3].includes(Number(record.edition)) ? '<p class="keywords"><strong>Palavras-chave</strong> · Não cadastradas; verificar no PDF original antes de afirmar que estão ausentes.</p>' : ''))}
           ${Number(record.edition) === 3 && record.metadataStatus ? '<p class="keywords"><strong>Conferência documental</strong> · Metadados sujeitos à revisão do original.</p>' : ''}
         </div>
       </details>
