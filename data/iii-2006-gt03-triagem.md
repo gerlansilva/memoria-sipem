@@ -12,3 +12,7 @@ Inventário e páginas-fonte entregues no pacote de auditoria local `III_SIPEM_G
 
 ## Varredura das 159 páginas (02/11/2026)
 Foram constatadas páginas de abertura explícitas G1 (p. 5), G2 (p. 20), G3 (p. 33), G6 (p. 75), G7 (p. 84) e G9 (p. 119). No exemplar original examinado, as aberturas G4, G5, G8, G10, G11 e G12 não estão explicitamente identificáveis. As faixas 34–74, 85–118 e 120–150 devem permanecer sem subdivisões presumidas. As páginas 151–159 são índice de autores. Foi criado um pacote documental de 159 PDFs de páginas completas, manifesto e índice CSV, ainda não depositado no Drive, sem sugerir conclusão da validação dos 12 GTs.
+
+
+## Controle consolidado dos 12 GTs (02/11/2026)
+Foi compilado um índice local com 43 candidatos não validados (17 GT02 e 26 GT03) e um quadro de andamento dos 12 GTs. Permanecem 28 registros já integrados no catálogo do site (GT01 17, GT12 11). Os 43 candidatos **não** foram adicionados ao catálogo público: não têm PDFs individuais definitivos, resumos e autoria integralmente validados. O PDF original de 159 páginas já está no Drive. Não foi realizada inserção de novos PDFs no Drive nesta etapa. O controle em ZIP está disponível como artefato da conversa, sem alegação de que tenha sido sincronizado ao Drive.
