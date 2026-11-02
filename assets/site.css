@@ -1698,3 +1698,9 @@ h1, h2, h3, p { text-wrap: pretty; }
 .panorama-filter-compact select:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 .panorama-explore-head{align-items:center}
 @media(max-width:560px){.panorama-ies-heading-row,.panorama-explore-head{align-items:flex-start}.panorama-heading-actions{width:100%}.panorama-filter-compact select{max-width:100%;min-width:0}}
+
+/* Leitura documental dos metadados do IV SIPEM */
+.record-institutions{margin-top:1rem}
+.record-institutions h4{font-size:.82rem;font-weight:700;margin:0 0 .5rem}
+.record-document-note{font-size:.75rem;line-height:1.6;color:var(--muted, #65717b);margin:.55rem 0 0}
+.record .authors{line-height:1.65}
