@@ -589,6 +589,7 @@ function article(record) {
           ${Number(record.edition) === 3 && record.metadataStatus ? '<p class="keywords"><strong>Conferência documental</strong> · Metadados sujeitos à revisão do original.</p>' : ''}
         </div>
       </details>
+      ${Number(record.edition) === 3 && record.gt === 'GT01' && Array.isArray(record.sourceImages) && record.sourceImages.length ? `<div class="source-images"><strong>Imagem original:</strong> ${record.sourceImages.map((link,i) => `<a href="${safeURL(link)}" target="_blank" rel="noopener">${record.sourceImages.length > 1 ? `Parte ${i+1}` : 'Consultar captura'}</a>`).join(' · ')}</div>` : ''}
       ${url
         ? `<a class="download" href="${url}" target="_blank" rel="noopener" aria-label="${accessLabel === 'PDF' ? 'Acessar PDF' : 'Abrir documento'} — ${escapeHTML(record.title)}">${downloadIcon}<span>${accessLabel === 'PDF' ? 'Acessar PDF' : 'Abrir documento'}</span></a>`
         : '<span class="unavailable">Documento indisponível</span>'}
