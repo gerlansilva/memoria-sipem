@@ -34,3 +34,10 @@ Atualizado em 2026-11-02. Documento de controle editorial; **não é catálogo d
 - GT12-002 não possui palavras-chave no catálogo.
 - GT12-011 não possui resumo no catálogo.
 - A aplicação já carrega `iii-2006.json` através de `assets/site.js`, mas a renderização em produção ainda precisa de teste manual.
+
+## Etapa 27 — revisão visual do exemplar completo (2026-11-02)
+- Original de 159 páginas, imagem digitalizada; análise das páginas digitais 20–33.
+- Inspeção visual identificou **17 blocos com títulos aparentes** no GT02, em contraste com os 16 candidatos do inventário anterior. Divergência a resolver cotejando item a item antes de atualizar totais do site.
+- Foram preparados localmente 17 **recortes preliminares** por intervalos verticais de página, em ZIP, com manifesto JSON e indicação explícita de revisão pendente. Não são PDFs definitivos e ainda não foram enviados ao Drive.
+- O trecho anterior ao primeiro título da página digital 21 foi mantido fora dos recortes: é continuação sem origem identificada, e não deve ser atribuído a outro autor por suposição.
+- Recomenda-se revisar margens e limites, conferir os 17 títulos e seus resumos antes de publicação, e investigar se o inventário antigo agregou dois blocos por erro.
