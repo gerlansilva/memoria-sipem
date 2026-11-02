@@ -41,3 +41,10 @@ Atualizado em 2026-11-02. Documento de controle editorial; **não é catálogo d
 - Foram preparados localmente 17 **recortes preliminares** por intervalos verticais de página, em ZIP, com manifesto JSON e indicação explícita de revisão pendente. Não são PDFs definitivos e ainda não foram enviados ao Drive.
 - O trecho anterior ao primeiro título da página digital 21 foi mantido fora dos recortes: é continuação sem origem identificada, e não deve ser atribuído a outro autor por suposição.
 - Recomenda-se revisar margens e limites, conferir os 17 títulos e seus resumos antes de publicação, e investigar se o inventário antigo agregou dois blocos por erro.
+
+## Etapa 28 — controle técnico dos 17 PDFs preliminares (2026-11-02)
+- Os 17 PDFs locais abriram sem erro com PyMuPDF, totalizando 28 páginas físicas após os recortes regionais.
+- Foi gerado um painel visual de suas primeiras páginas e uma planilha CSV de controle.
+- A validação efetuada é apenas de integridade e legibilidade geral dos arquivos; **não demonstra ainda** que todas as margens estejam corretas nem que textos/descritores estejam integralmente transcritos.
+- Conserva-se como pendente a divergência entre 16 candidatos do inventário e 17 blocos de títulos no original.
+- Nenhum registro adicional foi publicado no site ou enviado ao Drive nesta etapa.
