@@ -320,7 +320,7 @@ const IV_FILES = ['iv-2009.json'];
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iv-2009-20261101-1';
+const catalogVersion = 'iv-keywords-20261102-1';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
