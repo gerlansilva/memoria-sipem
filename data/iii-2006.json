@@ -550,7 +550,9 @@
     "drivePdf": "https://drive.google.com/file/d/1aNxAq-unDE8T9w72uMGDr8pA43oXXHrf/view",
     "pdfStatus": "Recorte individual disponível; conferência documental pendente",
     "section": "GT12 — Ensino de Probabilidade e Estatística",
-    "type": "Resumo"
+    "type": "Resumo",
+    "keywordsStatus": "AUSENTES_NO_ORIGINAL_VERIFICADO",
+    "keywordsVerification": "Conferência visual das duas páginas do PDF individual; após o fim do resumo inicia-se o título seguinte, sem seção de palavras-chave."
   },
   {
     "id": "III-2006-GT12-003",
