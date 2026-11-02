@@ -477,7 +477,6 @@ function archives() {
     ${edition ? `<img class="archive-logo" src="${escapeHTML(edition.logo)}" alt="Marca do ${edition.roman} SIPEM" width="110" height="64">` : ''}
   </header>
 
-  ${selected === 4 ? `<aside class="review-notice" aria-label="Aviso de conferência do IV SIPEM"><strong>IV SIPEM (2009): metadados em revisão.</strong> Os 199 PDFs individuais estão disponíveis no Google Drive. Autores, instituições, resumos e descritores foram transcritos preliminarmente e podem conter imprecisões. A ausência de um campo não comprova sua ausência no documento original.</aside>` : ''}
   ${selected === 2 ? `<aside class="review-notice" aria-label="Aviso sobre a conferência documental"><strong>II SIPEM (2003): revisão documental em andamento.</strong> Títulos, autorias, instituições, resumos e palavras-chave ainda estão sendo confrontados com os PDFs originais. A ausência de metadados no catálogo não significa ausência no documento. <a href="https://github.com/gerlansilva/memoria-sipem/blob/main/auditoria/protocolo-ii-sipem.md" target="_blank" rel="noopener">Consultar o protocolo de revisão</a>.</aside>` : ''}
   <div class="search-panel">
     <form class="search-form" role="search">
