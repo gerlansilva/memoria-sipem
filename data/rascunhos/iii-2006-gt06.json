@@ -16,11 +16,18 @@
     ],
     "sourcePages": "76",
     "abstract": "",
-    "keywords": [],
+    "keywords": [
+      "Geometria Hiperbólica",
+      "Geometria Euclidiana",
+      "Cabri-géomètre",
+      "formação de professores"
+    ],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
     "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "type": "Resumo",
+    "keywordsStatus": "CONFERIDAS_VISUALMENTE_NO_ORIGINAL",
+    "keywordsSource": "Continuação na página digital 76, antes do título do GT06-002"
   },
   {
     "id": "III-2006-GT06-002",
@@ -206,7 +213,7 @@
     "edition": 3,
     "year": 2006,
     "gt": "GT06",
-    "title": "Diferentes níveis na exploração de alguns conceitos geométricos",
+    "title": "Diferentes mídias na exploração de alguns conceitos geométricos",
     "authors": [
       "Deise Maria B. Costa",
       "Ellen Andrea Janzen",
@@ -221,7 +228,8 @@
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
     "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "type": "Resumo",
+    "titleStatus": "CONFERIDO_VISUALMENTE_NO_ORIGINAL"
   },
   {
     "id": "III-2006-GT06-011",
