@@ -479,10 +479,6 @@ function archives() {
   </header>
 
   ${selected === 2 ? `<aside class="review-notice" aria-label="Aviso sobre a conferência documental"><strong>II SIPEM (2003): revisão documental em andamento.</strong> Títulos, autorias, instituições, resumos e palavras-chave ainda estão sendo confrontados com os PDFs originais. A ausência de metadados no catálogo não significa ausência no documento. <a href="https://github.com/gerlansilva/memoria-sipem/blob/main/auditoria/protocolo-ii-sipem.md" target="_blank" rel="noopener">Consultar o protocolo de revisão</a>.</aside>` : ''}
-  ${selected === 3 ? `<aside class="review-notice" aria-label="Documentos do GT02 em triagem"><strong>III SIPEM (2006): documentos ainda em revisão.</strong> O catálogo possui 40 registros, dos quais 12 são preliminares. Além deles, há 17 recortes candidatos do GT02 disponíveis abaixo, que <strong>não contam como trabalhos catalogados</strong> até a confirmação de títulos, autorias e limites. <details><summary>Ver 17 PDFs do GT02 em triagem</summary><div id="gt02-preliminary" class="preliminary-list"></div></details></aside>` : ''}
-  ${selected === 3 ? `<aside class="review-notice" aria-label="Inventário visual do GT03"><strong>GT03 — 26 títulos candidatos identificados nas páginas 34–51.</strong> São referências de localização no PDF original, ainda sem validação bibliográfica; não integram a contagem dos 40 trabalhos catalogados. <details><summary>Consultar os 26 títulos e páginas do GT03</summary><div id="gt03-preliminary"></div></details></aside>` : ''}
-  ${selected === 3 ? `<aside class="review-notice"><strong>Faixa documental 52–74 dos anais (2006).</strong> Há trabalhos adicionais nesta sequência antes da abertura do GT06 na página 75. A atribuição de cada página a GT03, GT04 ou GT05 ainda não foi verificada. <details><summary>Consultar as 23 páginas para identificação de GT e trabalhos</summary><div id="iii-pages-52-74"></div></details></aside>` : ''}
-  ${selected === 3 ? `<aside class="review-notice"><strong>14 trabalhos identificados nas páginas 66–73.</strong> Títulos e parte das autorias foram lidos visualmente no original. A atribuição aos GTs e a validação completa de metadados permanecem abertas. <details><summary>Consultar os 14 trabalhos identificados</summary><div id="iii-identified-66-73"></div></details></aside>` : ''}
   <div class="search-panel">
     <form class="search-form" role="search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg>
@@ -523,34 +519,6 @@ function archives() {
     $('#search').value = ''; $('#gt').value = '';
     results(); $('#search').focus();
   });
-  if (selected === 3) {
-    const target = $('#iii-identified-66-73');
-    if (target) fetch('data/iii-2006-paginas-66-73-trabalhos-identificados.json?v=20261102-2', {cache:'no-store'})
-      .then(response => { if (!response.ok) throw Error('Dados indisponíveis'); return response.json(); })
-      .then(rows => { target.innerHTML = rows.map(row => `<p><strong>${escapeHTML(row.title)}</strong> — ${row.authors.length ? escapeHTML(row.authors.join('; ')) : 'Autoria em conferência'} · Página ${row.page} · <a href="${safeURL(row.preliminaryDrivePdf || row.sourcePdf)}" target="_blank" rel="noopener">${row.preliminaryDrivePdf ? "PDF individual preliminar" : "Anais originais"}</a></p>`).join(''); })
-      .catch(() => { target.textContent = 'Dados temporariamente indisponíveis.'; });
-  }
-  if (selected === 3) {
-    const t = $('#iii-pages-52-74');
-    if (t) fetch('data/iii-2006-faixa-52-74.json?v=20261102-1', {cache:'no-store'})
-      .then(r => {if(!r.ok) throw Error('Índice indisponível');return r.json();})
-      .then(rows => {t.innerHTML = rows.map(row => `<p>Página digital ${row.page} — <a href="${safeURL(row.sourcePdf)}" target="_blank" rel="noopener">Consultar anais originais</a> · GT ainda não confirmado</p>`).join('');})
-      .catch(() => {t.textContent='Índice de páginas indisponível.';});
-  }
-  if (selected === 3) {
-    const target3 = $('#gt03-preliminary');
-    if (target3) fetch('data/iii-2006-gt03-preliminares.json?v=20261102-2', {cache:'no-store'})
-      .then(response => {if (!response.ok) throw Error('Índice indisponível'); return response.json();})
-      .then(items => {target3.innerHTML = items.map(item => `<p><strong>Página digital ${item.page}</strong> — ${escapeHTML(item.title)} <a href="${safeURL(item.pageSourceDrivePdf || item.sourcePdf)}" target="_blank" rel="noopener">${item.pageSourceDrivePdf ? "Página-fonte no Drive" : "Anais originais"}</a></p>`).join('');})
-      .catch(() => {target3.textContent = 'Índice indisponível';});
-  }
-  if (selected === 3) {
-    const target = $('#gt02-preliminary');
-    if (target) fetch('data/iii-2006-gt02-preliminares.json?v=20261102-1', {cache:'no-store'})
-      .then(response => { if (!response.ok) throw Error('Índice indisponível'); return response.json(); })
-      .then(items => { target.innerHTML = items.map(item => `<p><strong>${escapeHTML(item.id.replace('GT02-PRELIMINAR-', 'Candidato '))}</strong> — ${escapeHTML(item.label)} <a href="${safeURL(item.pdf)}" target="_blank" rel="noopener">PDF preliminar</a></p>`).join(''); })
-      .catch(() => { target.textContent = 'Índice dos documentos temporariamente indisponível.'; });
-  }
   results();
 }
 
