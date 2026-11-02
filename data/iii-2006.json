@@ -2098,11 +2098,19 @@
     "authors": [
       "Eliane da Silva Souza"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade Estadual de Campinas"
+    ],
+    "abstract": "O trabalho situa-se no campo de pesquisa que investiga a participação da História da Matemática e da Educação Matemática na formação de professores das séries iniciais do Ensino Fundamental. A questão central de investigação consistiu em identificar os valores que estariam sustentando a naturalização do processo de transmissão da prática social do cálculo escrito na instituição escolar. Tal identificação foi realizada através de uma problematização do diálogo ocorrido, durante sessões interativas de investigação, entre a pesquisadora e um grupo de professoras das séries iniciais do Ensino Fundamental. Por sua vez, esta problematização tomou como ponto de referência alguns aspectos da história dos processos de apropriação da prática social do cálculo escrito ao modo hindu-arábico. Os trabalhos de Michel Foucault constituíram fonte de inspiração para o desenvolvimento da pesquisa.",
+    "keywords": [
+      "História da Educação Matemática",
+      "Formação de professores de matemática",
+      "Algoritmos das operações aritméticas elementares",
+      "Prática social do cálculo escrito"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1BDsWGvLLpfz4dTqWJTB8rIpD7Qx5cFkO/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Transcrição do original"
   },
   {
     "id": "III-2006-GT05-025",
@@ -2117,7 +2125,7 @@
     "institutions": [
       "Universidade Federal de Sergipe"
     ],
-    "abstract": "",
+    "abstract": "Nos assentamentos Santana dos Frades e Santaninha, localizados na região nordeste do estado de Sergipe, os trabalhadores e as trabalhadoras utilizam práticas sociais nas quais está presente um conjunto de unidades de medida que se diferem das utilizadas no sistema métrico oficial. Para construção de cada unidade de medida os camponeses e as camponesas utilizam o corpo ou parte deste como referência. A prática social de medir terra é uma das práticas mais utilizadas na cultura desses trabalhadores. Nessa prática social eles e elas utilizam a vara como unidade de medida – que equivale a 2,20m; a tarefa – que equivale a 25 varas quadradas e o celamim para medir os produtos agrícolas colhidos. Essa medida é uma caixa quadrada de madeira que, geralmente, tem 9 cm de largura e 8 cm de altura. A prática social de medir terra foi uma das práticas sociais por mim analisadas nesses assentamentos quando da realização da parte empírica da pesquisa que desenvolvi no mestrado.",
     "keywords": [
       "saberes populares",
       "Currículo",
@@ -2125,7 +2133,8 @@
       "Cultura"
     ],
     "drivePdf": "https://drive.google.com/file/d/1wRZF4hDonEO4iXQ_v8_wqSsU_UH4iKdj/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Transcrição do original"
   },
   {
     "id": "III-2006-GT05-027",
@@ -2397,22 +2406,24 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "UNIDADES DE MEDIDA COTIDIANAS EM ASSENTAMENTOS SERGIPANOS: VARAS, TAREFAS E CELAMINS",
+    "title": "UM ESTUDO EM EDUCAÇÃO MATEMÁTICA SOBRE A CADES: UMA PESQUISA EM CONSTITUIÇÃO",
     "authors": [
-      "Marlene Santos"
+      "Ivete Maria Baraldi",
+      "Rosinete Gaertner"
     ],
     "institutions": [
-      "Universidade Federal de Sergipe"
+      "Universidade do Sagrado Coração",
+      "Universidade Regional de Blumenau"
     ],
-    "abstract": "",
+    "abstract": "Este trabalho enfoca uma pesquisa em desenvolvimento, multi-institucional (FURB/Blumenau e USC/Bauru), que pretende colaborar com elementos para uma configuração mais plena do que, como tendência de pesquisa em constituição, é denominada de “História da Educação Matemática Brasileira”. A pesquisa em questão faz o aprofundamento das investigações de Baraldi (2003) e Gaertner (2004), nas quais, de maneira breve, foi abordada a formação do professor de matemática por meio da CADES – Campanha de Aperfeiçoamento e Difusão do Ensino Secundário. Dois procedimentos metodológicos são utilizados: a História Oral e a pesquisa bibliográfica e documental. Através da História Oral são entrevistados professores formadores e formados, além daqueles que foram entrevistados para os estudos de doutorado, visando constituir elementos de compreensão sobre a Campanha e sua importância para a educação secundária brasileira. Com a pesquisa bibliográfica e documental pretende-se identificar e fornecer referenciais e fontes, por intermédio da recuperação de obras e coleta de documentos sobre a legislação, os programas curriculares, os catálogos de editoras e a produção didática publicada pela Campanha de Aperfeiçoamento e Difusão do Ensino Secundário.",
     "keywords": [
-      "saberes populares",
-      "Currículo",
-      "Unidades de medida",
-      "Cultura"
+      "CADES",
+      "História da Educação Matemática",
+      "Formação de Professores"
     ],
     "drivePdf": "https://drive.google.com/file/d/17N2EC_FmTZqUY7oVczITFISrJMnYSzcS/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Transcrição do original"
   },
   {
     "id": "III-2006-GT05-029",
