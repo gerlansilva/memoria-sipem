@@ -554,7 +554,7 @@ function article(record) {
           ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo não disponível neste registro.</p>'}
           ${institutions.length ? `<div class="record-institutions"><h4>Instituições e vínculos informados</h4><div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>${isIV ? '' : ''}</div>` : ''}
           ${showKeywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${showKeywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : (record.keywordsStatus === 'AUSENTES_NO_ORIGINAL_VERIFICADO' ? '<p class="keywords"><strong>Palavras-chave</strong> · Não constam no documento original (conferência visual).</p>' : ([2, 3].includes(Number(record.edition)) ? '<p class="keywords"><strong>Palavras-chave</strong> · Não cadastradas; verificar no PDF original antes de afirmar que estão ausentes.</p>' : ''))}
-          ${Number(record.edition) === 3 && record.metadataStatus ? '<p class="keywords"><strong>Conferência documental</strong> · Metadados sujeitos à revisão do original.</p>' : ''}
+
         </div>
       </details>
       ${url
