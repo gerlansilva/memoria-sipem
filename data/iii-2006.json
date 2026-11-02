@@ -1129,13 +1129,21 @@
     "section": "GT03",
     "title": "A NOÇÃO DE COMPETÊNCIA NAS REFORMAS EDUCACIONAIS DO ENSINO MÉDIO DOS ANOS 1990",
     "authors": [
-      "Ana Cláudia Costa"
+      "José Carlos Oliveira Costa"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Centro Universitário Fundação Santo André",
+      "Universidade de São Paulo"
+    ],
+    "abstract": "Este estudo da noção de competência nas atuais reformas educacionais é parte da pesquisa de mestrado intitulada “O currículo de Matemática no Ensino Médio e as prescrições da LDB 9394/96 - USP, 2006”, que teve por objetivo refletir sobre a natureza do ensino médio, e sobre a formação matemática necessária ao aluno desse nível de ensino. A análise documental empreendida neste estudo evidenciou entre outros aspectos que o currículo do Ensino Médio recente traz como um dos seus eixos estruturantes a noção de competência e que o domínio de competências básicas, se contrapõe ao objetivo de acúmulo de informações que na prática prevaleceu nas experiências curriculares precedentes. A realização do estudo permitiu explicitar diferentes significados da noção de competência e fazer uma análise crítica da incorporação do termo e da centralidade ocupada nos projetos curriculares oficiais, em particular, nos currículos de Matemática para o Ensino Médio, produzidos nos anos 90. Entre as conclusões desse estudo verificou-se a necessidade de realizar pesquisas sobre os limites e possibilidades dessa abordagem por competência para evitar a mera discussão ideológica.",
+    "keywords": [
+      "competência",
+      "reforma dos anos 1990",
+      "parâmetros curriculares do ensino médio"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1hlnuCQ7salOnyqq23mjMt8NsPsrted9E/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT03-007",
@@ -1147,11 +1155,20 @@
     "authors": [
       "Wanderley Moura Rezende"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade Federal Fluminense"
+    ],
+    "abstract": "Este artigo contém os resultados parciais referentes à primeira etapa da pesquisa “Uma Proposta de Emersão das Ideias Fundamentais do Cálculo no Ensino Básico de Matemática”. O projeto de pesquisa se desenvolveu em duas etapas distintas e inter-relacionadas: uma inicial, em que se realiza um mapeamento das ideias e dos problemas construtores do Cálculo que se encontram camuflados no ensino básico de matemática; e uma posterior, em que são propostas algumas atividades didáticas de emersão das ideias do Cálculo.",
+    "keywords": [
+      "Cálculo",
+      "Ensino básico",
+      "Função",
+      "Corpos redondos",
+      "Mapas"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1LMlCSslls1E-jIbNVRemaQYSH8VWG-vG/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT03-009",
@@ -1164,11 +1181,18 @@
       "Marisa Carlovich",
       "Saddo Ag Almouloud"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Pontifícia Universidade Católica de São Paulo"
+    ],
+    "abstract": "Esta pesquisa tem o objetivo de analisar o ensino da Geometria dedutiva nos livros didáticos do 3º e 4º ciclos do Ensino Fundamental mais utilizados nas escolas públicas do Estado de São Paulo. Definimos para a pesquisa dois períodos de análise: o início dos anos 1990 e o início dos anos 2000. As questões de pesquisa versam sobre como, em cada época, as coleções de livros didáticos acompanharam as discussões da Didática da Matemática no que se refere ao ensino-aprendizagem da Geometria dedutiva e sobre as diferenças dessas apropriações nas duas épocas.",
+    "keywords": [
+      "Geometria dedutiva",
+      "Ensino Fundamental",
+      "Heurística"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1Zojx4ZsE0sbNutz2lzWOWw018FaNS2wx/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT03-010",
@@ -1176,15 +1200,23 @@
     "year": 2006,
     "gt": "GT03",
     "section": "GT03",
-    "title": "DISCUTINDO A NOÇÃO DE EQUAÇÃO: UMA ANÁLISE DA CONVERSÃO DA ESCRITA ARITMÉTICA PARA A ESCRITA ALGÉBRICA",
+    "title": "DISCUTINDO A NOÇÃO DE EQUAÇÃO: UMA ANÁLISE CONSIDERANDO AS IDÉIAS DA TRANSPOSIÇÃO DIDÁTICA",
     "authors": [
       "Alessandro Jacques Ribeiro"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Pontifícia Universidade Católica de São Paulo"
+    ],
+    "abstract": "O presente estudo baseou-se nos resultados de Ribeiro (2001) e em outros autores, como Kieran (1992) e Cotret (1997). O trabalho objetiva discutir se o termo matemático equação é concebido como uma noção matemática ou como uma noção paramatemática, segundo as ideias da Transposição Didática de Chevallard (1991). Trata-se de estudo teórico em que se verificou se e como a noção de equação é apresentada na literatura nacional e internacional. As análises conduziram à conclusão de que não há consenso entre os autores sobre a definição de equação e, em segundo lugar, a ideia de equação não é concebida como noção matemática, mas como noção paramatemática.",
+    "keywords": [
+      "Equação",
+      "Álgebra Elementar",
+      "Didática da Álgebra",
+      "Transposição Didática"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1R1Jy15wHEYWjbtr-9FV_IyTlNwytTGWX/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT03-013",
@@ -1192,13 +1224,23 @@
     "year": 2006,
     "gt": "GT03",
     "section": "GT03",
-    "title": "OS CONHECIMENTOS PRÉVIOS DOS ALUNOS DE 6ª SÉRIE DO ENSINO FUNDAMENTAL EM FUNÇÕES E SUA APRENDIZAGEM: SIGNIFICADOS DE CONCEITOS MATEMÁTICOS",
-    "authors": [],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "title": "OS CONHECIMENTOS PRÉVIOS DOS ALUNOS DA 5ª SÉRIE DO ENSINO FUNDAMENTAL: UM CAMINHO PARA A APRENDIZAGEM SIGNIFICATIVA DE CONCEITOS GEOMÉTRICOS",
+    "authors": [
+      "Elaine de Almeida Oliveira",
+      "Maria Raquel Miotto Morelatti"
+    ],
+    "institutions": [
+      "Universidade Estadual Paulista Júlio de Mesquita Filho"
+    ],
+    "abstract": "O estudo investiga o processo de ensino e aprendizagem de conceitos geométricos e as dificuldades encontradas por alunos da 5ª série do Ensino Fundamental de uma escola pública municipal. Parte da constatação de que o ensino de geometria é pouco contextualizado e frequentemente enfatiza aspectos abstratos antes dos concretos. Por meio de uma prova diagnóstica, identificou conhecimentos prévios e dificuldades na relação entre sólidos geométricos e figuras planas. A análise das respostas permitiu compreender obstáculos à aprendizagem de conceitos geométricos e apontou caminhos para a aprendizagem significativa e a construção do pensamento geométrico.",
+    "keywords": [
+      "Ensino e Aprendizagem de Geometria",
+      "Conhecimento Prévio",
+      "Dificuldades de aprendizagem"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1uBxTnsIw30W7sXs4MLB8XQ-pH5YEZ4Fj/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT03-014",
@@ -1207,12 +1249,22 @@
     "gt": "GT03",
     "section": "GT03",
     "title": "CURRÍCULO DE MATEMÁTICA E PERFIL SOCIAL DO ALUNO",
-    "authors": [],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "authors": [
+      "Maria Isabel Ramalho Ortigão"
+    ],
+    "institutions": [
+      "Universidade do Estado do Rio de Janeiro"
+    ],
+    "abstract": "O artigo apresenta resultados de investigação sobre o currículo de Matemática ensinado e sua relação com o perfil social dos estudantes do Ensino Fundamental. Com objetivo de obter visão geral do ensino de Matemática, selecionou amostra probabilística de 48 escolas do Rio de Janeiro e coletou informações por questionários aplicados a professores de Matemática da 5ª à 8ª série e alunos da 8ª série. A análise aplicou modelo de regressão para investigar características escolares relacionadas à seleção de tópicos de Tratamento da Informação. Concluiu que alunos de menor poder aquisitivo leem menos conteúdos de Tratamento da Informação, mas têm maior chance de acesso quando o professor utiliza livros didáticos, jornais ou resolução de problemas.",
+    "keywords": [
+      "Currículo de Matemática",
+      "Seleção de conteúdos",
+      "Tratamento da Informação",
+      "Desigualdade educacional"
+    ],
     "drivePdf": "https://drive.google.com/file/d/18YJhuJ6PiuDmAwrxX9iLwQ5ksJ7TciZZ/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT04-002",
@@ -1378,14 +1430,15 @@
     "institutions": [
       "Universidade Estadual Paulista Júlio de Mesquita Filho"
     ],
-    "abstract": "",
+    "abstract": "A pesquisa investiga o desempenho dos participantes em resolução de problemas cujos enunciados apresentavam dados supérfluos, analisa as relações entre notas e estratégias utilizadas e examina as dificuldades encontradas. Participaram 272 alunos do ensino fundamental, médio e Licenciatura em Matemática. O instrumento consistiu em uma prova matemática com dez problemas contendo dados supérfluos. A análise mostrou que participantes com médias maiores identificaram os dados supérfluos e não tiveram dificuldades no processo de resolução, enquanto alguns participantes com notas menores usaram tais dados e tiveram desempenho insatisfatório. Os que obtiveram melhor desempenho utilizaram conceitos e princípios já conhecidos e resgataram estruturas cognitivas para chegar à solução final.",
     "keywords": [
       "resolução de problemas",
       "habilidades matemáticas",
       "educação matemática"
     ],
     "drivePdf": "https://drive.google.com/file/d/18EgQxGzmw7P0vfkLCaUhNCdLR7Jl0V4s/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT03-008",
@@ -1402,14 +1455,15 @@
       "Secretaria Executiva de Educação do Pará",
       "Universidade do Estado do Pará"
     ],
-    "abstract": "",
+    "abstract": "O estudo apresenta resultados de uma pesquisa com 37 alunos do 2º ano do ensino médio de uma escola pública do Pará sobre conhecimentos relativos às definições, às relações e aos problemas envolvendo razões trigonométricas no triângulo retângulo. Os resultados apontam dificuldades na identificação dos elementos do triângulo, nas definições das razões e no estabelecimento das relações entre lados e ângulos. Identificaram-se erros de representação decimal, de cálculo, de inversão de valores das razões, respostas incompletas e em branco, além de inadequações no posicionamento da vírgula nas respostas.",
     "keywords": [
       "Ensino de Trigonometria",
       "Razões Trigonométricas",
       "Resolução de Problemas"
     ],
     "drivePdf": "https://drive.google.com/file/d/16W84L2eqkML6YbMJPRGc0OJOSkqXMZe3/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT03-011",
@@ -1424,14 +1478,15 @@
     "institutions": [
       "Universidade Federal de Mato Grosso do Sul"
     ],
-    "abstract": "",
+    "abstract": "O artigo descreve resultados de pesquisa para caracterizar aspectos didáticos e epistemológicos relativos ao Teorema de Pitágoras a partir da análise de 12 livros didáticos brasileiros destinados à oitava série do Ensino Fundamental, publicados nas últimas décadas. O referencial fundamenta-se na teoria antropológica do didático, de Chevallard, e na noção de vulgata, proposta por Chervel. A análise qualitativa mostrou a permanência do teorema no núcleo dos conteúdos geométricos, com distintos graus de formalização, articulação entre aspectos matemáticos e pedagógicos e valorização de problemas, procedimentos lógico-dedutivos e recursos visuais.",
     "keywords": [
       "Teorema de Pitágoras",
       "Ensino da Geometria",
       "Livros Didáticos"
     ],
     "drivePdf": "https://drive.google.com/file/d/17HCJFKCcLUPFH-BhypHmP1PvaVkeYY9e/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT03-012",
@@ -1447,7 +1502,7 @@
     "institutions": [
       "Universidade do Oeste Paulista"
     ],
-    "abstract": "",
+    "abstract": "O estudo investiga as contribuições dos jogos e materiais pedagógicos na construção de conceitos fundamentais matemáticos, procurando alternativas teórico-metodológicas à prática docente. Com base em trabalho desenvolvido em duas 5ª séries do ensino fundamental, com crianças entre 10 e 14 anos, utiliza fundamentação de Piaget e Vygotsky. Os resultados destacam jogos e atividades lúdicas como estratégias para a construção do pensamento lógico-matemático e o desenvolvimento de organização, atenção, concentração, linguagem, criatividade e raciocínio dedutivo.",
     "keywords": [
       "jogos",
       "brinquedos",
@@ -1456,7 +1511,8 @@
       "formação de conceitos matemáticos"
     ],
     "drivePdf": "https://drive.google.com/file/d/1KcOI02c4M50Qj5-B1SmDO22sIDdKuH1r/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "metadataStatus": "CONFERIDO_COM_IMAGEM_ORIGINAL_2026_11_02"
   },
   {
     "id": "III-2006-GT04-001",
