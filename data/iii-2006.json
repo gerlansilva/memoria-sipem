@@ -754,5 +754,31 @@
     "type": "Resumo",
     "metadataStatus": "TRANSCRITO_DA_IMAGEM",
     "pdfStatus": "PDF_CONVERTIDO_DA_IMAGEM_2026_11_02"
+  },
+  {
+    "id": "III-2006-GT02-004",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT02",
+    "section": "GT02",
+    "title": "DEMONSTRAÇÕES E EDUCAÇÃO MATEMÁTICA – UMA ANÁLISE DE PESQUISAS EXISTENTES",
+    "authors": [
+      "Ruy César Pietropaolo"
+    ],
+    "institutions": [
+      "Pontifícia Universidade Católica de São Paulo"
+    ],
+    "abstract": "Este artigo analisa pesquisas sobre demonstrações e provas com o objetivo de delinear um panorama das principais questões debatidas pelos pesquisadores em Educação Matemática e contribuir para uma reflexão sobre a necessidade, ou não, da inclusão desse tema nos currículos da Educação Básica. Pode-se, por exemplo, verificar a existência de poucas pesquisas brasileiras sobre esse assunto, ao contrário de outros países como França, Inglaterra e Itália. Tampouco parece haver sobre esse tema projetos articulados entre si e nos diferentes níveis de ensino. Mostra-se, sobretudo, a necessidade de pesquisas brasileiras nessa área e de discussão sobre as potencialidades da prova nos currículos de Educação Básica.",
+    "keywords": [
+      "Educação Matemática",
+      "Demonstrações e Provas",
+      "Currículos da Educação Básica"
+    ],
+    "sourceImages": [
+      "https://drive.google.com/file/d/16dIwRxIRAmd3sSMnxX_IiktXi8ADxtOm/view"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/16dIwRxIRAmd3sSMnxX_IiktXi8ADxtOm/view",
+    "type": "Resumo",
+    "metadataStatus": "TRANSCRITO_DA_CAPTURA_GT02_004"
   }
 ]
