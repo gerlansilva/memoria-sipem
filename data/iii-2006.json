@@ -696,5 +696,31 @@
     "type": "Resumo",
     "accessLabel": "Imagem original",
     "metadataStatus": "TRANSCRITO_DA_IMAGEM"
+  },
+  {
+    "id": "III-2006-GT03-003",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT03",
+    "section": "GT03",
+    "title": "TEORIA DOS NÚMEROS NO ENSINO BÁSICO – DESENVOLVENDO O PENSAMENTO ARITMÉTICO",
+    "authors": [
+      "Giovanni da Silva Nunes",
+      "Rosvita Fuelber Franke"
+    ],
+    "institutions": [
+      "Universidade Luterana do Brasil"
+    ],
+    "abstract": "Nesse trabalho apresentamos a pesquisa “Teoria dos Números e suas aplicações no processo de ensino e aprendizagem”, que vem sendo desenvolvida desde 2001, na Universidade Luterana do Brasil – ULBRA, campus de Canoas, Rio Grande do Sul. A Teoria dos Números é a área da matemática que estuda as relações entre os números inteiros e que têm aplicações em diversos campos da Matemática. Investigamos os conceitos da Teoria dos Números que são apresentados no Ensino Básico, sugerindo atividades didáticas que promovam o desenvolvimento do pensamento aritmético, despertando nos alunos o interesse por essa área da matemática e com o objetivo de verificar se: “A introdução e o desenvolvimento de atividades didáticas da Teoria dos Números possibilitam ao aluno o desenvolvimento de estratégias de pensamento que melhorem seu raciocínio lógico e algébrico”. Os temas abordados foram: números primos, divisibilidade, algoritmo da divisão, máximo divisor comum, entre outros. Nesse trabalho apresentamos os resultados de dois experimentos de ensino, um aplicado com uma turma de 6ª série do Ensino Fundamental e outro aplicado em alunos do curso de Licenciatura em Matemática da ULBRA.",
+    "keywords": [
+      "Teoria de Números",
+      "Pensamento Aritmético",
+      "Atividades Didáticas",
+      "Experimento de Ensino"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1IuJs0AeEMPxy-cNo5uX4g7V92o1BQgd_/view",
+    "accessLabel": "Imagem original",
+    "type": "Resumo",
+    "metadataStatus": "TRANSCRITO_DA_IMAGEM"
   }
 ]
