@@ -1279,7 +1279,7 @@
     "institutions": [
       "Pontifícia Universidade Católica do Rio de Janeiro"
     ],
-    "abstract": "Pesquisa de integração curricular da Matemática com a Arquitetura, discutindo a organização do ensino de cálculo integral a partir de situações e necessidades específicas do curso de Arquitetura.",
+    "abstract": "Neste artigo descrevemos uma pesquisa de integração curricular de Matemática com Arquitetura. Após relatar a gênese deste trabalho e apresentar o desenho da proposta curricular, informamos a fundamentação teórica na qual este se baseia. A seguir, discutimos o desenrolar da experiência e alguns de seus resultados para que o leitor possa tirar algum proveito de um saber que construímos e desejamos compartilhar em seus aspectos teóricos e práticos.",
     "keywords": [
       "Cálculo na Arquitetura",
       "Matemática para outras disciplinas",
@@ -1287,7 +1287,8 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/12r49P8xQ1mWSRypkyOtJisnzbSSxYsQS/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL"
   },
   {
     "id": "III-2006-GT04-003",
@@ -1297,12 +1298,12 @@
     "section": "GT04",
     "title": "O COMPORTAMENTO EMOCIONAL E A AVALIAÇÃO DA DISCIPLINA ANÁLISE REAL: TECENDO ALGUMAS CONSIDERAÇÕES",
     "authors": [
-      "Roberto D'Angelo Marfati Barbosa"
+      "Roberta D’Angela Menduni Bortoloti"
     ],
     "institutions": [
-      "Universidade Católica de Santos"
+      "Universidade Estadual do Sudoeste da Bahia"
     ],
-    "abstract": "Pesquisa sobre comportamento emocional de estudantes universitários e avaliação na disciplina Análise Real. Analisa manifestações de ansiedade e dificuldades vivenciadas no curso e suas relações com o processo de aprendizagem e a avaliação.",
+    "abstract": "Este trabalho teve como objetivo conhecer o que os alunos percebiam sobre o comportamento da turma em momentos avaliativos tendo como contexto a disciplina Análise Real. Além disso, se os mesmos reconheciam a existência e a influência dos aspectos emocionais em seus desempenhos acadêmicos. Os sujeitos escolhidos foram os alunos de bacharelado e licenciatura, do curso de Matemática da Universidade Federal do Espírito Santo, matriculados na disciplina Análise Real I. O método de pesquisa qualitativa, adotado para esta investigação foi o estudo de caso. Após as análises dos dados coletados, em linhas gerais, o estudo constatou que o comportamento da turma em dias avaliativos se caracterizava como ansioso pelos seguintes motivos: Pressa em resolver logo a prova e ver-se livre dessa obrigação; Preparação inadequada; Preocupação com o próprio desempenho e pelo histórico da disciplina (o que se construiu histórica e socialmente). Este comportamento influenciou ora de maneira negativa o desenvolvimento dos alunos em situações avaliativas. Ressaltamos ainda a importância de se compreender a influência de aspectos de domínio afetivo tanto por parte dos professores, como dos alunos no processo educativo, especificamente no processo avaliativo.",
     "keywords": [
       "Educação Matemática",
       "Ansiedade",
@@ -1310,7 +1311,8 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/1rGc7_rLfsEgbEzOBzFv1VVGvlfSbVAkM/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL"
   },
   {
     "id": "III-2006-GT04-004",
@@ -1320,15 +1322,16 @@
     "section": "GT04",
     "title": "LIMITE: DEFINIÇÃO INTUITIVA VERSUS DEFINIÇÃO FORMAL",
     "authors": [
-      "Natalia Maria Goulart Barbosa",
+      "Natália Maria Cordeiro Barroso",
       "João César Moura Mota",
       "José Marques Soares",
       "Hermínio Borges Neto"
     ],
     "institutions": [
-      "Universidade Federal do Ceará"
+      "Universidade Federal do Ceará",
+      "Departamento de Engenharia de Teleinformática"
     ],
-    "abstract": "Discute as relações entre a definição formal e a definição intuitiva de limite, destacando como a compreensão inicial do conceito matemático pode apoiar a construção de ideias formais na aprendizagem de Cálculo.",
+    "abstract": "A definição formal do limite de uma função não corresponde exatamente à idéia intuitiva que se tem de seu conceito. Tal situação é criadora de dificuldades no seu ensino/aprendizado. Analisando alguns livros de Cálculo Diferencial e Integral (CDI) no que concerne ao conceito de limite, percebe-se claramente a complexidade de uma abordagem apenas formal e a falta de rigor de uma abordagem que faz uso apenas da noção intuitiva. Em sala de aula, constata-se que transitar entre essas linguagens não é nada natural. Porém, o bom desempenho do aluno na disciplina de CDI independe de ele ter ou não adquirido o conceito de limite. Por isso, questionam-se os objetivos da disciplina de CDI e conclamam-se os profissionais de Educação Matemática a buscar soluções no sentido de melhorar o ensino/aprendizagem do conceito de limite no contexto da escola brasileira.",
     "keywords": [
       "Limite",
       "definição formal",
@@ -1336,7 +1339,8 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/1Va2JtkRRgtoJ_GkJmx4QIrWtOOITKS02/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL"
   },
   {
     "id": "III-2006-GT04-005",
