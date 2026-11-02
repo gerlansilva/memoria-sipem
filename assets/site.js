@@ -321,7 +321,7 @@ const III_FILES = ['iii-2006.json'];
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iii-sipem-20261102-4';
+const catalogVersion = 'iii-sipem-20261102-5';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -479,6 +479,7 @@ function archives() {
   </header>
 
   ${selected === 2 ? `<aside class="review-notice" aria-label="Aviso sobre a conferência documental"><strong>II SIPEM (2003): revisão documental em andamento.</strong> Títulos, autorias, instituições, resumos e palavras-chave ainda estão sendo confrontados com os PDFs originais. A ausência de metadados no catálogo não significa ausência no documento. <a href="https://github.com/gerlansilva/memoria-sipem/blob/main/auditoria/protocolo-ii-sipem.md" target="_blank" rel="noopener">Consultar o protocolo de revisão</a>.</aside>` : ''}
+  ${selected === 3 ? `<aside class="review-notice" aria-label="Documentos do GT02 em triagem"><strong>III SIPEM (2006): documentos ainda em revisão.</strong> O catálogo possui 40 registros, dos quais 12 são preliminares. Além deles, há 17 recortes candidatos do GT02 disponíveis abaixo, que <strong>não contam como trabalhos catalogados</strong> até a confirmação de títulos, autorias e limites. <details><summary>Ver 17 PDFs do GT02 em triagem</summary><div id="gt02-preliminary" class="preliminary-list"></div></details></aside>` : ''}
   <div class="search-panel">
     <form class="search-form" role="search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg>
@@ -519,6 +520,13 @@ function archives() {
     $('#search').value = ''; $('#gt').value = '';
     results(); $('#search').focus();
   });
+  if (selected === 3) {
+    const target = $('#gt02-preliminary');
+    if (target) fetch('data/iii-2006-gt02-preliminares.json?v=20261102-1', {cache:'no-store'})
+      .then(response => { if (!response.ok) throw Error('Índice indisponível'); return response.json(); })
+      .then(items => { target.innerHTML = items.map(item => `<p><strong>${escapeHTML(item.id.replace('GT02-PRELIMINAR-', 'Candidato '))}</strong> — ${escapeHTML(item.label)} <a href="${safeURL(item.pdf)}" target="_blank" rel="noopener">PDF preliminar</a></p>`).join(''); })
+      .catch(() => { target.textContent = 'Índice dos documentos temporariamente indisponível.'; });
+  }
   results();
 }
 
