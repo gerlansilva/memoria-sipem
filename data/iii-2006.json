@@ -1655,14 +1655,16 @@
       "Alexandre Guilarducci Porfírio",
       "Ana Paula Almeida Saraiva Magalhães",
       "Luciana Parente Rocha",
-      "Vânia Lucia Machado"
+      "Vânia Lúcia Machado"
     ],
     "institutions": [
       "Universidade Federal de Goiás",
+      "Universidade Católica de Brasília",
       "Secretaria Municipal de Educação de Goiás",
-      "Secretaria de Estado da Educação de Goiás"
+      "Secretaria de Estado da Educação de Goiás",
+      "Universidade Estadual de Goiás"
     ],
-    "abstract": "Mapeamento das tendências de pesquisa em Educação Matemática em trabalhos publicados nos periódicos Zetetiké e Bolema entre 1999 e 2004. Organiza temas e características das produções examinadas para compreender o estado do conhecimento da área no período.",
+    "abstract": "Este artigo apresenta as tendências das pesquisas realizadas na área de Educação Matemática publicadas nas revistas BOLEMA e Zetetiké, no período de 1999-2004. Trata-se de um estudo bibliográfico denominado ‘Estado da Arte’ ou ‘Estado do Conhecimento’ da Educação Matemática e tem por objetivo contribuir para a compreensão do estado alcançado pelo conhecimento relativo à Educação Matemática nas revistas citadas e para a cientificidade desta área. O estudo salienta as vertentes temáticas e os aspectos privilegiados ou negados nos artigos e faz o mapeamento dos artigos de cada uma das revistas. Esse mapeamento foi elaborado com base em 11 categorias, a saber: Aspectos Filosóficos, Aspectos Psicológicos, Aspectos Históricos, Propostas de Ensino, Formação de Professores, Etnomatemática, Modelagem Matemática, Tecnologia Educacional, Linguagem Matemática, Avaliação e ‘Outros’. A presente pesquisa poderá anunciar temáticas no campo da Educação Matemática que, por sua complexidade e atualidade, abrem caminhos para novas investigações. A análise crítica aqui apresentada se fundamenta em dados quantitativos apontando tendências e lacunas existentes nas pesquisas, representando nosso olhar sobre esse conjunto de artigos.",
     "keywords": [
       "Estado do Conhecimento",
       "Mapeamento",
@@ -1670,7 +1672,8 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/18RpfRSqQX4SyvZxB2VF8hyXVEi04ytOa/view",
     "type": "Resumo",
-    "abstractType": "Síntese do resumo do original"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL"
   },
   {
     "id": "III-2006-GT05-001",
