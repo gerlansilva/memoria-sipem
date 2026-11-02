@@ -317,10 +317,11 @@ const editionLabel = edition => `${edition.roman} SIPEM · ${edition.year}`;
 const II_FILES = ['ii-2003-gt01.json', 'ii-2003-gt02-03.json', 'ii-2003-gt04.json', 'ii-2003-gt05.json', 'ii-2003-gt06.json', 'ii-2003-gt07.json', 'ii-2003-gt08.json', 'ii-2003-gt09.json', 'ii-2003-gt10.json', 'ii-2003-gt11.json', 'ii-2003-gt12.json'];
 const VII_FILES = ['records-vii-2018-gt01.json', 'records-vii-2018-gt02.json', 'vii-2018-gt03-a.json', 'vii-2018-gt03-b.json', 'vii-2018-gt04.json', 'vii-2018-gt05.json', 'vii-2018-gt06.json', 'vii-2018-gt07-a.json', 'vii-2018-gt07-b.json', 'vii-2018-gt08.json', 'vii-2018-gt09.json', 'vii-2018-gt10.json', 'vii-2018-gt11.json', 'vii-2018-gt12.json', 'vii-2018-gt13.json', 'vii-2018-gt14.json', 'vii-2018-gt15.json'];
 const IV_FILES = ['iv-2009.json'];
-const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES];
+const III_FILES = ['iii-2006.json'];
+const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'panorama-temas-20261102-1';
+const catalogVersion = 'iii-sipem-20261102-1';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
