@@ -320,7 +320,7 @@ const IV_FILES = ['iv-2009.json'];
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iv-keywords-20261102-1';
+const catalogVersion = 'panorama-temas-20261102-1';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -547,6 +547,8 @@ function article(record) {
       <details class="record-details">
         <summary><span class="details-open">Ver detalhes</span><span class="details-close">Ocultar detalhes</span></summary>
         <div class="record-expanded">
+          <h4>Temática principal</h4>
+          <p class="record-theme">${escapeHTML(thematicClassification(record).primary)}</p>
           <h4>Resumo</h4>
           ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo não disponível neste registro.</p>'}
           ${institutions.length ? `<div class="record-institutions"><h4>Instituições e vínculos informados</h4><div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>${isIV ? '' : ''}</div>` : ''}
