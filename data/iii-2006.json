@@ -641,5 +641,60 @@
     "accessLabel": "Imagem original",
     "type": "Resumo",
     "metadataStatus": "CONFERIDO_VISUALMENTE_2026_11_02"
+  },
+  {
+    "id": "III-2006-GT03-001",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT03",
+    "section": "GT03",
+    "title": "CLASSIFICAÇÃO GERAL DOS JOGOS MATEMÁTICOS",
+    "authors": [
+      "Valdir Bezerra dos Santos Júnior",
+      "Jamille Mineo Carvalho de Magalhães",
+      "Josinalva Estacio Menezes",
+      "Josivaldo de Souza Brito",
+      "Marco Aurélio Tomaz Mailaret Júnior",
+      "Ronald de Santana da Silva"
+    ],
+    "institutions": [
+      "Universidade Federal de Pernambuco"
+    ],
+    "abstract": "Neste trabalho, estamos dando continuidade a uma pesquisa sobre as recreações matemáticas, a partir dos textos, tanto reais quanto virtuais, e do material concreto existente, acessados sobre o assunto, buscando uma classificação que permita sistematizar mais efetivamente o trabalho com jogos no LACAPE. Embora não seja possível abranger todas as recreações matemáticas que a humanidade já produziu, já dispomos de um acervo considerável sobre jogos, tanto já existentes no LACAPE, quanto na literatura acessada, o que permitirá atender a todas as necessidades referentes aos jogos ou recreações matemáticas no âmbito daquele laboratório. Esta pesquisa está organizada da seguinte forma: fazer um levantamento dos jogos existentes a partir do acervo inicial disponível para o LACAPE e dos jogos já utilizados no mesmo, organizar os jogos em categorias referentes aos níveis de dificuldade, às sub-áreas do conhecimento matemático, às séries escolares e a estruturação e ainda organizar um banco de dados para registrar os jogos matemáticos de acordo com a classificação feita. O banco tem permitido realizar atividades e divulgação junto a instituições e escolas voltadas para o ensino-aprendizagem de matemática. Acreditamos estar dando uma contribuição no sentido de difundir o lugar das recreações matemáticas como no contexto matemático por excelência.",
+    "keywords": [
+      "jogos matemáticos",
+      "classificação",
+      "educação matemática"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1HGHwtODFe6L8zYNyl73di82dbgfwfOEd/view",
+    "type": "Resumo",
+    "accessLabel": "Imagem original",
+    "metadataStatus": "TRANSCRITO_DA_IMAGEM"
+  },
+  {
+    "id": "III-2006-GT03-002",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT03",
+    "section": "GT03",
+    "title": "A COMPLEMENTARIDADE ENTRE OS ASPECTOS INTENSIONAL E EXTENSIONAL DO CONCEITO DE NÚMERO",
+    "authors": [
+      "Rogério Ferreira da Fonseca"
+    ],
+    "institutions": [
+      "Pontifícia Universidade Católica de São Paulo"
+    ],
+    "abstract": "O tema da pesquisa aqui apresentada é o conceito de número, em especial a abordagem elaborada pelo matemático John H. Conway. O interesse, para a Educação Matemática, pela conceituação de Conway está na possibilidade de ela contemplar os dois aspectos complementares da definição do conceito de número, quais sejam: intensional e extensional. A extensionalidade é expressa pela aplicabilidade do conceito de número como certos tipos de jogos, incluindo entre eles o jogo Hackenbush, estudado neste trabalho. Propusemo-nos a investigar uma nova abordagem para o conceito de número, com vistas a buscar nela elementos que favoreçam o ensino e conseqüentemente a aprendizagem. Nossa investigação tem por pressuposto que número é um dos conceitos fundamentais da Matemática e que sua constituição apresenta diversas abordagens, sem que nenhuma delas possibilite responder à questão “O que é número?”. Como subsídio à investigação, avaliamos algumas respostas de correntes filosóficas sobre a natureza e a existência dos números, as quais nos fornecem pistas das complexidades implícitas nesta noção. Apresentamos também algumas pesquisas que abordam o conceito de números a partir de jogos, assim como a implicação de tal abordagem para o processo de ensino e aprendizagem da Matemática.",
+    "keywords": [
+      "Números",
+      "Jogos",
+      "Complementaridade",
+      "Hackenbush",
+      "Conway"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1FkoieURS_ydufAwg4PdKouZ2iGXpe3Vr/view",
+    "type": "Resumo",
+    "accessLabel": "Imagem original",
+    "metadataStatus": "TRANSCRITO_DA_IMAGEM"
   }
 ]
