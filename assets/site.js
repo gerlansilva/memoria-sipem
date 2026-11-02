@@ -302,7 +302,12 @@ const authorAffiliation = author => {
   const match = String(author).match(/\(([^()]+)\)\s*$/);
   return match ? iesSigla(match[1]) : '';
 };
-const authorHTML = author => escapeHTML(authorName(author));
+const authorHTML = (author, index, authors, institutions) => {
+  const explicit = authorAffiliation(author);
+  const matched = !explicit && institutions.length === authors.length ? iesSigla(institutions[index]) : '';
+  const sigla = explicit || matched;
+  return escapeHTML(authorName(author)) + (sigla ? ' (' + escapeHTML(sigla) + ')' : '');
+};
 const groupLabel = record => Number(record.edition) === 7 ? (GT07_LABELS[record.gt] || record.gt) : (record.section || record.gt || '');
 const route = (target, id) => '#' + ({ history: 'historia', archives: 'anais' }[target] || 'inicio') + (id ? '?edicao=' + id : '');
 const themeOf = edition => edition.theme && !edition.theme.startsWith('Tema geral não') ? edition.theme : '';
@@ -535,10 +540,8 @@ function article(record) {
       </div>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
       <div class="record-attribution">
-        ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
-        ${cardIES.length ? `<p class="record-ies-inline" aria-label="Instituições">${cardIES.map(name => `<span>${escapeHTML(name)}</span>`).join(' · ')}</p>` : ''}
+        ${(record.authors || []).length ? `<p class="authors">${record.authors.map((author, index) => authorHTML(author, index, record.authors, institutions)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
       </div>
-
     </div>
     <div class="record-actions">
       <details class="record-details">
