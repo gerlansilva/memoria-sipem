@@ -1889,22 +1889,23 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "DESENVOLVIMENTO DA MATEMÁTICA NO RIO DE JANEIRO – A CONTRIBUIÇÃO DA FACULDADE NACIONAL DE FILOSOFIA",
+    "title": "O MOVIMENTO DA MATEMÁTICA MODERNA NA PERSPECTIVA DE BENEDITO CASTRUCCI",
     "authors": [
-      "Maria Laura Mouzinho Leite Lopes"
+      "Aparecida Rodrigues Silva Duarte"
     ],
     "institutions": [
-      "Universidade Federal do Rio de Janeiro"
+      "Pontifícia Universidade Católica de São Paulo"
     ],
-    "abstract": "Neste artigo é feito um relato da história do desenvolvimento da Matemática no Rio de Janeiro e do papel da Faculdade Nacional de Filosofia.",
+    "abstract": "Este artigo tem como objetivo levantar alguns elementos que possam contribuir para a compreensão das circunstâncias históricas que levaram à implementação do Movimento da Matemática Moderna no Brasil, na década de 1960. Buscamos identificar sinais desse movimento, utilizando como fonte um depoimento do matemático Benedito Castrucci concedido à pesquisadora Elizabete Zardo Burigo em julho de 1988. A análise das idéias defendidas por Castrucci naquela ocasião permitiu elucidar alguns pontos que contribuem para uma reconstrução do percurso da História da Educação Matemática no Brasil. Para tanto, buscamos fundamentação nas teorias de Michel de Certeau e Clifford Geertz.",
     "keywords": [
-      "Matemática",
-      "Universidade do Distrito Federal",
-      "Faculdade Nacional de Filosofia",
-      "Instituto de Matemática da Universidade Federal do Rio de Janeiro"
+      "Movimento da Matemática Moderna",
+      "História da Educação Matemática",
+      "Benedito Castrucci"
     ],
     "drivePdf": "https://drive.google.com/file/d/1or9nHZd0HlzFb2Za3wLK9SiKhguq8j_i/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Transcrição do original",
+    "documentVersion": "Segunda captura do mesmo trabalho (GT05-012)"
   },
   {
     "id": "III-2006-GT05-015",
@@ -1934,6 +1935,30 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
+    "title": "FORMAÇÃO DE PROFESSORES E ETNOMATEMÁTICA: COMPREENDENDO PARA PEDIR MUDANÇAS",
+    "authors": [
+      "Maria do Carmo S. Domite"
+    ],
+    "institutions": [
+      "Universidade de São Paulo"
+    ],
+    "abstract": "O propósito desta pesquisa está em deslocar a discussão que aí está posta - com muita seriedade - sobre formação de professores (de matemática) de uma perspectiva quase somente centrada no processo formativo dos(as) professores(as) enquanto sujeito social/intelectual de suas ações para uma perspectiva aliada à cultura que cada educando traz dentro de si. Neste sentido, a formação de professores aqui refletida - numa perspectiva da etnomatemática - pode ser reconhecida como um meio para gerar uma mudança estrutural no âmbito da formação de professores - ou, ao menos, denunciar que o educando não tem estado de todo fora das propostas de formação de professores, mas também não está dentro.",
+    "keywords": [
+      "formação de professores",
+      "conhecimento do educando",
+      "etnomatemática"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1RvLb1leNr7Qg5ZMEJb-il67Q7tzA70BT/view",
+    "type": "Resumo",
+    "abstractType": "Transcrição do original",
+    "documentVersion": "Segunda captura do mesmo trabalho (GT05-015)"
+  },
+  {
+    "id": "III-2006-GT05-017",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
     "title": "O CÁLCULO INFINITESIMAL NA ESCOLA POLITÉCNICA DE SÃO PAULO, NO ANO DE 1904: UMA ANÁLISE DOCUMENTAL",
     "authors": [
       "Antonio Sylvio Vieira de Oliveira"
@@ -1949,32 +1974,9 @@
       "Escola Politécnica",
       "História da Matemática"
     ],
-    "drivePdf": "https://drive.google.com/file/d/1RvLb1leNr7Qg5ZMEJb-il67Q7tzA70BT/view",
-    "type": "Resumo"
-  },
-  {
-    "id": "III-2006-GT05-017",
-    "edition": 3,
-    "year": 2006,
-    "gt": "GT05",
-    "section": "GT05",
-    "title": "ETNOMATEMÁTICA E PRÁTICA DOCENTE: LEGITIMANDO SABERES",
-    "authors": [
-      "Maria Cecília de Castello Branco Fantinato",
-      "Rosana Kelly dos Santos"
-    ],
-    "institutions": [
-      "Universidade Federal Fluminense"
-    ],
-    "abstract": "O estudo investiga a prática docente de um professor de Matemática da educação de jovens e adultos sob uma perspectiva etnomatemática. Analisa interações dialógicas entre diferentes formas de conhecimento matemático e processos de legitimação dos saberes de educandos e professores.",
-    "keywords": [
-      "educação matemática de jovens e adultos",
-      "etnomatemática",
-      "formação de professores de EJA"
-    ],
     "drivePdf": "https://drive.google.com/file/d/1ZAzl7BxieCUWpRXKMfjD1s2kpdd3SDcf/view",
     "type": "Resumo",
-    "abstractType": "Síntese conferida com original"
+    "abstractType": "Síntese documental conferida"
   },
   {
     "id": "III-2006-GT05-019",
@@ -2006,22 +2008,22 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "EDUCAÇÃO E CULTURA: A ESCOLA TRADICIONAL E A ESCOLA INDÍGENA",
+    "title": "ESPAÇOS DE TRANSVERSALIDADE NO ENSINO DE MATEMÁTICA",
     "authors": [
-      "Kátia Cristina de Menezes Domingues"
+      "José Ricardo de Souza Mafra"
     ],
     "institutions": [
-      "Universidade de São Paulo"
+      "Universidade Federal do Rio Grande do Norte"
     ],
-    "abstract": "Examina as diferenças entre a escola tradicional, pautada na cultura eurocêntrica, e a escola indígena diferenciada, que valoriza a cultura e as experiências dos alunos. Discute identidade indígena, interculturalidade e as funções pedagógicas, culturais e políticas da escola.",
+    "abstract": "O artigo apresenta desenvolvimento de investigação em Educação Matemática voltada à transversalidade, com atenção à pesquisa do tipo etnográfica e a diálogos com a antropologia. Discute interfaces entre Educação, Matemática e Educação Etnomatemática em turmas do Ensino Fundamental.",
     "keywords": [
-      "escola tradicional",
-      "escola indígena",
-      "cultura"
+      "Educação",
+      "Educação Matemática",
+      "Educação Etnomatemática"
     ],
     "drivePdf": "https://drive.google.com/file/d/1KHtGvH5dUuPMAnqdgaYIUcIr6oPkBXnY/view",
     "type": "Resumo",
-    "abstractType": "Síntese conferida com original"
+    "abstractType": "Síntese conferida na captura"
   },
   {
     "id": "III-2006-GT05-021",
@@ -2029,22 +2031,22 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "A MATEMÁTICA ESCOLAR E OS PROFESSORES INDÍGENAS DO ESTADO DE SÃO PAULO",
+    "title": "EDUCAÇÃO E CULTURA: A ESCOLA TRADICIONAL E A ESCOLA INDÍGENA",
     "authors": [
       "Kátia Cristina de Menezes Domingues"
     ],
     "institutions": [
       "Universidade de São Paulo"
     ],
-    "abstract": "Analisa entrevistas de professores indígenas das etnias Kaingang, Krenak, Terena, Tupi-Guarani e Guarani participantes de formação no Estado de São Paulo. Discute dificuldades na aprendizagem da matemática escrita e a importância de considerar os conhecimentos matemáticos próprios das comunidades.",
+    "abstract": "O trabalho examina a escola tradicional e a escola indígena diferenciada, relacionando práticas pedagógicas, cultura e identidade indígena e o reconhecimento dos saberes dos alunos.",
     "keywords": [
-      "etnomatemática",
-      "professores indígenas",
-      "matemática"
+      "escola tradicional",
+      "escola indígena",
+      "cultura"
     ],
     "drivePdf": "https://drive.google.com/file/d/16fwdh5Enq2lnBnd3pbLZNtFxVw2wOZG8/view",
     "type": "Resumo",
-    "abstractType": "Síntese conferida com original"
+    "abstractType": "Síntese conferida na captura"
   },
   {
     "id": "III-2006-GT05-022",
@@ -2267,6 +2269,30 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
+    "title": "VIRADA DO SÉCULO XVIII PARA O XIX",
+    "authors": [
+      "Flávia Soares"
+    ],
+    "institutions": [
+      "Pontifícia Universidade Católica do Rio de Janeiro"
+    ],
+    "abstract": "O texto discute aspectos da história do ensino de Matemática no Brasil na passagem do século XVIII para o XIX, considerando normas de recrutamento e seleção de professores de primeiras letras após as Reformas pombalinas. Analisa exames realizados no Rio de Janeiro, as exigências para o exercício do magistério e os conteúdos de Matemática presentes nas provas, compreendendo os concursos como instrumento de avaliação e caracterização da profissão docente.",
+    "keywords": [
+      "Instrução Pública",
+      "seleção de professores",
+      "ensino de Matemática"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1KRbkzEDPfokBmnvcPO9TJj4j0SS5vSxr/view",
+    "type": "Resumo",
+    "abstractType": "Síntese conferida na captura",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
+  },
+  {
+    "id": "III-2006-GT05-035",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT05",
+    "section": "GT05",
     "title": "O ESTUDO DE UM MANUAL DE ENSINO DE MATEMÁTICA: O LIVRO GEOGRAFIA GERAL",
     "authors": [
       "Arlete de Jesus Brito"
@@ -2281,34 +2307,9 @@
       "Matemática",
       "Geografia"
     ],
-    "drivePdf": "https://drive.google.com/file/d/1KRbkzEDPfokBmnvcPO9TJj4j0SS5vSxr/view",
-    "type": "Resumo",
-    "abstractType": "Síntese do texto original",
-    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
-  },
-  {
-    "id": "III-2006-GT05-035",
-    "edition": 3,
-    "year": 2006,
-    "gt": "GT05",
-    "section": "GT05",
-    "title": "HISTÓRIA DA MATEMÁTICA NA EDUCAÇÃO MATEMÁTICA: ESPELHO OU PINTURA?",
-    "authors": [
-      "Cristina Dalva Van Berghem Motta",
-      "Antonio Carlos Brolezzi"
-    ],
-    "institutions": [
-      "Universidade de São Paulo"
-    ],
-    "abstract": "O artigo apresenta pesquisa exploratória de revisão bibliográfica sobre fundamentos teórico-epistemológicos da integração da História da Matemática ao ensino da Matemática. Examina estudos críticos e concepções de aprendizagem de diferentes abordagens, bem como as justificativas de caráter internalista, determinista e indutivista para o uso da história. Discute o papel do professor e de sua formação nesse trabalho de integração.",
-    "keywords": [
-      "Educação Matemática",
-      "História da Matemática",
-      "formação de professores"
-    ],
     "drivePdf": "https://drive.google.com/file/d/14TyubKI8z3QwaDuxdaaBaJDPlBqUTUaN/view",
     "type": "Resumo",
-    "abstractType": "Síntese do texto original",
+    "abstractType": "Síntese conferida na captura",
     "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
   },
   {
@@ -2333,7 +2334,7 @@
     ],
     "drivePdf": "https://drive.google.com/file/d/1epppk8tuZib7649NuCSV5oj_TynYM0Dp/view",
     "type": "Resumo",
-    "abstractType": "Síntese conferida com o original"
+    "abstractType": "Síntese conferida na captura"
   },
   {
     "id": "III-2006-GT05-009",
