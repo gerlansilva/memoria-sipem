@@ -24,10 +24,11 @@
     ],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
     "type": "Resumo",
     "keywordsStatus": "CONFERIDAS_VISUALMENTE_NO_ORIGINAL",
-    "keywordsSource": "Continuação na página digital 76, antes do título do GT06-002"
+    "keywordsSource": "Continuação na página digital 76, antes do título do GT06-002",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/1m8uWKF_jpR3gBsdPaMtTfWVbN1eg_Hp5/view"
   },
   {
     "id": "III-2006-GT06-002",
@@ -47,8 +48,9 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/1uYcnshyPtU1IhOcevMi1XTqVnMKIg751/view"
   },
   {
     "id": "III-2006-GT06-003",
@@ -73,8 +75,9 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/1ppm6C6kvgc99ex8v38S1GdOIrbXb9RWE/view"
   },
   {
     "id": "III-2006-GT06-004",
@@ -97,8 +100,9 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/18p1hVKgzoMCeIY7-mD_2CT8QpYD9fPwD/view"
   },
   {
     "id": "III-2006-GT06-005",
@@ -117,8 +121,9 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/1nZhMzKVOwIrfXHFaVbI9T1Yjy0_sJRhw/view"
   },
   {
     "id": "III-2006-GT06-006",
@@ -141,8 +146,9 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/1712u9SagacF4QVPMK5GIuceyrMyiI3Rt/view"
   },
   {
     "id": "III-2006-GT06-007",
@@ -162,8 +168,9 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/17k5OIajybM3RmFPYA6gFpSC2IMRzYfop/view"
   },
   {
     "id": "III-2006-GT06-008",
@@ -184,8 +191,9 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/1ciZkLvEzFKrfcoZz9sI3dZVUZH7rZgNC/view"
   },
   {
     "id": "III-2006-GT06-009",
@@ -205,8 +213,9 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/15dku9qADz4-qlrvfJetW04JfrPho6kmS/view"
   },
   {
     "id": "III-2006-GT06-010",
@@ -227,9 +236,10 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
     "type": "Resumo",
-    "titleStatus": "CONFERIDO_VISUALMENTE_NO_ORIGINAL"
+    "titleStatus": "CONFERIDO_VISUALMENTE_NO_ORIGINAL",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/1DaU7ov39UGF-_GT4x2doIaGHmXT1yLO4/view"
   },
   {
     "id": "III-2006-GT06-011",
@@ -248,8 +258,9 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/14NQu0jYNs_r3pb-KDkkzF_NEhXV_fYPv/view"
   },
   {
     "id": "III-2006-GT06-012",
@@ -268,7 +279,8 @@
     "keywords": [],
     "drivePdf": "",
     "metadataStatus": "CONFERENCIA_PENDENTE",
-    "pdfStatus": "RECORTE_PRELIMINAR_LOCAL",
-    "type": "Resumo"
+    "pdfStatus": "PDF_PRELIMINAR_ENVIADO_AO_DRIVE_REVISAR_RECORTE",
+    "type": "Resumo",
+    "preliminaryDrivePdf": "https://drive.google.com/file/d/1346yQA8fA14B3YaoFnSW5XtddKq_6j9x/view"
   }
 ]
