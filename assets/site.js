@@ -268,20 +268,20 @@ const IES_EXTRA = {
 };
 const iesOne = part => {
   const original = String(part).trim();
-  const clean = original.replace(/\\(.*?\\)/g, ' ').replace(/\\s+/g, ' ').trim();
+  const clean = original.replace(/\(.*?\)/g, ' ').replace(/\s+/g, ' ').trim();
   const key = iesKey(clean);
   const names = {...IES_SIGLAS, ...IES_EXTRA};
   const prefixes = Object.keys(names).sort((a,b) => b.length - a.length);
   const match = prefixes.find(k => key === k || key.startsWith(k + ' ') || key.startsWith(k + ' -') || key.startsWith(k + ' –'));
   if (match) return names[match];
-  const uppercase = original.match(/\\b(?:U[A-Z]{2,8}|IF[A-Z]{1,8}|CEFET(?:-[A-Z]{2})?|PUC(?:-[A-Z]{2,})?|UNESP|UNICAMP|UNIBAN|UNIFRA|UNICSUL|FURG|FURB|UE[A-Z]{1,5})\\b/g);
+  const uppercase = original.match(/\b(?:U[A-Z]{2,8}|IF[A-Z]{1,8}|CEFET(?:-[A-Z]{2})?|PUC(?:-[A-Z]{2,})?|UNESP|UNICAMP|UNIBAN|UNIFRA|UNICSUL|FURG|FURB|UE[A-Z]{1,5})\b/g);
   if (uppercase?.length) return [...new Set(uppercase)].join(' / ');
   if (IES_AMBIGUAS.has(key)) return 'IES não identificada';
   // Não transformar campus, programa de pós-graduação ou rede de ensino em IES.
   return '';
 };
 const iesSigla = name => {
-  const parts = String(name).split(/\\s*[\\/;]\\s*|\\s+e\\s+(?=(?:Universidade|Instituto|Faculdade|Centro)\\b)/i);
+  const parts = String(name).split(/\s*[\/;]\s*|\s+e\s+(?=(?:Universidade|Instituto|Faculdade|Centro)\b)/i);
   return [...new Set(parts.map(iesOne).filter(Boolean))].join(' / ');
 };
 const iesTag = name => {
@@ -290,7 +290,7 @@ const iesTag = name => {
 };
 const authorHTML = author => {
   const original = String(author);
-  const match = original.match(/^(.*?)\\s*\\(([^()]+)\\)\\s*$/);
+  const match = original.match(/^(.*?)\s*\(([^()]+)\)\s*$/);
   if (!match) return escapeHTML(original);
   const sigla = iesSigla(match[2]);
   return escapeHTML(match[1]) + (sigla ? ' (' + escapeHTML(sigla) + ')' : '');
