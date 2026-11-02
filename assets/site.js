@@ -637,7 +637,7 @@ function panorama() {
     <section class="panorama-explore" aria-labelledby="panorama-explore-heading">
       <div class="panorama-explore-head"><div><p class="eyebrow">Explorar os dados</p><h2 id="panorama-explore-heading">Produção, pesquisadores e temáticas</h2></div><label class="panorama-filter panorama-filter-compact"><span class="sr-only">Filtrar cartões por edição</span><select id="panorama-explore-filter" aria-label="Filtrar análises por edição">${selector}</select></label></div>
       <div class="panorama-dashboard-grid">
-        <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Temáticas dos trabalhos</h3><span>Classificação exploratória</span></div><p>Distribuição por assuntos identificados em títulos e palavras-chave. Não equivale à codificação temática documental.</p><div id="panorama-topics-results" aria-live="polite"></div></article>
+        <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Temáticas dos trabalhos</h3><span>Classificação exploratória</span></div><p>Cada trabalho recebe uma temática principal a partir de título, palavras-chave e resumo. Classificação automática, ainda sujeita à revisão documental.</p><div id="panorama-topics-results" aria-live="polite"></div></article>
         <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Produção por pesquisador</h3><span>Participações em trabalhos</span></div><p>Cada autor conta uma vez por registro. Variações de nomes ainda podem dividir uma mesma autoria.</p><div id="panorama-authors-results" aria-live="polite"></div></article>
         <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Palavras-chave mais frequentes</h3><span>Frequência documental</span></div><p>Uma palavra-chave conta uma vez por trabalho. Acentuação, maiúsculas e espaços são normalizados; sinônimos não são reunidos.</p><div id="panorama-keywords-results" aria-live="polite"></div></article>
       </div>
@@ -683,20 +683,32 @@ function panorama() {
   $('#panorama-gt-results').innerHTML = panels;
 
   const exploratoryFilter = $('#panorama-explore-filter');
+  // Classificação temática reproduzível: título (peso 4), palavras-chave (3), resumo (1).
+  // Uma classificação principal por trabalho; categorias adicionais são mantidas para análise.
   const topicRules = [
-    ['Formação de professores', /forma[cç][aã]o (?:de |do |dos )?profess|desenvolvimento profissional|saberes docentes|pr[aá]tica docente|licenciatura|professor que ensina/],
-    ['Tecnologias digitais', /tecnologia|software|computador|internet|geogebra|ambiente virtual|inform[aá]tica|programa[cç][aã]o|digital/],
-    ['Ensino e aprendizagem', /ensino.aprendizagem|aprendizagem|sala de aula|resolu[cç][aã]o de problemas|did[aá]tica|atividades de ensino/],
-    ['Currículo e materiais', /curr[ií]culo|livro did[aá]tico|material did[aá]tico|pcn|bncc|proposta curricular/],
-    ['História e filosofia', /hist[oó]ria da matem[aá]tica|hist[oó]ria da educa[cç][aã]o|filosofia da|epistemologia|hist[oó]rico.filos[oó]fica/],
-    ['Avaliação', /avalia[cç][aã]o|provas|exame|desempenho escolar/],
-    ['Geometria e medidas', /geometria|geom[eé]tric|espa[cç]o|[aá]rea|volume|medidas|trigonometria/],
-    ['Álgebra e funções', /[aá]lgebra|alg[eé]bric|fun[cç][aã]o|fun[cç][oõ]es|equa[cç][aã]o|inequa[cç][aã]o/],
-    ['Estatística e probabilidade', /estat[ií]stic|probabil|combinat[oó]ria|gr[aá]fic|dados estat[ií]sticos/],
-    ['Números e operações', /n[uú]meros?|numera[cç][aã]o|aritm[eé]tic|opera[cç][oõ]es|fra[cç][oõ]es|proporcionalidade/],
-    ['Inclusão e diversidade', /inclus[aã]o|defici[eê]ncia|surdo|cego|educa[cç][aã]o especial|etnomatem[aá]tica|educa[cç][aã]o ind[ií]gena/],
-    ['Pesquisa e metodologia', /pesquisa em educa[cç][aã]o|metodologia|estado da arte|investiga[cç][aã]o|mapeamento da pesquisa/]
+    ['Formação de professores', /forma[cç][aã]o (?:inicial|continuada|de |do |dos )?profess|desenvolvimento profissional|saberes docentes|pr[aá]tica docente|licenciatura|professor que ensina|profissionalidade docente|est[aá]gio supervisionado/gi],
+    ['Tecnologias digitais', /tecnologia(?:s)? digital|software|computador|internet|geogebra|ambiente virtual|inform[aá]tica|programa[cç][aã]o|lousa digital|moodle|tics?\b|educa[cç][aã]o a dist[aâ]ncia/gi],
+    ['Ensino e aprendizagem', /ensino.aprendizagem|aprendizagem|sala de aula|resolu[cç][aã]o de problemas|did[aá]tica|atividades de ensino|sequ[eê]ncia did[aá]tica|estrat[eé]gias de ensino/gi],
+    ['Currículo e materiais', /curr[ií]culo|livro did[aá]tico|material did[aá]tico|orienta[cç][oõ]es curriculares|\bpcn\b|\bbncc\b|proposta curricular|recurso did[aá]tico/gi],
+    ['História e filosofia', /hist[oó]ria da matem[aá]tica|hist[oó]ria da educa[cç][aã]o|filosofia da|epistemologia|hist[oó]rico.filos[oó]fica|historiografia/gi],
+    ['Avaliação', /avalia[cç][aã]o|provas|exame|desempenho escolar|an[aá]lise da produ[cç][aã]o escrita/gi],
+    ['Geometria e medidas', /geometria|geom[eé]tric|geoespa[cç]o|[aá]rea de figuras|volume de s[oó]lidos|grandezas e medidas|trigonometria|figuras espaciais/gi],
+    ['Álgebra e funções', /[aá]lgebra|alg[eé]bric|fun[cç][aã]o|fun[cç][oõ]es|equa[cç][aã]o|inequa[cç][aã]o|pensamento alg[eé]brico/gi],
+    ['Estatística e probabilidade', /estat[ií]stic|probabil|combinat[oó]ri|an[aá]lise de dados|gr[aá]fico de barras|gr[aá]fico de linhas/gi],
+    ['Números e operações', /n[uú]meros?|numera[cç][aã]o|aritm[eé]tic|opera[cç][oõ]es|fra[cç][oõ]es|proporcionalidade|divis[aã]o|multiplica[cç][aã]o|c[aá]lculo mental/gi],
+    ['Inclusão e diversidade', /inclus[aã]o|defici[eê]ncia|surdo|cego|educa[cç][aã]o especial|etnomatem[aá]tica|educa[cç][aã]o ind[ií]gena|educa[cç][aã]o quilombola|acessibilidade/gi],
+    ['Pesquisa e metodologia', /pesquisa em educa[cç][aã]o|metodologia de pesquisa|estado da arte|metapesquisa|revis[aã]o sistem[aá]tica|mapeamento da pesquisa|produ[cç][aã]o cient[ií]fica/gi]
   ];
+  const thematicClassification = record => {
+    const title = String(record.title || '');
+    const keywords = Array.isArray(record.keywords) ? record.keywords.join(' ') : '';
+    const abstract = String(record.abstract || '');
+    const scored = topicRules.map(([label, pattern]) => {
+      const count = str => { pattern.lastIndex = 0; return [...str.matchAll(pattern)].length; };
+      return {label, score: Math.min(count(title),3)*4 + Math.min(count(keywords),4)*3 + Math.min(count(abstract),4)};
+    }).filter(item=>item.score>0).sort((a,b)=>b.score-a.score);
+    return {primary:scored[0]?.label || 'Outras temáticas (revisão necessária)', secondary:scored.slice(1,4).map(x=>x.label), method:'Classificação automática por título, descritores e resumo'};
+  };
   const normalizeTerm = value => normalize(String(value || '').replace(/\s+/g,' ').trim()).replace(/[‐‑–—]/g,'-');
   const rankList = (items, cap=12) => {
     const selected = items.slice(0,cap), largest=Math.max(1,...selected.map(x=>x[1]));
@@ -721,10 +733,9 @@ function panorama() {
       original.forEach(term=>{const key=normalizeTerm(term).replace(/[.;,]+$/,'');if(key.length>2 && key.length<95 && !/resumos semin[aá]rio|semin[aá]rio internacional de pesquisa|^palavras.chave$/.test(key))termMap.set(key,termMap.get(key)||term.replace(/[.;,]+$/,''));});
       if(termMap.size)coveredKeywords++;
       termMap.forEach((label,key)=>{const old=keywords.get(key);keywords.set(key,{label:old?.label||label,n:(old?.n||0)+1});});
-      const raw=[record.title||'',...original].join(' ').toLocaleLowerCase('pt-BR');
-      const matches=topicRules.filter(([,re])=>re.test(raw)).map(([label])=>label);
-      if(matches.length)coveredThemes++;
-      [...new Set(matches)].forEach(name=>topics.set(name,(topics.get(name)||0)+1));
+      const classification=thematicClassification(record);
+      coveredThemes++;
+      topics.set(classification.primary,(topics.get(classification.primary)||0)+1);
     });
     const sorted=map=>[...map.values()].sort((a,b)=>b.n-a.n||a.label.localeCompare(b.label,'pt-BR')).map(x=>[x.label,x.n]);
     displayRanking($('#panorama-topics-results'),[...topics].sort((a,b)=>b[1]-a[1]),coveredThemes,rows.length);
