@@ -1951,13 +1951,21 @@
     "section": "GT05",
     "title": "ETNOMATEMÁTICA E PRÁTICA DOCENTE: LEGITIMANDO SABERES",
     "authors": [
-      "Maria Cecília de Castro Branco Fantinato"
+      "Maria Cecília de Castello Branco Fantinato",
+      "Rosana Kelly dos Santos"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade Federal Fluminense"
+    ],
+    "abstract": "O estudo investiga a prática docente de um professor de Matemática da educação de jovens e adultos sob uma perspectiva etnomatemática. Analisa interações dialógicas entre diferentes formas de conhecimento matemático e processos de legitimação dos saberes de educandos e professores.",
+    "keywords": [
+      "educação matemática de jovens e adultos",
+      "etnomatemática",
+      "formação de professores de EJA"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1ZAzl7BxieCUWpRXKMfjD1s2kpdd3SDcf/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese conferida com original"
   },
   {
     "id": "III-2006-GT05-019",
@@ -1981,13 +1989,20 @@
     "section": "GT05",
     "title": "EDUCAÇÃO E CULTURA: A ESCOLA TRADICIONAL E A ESCOLA INDÍGENA",
     "authors": [
-      "Alice Cristina de Moraes Domingues"
+      "Kátia Cristina de Menezes Domingues"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade de São Paulo"
+    ],
+    "abstract": "Examina as diferenças entre a escola tradicional, pautada na cultura eurocêntrica, e a escola indígena diferenciada, que valoriza a cultura e as experiências dos alunos. Discute identidade indígena, interculturalidade e as funções pedagógicas, culturais e políticas da escola.",
+    "keywords": [
+      "escola tradicional",
+      "escola indígena",
+      "cultura"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1KHtGvH5dUuPMAnqdgaYIUcIr6oPkBXnY/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese conferida com original"
   },
   {
     "id": "III-2006-GT05-021",
@@ -1997,13 +2012,20 @@
     "section": "GT05",
     "title": "A MATEMÁTICA ESCOLAR E OS PROFESSORES INDÍGENAS DO ESTADO DE SÃO PAULO",
     "authors": [
-      "Alice Cristina de Moraes Domingues"
+      "Kátia Cristina de Menezes Domingues"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade de São Paulo"
+    ],
+    "abstract": "Analisa entrevistas de professores indígenas das etnias Kaingang, Krenak, Terena, Tupi-Guarani e Guarani participantes de formação no Estado de São Paulo. Discute dificuldades na aprendizagem da matemática escrita e a importância de considerar os conhecimentos matemáticos próprios das comunidades.",
+    "keywords": [
+      "etnomatemática",
+      "professores indígenas",
+      "matemática"
+    ],
     "drivePdf": "https://drive.google.com/file/d/16fwdh5Enq2lnBnd3pbLZNtFxVw2wOZG8/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese conferida com original"
   },
   {
     "id": "III-2006-GT05-022",
