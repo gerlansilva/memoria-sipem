@@ -689,7 +689,7 @@
     "institutions": [
       "Pontifícia Universidade Católica de São Paulo"
     ],
-    "abstract": "O tema da pesquisa aqui apresentada é o conceito de número, em especial a abordagem elaborada pelo matemático John H. Conway. O interesse, para a Educação Matemática, pela conceituação de Conway está na possibilidade de ela contemplar os dois aspectos complementares da definição do conceito de número, quais sejam: intensional e extensional. A extensionalidade é expressa pela aplicabilidade do conceito de número como certos tipos de jogos, incluindo entre eles o jogo Hackenbush, estudado neste trabalho. Propusemo-nos a investigar uma nova abordagem para o conceito de número, com vistas a buscar nela elementos que favoreçam o ensino e conseqüentemente a aprendizagem. Nossa investigação tem por pressuposto que número é um dos conceitos fundamentais da Matemática e que sua constituição apresenta diversas abordagens, sem que nenhuma delas possibilite responder à questão “O que é número?”. Como subsídio à investigação, avaliamos algumas respostas de correntes filosóficas sobre a natureza e a existência dos números, as quais nos fornecem pistas das complexidades implícitas nesta noção. Apresentamos também algumas pesquisas que abordam o conceito de números a partir de jogos, assim como a implicação de tal abordagem para o processo de ensino e aprendizagem da Matemática.",
+    "abstract": "O tema da pesquisa aqui apresentada é o conceito de número, em especial a abordagem elaborada pelo matemático John H. Conway. O interesse, para a Educação Matemática, pela conceituação de Conway está na possibilidade de ela contemplar os dois aspectos complementares da definição do conceito de número, quais sejam: intensional e extensional. A extensionalidade é expressa pela aplicabilidade do conceito de número como certos tipos de jogos, incluindo entre eles o jogo Hackenbush, estudado neste trabalho. Propusemo-nos a investigar uma nova abordagem para o conceito de número, com vistas a buscar nela elementos que favoreçam o ensino e conseqüentemente a aprendizagem. Nossa investigação tem por pressuposto que número é um dos conceitos fundamentais da Matemática e que sua constituição apresenta diversas abordagens, sem que nenhuma delas possibilite responder à questão “O que é número?”. Como subsídio à investigação, avaliamos algumas respostas de correntes filosóficas sobre a natureza e a existência dos números, as quais nos fornecem pistas das complexidades implícitas nessa noção. Apresentamos também algumas pesquisas que abordam o conceito de números a partir de jogos, assim como a implicação de tal abordagem para o processo de ensino e aprendizagem da Matemática.",
     "keywords": [
       "Números",
       "Jogos",
@@ -700,8 +700,10 @@
     "drivePdf": "https://drive.google.com/file/d/1ajKKKz1iPm16NxA99AgTaopnHamV4PBv/view",
     "type": "Resumo",
     "accessLabel": "Imagem original",
-    "metadataStatus": "TRANSCRITO_DA_IMAGEM",
-    "pdfStatus": "PDF_NA_PASTA_GT03_2026_11_02"
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL",
+    "pdfStatus": "PDF_NA_PASTA_GT03_2026_11_02",
+    "abstractType": "Transcrição do original",
+    "abstractProvenance": "Transcrição conferida na captura original"
   },
   {
     "id": "III-2006-GT03-003",
@@ -717,7 +719,7 @@
     "institutions": [
       "Universidade Luterana do Brasil"
     ],
-    "abstract": "Nesse trabalho apresentamos a pesquisa “Teoria dos Números e suas aplicações no processo de ensino e aprendizagem”, que vem sendo desenvolvida desde 2001, na Universidade Luterana do Brasil – ULBRA, campus de Canoas, Rio Grande do Sul. A Teoria dos Números é a área da matemática que estuda as relações entre os números inteiros e que têm aplicações em diversos campos da Matemática. Investigamos os conceitos da Teoria dos Números que são apresentados no Ensino Básico, sugerindo atividades didáticas que promovam o desenvolvimento do pensamento aritmético, despertando nos alunos o interesse por essa área da matemática e com o objetivo de verificar se: “A introdução e o desenvolvimento de atividades didáticas da Teoria dos Números possibilitam ao aluno o desenvolvimento de estratégias de pensamento que melhorem seu raciocínio lógico e algébrico”. Os temas abordados foram: números primos, divisibilidade, algoritmo da divisão, máximo divisor comum, entre outros. Nesse trabalho apresentamos os resultados de dois experimentos de ensino, um aplicado com uma turma de 6ª série do Ensino Fundamental e outro aplicado em alunos do curso de Licenciatura em Matemática da ULBRA.",
+    "abstract": "Nesse trabalho apresentamos a pesquisa “Teoria dos Números e suas aplicações no processo de ensino e aprendizagem”, que vem sendo desenvolvida desde 2001, na Universidade Luterana do Brasil – ULBRA, campus de Canoas, Rio Grande do Sul. A Teoria dos Números é a área da matemática que estuda as relações entre os números inteiros e que tem aplicações em diversos campos da Matemática. Investigamos os conceitos da Teoria dos Números que são apresentados no Ensino Básico, sugerindo atividades didáticas que promovam o desenvolvimento do pensamento aritmético, despertando nos alunos o interesse por essa área da matemática e com o objetivo de verificar se: “A introdução e o desenvolvimento de atividades didáticas da Teoria dos Números possibilitam ao aluno o desenvolvimento de estratégias de pensamento que melhorem seu raciocínio lógico e algébrico”. Os temas abordados foram: números primos, divisibilidade, algoritmo da divisão, máximo divisor comum, entre outros. Nesse trabalho apresentamos os resultados de dois experimentos de ensino, um aplicado com uma turma de 6ª série do Ensino Fundamental e outro aplicado em alunos do curso de Licenciatura em Matemática da ULBRA.",
     "keywords": [
       "Teoria de Números",
       "Pensamento Aritmético",
@@ -727,8 +729,10 @@
     "drivePdf": "https://drive.google.com/file/d/1SsTzlezdR1SibFdu_ZnL_Lxa8b0N6twH/view",
     "accessLabel": "Imagem original",
     "type": "Resumo",
-    "metadataStatus": "TRANSCRITO_DA_IMAGEM",
-    "pdfStatus": "PDF_NA_PASTA_GT03_2026_11_02"
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL",
+    "pdfStatus": "PDF_NA_PASTA_GT03_2026_11_02",
+    "abstractType": "Transcrição do original",
+    "abstractProvenance": "Transcrição conferida na captura original"
   },
   {
     "id": "III-2006-GT03-004",
@@ -743,7 +747,7 @@
     "institutions": [
       "Universidade de Passo Fundo"
     ],
-    "abstract": "Nesse texto apresentamos o relato de um processo de pesquisa entre universidade e educação básica cujo principal objetivo é contribuir com o avanço das discussões teóricas sobre a pesquisa em educação matemática. O processo vivenciado permite que se possa afirmar que estamos ampliando nossas concepções sobre pesquisa, na medida em que estamos possibilitando intervenções qualitativas no processo ensino-aprendizagem. O grupo, composto por pesquisadores da Universidade de Passo Fundo, professores de matemática de escolas públicas e bolsistas de iniciação científica, preocupou-se com a apropriação de significados geométricos e algébricos no ensino fundamental - 5ª à 8ª série. Dentre os aspectos mais relevantes destacamos a importância dada às interações que o trabalho em grupo possibilita, à elaboração de uma sequência metodológica que considere a formação de conceitos como sistemas de conhecimento e ao papel fundamental da aprendizagem no desenvolvimento do pensamento.",
+    "abstract": "Nesse texto apresentamos o relato de um processo de pesquisa entre universidade e educação básica cujo principal objetivo é contribuir com o avanço das discussões teóricas sobre a pesquisa em educação matemática. O processo vivenciado permite que se possa afirmar que estamos ampliando nossas concepções sobre pesquisa, na medida em que estamos possibilitando intervenções qualitativas no processo ensino-aprendizagem. O grupo, composto por pesquisadores da Universidade de Passo Fundo, professores de matemática de escolas públicas e bolsistas de iniciação científica, preocupou-se com a apropriação de significados geométricos e algébricos no ensino fundamental - 5ª a 8ª série. Dentre os aspectos mais relevantes destacamos a importância dada às interações que o trabalho em grupo possibilita, à elaboração de uma seqüência metodológica que considere a formação de conceitos como sistemas de conhecimento e ao papel fundamental da aprendizagem no desenvolvimento do pensamento.",
     "keywords": [
       "Educação matemática",
       "ensino fundamental",
@@ -753,8 +757,10 @@
     "drivePdf": "https://drive.google.com/file/d/1cCBldhN4rcHhxGM_rSrdxbC7-X-IUuM-/view",
     "accessLabel": "Imagem original",
     "type": "Resumo",
-    "metadataStatus": "TRANSCRITO_DA_IMAGEM",
-    "pdfStatus": "PDF_NA_PASTA_GT03_2026_11_02"
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_ORIGINAL",
+    "pdfStatus": "PDF_NA_PASTA_GT03_2026_11_02",
+    "abstractType": "Transcrição do original",
+    "abstractProvenance": "Transcrição conferida na captura original"
   },
   {
     "id": "III-2006-GT02-004",
