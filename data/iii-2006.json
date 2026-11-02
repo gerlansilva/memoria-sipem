@@ -2196,11 +2196,19 @@
     "authors": [
       "Rosemeire Bressan"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Fundação Educacional de Votuporanga"
+    ],
+    "abstract": "As faixas decorativas ou faixas simétricas aparecem em obras de arquitetura como pinturas de paredes, pisos e madeiras. A construção dessas faixas envolve o reconhecimento de sete padrões de simetria que utilizam translação, translação refletida, rotação e reflexões verticais e horizontais. Softwares específicos de fácil utilização permitem elaborar faixas com motivos variados.",
+    "keywords": [
+      "Faixas Simétricas",
+      "Simetria",
+      "Software"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1fdGs2XwUsrJDSkyJRq04FE772CHM5Ltp/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do texto original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
   },
   {
     "id": "III-2006-GT05-033",
@@ -2212,11 +2220,19 @@
     "authors": [
       "Flávia Soares"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Pontifícia Universidade Católica do Rio de Janeiro"
+    ],
+    "abstract": "O texto discute aspectos da história do ensino de Matemática no Brasil na passagem do século XVIII para o XIX, considerando normas de recrutamento e seleção de professores de primeiras letras após as Reformas pombalinas. Analisa exames realizados no Rio de Janeiro, as exigências para o exercício do magistério e os conteúdos de Matemática presentes nas provas, compreendendo os concursos como instrumento de avaliação e caracterização da profissão docente.",
+    "keywords": [
+      "Instrução Pública",
+      "seleção de professores",
+      "ensino de Matemática"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1WWWv120Ik7ZqnJN8w0rYpoapVyWXZd25/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do texto original",
+    "metadataStatus": "CONFERIDO_NA_IMAGEM_2026_11_02"
   },
   {
     "id": "III-2006-GT05-034",
