@@ -1921,12 +1921,16 @@
     "institutions": [
       "Universidade Luterana do Brasil"
     ],
-    "abstract": "Investigação sobre o uso da História da Matemática como recurso de motivação e apoio ao processo de ensino e aprendizagem de Matemática, considerando experiências de docentes vinculados à 2ª CRE.",
-    "keywords": [],
+    "abstract": "O artigo investiga o uso da História da Matemática como fator de motivação e contribuição para o processo de ensino e aprendizagem. A pesquisa foi realizada nas escolas de Ensino Médio públicas e privadas da 2ª CRE, com sede em São Leopoldo (RS), envolvendo grupos de alunos e atividades com história da disciplina. Os resultados indicam contribuições à aprendizagem e ao interesse dos estudantes pela Matemática.",
+    "keywords": [
+      "História da Matemática",
+      "Livro didático",
+      "Aprendizagem da matemática"
+    ],
     "drivePdf": "https://drive.google.com/file/d/12ePpFma9flP2xXFmMz75dcobTqd_vqll/view",
     "type": "Resumo",
-    "abstractType": "Síntese editorial, requer conferência integral",
-    "metadataStatus": "TITULO_E_AUTORIA_CONFERIDOS_NA_CAPTURA_2026_11_02"
+    "abstractType": "Síntese conferida no PDF original",
+    "metadataStatus": "CONFERIDO_NO_PDF_ORIGINAL"
   },
   {
     "id": "III-2006-GT05-016",
@@ -2101,15 +2105,22 @@
     "section": "GT05",
     "title": "UM ESTUDO SOBRE O PROCESSO DE OBSOLESCÊNCIA DE UMA PRÁTICA CULTURAL: A PROVA DOS NOVE",
     "authors": [
-      "Antonio Miguel"
+      "Antonio Miguel",
+      "Eliana da Silva Souza"
     ],
-    "institutions": [],
-    "abstract": "Investigação histórica sobre a prática cultural de verificação de cálculos conhecida como prova dos nove e seu processo de desuso.",
-    "keywords": [],
+    "institutions": [
+      "Universidade Estadual de Campinas"
+    ],
+    "abstract": "Este trabalho, que constitui uma pesquisa em andamento situada no campo de investigação da História da Educação Matemática, tem por objetivo estudar os processos de produção, circulação e apropriação de uma prática cultural determinada – a “prova” dos nove – em diferentes contextos geopolíticos e institucionais, particularmente no contexto escolar brasileiro.",
+    "keywords": [
+      "história da educação matemática",
+      "prática cultural do cálculo escrito",
+      "prova dos nove"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1BDsWGvLLpfz4dTqWJTB8rIpD7Qx5cFkO/view",
     "type": "Resumo",
-    "abstractType": "Síntese editorial baseada no título; conferir original",
-    "metadataStatus": "TITULO_CONFERIDO_NO_PDF_2026_11_02"
+    "abstractType": "Transcrição do original",
+    "metadataStatus": "CONFERIDO_NO_PDF_ORIGINAL"
   },
   {
     "id": "III-2006-GT05-025",
@@ -2200,12 +2211,17 @@
     "institutions": [
       "Universidade de São Paulo"
     ],
-    "abstract": "Estudo histórico do discurso pedagógico de Malba Tahan na revista Al-Karismi, considerando as contribuições dos textos publicados para compreender a Educação Matemática brasileira.",
-    "keywords": [],
+    "abstract": "O trabalho apresenta pesquisa de doutorado sobre os conteúdos da revista Al-Karismi, organizada por Malba Tahan na década de 1940, destinada a professores de matemática e alunos. Examina as contribuições desses textos à História da Educação Matemática brasileira, recorrendo ao discurso pedagógico, às relações de poder e aos referenciais de pesquisa histórico-bibliográfica e documental.",
+    "keywords": [
+      "Malba Tahan",
+      "discurso",
+      "microética",
+      "Educação Matemática"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1cWK49xJFvZEbmfUunuUp9rt6nyUmQQaz/view",
     "type": "Resumo",
-    "abstractType": "Síntese editorial baseada no título; conferir original",
-    "metadataStatus": "TITULO_E_AUTORIA_CONFERIDOS_NA_CAPTURA_2026_11_02"
+    "abstractType": "Síntese conferida no PDF original",
+    "metadataStatus": "CONFERIDO_NO_PDF_ORIGINAL"
   },
   {
     "id": "III-2006-GT05-032",
