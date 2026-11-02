@@ -523,9 +523,9 @@ function archives() {
   });
   if (selected === 3) {
     const target3 = $('#gt03-preliminary');
-    if (target3) fetch('data/iii-2006-gt03-preliminares.json?v=20261102-1', {cache:'no-store'})
+    if (target3) fetch('data/iii-2006-gt03-preliminares.json?v=20261102-2', {cache:'no-store'})
       .then(response => {if (!response.ok) throw Error('Índice indisponível'); return response.json();})
-      .then(items => {target3.innerHTML = items.map(item => `<p><strong>Página digital ${item.page}</strong> — ${escapeHTML(item.title)} <a href="${safeURL(item.sourcePdf)}" target="_blank" rel="noopener">Anais originais</a></p>`).join('');})
+      .then(items => {target3.innerHTML = items.map(item => `<p><strong>Página digital ${item.page}</strong> — ${escapeHTML(item.title)} <a href="${safeURL(item.pageSourceDrivePdf || item.sourcePdf)}" target="_blank" rel="noopener">${item.pageSourceDrivePdf ? "Página-fonte no Drive" : "Anais originais"}</a></p>`).join('');})
       .catch(() => {target3.textContent = 'Índice indisponível';});
   }
   if (selected === 3) {
