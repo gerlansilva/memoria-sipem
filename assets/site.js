@@ -305,7 +305,7 @@ const authorAffiliation = author => {
 };
 const authorHTML = (author, index, authors, institutions) => {
   const explicit = authorAffiliation(author);
-  const matched = !explicit && institutions.length === authors.length ? iesSigla(institutions[index]) : '';
+  const matched = !explicit && institutions.length === authors.length ? iesSigla(institutions[index]) : (!explicit && institutions.length === 1 ? iesSigla(institutions[0]) : '');
   const sigla = explicit || matched;
   return escapeHTML(authorName(author)) + (sigla ? ' (' + escapeHTML(sigla) + ')' : '');
 };
