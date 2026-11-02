@@ -2314,15 +2314,23 @@
     "year": 2006,
     "gt": "GT05",
     "section": "GT05",
-    "title": "O OLHAR DE EDUCADORES MATEMÁTICOS SOBRE A OBRA DE PAULO FREIRE",
+    "title": "HISTÓRIA DA MATEMÁTICA NA EDUCAÇÃO MATEMÁTICA: ESPELHO OU PINTURA?",
     "authors": [
-      "José Roberto Linhares de Mattos"
+      "Cristina Dalva Van Berghem Motta",
+      "Antonio Carlos Brolezzi"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade de São Paulo"
+    ],
+    "abstract": "O artigo apresenta uma pesquisa exploratória de revisão bibliográfica sobre as fundamentações teórico-epistemológicas de diferentes abordagens que integram a História da Matemática ao ensino da Matemática. Com base em estudos críticos e referenciais sobre concepções de aprendizagem, discute justificativas para o recurso à história e o papel do professor e de sua formação nessa integração.",
+    "keywords": [
+      "Educação Matemática",
+      "História da Matemática",
+      "formação de professores"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1epppk8tuZib7649NuCSV5oj_TynYM0Dp/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese conferida com o original"
   },
   {
     "id": "III-2006-GT05-009",
@@ -2337,14 +2345,15 @@
     "institutions": [
       "Pontifícia Universidade Católica de São Paulo"
     ],
-    "abstract": "",
+    "abstract": "O artigo analisa inicialmente o curso de Matemática oferecido pela Faculdade de Filosofia, Ciências e Letras da Universidade de São Paulo na década de 1950 para a formação de bacharéis e licenciados. Utiliza anotações de aulas produzidas por Ubiratan D’Ambrosio, entrevistas com ele e com Elza Gomide e livros referenciados nesses cursos. A análise conclui que D’Ambrosio vivenciou cursos magistrais que associavam a produção e transmissão do saber a práticas orais e escritas. Essa formação, acrescida de disciplinas de Didática, constituiu um modelo influente na formação de professores de Matemática.",
     "keywords": [
       "História da Educação Matemática",
       "Formação de professores de Matemática",
       "arquivos pessoais"
     ],
     "drivePdf": "https://drive.google.com/file/d/1baYj-uTPRQ465krtKzBqPjaJhvyuSjhI/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese conferida com o original"
   },
   {
     "id": "III-2006-GT05-010",
@@ -2359,7 +2368,7 @@
     "institutions": [
       "Universidade Federal de Minas Gerais"
     ],
-    "abstract": "",
+    "abstract": "O trabalho integra uma pesquisa de mestrado, em fase inicial, realizada no Programa de Pós-Graduação em Educação da Universidade Federal de Minas Gerais. Investiga articulações entre o Programa Etnomatemática e a Educação Matemática Crítica. A autora revisita abordagens da Etnomatemática e ideias da Educação Matemática Crítica, discutindo contribuições possíveis dessa articulação para a sala de aula de Matemática. Os resultados iniciais sugerem que essa aproximação pode questionar relações de poder e valorizar os conhecimentos matemáticos presentes no cotidiano escolar.",
     "keywords": [
       "Etnomatemática",
       "Educação Matemática Crítica",
@@ -2367,7 +2376,8 @@
       "sala de aula"
     ],
     "drivePdf": "https://drive.google.com/file/d/1_uWtGs2E9GGkv6GwKTX9oul63mEN36xA/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese conferida com o original"
   },
   {
     "id": "III-2006-GT05-014",
@@ -2501,13 +2511,14 @@
     "institutions": [
       "Pontifícia Universidade Católica de Campinas"
     ],
-    "abstract": "",
+    "abstract": "A pesquisa qualitativa, desenvolvida em 2005 em programa de mestrado em educação, investiga como educadores matemáticos que atuam na formação de professores percebem conceitos fundamentais da teoria de Paulo Freire. Emprega História Oral, com relatos de oito pesquisadores que conviveram com Freire ou desenvolveram projetos apoiados em sua perspectiva, incluindo pesquisas em Etnomatemática, formação docente e tecnologias no ensino de Matemática. A análise evidencia diferentes intensidades de aproximação com Freire e a percepção da necessidade de uma Educação Matemática mais relacionada à teoria freireana.",
     "keywords": [
       "Pedagogia de Paulo Freire",
       "Educação Matemática",
       "formação de professores"
     ],
     "drivePdf": "https://drive.google.com/file/d/1U0V71am4j328m4w3nEAO_4tiwt1fz6ZG/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese conferida com o original"
   }
 ]
