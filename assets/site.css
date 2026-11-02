@@ -1704,3 +1704,8 @@ h1, h2, h3, p { text-wrap: pretty; }
 .record-institutions h4{font-size:.82rem;font-weight:700;margin:0 0 .5rem}
 .record-document-note{font-size:.75rem;line-height:1.6;color:var(--muted, #65717b);margin:.55rem 0 0}
 .record .authors{line-height:1.65}
+
+/* Instituições visíveis no resumo dos cards */
+.record-ies-inline{font-size:.76rem;line-height:1.55;color:var(--muted,#65717b);margin:.25rem 0 .45rem;overflow-wrap:anywhere}
+.record-ies-label{font-weight:650;color:var(--ink,#293b4c)}
+.record-ies-inline abbr{text-decoration:none;cursor:help}
