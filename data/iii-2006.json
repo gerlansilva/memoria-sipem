@@ -1276,11 +1276,18 @@
     "authors": [
       "Gilda de La Rocque Palis"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Pontifícia Universidade Católica do Rio de Janeiro"
+    ],
+    "abstract": "Pesquisa de integração curricular da Matemática com a Arquitetura, discutindo a organização do ensino de cálculo integral a partir de situações e necessidades específicas do curso de Arquitetura.",
+    "keywords": [
+      "Cálculo na Arquitetura",
+      "Matemática para outras disciplinas",
+      "Cálculo Integral"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1ZfLjD41VJ1jtqfSw1i6-Y56Dw8BJGt55/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-003",
@@ -1292,11 +1299,18 @@
     "authors": [
       "Roberto D'Angelo Marfati Barbosa"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade Católica de Santos"
+    ],
+    "abstract": "Pesquisa sobre comportamento emocional de estudantes universitários e avaliação na disciplina Análise Real. Analisa manifestações de ansiedade e dificuldades vivenciadas no curso e suas relações com o processo de aprendizagem e a avaliação.",
+    "keywords": [
+      "Educação Matemática",
+      "Ansiedade",
+      "Avaliação"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1rGc7_rLfsEgbEzOBzFv1VVGvlfSbVAkM/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-004",
@@ -1305,12 +1319,24 @@
     "gt": "GT04",
     "section": "GT04",
     "title": "LIMITE: DEFINIÇÃO INTUITIVA VERSUS DEFINIÇÃO FORMAL",
-    "authors": [],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "authors": [
+      "Natalia Maria Goulart Barbosa",
+      "João César Moura Mota",
+      "José Marques Soares",
+      "Hermínio Borges Neto"
+    ],
+    "institutions": [
+      "Universidade Federal do Ceará"
+    ],
+    "abstract": "Discute as relações entre a definição formal e a definição intuitiva de limite, destacando como a compreensão inicial do conceito matemático pode apoiar a construção de ideias formais na aprendizagem de Cálculo.",
+    "keywords": [
+      "Limite",
+      "definição formal",
+      "definição intuitiva"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1mP_q8n9wS8Kp096ur2ry2r0Z8RGdVjSZ/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-005",
@@ -1322,11 +1348,18 @@
     "authors": [
       "Ângela Marta Pereira das Dores Savioli"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade Estadual de Londrina"
+    ],
+    "abstract": "Aborda equações algébricas nas práticas vivenciadas, recorrendo à dimensão histórica para discutir propostas didáticas. Examina a relação entre construção dos conceitos, resolução de problemas e aprendizagem em Álgebra.",
+    "keywords": [
+      "Equações algébricas",
+      "práticas vivenciadas",
+      "resolução de problemas"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1hGld5dvZP-Jbw5_ZYWabrCTnAyFIwD0S/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-008",
@@ -1336,13 +1369,19 @@
     "section": "GT04",
     "title": "PROFESSORES DE MATEMÁTICA E SUAS PERCEPÇÕES SOBRE UM TRATAMENTO PARA OS NÚMEROS REAIS, VIA MEDIÇÃO, EM CURSOS DE FORMAÇÃO",
     "authors": [
-      "Regina Célia Grupo Pasquini"
+      "Regina Célia Grando Pasquini"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade de São Paulo"
+    ],
+    "abstract": "Apresenta resultados preliminares de pesquisa com professores de Matemática sobre o tratamento dos números reais por meio da medição em cursos de formação, investigando possibilidades dessa abordagem para o ensino.",
+    "keywords": [
+      "Números Reais",
+      "formação de professores"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1kV-s6a1zKzMen38vgU2_XqPcy8sDrtbH/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-009",
@@ -1351,12 +1390,23 @@
     "gt": "GT04",
     "section": "GT04",
     "title": "O DESENVOLVIMENTO DE UMA SEQUÊNCIA DIDÁTICA PARA A ABORDAGEM DO CONCEITO DE LIMITE",
-    "authors": [],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "authors": [
+      "Ivan Paulo Sechi",
+      "Miriam Buss Gonçalves",
+      "Nei Ferreira Brito Camacho"
+    ],
+    "institutions": [
+      "Universidade Federal de Santa Catarina"
+    ],
+    "abstract": "Estudo sobre a concepção e aplicação de sequência didática para abordagem do conceito de limite no ensino superior, considerando atividades de aprendizagem, representações e dificuldades de estudantes.",
+    "keywords": [
+      "Sequência Didática",
+      "Limite",
+      "Ensino-Aprendizagem"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1wXNPfaybQeR_1Ao3ek4THRgvaQaoawBT/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-010",
@@ -1368,11 +1418,17 @@
     "authors": [
       "Márcia Maria Fusaro Pinto"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade Federal de Minas Gerais"
+    ],
+    "abstract": "Apresenta elementos teóricos da pesquisa de David Tall sobre o desenvolvimento do conhecimento matemático nos mundos corporificado, simbólico-proceptual e formal, discutindo a investigação de seus modos de operar e de resultados empíricos relacionados.",
+    "keywords": [
+      "Desenvolvimento matemático",
+      "Mundos matemáticos"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1hkABcvie8dg_XdN1lB56gppxGePiReec/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-011",
@@ -1384,11 +1440,18 @@
     "authors": [
       "Luciana Ferreira"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Universidade Federal de Minas Gerais"
+    ],
+    "abstract": "Apresenta concepções de futuros professores sobre o uso de jogos no ensino de Matemática e discute possibilidades pedagógicas, formação docente e critérios para utilização de atividades lúdicas nas aulas.",
+    "keywords": [
+      "Ensino de Matemática",
+      "Jogos",
+      "Intervenções pedagógicas"
+    ],
     "drivePdf": "https://drive.google.com/file/d/17yyfSLEaUKAG_sFKOvz-AmvX0p8D2eFK/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-012",
@@ -1400,11 +1463,18 @@
     "authors": [
       "Helena Noronha Cury"
     ],
-    "institutions": [],
-    "abstract": "",
-    "keywords": [],
+    "institutions": [
+      "Pontifícia Universidade Católica do Rio Grande do Sul"
+    ],
+    "abstract": "Pesquisa sobre desempenho de estudantes ingressantes em disciplinas de Matemática do ensino superior e sobre erros identificados em avaliações, analisando possíveis causas e implicações pedagógicas para o ensino.",
+    "keywords": [
+      "Avaliação de erros",
+      "Disciplinas matemáticas",
+      "Calouros"
+    ],
     "drivePdf": "https://drive.google.com/file/d/1fgCqIf26r_ra0hBWMb4ql1gfm8JtONw2/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT03-006",
@@ -1528,14 +1598,15 @@
     "institutions": [
       "Pontifícia Universidade Católica de São Paulo"
     ],
-    "abstract": "",
+    "abstract": "Estudo sobre o tratamento de registros de representação semiótica em livros didáticos de Álgebra Linear, com atenção às noções de independência linear e às conversões de registros utilizadas nas atividades de ensino e aprendizagem.",
     "keywords": [
       "Ensino-Aprendizagem",
       "livros didáticos",
       "Álgebra Linear"
     ],
     "drivePdf": "https://drive.google.com/file/d/1bLYjFxu5btlRd_pniyrBGqSBRTKLnRif/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-006",
@@ -1552,7 +1623,7 @@
       "Instituto Paulista de Ciências da Administração",
       "Pontifícia Universidade Católica de São Paulo"
     ],
-    "abstract": "",
+    "abstract": "Investigação sobre a influência do currículo oculto no ensino e aprendizagem de Matemática em curso de Administração, examinando a distância entre o currículo prescrito e as práticas efetivamente vividas nas aulas.",
     "keywords": [
       "Ensino Superior",
       "Currículo Prescrito",
@@ -1560,7 +1631,8 @@
       "Ensino e aprendizagem de Matemática"
     ],
     "drivePdf": "https://drive.google.com/file/d/1OLrGdjXZYzTdlmmuM8eipN9Td2y0l0-y/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   },
   {
     "id": "III-2006-GT04-007",
@@ -1584,13 +1656,14 @@
       "Secretaria Municipal de Educação de Goiás",
       "Secretaria de Estado da Educação de Goiás"
     ],
-    "abstract": "",
+    "abstract": "Mapeamento das tendências de pesquisa em Educação Matemática em trabalhos publicados nos periódicos Zetetiké e Bolema entre 1999 e 2004. Organiza temas e características das produções examinadas para compreender o estado do conhecimento da área no período.",
     "keywords": [
       "Estado do Conhecimento",
       "Mapeamento",
       "Educação Matemática"
     ],
     "drivePdf": "https://drive.google.com/file/d/18RpfRSqQX4SyvZxB2VF8hyXVEi04ytOa/view",
-    "type": "Resumo"
+    "type": "Resumo",
+    "abstractType": "Síntese do resumo do original"
   }
 ]
