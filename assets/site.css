@@ -1002,6 +1002,15 @@ h1, h2, h3, p { text-wrap: pretty; }
   border-color: var(--line-strong);
   background: var(--accent-tint);
 }
+.record-theme-tag {
+  display: inline-block;
+  color: var(--muted);
+  font-size: inherit;
+  font-weight: 600;
+  max-width: min(55ch, 100%);
+  overflow-wrap: anywhere;
+}
+
 .record-meta {
   display: flex;
   flex-wrap: wrap;
