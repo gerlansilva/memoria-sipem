@@ -252,17 +252,48 @@ Object.assign(IES_SIGLAS, {
 });
 const IES_AMBIGUAS = new Set(['puc', 'universidade catolica', 'universidade federal', 'universidade estadual', 'universidade', 'instituto federal', 'cefet']);
 const iesKey = name => String(name).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[,.“”"]/g, '').replace(/\s+/g, ' ').trim();
-const iesOne = part => {
-  const clean = part.replace(/\(.*?\)/g, ' ').trim();
-  const candidates = [clean, clean.split(/\s*[-–—]\s*/)[0], ...clean.split(',').map(s => s.trim())];
-  const found = candidates.map(c => IES_SIGLAS[iesKey(c)]).find(Boolean);
-  return found || (IES_AMBIGUAS.has(iesKey(clean)) ? 'Instituição não identificada' : part.trim());
+const IES_EXTRA = {
+  'instituto federal goiano': 'IF Goiano',
+  'instituto federal goiano campus urutai': 'IF Goiano',
+  'instituto federal de goias': 'IFG',
+  'universidade federal de campina grande': 'UFCG',
+  'universidade federal de mato grosso': 'UFMT',
+  'universidade federal de rondonia': 'UNIR',
+  'universidade federal do tocantins': 'UFT',
+  'universidade do estado da bahia': 'UNEB',
+  'universidade estadual de santa cruz': 'UESC',
+  'universidade do estado do para': 'UEPA',
+  'centro universitario franciscano': 'UNIFRA',
+  'instituto federal de educacao ciencia e tecnologia goiano': 'IF Goiano'
 };
-const iesSigla = name => String(name).split(/\s*[\/;]\s*|\s+e\s+(?=(?:Universidade|Instituto|Faculdade|Centro)\b)/).map(iesOne).join(' / ');
-const iesTag = name => `<abbr title="${escapeHTML(name)}">${escapeHTML(iesSigla(name))}</abbr>`;
+const iesOne = part => {
+  const original = String(part).trim();
+  const clean = original.replace(/\\(.*?\\)/g, ' ').replace(/\\s+/g, ' ').trim();
+  const key = iesKey(clean);
+  const names = {...IES_SIGLAS, ...IES_EXTRA};
+  const prefixes = Object.keys(names).sort((a,b) => b.length - a.length);
+  const match = prefixes.find(k => key === k || key.startsWith(k + ' ') || key.startsWith(k + ' -') || key.startsWith(k + ' –'));
+  if (match) return names[match];
+  const uppercase = original.match(/\\b(?:U[A-Z]{2,8}|IF[A-Z]{1,8}|CEFET(?:-[A-Z]{2})?|PUC(?:-[A-Z]{2,})?|UNESP|UNICAMP|UNIBAN|UNIFRA|UNICSUL|FURG|FURB|UE[A-Z]{1,5})\\b/g);
+  if (uppercase?.length) return [...new Set(uppercase)].join(' / ');
+  if (IES_AMBIGUAS.has(key)) return 'IES não identificada';
+  // Não transformar campus, programa de pós-graduação ou rede de ensino em IES.
+  return '';
+};
+const iesSigla = name => {
+  const parts = String(name).split(/\\s*[\\/;]\\s*|\\s+e\\s+(?=(?:Universidade|Instituto|Faculdade|Centro)\\b)/i);
+  return [...new Set(parts.map(iesOne).filter(Boolean))].join(' / ');
+};
+const iesTag = name => {
+  const sigla = iesSigla(name);
+  return sigla ? `<abbr title="${escapeHTML(name)}">${escapeHTML(sigla)}</abbr>` : '';
+};
 const authorHTML = author => {
-  const match = String(author).match(/^(.*?)\s*\(([^()]+)\)\s*$/);
-  return match ? `${escapeHTML(match[1])} (${iesTag(match[2])})` : escapeHTML(author);
+  const original = String(author);
+  const match = original.match(/^(.*?)\\s*\\(([^()]+)\\)\\s*$/);
+  if (!match) return escapeHTML(original);
+  const sigla = iesSigla(match[2]);
+  return escapeHTML(match[1]) + (sigla ? ' (' + escapeHTML(sigla) + ')' : '');
 };
 const groupLabel = record => Number(record.edition) === 7 ? (GT07_LABELS[record.gt] || record.gt) : (record.section || record.gt || '');
 const route = (target, id) => '#' + ({ history: 'historia', archives: 'anais' }[target] || 'inicio') + (id ? '?edicao=' + id : '');
@@ -495,7 +526,7 @@ function article(record) {
       </div>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
       ${(record.authors || []).length ? `<p class="authors">${record.authors.map(author => authorHTML(author)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
-      ${institutions.length ? `<p class="record-ies-inline"><span class="record-ies-label">IES / vínculos:</span> ${[...new Set(institutions.map(name => String(name).trim()).filter(Boolean))].map(name => iesTag(name)).join(' · ')}</p>` : ''}
+      ${institutions.length ? `<p class="record-ies-inline"><span class="record-ies-label">IES / vínculos:</span> ${[...new Set(institutions.map(iesSigla).filter(Boolean))].map(name => `<abbr title="${escapeHTML(name)}">${escapeHTML(name)}</abbr>`).join(' · ')}</p>` : ''}
 
     </div>
     <div class="record-actions">
