@@ -1459,8 +1459,8 @@
           "imageName": "Colado 2026-11-02 às 18.10.18.png",
           "imageUrl": "https://drive.google.com/file/d/1W0DoGYEHcrYyJXiGSYsQOLZVuNUOSNKp/view?usp=drivesdk",
           "pdfName": "III-2006-GT10-012.pdf",
-          "pdfUrl": null,
-          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "pdfUrl": "https://drive.google.com/file/d/107nVFhnifADiWnhNk8iYVvWpM-qGZcJ8/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
           "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
         },
         {
@@ -1482,11 +1482,9 @@
           "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
         }
       ],
-      "existingIndividualPdfCount": 13,
-      "remainingIndividualPdfs": 1,
-      "expectedMissingFilenames": [
-        "III-2006-GT10-012.pdf"
-      ],
+      "existingIndividualPdfCount": 14,
+      "remainingIndividualPdfs": 0,
+      "expectedMissingFilenames": [],
       "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
     },
     {
@@ -1848,5 +1846,5 @@
       "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
     }
   ],
-  "note": "GT07–GT12: 94 imagens, uma duplicada, e um trabalho adicional localizado em página compartilhada com o resumo anterior. Total correto: 94 trabalhos distintos, 80 PDFs individuais no Drive e 14 pendentes de envio."
+  "note": "GT10 possui 14 imagens e 14 PDFs individuais no Drive. Nos GT07–GT12, faltam 13 PDFs individuais para os demais grupos."
 }
