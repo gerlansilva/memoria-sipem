@@ -519,7 +519,26 @@
           "mimeType": "image/png",
           "status": "AGUARDANDO_CONFERENCIA_DOCUMENTAL"
         }
-      ]
+      ],
+      "expectedWorks": 42,
+      "expectedIndividualPdfs": 42,
+      "existingIndividualPdfCount": 30,
+      "remainingIndividualPdfs": 12,
+      "expectedMissingFilenames": [
+        "III-2006-GT07-031.pdf",
+        "III-2006-GT07-032.pdf",
+        "III-2006-GT07-033.pdf",
+        "III-2006-GT07-034.pdf",
+        "III-2006-GT07-035.pdf",
+        "III-2006-GT07-036.pdf",
+        "III-2006-GT07-037.pdf",
+        "III-2006-GT07-038.pdf",
+        "III-2006-GT07-039.pdf",
+        "III-2006-GT07-040.pdf",
+        "III-2006-GT07-041.pdf",
+        "III-2006-GT07-042.pdf"
+      ],
+      "note": "Segundo a correspondência informada pelo responsável pelo acervo: 42 imagens originais representam 42 trabalhos distintos. Os 30 PDFs numerados existentes não encerram a coleção. A associação de cada imagem a um registro e PDF exige conferência individual; não inferir a correspondência pela ordem dos nomes ou horários das imagens."
     },
     {
       "gt": "GT08",
@@ -922,5 +941,6 @@
         }
       ]
     }
-  ]
+  ],
+  "note": "GT07: total esperado corrigido para 42 trabalhos e 42 PDFs individuais. Os outros GTs seguem pendentes de conferência."
 }
