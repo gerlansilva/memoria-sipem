@@ -28,7 +28,8 @@ const GT03_2006_LABELS = {
   GT02: 'GT02 — Educação Matemática nas Séries Finais do Ensino Fundamental e no Ensino Médio',
   GT03: 'GT03 — Educação Matemática no Ensino Médio',
   GT04: 'GT04 — Educação Matemática no Ensino Superior',
-  GT05: 'GT05 — História da Matemática e Cultura'
+  GT05: 'GT05 — História da Matemática e Cultura',
+  GT06: 'GT06 — Educação Matemática: Novas Tecnologias e Educação a Distância'
 };
 const GT07_LABELS = {
   GT01: 'GT01 — Matemática na Educação Infantil e nos Anos Iniciais do Ensino Fundamental',
@@ -328,7 +329,7 @@ const III_FILES = ['iii-2006.json'];
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iii-gt-historical-names-20261102';
+const catalogVersion = 'iii-2006-gt06-12-20261102';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
