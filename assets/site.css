@@ -1743,3 +1743,21 @@ h1, h2, h3, p { text-wrap: pretty; }
 .record .authors { color: #41586e; }
 .record-actions .download { color: #155b78; font-weight: 650; }
 .record-actions .download:hover { color: #0b745f; }
+
+/* Panorama — gráfico de temáticas, responsivo e legível. */
+.panorama-theme-description { color: var(--muted); font-size: .92rem; line-height: 1.6; margin: .45rem 0 0; max-width: 67ch; }
+.panorama-themes-chart { margin-top: 1.2rem; }
+.panorama-theme-total { color: var(--muted); font-size: .86rem; margin: 0 0 1.3rem; }
+.panorama-theme-bars { display: grid; gap: 1.2rem; }
+.panorama-theme-bar-row { display: grid; grid-template-columns: minmax(180px, 1.35fr) minmax(100px, 2.2fr) minmax(86px, .5fr); gap: 1rem; align-items: center; }
+.panorama-theme-name { color: var(--ink); font-size: .91rem; line-height: 1.35; }
+.panorama-theme-track { height: 14px; border-radius: 10px; background: var(--accent-tint); overflow: hidden; }
+.panorama-theme-fill { height: 100%; border-radius: 10px; background: var(--accent-secondary); min-width: 2px; }
+.panorama-theme-value { white-space: nowrap; text-align: right; font-weight: 650; font-size: .89rem; font-variant-numeric: tabular-nums; color: var(--ink); }
+.panorama-theme-value small { color: var(--muted); font-weight: 400; font-size: .8rem; }
+@media (max-width: 680px) {
+  .panorama-theme-bar-row { grid-template-columns: 1fr auto; gap: .35rem .75rem; }
+  .panorama-theme-name { grid-column: 1; grid-row: 1; }
+  .panorama-theme-value { grid-column: 2; grid-row: 1; }
+  .panorama-theme-track { grid-column: 1 / -1; grid-row: 2; height: 11px; }
+}
