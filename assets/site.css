@@ -1002,13 +1002,15 @@ h1, h2, h3, p { text-wrap: pretty; }
   border-color: var(--line-strong);
   background: var(--accent-tint);
 }
-.record-theme-tag {
-  display: inline-block;
+.record-theme-inline {
+  margin: -2px 0 9px;
   color: var(--muted);
-  font-size: inherit;
+  font-size: var(--fs-micro);
+  line-height: 1.5;
+}
+.record-theme-label {
   font-weight: 600;
-  max-width: min(55ch, 100%);
-  overflow-wrap: anywhere;
+  color: var(--text);
 }
 
 .record-meta {
