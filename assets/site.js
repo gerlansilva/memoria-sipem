@@ -335,7 +335,7 @@ const III_FILES = ['iii-2006.json', 'iii-2006-gt07-gt12-catalogo-provisorio.json
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'gt10-14-pdfs-20261103';
+const catalogVersion = 'iii-gt07-gt12-94-pdfs-20261103';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -492,7 +492,7 @@ function archives() {
     ${edition ? `<img class="archive-logo" src="${escapeHTML(edition.logo)}" alt="Marca do ${edition.roman} SIPEM" width="110" height="64">` : ''}
   </header>
 
-  ${selected === 3 ? `<aside class="review-notice" aria-label="Situação do acervo do III SIPEM"><strong>III SIPEM (2006): GT07 a GT12 disponíveis para consulta documental.</strong> Os 94 registros desses grupos incluem 80 PDFs individuais no Drive e 14 registros que apontam para a imagem original enquanto seus PDFs individuais aguardam envio. Um resumo adicional do GT11 foi recuperado de página compartilhada. Títulos, autorias, instituições, resumos e palavras-chave ainda estão em conferência para parte do acervo. Consulte o documento original antes de citar os metadados.</aside>` : ''}
+  ${selected === 3 ? `<aside class="review-notice" aria-label="Situação do acervo do III SIPEM"><strong>III SIPEM (2006): GT07 a GT12 disponíveis para consulta documental.</strong> Os 94 trabalhos desses grupos possuem agora PDFs individuais disponíveis no Google Drive. A conferência textual de parte dos metadados permanece em andamento. Um resumo adicional do GT11 foi recuperado de página compartilhada. Títulos, autorias, instituições, resumos e palavras-chave ainda estão em conferência para parte do acervo. Consulte o documento original antes de citar os metadados.</aside>` : ''}
   ${selected === 2 ? `<aside class="review-notice" aria-label="Aviso sobre a conferência documental"><strong>II SIPEM (2003): revisão documental em andamento.</strong> Títulos, autorias, instituições, resumos e palavras-chave ainda estão sendo confrontados com os PDFs originais. A ausência de metadados no catálogo não significa ausência no documento. <a href="https://github.com/gerlansilva/memoria-sipem/blob/main/auditoria/protocolo-ii-sipem.md" target="_blank" rel="noopener">Consultar o protocolo de revisão</a>.</aside>` : ''}
   <div class="search-panel">
     <form class="search-form" role="search">
