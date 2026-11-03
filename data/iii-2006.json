@@ -2596,5 +2596,268 @@
     "type": "Resumo",
     "abstractType": "Síntese conferida com o original",
     "abstractProvenance": "Síntese editorial, não transcrição literal"
+  },
+  {
+    "id": "III-2006-GT06-001",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "A geometria hiperbólica na formação docente: possibilidades de uma proposta com o auxílio do Cabri-Géomètre",
+    "authors": [
+      "Eliane Cabariti",
+      "Ana Paula Jahn"
+    ],
+    "institutions": [
+      "UNIBAN",
+      "FATEC",
+      "Pontifícia Universidade Católica de São Paulo"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/1MQjnbjpDdbM2h1v1D_Fi4H8mS8QWl8Qj/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-002",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "A resolução de problemas com computador e sem computador: que relações os alunos estabelecem?",
+    "authors": [
+      "Norma Suely Gomes Allevato"
+    ],
+    "institutions": [
+      "Centro Universitário Salesiano",
+      "Universidade Estadual Paulista"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/1R6WNm5QXFrAURnVAv6G0dzjPQ0EdwQIB/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-003",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Aprendizagem cooperativa a distância em matemática",
+    "authors": [
+      "Luiz Carlos Guimarães",
+      "Rafael Garcia Barbastefano",
+      "Francisco Roberto Pinto Mattos",
+      "Thiago Guimarães Moraes"
+    ],
+    "institutions": [
+      "IM-UFRJ",
+      "CEFET/RJ",
+      "UERJ/CP II/COPPE-UFRJ",
+      "IBM/COPPE-UFRJ"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/1tmFY791BQJFmpwgX1ZcI1PIEAQoMZb6B/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-004",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Comunidade virtual como locus do resgate da cultura docente: contribuições para a formação continuada do professor de matemática",
+    "authors": [
+      "Rosana Giaretta Sguerra Miskulin",
+      "Mariana da Rocha Correia Silva",
+      "Mauricio Rosa"
+    ],
+    "institutions": [
+      "IGCE/UNESP/RIO CLARO",
+      "FE/UNICAMP"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/1_0mxKUouvtzOLePZzByabmm4TfTDIZAN/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-005",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Possibilidades e dificuldades da incorporação do uso de softwares na aprendizagem da matemática: um estudo de um caso – o software Aplusix",
+    "authors": [
+      "Marilena Bittar"
+    ],
+    "institutions": [
+      "Universidade Federal de Mato Grosso do Sul"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/18RXB3N4A_s3dj4TC-i3J8ktJl1lRUd9e/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-006",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Recursos computacionais nas aulas de matemática",
+    "authors": [
+      "Maria Madalena Dullius",
+      "Giane Maria Eidelwein",
+      "Graziela Maria Fick",
+      "Claus Haetinger",
+      "Marli Teresinha Quartieri"
+    ],
+    "institutions": [
+      "Centro Universitário UNIVATES"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/1hCHHujQkSxleNuF7h_PDZ4o3oJ1g38R_/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-007",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Criando representações para a multiplicação de números inteiros negativos: construindo jogos eletrônicos",
+    "authors": [
+      "Mauricio Rosa",
+      "Marcus Vinicius Maltempi"
+    ],
+    "institutions": [
+      "Universidade Estadual Paulista"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/1as8IfpOJtMLsPDg6tr3UCPjxbwMWJbXg/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-008",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Uma simulação no ensino da matemática: um exemplo com Cabri-Géomètre para abordar os conceitos de área e perímetro",
+    "authors": [
+      "Franck Bellemain",
+      "Paula Moreira Baltar Bellemain",
+      "Verônica Gitirana"
+    ],
+    "institutions": [
+      "Universidade Federal de Pernambuco"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/111Jiij7ALUldxKJl-X4Y0oG0QO2eDQTm/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-009",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Diferentes mídias, diferentes tipos de trabalhos coletivos em cursos de formação continuada de professores a distância: pode me passar a caneta, por favor?",
+    "authors": [
+      "Rúbia Barcelos Amaral Zulatto",
+      "Marcelo de Carvalho Borba"
+    ],
+    "institutions": [
+      "Universidade Estadual Paulista"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/13LzsmVdpVxhvz3zc3LaJxdODdS3yfEoO/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-010",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Diferentes níveis na exploração de alguns conceitos geométricos",
+    "authors": [
+      "Deise Maria B. Costa",
+      "Ellen Andrea Janzen",
+      "Emerson Rolkoeski"
+    ],
+    "institutions": [
+      "Universidade Federal do Paraná"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/1bBwh_L4j2pZVRqOZADMZmXUaB53I2lu3/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-011",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Monitoria virtual: um experimento on-line para potencializar um ambiente de apoio à aprendizagem",
+    "authors": [
+      "Raquel N. Moreira Brumatti"
+    ],
+    "institutions": [
+      "Pontifícia Universidade Católica de Campinas"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/111XJ2p3NTQnr4yydieCQ2-LplqBZKu9a/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
+  },
+  {
+    "id": "III-2006-GT06-012",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT06",
+    "section": "GT06",
+    "title": "Uma abordagem de ensino-aprendizagem da geometria esférica através do computador",
+    "authors": [
+      "Flavio Roberto Gouvea"
+    ],
+    "institutions": [
+      "Centro Universitário Paulistano — Unipaulistana"
+    ],
+    "abstract": "",
+    "keywords": [],
+    "drivePdf": "https://drive.google.com/file/d/16TTgGwOK03gck42msU80s0EFrNyA0WjS/view",
+    "type": "Resumo",
+    "metadataStatus": "TITULO_AUTORIA_IES_CONFERIDOS_VISUALMENTE__RESUMO_E_PALAVRAS_CHAVE_PENDENTES",
+    "pdfStatus": "RECORTE_PRELIMINAR_DOS_ANAIS_ORIGINAIS"
   }
 ]
