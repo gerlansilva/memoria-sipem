@@ -1557,8 +1557,8 @@
           "status": "AGUARDANDO_CONFERENCIA_DOCUMENTAL"
         }
       ],
-      "expectedWorks": 8,
-      "expectedIndividualPdfs": 8,
+      "expectedWorks": 7,
+      "expectedIndividualPdfs": 7,
       "works": [
         {
           "id": "III-2006-GT11-001",
@@ -1585,15 +1585,6 @@
           "pdfName": "III-2006-GT11-003.pdf",
           "pdfUrl": "https://drive.google.com/file/d/1zV4hJAri9wHmRl00csBvipRqkFK0aBVr/view?usp=drivesdk",
           "pdfStatus": "NO_DRIVE",
-          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
-        },
-        {
-          "id": "III-2006-GT11-004",
-          "imageName": "Colado 2026-11-02 às 17.34.28.png",
-          "imageUrl": "https://drive.google.com/file/d/1lV85NvyyoIkloGxEMrxuk8vAMknSvlng/view?usp=drivesdk",
-          "pdfName": "III-2006-GT11-004.pdf",
-          "pdfUrl": null,
-          "pdfStatus": "PENDENTE_DE_ENVIO",
           "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
         },
         {
@@ -1634,13 +1625,20 @@
         }
       ],
       "existingIndividualPdfCount": 5,
-      "remainingIndividualPdfs": 3,
+      "remainingIndividualPdfs": 2,
       "expectedMissingFilenames": [
         "III-2006-GT11-002.pdf",
-        "III-2006-GT11-004.pdf",
         "III-2006-GT11-008.pdf"
       ],
-      "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
+      "note": "8 imagens recebidas, das quais 2 são cópias idênticas do mesmo resumo (003/004); há 7 trabalhos distintos. Documento duplicado preservado no inventário, não listado no site.",
+      "duplicateImages": [
+        {
+          "id": "III-2006-GT11-004",
+          "duplicateOf": "III-2006-GT11-003",
+          "reason": "imagens binariamente idênticas; título, autoria, resumo e palavras-chave coincidem",
+          "imageUrl": "https://drive.google.com/file/d/1lV85NvyyoIkloGxEMrxuk8vAMknSvlng/view?usp=drivesdk"
+        }
+      ]
     },
     {
       "gt": "GT12",
@@ -1839,5 +1837,5 @@
       "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
     }
   ],
-  "note": "GT07–GT12: PDFs individuais gerados a partir das imagens; itens bloqueados no upload permanecem como pendências. Metadados textuais exigem revisão dos originais."
+  "note": "GT07–GT12: 94 imagens digitalizadas, 93 trabalhos distintos após deduplicação documental do GT11. Metadados transcritos por OCR ainda sujeitos a cotejo visual."
 }
