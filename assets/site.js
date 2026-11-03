@@ -335,7 +335,7 @@ const III_FILES = ['iii-2006.json', 'iii-2006-gt07-gt12-catalogo-provisorio.json
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'panorama-tematicas-20261103';
+const catalogVersion = 'gt10-14-pdfs-20261103';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
