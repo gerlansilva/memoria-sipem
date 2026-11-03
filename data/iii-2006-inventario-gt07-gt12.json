@@ -963,7 +963,80 @@
           "mimeType": "image/png",
           "status": "AGUARDANDO_CONFERENCIA_DOCUMENTAL"
         }
-      ]
+      ],
+      "expectedWorks": 7,
+      "expectedIndividualPdfs": 7,
+      "works": [
+        {
+          "id": "III-2006-GT08-001",
+          "imageName": "Colado 2026-11-02 às 18.14.21.png",
+          "imageUrl": "https://drive.google.com/file/d/1YCfQMocU7HqDJMRpfDgBUTHuTttuHbvs/view?usp=drivesdk",
+          "pdfName": "III-2006-GT08-001.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT08-002",
+          "imageName": "Colado 2026-11-02 às 18.14.28.png",
+          "imageUrl": "https://drive.google.com/file/d/1gBgd3a0djtMj6OFU64XtBiYTwF3Sk3AP/view?usp=drivesdk",
+          "pdfName": "III-2006-GT08-002.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1tOizE20HaOG2Z2Ht70-WMUJvJMANItFV/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT08-003",
+          "imageName": "Colado 2026-11-02 às 18.14.36.png",
+          "imageUrl": "https://drive.google.com/file/d/1UePlRaIXfi_lYhyLv139DLf0Dtbb9JHi/view?usp=drivesdk",
+          "pdfName": "III-2006-GT08-003.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1iYUJtQfhj74pdSnUeN5ntweUnIj-v7Vq/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT08-004",
+          "imageName": "Colado 2026-11-02 às 18.14.44.png",
+          "imageUrl": "https://drive.google.com/file/d/1uBc4V1yhZ7Udtq7DnChtt9i8EnW9CFnT/view?usp=drivesdk",
+          "pdfName": "III-2006-GT08-004.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1z6PvkCyLzdmKID2FBU_Upy8JSqZH8VUe/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT08-005",
+          "imageName": "Colado 2026-11-02 às 18.14.54.png",
+          "imageUrl": "https://drive.google.com/file/d/1Cnfecqu55Chl76bpCecOnU-9Od7gn3nL/view?usp=drivesdk",
+          "pdfName": "III-2006-GT08-005.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1FonYXF0SGnZUkKOGsPUfpLmt9PCJ3lHY/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT08-006",
+          "imageName": "Colado 2026-11-02 às 18.15.02.png",
+          "imageUrl": "https://drive.google.com/file/d/1RMGACVqUPcBpm0enKjcbK0yqCyVGGoQ4/view?usp=drivesdk",
+          "pdfName": "III-2006-GT08-006.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1LtniaS_mPYat3k_9AFiHRaTfqOJUoDDW/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT08-007",
+          "imageName": "Colado 2026-11-02 às 18.15.12.png",
+          "imageUrl": "https://drive.google.com/file/d/17yEx32nEQCt34Y_DBKpVoRTeZ3J0ZAjF/view?usp=drivesdk",
+          "pdfName": "III-2006-GT08-007.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1kvhpZUQ4wJoCkNRByls2u_effI0yLtF_/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        }
+      ],
+      "existingIndividualPdfCount": 6,
+      "remainingIndividualPdfs": 1,
+      "expectedMissingFilenames": [
+        "III-2006-GT08-001.pdf"
+      ],
+      "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
     },
     {
       "gt": "GT09",
@@ -1053,7 +1126,128 @@
           "mimeType": "image/png",
           "status": "AGUARDANDO_CONFERENCIA_DOCUMENTAL"
         }
-      ]
+      ],
+      "expectedWorks": 12,
+      "expectedIndividualPdfs": 12,
+      "works": [
+        {
+          "id": "III-2006-GT09-001",
+          "imageName": "Colado 2026-11-02 às 18.11.44.png",
+          "imageUrl": "https://drive.google.com/file/d/1ySOaLpGnkaNUR273HQr8lTizLnJpvfOs/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-001.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1_nlLEuW5t5hqCOZoac-G7R1wZn766Hwb/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-002",
+          "imageName": "Colado 2026-11-02 às 18.11.55.png",
+          "imageUrl": "https://drive.google.com/file/d/1N157mkr91-RbMmrS61ffP6yCI_zF8UWC/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-002.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-003",
+          "imageName": "Colado 2026-11-02 às 18.12.03.png",
+          "imageUrl": "https://drive.google.com/file/d/1Q0wftMFUMi5b-gIx3c9NVHKk0eaWA0Fr/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-003.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1jNBw_ReGi5y6vQOOoDQj-fl0A2teBar2/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-004",
+          "imageName": "Colado 2026-11-02 às 18.12.17.png",
+          "imageUrl": "https://drive.google.com/file/d/1XA0StQ9p3B-_P_8EvZQfqc50uXKVs71h/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-004.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-005",
+          "imageName": "Colado 2026-11-02 às 18.12.26.png",
+          "imageUrl": "https://drive.google.com/file/d/133PHtDqaCG_4Z94pWY4gDuBbr7cr-HZw/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-005.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1L97h_rCHzYTwprCiOgxajTHA91v1mrEV/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-006",
+          "imageName": "Colado 2026-11-02 às 18.12.35.png",
+          "imageUrl": "https://drive.google.com/file/d/1gyYKXE19ZJHfVNNi3n0EtQlAba883K_L/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-006.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1cK-6P-VVYBj9O49KKW4eM3UwWnslibjm/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-007",
+          "imageName": "Colado 2026-11-02 às 18.12.47.png",
+          "imageUrl": "https://drive.google.com/file/d/1ucLyFEkAXTrDBP8J463SooaNxuHupyHf/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-007.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1uEbJzS8muHJX2DtggOwaBTk8QsjxvBXV/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-008",
+          "imageName": "Colado 2026-11-02 às 18.12.57.png",
+          "imageUrl": "https://drive.google.com/file/d/1FFNpiqJTcwpPuQ8OBl21Zm_MUuBNH5kt/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-008.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-009",
+          "imageName": "Colado 2026-11-02 às 18.13.06.png",
+          "imageUrl": "https://drive.google.com/file/d/1BsvbWPaaRpAmDi14Nr62WpdQcp1UmDq2/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-009.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1LP25XwCxPUo8xVl2qjWhuutkCAYXNgr0/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-010",
+          "imageName": "Colado 2026-11-02 às 18.13.15.png",
+          "imageUrl": "https://drive.google.com/file/d/1QEHanrd3h0l9ZrCvL2CEwyymvRNID3V4/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-010.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1f048cplHlzdHsMkOUmYOqQBk18rKUBru/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-011",
+          "imageName": "Colado 2026-11-02 às 18.13.23.png",
+          "imageUrl": "https://drive.google.com/file/d/19PL9vyJFDiGDiV7YxWJIfckYS1OL4Rae/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-011.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1_XAuF0JN6Kov3vRJA99puF2l31QvKPrn/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT09-012",
+          "imageName": "Colado 2026-11-02 às 18.13.33.png",
+          "imageUrl": "https://drive.google.com/file/d/1uRL-B9_7LVtuoZ6UawMcD43yTHEzzF_A/view?usp=drivesdk",
+          "pdfName": "III-2006-GT09-012.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        }
+      ],
+      "existingIndividualPdfCount": 8,
+      "remainingIndividualPdfs": 4,
+      "expectedMissingFilenames": [
+        "III-2006-GT09-002.pdf",
+        "III-2006-GT09-004.pdf",
+        "III-2006-GT09-008.pdf",
+        "III-2006-GT09-012.pdf"
+      ],
+      "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
     },
     {
       "gt": "GT10",
@@ -1157,7 +1351,143 @@
           "mimeType": "image/png",
           "status": "AGUARDANDO_CONFERENCIA_DOCUMENTAL"
         }
-      ]
+      ],
+      "expectedWorks": 14,
+      "expectedIndividualPdfs": 14,
+      "works": [
+        {
+          "id": "III-2006-GT10-001",
+          "imageName": "Colado 2026-11-02 às 18.08.32.png",
+          "imageUrl": "https://drive.google.com/file/d/1Bx1hsEAUxMjs8fGxlFe-9c6oYh-P_wOM/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-001.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1jcvt_zdQoe2oSdfv9-xieOJ_BwWuFvAb/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-002",
+          "imageName": "Colado 2026-11-02 às 18.08.41.png",
+          "imageUrl": "https://drive.google.com/file/d/1zjfRd53y7pr5vvYQy9P45AUyrPiBnaBZ/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-002.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1qP312hekWTY3r7hBq68s-J4BvdN1mx6V/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-003",
+          "imageName": "Colado 2026-11-02 às 18.08.49.png",
+          "imageUrl": "https://drive.google.com/file/d/1WIfVtuxb_IRRoWmnKXnzDLM0juWfcodq/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-003.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1C4_q1o7LnXAUdvCO0LyZZLNzMDzz0vOi/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-004",
+          "imageName": "Colado 2026-11-02 às 18.08.59.png",
+          "imageUrl": "https://drive.google.com/file/d/18P-L_X2R8iHZBThZWw1menvz8ZcJUESZ/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-004.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1yCadeBdyL-E2GtDQYdQacr6A09mJ0Z6Y/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-005",
+          "imageName": "Colado 2026-11-02 às 18.09.08.png",
+          "imageUrl": "https://drive.google.com/file/d/1Fr3GonGQoAddAXgHTxLXHCM3GFOkJmGK/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-005.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1h2A19pEPUzefiYWGYHvSOeqo_z8HKpcy/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-006",
+          "imageName": "Colado 2026-11-02 às 18.09.19.png",
+          "imageUrl": "https://drive.google.com/file/d/1bq28mdKzrP-sskuJdSpJabUIHLypFpfE/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-006.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1hS6XCtlEwoGrQpy-x64n-GV361IktHh9/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-007",
+          "imageName": "Colado 2026-11-02 às 18.09.28.png",
+          "imageUrl": "https://drive.google.com/file/d/19qdylVWlAkk9jKH12to51p6vFx9B3Ujt/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-007.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1KZJcyxyvTCccbi43eLgcLcDtzDiyLkzL/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-008",
+          "imageName": "Colado 2026-11-02 às 18.09.40.png",
+          "imageUrl": "https://drive.google.com/file/d/1XoFx2q2wu3corO6fsakSCJElxT0GTVDc/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-008.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1sRPjneNoCcZC6FOo10Vk6twcS2Y0Nggo/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-009",
+          "imageName": "Colado 2026-11-02 às 18.09.51.png",
+          "imageUrl": "https://drive.google.com/file/d/1IPCGT-JxOXVwvvUaU8hDp5n4UnSpOE45/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-009.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/10nidclzQiPZ-kLTHswggci_XAwAdCpCl/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-010",
+          "imageName": "Colado 2026-11-02 às 18.10.00.png",
+          "imageUrl": "https://drive.google.com/file/d/1zgwMx0WmFwP4sL1EPoep_nEEnBj9fcul/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-010.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1QTpRR1MDOjZolD-WJg4HffBWY0cUQzV2/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-011",
+          "imageName": "Colado 2026-11-02 às 18.10.09.png",
+          "imageUrl": "https://drive.google.com/file/d/1zR_ohXHsJEvGJK1c9HtCFj0HInuMGYJ1/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-011.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/11zSZCXWZBZU8iZwsziQVOTLcS0B6aOqF/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-012",
+          "imageName": "Colado 2026-11-02 às 18.10.18.png",
+          "imageUrl": "https://drive.google.com/file/d/1W0DoGYEHcrYyJXiGSYsQOLZVuNUOSNKp/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-012.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-013",
+          "imageName": "Colado 2026-11-02 às 18.10.29.png",
+          "imageUrl": "https://drive.google.com/file/d/1KBRMgH07tJf0hon57GeIpzr__Vc80ZQf/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-013.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1xbJcOIjw7B-yFNOfBBYPQNS5aFuXe1T7/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT10-014",
+          "imageName": "Colado 2026-11-02 às 18.10.39.png",
+          "imageUrl": "https://drive.google.com/file/d/1TIuSaa6tSkQeSThMNUgQpA0KmcmnbPRN/view?usp=drivesdk",
+          "pdfName": "III-2006-GT10-014.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1ik4JQaVbmu0OdtoQjVoa8nHjFQYZYH4w/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        }
+      ],
+      "existingIndividualPdfCount": 13,
+      "remainingIndividualPdfs": 1,
+      "expectedMissingFilenames": [
+        "III-2006-GT10-012.pdf"
+      ],
+      "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
     },
     {
       "gt": "GT11",
@@ -1226,7 +1556,91 @@
           "mimeType": "image/png",
           "status": "AGUARDANDO_CONFERENCIA_DOCUMENTAL"
         }
-      ]
+      ],
+      "expectedWorks": 8,
+      "expectedIndividualPdfs": 8,
+      "works": [
+        {
+          "id": "III-2006-GT11-001",
+          "imageName": "Colado 2026-11-02 às 17.33.45.png",
+          "imageUrl": "https://drive.google.com/file/d/1rGGGs4qRv3f-MOhgBG6LUL8PdWBcauZx/view?usp=drivesdk",
+          "pdfName": "III-2006-GT11-001.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1EU5LxapSB5BQEQgLRRIl-dop9vvQ8DXF/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT11-002",
+          "imageName": "Colado 2026-11-02 às 17.34.02.png",
+          "imageUrl": "https://drive.google.com/file/d/1N7X1PlLOc6Pji6qhu_3g93xTYkwFV_m5/view?usp=drivesdk",
+          "pdfName": "III-2006-GT11-002.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT11-003",
+          "imageName": "Colado 2026-11-02 às 17.34.14.png",
+          "imageUrl": "https://drive.google.com/file/d/1nCuJbWHm_XGJoehx3YSEpPVr9bEQgI8f/view?usp=drivesdk",
+          "pdfName": "III-2006-GT11-003.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1zV4hJAri9wHmRl00csBvipRqkFK0aBVr/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT11-004",
+          "imageName": "Colado 2026-11-02 às 17.34.28.png",
+          "imageUrl": "https://drive.google.com/file/d/1lV85NvyyoIkloGxEMrxuk8vAMknSvlng/view?usp=drivesdk",
+          "pdfName": "III-2006-GT11-004.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT11-005",
+          "imageName": "Colado 2026-11-02 às 17.34.36.png",
+          "imageUrl": "https://drive.google.com/file/d/1IkL9eywDkS84eQoeENJOlAPTKS9edPDv/view?usp=drivesdk",
+          "pdfName": "III-2006-GT11-005.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1wrAKDo9IYnxYjMBsWELBvWwHgeAIKw6N/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT11-006",
+          "imageName": "Colado 2026-11-02 às 17.34.49.png",
+          "imageUrl": "https://drive.google.com/file/d/183OkN99Vl1dMcHsCq4nN53F7gRui9iGy/view?usp=drivesdk",
+          "pdfName": "III-2006-GT11-006.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1epcBsh-Ee15zf6BJ_fW6Ao-Cpu0DUZwc/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT11-007",
+          "imageName": "Colado 2026-11-02 às 17.34.59.png",
+          "imageUrl": "https://drive.google.com/file/d/1xhJ0H8t0SBjTIVmLEGKThG-vaix5xkca/view?usp=drivesdk",
+          "pdfName": "III-2006-GT11-007.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1oeMshN5Qx59YJnBtkJHS57gVmHdsYO53/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT11-008",
+          "imageName": "Colado 2026-11-02 às 17.35.08.png",
+          "imageUrl": "https://drive.google.com/file/d/1ew5ilQOhUOEY1KJbBiw_ZlEjkH8Zb9bb/view?usp=drivesdk",
+          "pdfName": "III-2006-GT11-008.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        }
+      ],
+      "existingIndividualPdfCount": 5,
+      "remainingIndividualPdfs": 3,
+      "expectedMissingFilenames": [
+        "III-2006-GT11-002.pdf",
+        "III-2006-GT11-004.pdf",
+        "III-2006-GT11-008.pdf"
+      ],
+      "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
     },
     {
       "gt": "GT12",
@@ -1309,8 +1723,121 @@
           "mimeType": "image/png",
           "status": "AGUARDANDO_CONFERENCIA_DOCUMENTAL"
         }
-      ]
+      ],
+      "expectedWorks": 11,
+      "expectedIndividualPdfs": 11,
+      "works": [
+        {
+          "id": "III-2006-GT12-001",
+          "imageName": "Colado 2026-11-02 às 17.35.39.png",
+          "imageUrl": "https://drive.google.com/file/d/1oSqAF9Hb8NiXBJLsMeoEzR5upDL70Vwn/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-001.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1KW-OerqUkMkLrJWNXMqZ-7gAmrlVNgvg/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-002",
+          "imageName": "Colado 2026-11-02 às 17.35.50.png",
+          "imageUrl": "https://drive.google.com/file/d/1TleaBdR9NnUAIaCVJYP9TOwbvNCeE5Ft/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-002.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-003",
+          "imageName": "Colado 2026-11-02 às 17.36.00.png",
+          "imageUrl": "https://drive.google.com/file/d/1DVfdN4cl54sLh1T2fOoQu85WLS9UrKiJ/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-003.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-004",
+          "imageName": "Colado 2026-11-02 às 17.36.08.png",
+          "imageUrl": "https://drive.google.com/file/d/1JlyBHDQ9yaYCFMDkFoIS9QhkCyYEiF1U/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-004.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1exI5LQVW2w487grQ-IbcGdfLsA2J2yoa/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-005",
+          "imageName": "Colado 2026-11-02 às 17.36.17.png",
+          "imageUrl": "https://drive.google.com/file/d/1cusOsvSFvfDgWO_F2QBJKAKMO4Mp5eWJ/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-005.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1h8EID9g8bd4cgth02-OfdW6CbMZkBl_u/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-006",
+          "imageName": "Colado 2026-11-02 às 17.36.26.png",
+          "imageUrl": "https://drive.google.com/file/d/1HX5rv8y6LRsuP7KvSF0L3yvgi2lTP6tD/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-006.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-007",
+          "imageName": "Colado 2026-11-02 às 17.36.36.png",
+          "imageUrl": "https://drive.google.com/file/d/1KOIWwM6m-MiS8Q96rQJd_yof2l1GZFlK/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-007.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-008",
+          "imageName": "Colado 2026-11-02 às 17.36.46.png",
+          "imageUrl": "https://drive.google.com/file/d/1rY0kT342AyUlKrAi3jJEJiVJAuUc-1Zq/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-008.pdf",
+          "pdfUrl": null,
+          "pdfStatus": "PENDENTE_DE_ENVIO",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-009",
+          "imageName": "Colado 2026-11-02 às 17.36.57.png",
+          "imageUrl": "https://drive.google.com/file/d/1TVl9BT2OgU6-RoDbsqbiirmyornbDHPU/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-009.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1aEooD4nIcEd4a2cy8IXkB8juqNsqbpY4/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-010",
+          "imageName": "Colado 2026-11-02 às 17.37.07.png",
+          "imageUrl": "https://drive.google.com/file/d/1hEmIUqn2DUpxHh3ax38FIRRdTZrNT6kr/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-010.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1t4T94CGgG40ztpnONS278t1SOGOEvfsL/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT12-011",
+          "imageName": "Colado 2026-11-02 às 17.37.24.png",
+          "imageUrl": "https://drive.google.com/file/d/1ejE7C0dHiRE31Zumy8TPgfpAUPEA5mG5/view?usp=drivesdk",
+          "pdfName": "III-2006-GT12-011.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1S-8REFIyERSiSXzPb2E00pFlgVetPOPD/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        }
+      ],
+      "existingIndividualPdfCount": 6,
+      "remainingIndividualPdfs": 5,
+      "expectedMissingFilenames": [
+        "III-2006-GT12-002.pdf",
+        "III-2006-GT12-003.pdf",
+        "III-2006-GT12-006.pdf",
+        "III-2006-GT12-007.pdf",
+        "III-2006-GT12-008.pdf"
+      ],
+      "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
     }
   ],
-  "note": "GT07: 42 fontes/imagens, 41 PDFs encontrados no Drive, falta PDF 032 após bloqueio de upload. Metadados ainda exigem cotejo integral."
+  "note": "GT07–GT12: PDFs individuais gerados a partir das imagens; itens bloqueados no upload permanecem como pendências. Metadados textuais exigem revisão dos originais."
 }
