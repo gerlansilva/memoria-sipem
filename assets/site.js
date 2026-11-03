@@ -29,7 +29,13 @@ const GT03_2006_LABELS = {
   GT03: 'GT03 — Educação Matemática no Ensino Médio',
   GT04: 'GT04 — Educação Matemática no Ensino Superior',
   GT05: 'GT05 — História da Matemática e Cultura',
-  GT06: 'GT06 — Educação Matemática: Novas Tecnologias e Educação a Distância'
+  GT06: 'GT06 — Educação Matemática: Novas Tecnologias e Educação a Distância',
+  GT07: 'GT07 — Formação de Professores que Ensinam Matemática',
+  GT08: 'GT08 — Avaliação em Educação Matemática',
+  GT09: 'GT09 — Processos Cognitivos e Linguísticos em Educação Matemática',
+  GT10: 'GT10 — Modelagem Matemática',
+  GT11: 'GT11 — Filosofia da Educação Matemática',
+  GT12: 'GT12 — Ensino de Probabilidade e Estatística'
 };
 const GT07_LABELS = {
   GT01: 'GT01 — Matemática na Educação Infantil e nos Anos Iniciais do Ensino Fundamental',
@@ -325,11 +331,11 @@ const editionLabel = edition => `${edition.roman} SIPEM · ${edition.year}`;
 const II_FILES = ['ii-2003-gt01.json', 'ii-2003-gt02-03.json', 'ii-2003-gt04.json', 'ii-2003-gt05.json', 'ii-2003-gt06.json', 'ii-2003-gt07.json', 'ii-2003-gt08.json', 'ii-2003-gt09.json', 'ii-2003-gt10.json', 'ii-2003-gt11.json', 'ii-2003-gt12.json'];
 const VII_FILES = ['records-vii-2018-gt01.json', 'records-vii-2018-gt02.json', 'vii-2018-gt03-a.json', 'vii-2018-gt03-b.json', 'vii-2018-gt04.json', 'vii-2018-gt05.json', 'vii-2018-gt06.json', 'vii-2018-gt07-a.json', 'vii-2018-gt07-b.json', 'vii-2018-gt08.json', 'vii-2018-gt09.json', 'vii-2018-gt10.json', 'vii-2018-gt11.json', 'vii-2018-gt12.json', 'vii-2018-gt13.json', 'vii-2018-gt14.json', 'vii-2018-gt15.json'];
 const IV_FILES = ['iv-2009.json'];
-const III_FILES = ['iii-2006.json'];
+const III_FILES = ['iii-2006.json', 'iii-2006-gt07-gt12-catalogo-provisorio.json'];
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iii-2006-gt06-12-20261102';
+const catalogVersion = 'iii-2006-gt07-gt12-inventario-20261102b';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -486,6 +492,7 @@ function archives() {
     ${edition ? `<img class="archive-logo" src="${escapeHTML(edition.logo)}" alt="Marca do ${edition.roman} SIPEM" width="110" height="64">` : ''}
   </header>
 
+  ${selected === 3 ? `<aside class="review-notice" aria-label="Situação do acervo do III SIPEM"><strong>III SIPEM (2006): GT07 a GT12 disponíveis para consulta documental.</strong> Os 94 registros desses grupos são provisórios: 79 possuem PDFs no Drive e 15 apontam para a imagem original enquanto o envio de seus PDFs permanece pendente. Títulos, autorias, instituições, resumos e palavras-chave ainda estão em conferência para parte do acervo. Consulte o documento original antes de citar os metadados.</aside>` : ''}
   ${selected === 2 ? `<aside class="review-notice" aria-label="Aviso sobre a conferência documental"><strong>II SIPEM (2003): revisão documental em andamento.</strong> Títulos, autorias, instituições, resumos e palavras-chave ainda estão sendo confrontados com os PDFs originais. A ausência de metadados no catálogo não significa ausência no documento. <a href="https://github.com/gerlansilva/memoria-sipem/blob/main/auditoria/protocolo-ii-sipem.md" target="_blank" rel="noopener">Consultar o protocolo de revisão</a>.</aside>` : ''}
   <div class="search-panel">
     <form class="search-form" role="search">
@@ -532,6 +539,7 @@ function archives() {
 
 function article(record) {
   const url = safeURL([2, 7].includes(Number(record.edition)) ? record.drivePdf : (record.drivePdf || record.pdf || record.officialUrl));
+  const provisional = record.publicationStatus === 'PRELIMINAR_EM_REVISAO';
   const edition = editionById(record.edition);
   const keywords = (record.keywords || []).filter(keyword => keyword && !/^não encontrad/i.test(keyword));
   const isIV = Number(record.edition) === 4;
@@ -539,7 +547,7 @@ function article(record) {
   const institutions = record.institutions || [];
   const cardIES = [...new Set([...institutions.map(iesSigla), ...(record.authors || []).map(authorAffiliation)].flatMap(value => value.split(' / ').map(s => s.trim())).filter(Boolean))];
   const hasAbstract = record.abstract && !/^não encontrado$/i.test(record.abstract);
-  const accessLabel = record.accessLabel === 'Imagem original' ? 'Imagem original' : (record.publicationStatus === 'PRELIMINAR_EM_REVISAO' ? 'PDF preliminar' : (/pdf/i.test(record.accessLabel || '') || record.drivePdf || record.pdf ? 'PDF' : 'Abrir'));
+  const accessLabel = record.accessLabel === 'Imagem original' ? 'Imagem original' : (/pdf/i.test(record.accessLabel || '') || record.drivePdf || record.pdf ? 'PDF' : 'Abrir');
 
   return `<article class="record">
     <div class="record-body">
@@ -547,27 +555,26 @@ function article(record) {
         <span class="tag">${escapeHTML(record.gt || 'SIPEM')}</span>${record.publicationStatus === 'PRELIMINAR_EM_REVISAO' ? '<span class="tag">Registro em revisão</span>' : ''}
         <span>${edition ? `${edition.roman} SIPEM · ${record.year}` : record.year}</span>
       </div>
-      <p class="record-theme-inline"><span class="record-theme-label">Temática:</span> ${escapeHTML(thematicClassification(record).primary)}</p>
+      ${!provisional || (record.authors || []).length ? `<p class="record-theme-inline"><span class="record-theme-label">Temática:</span> ${escapeHTML(thematicClassification(record).primary)}</p>` : ''}
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
       <div class="record-attribution">
-        ${(record.authors || []).length ? `<p class="authors">${record.authors.map((author, index) => authorHTML(author, index, record.authors, institutions)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
+        ${(record.authors || []).length ? `<p class="authors">${record.authors.map((author, index) => authorHTML(author, index, record.authors, institutions)).join(' · ')}</p>` : '<p class="authors">Autoria em conferência no documento original.</p>'}
       </div>
     </div>
     <div class="record-actions">
       <details class="record-details">
         <summary><span class="details-open">Ver detalhes</span><span class="details-close">Ocultar detalhes</span></summary>
         <div class="record-expanded">
-          <h4>Temática principal</h4>
-          <p class="record-theme">${escapeHTML(thematicClassification(record).primary)}</p>
+          ${!provisional || (record.authors || []).length ? `<h4>Temática principal</h4><p class="record-theme">${escapeHTML(thematicClassification(record).primary)}</p>` : ''}
           <h4>${record.abstractProvenance === 'Síntese editorial, não transcrição literal' || /síntese/i.test(record.abstractType || '') ? 'Resumo — síntese editorial' : 'Resumo'}</h4>
-          ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo não disponível neste registro.</p>'}
+          ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo em conferência no documento original.</p>'}
           ${institutions.length ? `<div class="record-institutions"><h4>Instituições e vínculos informados</h4><div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>${isIV ? '' : ''}</div>` : ''}
           ${showKeywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${showKeywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : (record.keywordsStatus === 'AUSENTES_NO_ORIGINAL_VERIFICADO' ? '<p class="keywords"><strong>Palavras-chave</strong> · Não constam no documento original (conferência visual).</p>' : ([2, 3].includes(Number(record.edition)) ? '<p class="keywords"><strong>Palavras-chave</strong> · Não cadastradas; verificar no PDF original antes de afirmar que estão ausentes.</p>' : ''))}
 
         </div>
       </details>
       ${url
-        ? `<a class="download" href="${url}" target="_blank" rel="noopener" aria-label="${accessLabel === 'PDF' ? 'Acessar PDF' : 'Abrir documento'} — ${escapeHTML(record.title)}">${downloadIcon}<span>${accessLabel === 'PDF' ? 'Acessar PDF' : 'Abrir documento'}</span></a>`
+        ? `<a class="download" href="${url}" target="_blank" rel="noopener" aria-label="${accessLabel === 'PDF' ? 'Acessar PDF' : accessLabel === 'Imagem original' ? 'Ver imagem original' : 'Abrir documento'} — ${escapeHTML(record.title)}">${downloadIcon}<span>${accessLabel === 'PDF' ? 'Acessar PDF' : 'Abrir documento'}</span></a>`
         : '<span class="unavailable">Documento indisponível</span>'}
     </div>
   </article>`;
