@@ -2647,6 +2647,37 @@
     "sourceImageName": "Colado 2026-11-02 às 17.35.08.png"
   },
   {
+    "id": "III-2006-GT11-009",
+    "edition": 3,
+    "year": 2006,
+    "gt": "GT11",
+    "section": "GT11 — Filosofia da Educação Matemática",
+    "type": "Resumo",
+    "title": "REFLEXÃO FILOSÓFICA ACERCA DOS SIGNIFICADOS MATEMÁTICOS NOS CONTEXTOS DA ESCOLA E DA RUA",
+    "authors": [
+      "Denise Vilela"
+    ],
+    "institutions": [
+      "Universidade Estadual de Campinas"
+    ],
+    "abstract": "Este texto constitui um estudo filosófico acerca de um tema da Educação Matemática, a saber, a relação entre a matemática escolar e a matemática da vida cotidiana ou da rua. A questão de levar para a escola a matemática da rua em busca de significados é aqui pensada como a busca de uma referência — objeto ou fato no mundo empírico — que garantiria o significado de conceitos matemáticos no âmbito da escola. A busca de referências para garantir a significação de um conceito é associada a concepções filosóficas, identificáveis na história da filosofia. Em oposição, e como alternativa, a uma essência que garantiria um significado único, apresento a concepção wittgensteiniana de Jogos de Linguagem para a compreensão da significação, independentemente de concepções referenciais da linguagem. Nesta concepção, os significados existem dentro dos jogos de linguagem, relacionados, por sua vez, a formas de vida, e não convergem para uma essência quando os jogos são diferentes, isto é, não são os mesmos na matemática escolar e na da rua.",
+    "keywords": [
+      "significados",
+      "jogos de linguagem",
+      "matemática escolar",
+      "matemática da rua"
+    ],
+    "drivePdf": "https://drive.google.com/file/d/1EybH6H3HJGhSTO9tFs9tgRhYXbHfz9_z/view?usp=drivesdk",
+    "sourceImages": [],
+    "sourcePdf": "https://drive.google.com/file/d/1f6U_3MatkhemhdJb_S-fI_EHuvRLK9Wz/view?usp=drivesdk",
+    "accessLabel": "PDF",
+    "publicationStatus": "VALIDADO_NO_PDF_ORIGINAL",
+    "metadataStatus": "TRANSCRICAO_CONFERIDA_NO_PDF_ORIGINAL",
+    "pdfStatus": "NO_DRIVE",
+    "sourcePage": 167,
+    "notes": "Documento descoberto em PDF de página compartilhada, recorte individualizado sem sobreposição com o resumo anterior."
+  },
+  {
     "id": "III-2006-GT12-001",
     "edition": 3,
     "year": 2006,
