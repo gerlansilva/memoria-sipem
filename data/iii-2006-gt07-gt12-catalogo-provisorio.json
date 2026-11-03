@@ -2342,15 +2342,15 @@
       "Modelagem Matemática",
       "Formação inicial e experiências"
     ],
-    "drivePdf": null,
-    "officialUrl": "https://drive.google.com/file/d/1W0DoGYEHcrYyJXiGSYsQOLZVuNUOSNKp/view?usp=drivesdk",
+    "drivePdf": "https://drive.google.com/file/d/107nVFhnifADiWnhNk8iYVvWpM-qGZcJ8/view?usp=drivesdk",
+    "officialUrl": null,
     "sourceImages": [
       "https://drive.google.com/file/d/1W0DoGYEHcrYyJXiGSYsQOLZVuNUOSNKp/view?usp=drivesdk"
     ],
-    "accessLabel": "Imagem original",
+    "accessLabel": "PDF",
     "publicationStatus": "PRELIMINAR_EM_REVISAO",
     "metadataStatus": "TRANSCRICAO_OCR_PENDENTE_COTEJO_VISUAL",
-    "pdfStatus": "PENDENTE_DE_ENVIO",
+    "pdfStatus": "NO_DRIVE",
     "keywordStatus": "LOCALIZADAS_NA_IMAGEM_TRANSCRICAO_OCR",
     "sourceImageName": "Colado 2026-11-02 às 18.10.18.png"
   },
