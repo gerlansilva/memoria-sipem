@@ -335,7 +335,7 @@ const III_FILES = ['iii-2006.json', 'iii-2006-gt07-gt12-catalogo-provisorio.json
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iii-2006-94-registros-20261103-auditoria';
+const catalogVersion = 'panorama-tematicas-20261103';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -565,7 +565,6 @@ function article(record) {
       <details class="record-details">
         <summary><span class="details-open">Ver detalhes</span><span class="details-close">Ocultar detalhes</span></summary>
         <div class="record-expanded">
-          ${!provisional || (record.authors || []).length ? `<h4>Temática principal</h4><p class="record-theme">${escapeHTML(thematicClassification(record).primary)}</p>` : ''}
           <h4>${record.abstractProvenance === 'Síntese editorial, não transcrição literal' || /síntese/i.test(record.abstractType || '') ? 'Resumo — síntese editorial' : 'Resumo'}</h4>
           ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo em conferência no documento original.</p>'}
           ${institutions.length ? `<div class="record-institutions"><h4>Instituições e vínculos informados</h4><div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>${isIV ? '' : ''}</div>` : ''}
@@ -677,14 +676,20 @@ function panorama() {
       <h2 id="panorama-gt-heading">Distribuição por Grupo de Trabalho</h2>
       <div id="panorama-gt-results" class="panorama-gt-panels" aria-live="polite"></div>
     </section>
+    <section class="panorama-section" aria-labelledby="panorama-themes-heading">
+      <div class="panorama-ies-heading-row">
+        <div><h2 id="panorama-themes-heading">Distribuição das temáticas</h2><p class="panorama-theme-description">Uma temática principal por trabalho, identificada a partir do título, das palavras-chave e do resumo. Classificação exploratória sujeita a revisão.</p></div>
+        <label class="panorama-filter panorama-filter-compact"><span class="sr-only">Filtrar gráfico de temáticas por edição</span><select id="panorama-themes-filter" aria-label="Filtrar gráfico de temáticas por edição">${selector}</select></label>
+      </div>
+      <div id="panorama-themes-chart" class="panorama-themes-chart" aria-live="polite"></div>
+    </section>
     <section class="panorama-section" aria-labelledby="panorama-ies-heading">
       <div class="panorama-ies-heading-row"><h2 id="panorama-ies-heading">Instituições de Ensino Superior (IES)</h2><div class="panorama-heading-actions"><label class="panorama-filter panorama-filter-compact"><span class="sr-only">Filtrar IES por edição</span><select id="panorama-ies-filter" aria-label="Filtrar instituições por edição">${selector}</select></label><button type="button" id="panorama-export-ies" class="panorama-export-small" title="Exportar auditoria institucional em CSV" aria-label="Exportar auditoria institucional em CSV">CSV</button></div></div>
       <div id="panorama-ies-results" aria-live="polite"></div>
     </section>
     <section class="panorama-explore" aria-labelledby="panorama-explore-heading">
-      <div class="panorama-explore-head"><div><p class="eyebrow">Explorar os dados</p><h2 id="panorama-explore-heading">Produção, pesquisadores e temáticas</h2></div><label class="panorama-filter panorama-filter-compact"><span class="sr-only">Filtrar cartões por edição</span><select id="panorama-explore-filter" aria-label="Filtrar análises por edição">${selector}</select></label></div>
+      <div class="panorama-explore-head"><div><p class="eyebrow">Explorar os dados</p><h2 id="panorama-explore-heading">Pesquisadores e palavras-chave</h2></div><label class="panorama-filter panorama-filter-compact"><span class="sr-only">Filtrar cartões por edição</span><select id="panorama-explore-filter" aria-label="Filtrar análises por edição">${selector}</select></label></div>
       <div class="panorama-dashboard-grid">
-        <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Temáticas dos trabalhos</h3><span>Classificação exploratória</span></div><p>Cada trabalho recebe uma temática principal a partir de título, palavras-chave e resumo. Classificação automática, ainda sujeita à revisão documental.</p><div id="panorama-topics-results" aria-live="polite"></div></article>
         <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Produção por pesquisador</h3><span>Participações em trabalhos</span></div><p>Cada autor conta uma vez por registro. Variações de nomes ainda podem dividir uma mesma autoria.</p><div id="panorama-authors-results" aria-live="polite"></div></article>
         <article class="panorama-dashboard-card"><div class="panorama-dashboard-card-head"><h3>Palavras-chave mais frequentes</h3><span>Frequência documental</span></div><p>Uma palavra-chave conta uma vez por trabalho. Acentuação, maiúsculas e espaços são normalizados; sinônimos não são reunidos.</p><div id="panorama-keywords-results" aria-live="polite"></div></article>
       </div>
@@ -729,6 +734,33 @@ function panorama() {
   }).join('');
   $('#panorama-gt-results').innerHTML = panels;
 
+  const themeFilter = $('#panorama-themes-filter');
+  const renderThemeChart = () => {
+    const editionId = themeFilter.value;
+    const rows = editionId === 'all' ? data.records : recordsFor(Number(editionId));
+    const counts = new Map();
+    rows.forEach(record => {
+      const theme = thematicClassification(record).primary;
+      counts.set(theme, (counts.get(theme) || 0) + 1);
+    });
+    const ordered = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'pt-BR'));
+    const peak = Math.max(1, ...ordered.map(([, count]) => count));
+    const chart = $('#panorama-themes-chart');
+    chart.innerHTML = '<p class="panorama-theme-total">' + rows.length.toLocaleString('pt-BR') + ' trabalhos classificados · ' + ordered.length + ' temáticas</p>' +
+      (ordered.length ? '<div class="panorama-theme-bars" role="img" aria-label="Gráfico de barras com a distribuição dos trabalhos por temática">' +
+        ordered.map(([theme, count]) => {
+          const pct = rows.length ? (count / rows.length * 100) : 0;
+          const width = (count / peak * 100).toFixed(1);
+          return '<div class="panorama-theme-bar-row">' +
+            '<span class="panorama-theme-name">' + escapeHTML(theme) + '</span>' +
+            '<div class="panorama-theme-track"><div class="panorama-theme-fill" style="width:' + width + '%"></div></div>' +
+            '<span class="panorama-theme-value">' + count.toLocaleString('pt-BR') + ' <small>(' + pct.toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + '%)</small></span>' +
+          '</div>';
+        }).join('') + '</div>' : '<p class="panorama-count">Nenhum trabalho indexado nessa edição.</p>');
+  };
+  themeFilter.addEventListener('change', renderThemeChart);
+  renderThemeChart();
+
   const exploratoryFilter = $('#panorama-explore-filter');
   const normalizeTerm = value => normalize(String(value || '').replace(/\s+/g,' ').trim()).replace(/[‐‑–—]/g,'-');
   const rankList = (items, cap=12) => {
@@ -743,8 +775,8 @@ function panorama() {
   const renderExploratory = () => {
     const selected=exploratoryFilter.value;
     const rows=selected==='all'?data.records:recordsFor(Number(selected));
-    const topics=new Map(),authors=new Map(),keywords=new Map();
-    let coveredAuthors=0,coveredKeywords=0,coveredThemes=0;
+    const authors=new Map(),keywords=new Map();
+    let coveredAuthors=0,coveredKeywords=0;
     rows.forEach(record=>{
       const cleanAuthors=new Set((Array.isArray(record.authors)?record.authors:[]).map(author=>String(author).replace(/\s*\([^)]*\)\s*$/,'').trim()).filter(author=>author && !/@/.test(author) && author.split(/\s+/).length>=2));
       if(cleanAuthors.size)coveredAuthors++;
@@ -754,12 +786,8 @@ function panorama() {
       original.forEach(term=>{const key=normalizeTerm(term).replace(/[.;,]+$/,'');if(key.length>2 && key.length<95 && !/resumos semin[aá]rio|semin[aá]rio internacional de pesquisa|^palavras.chave$/.test(key))termMap.set(key,termMap.get(key)||term.replace(/[.;,]+$/,''));});
       if(termMap.size)coveredKeywords++;
       termMap.forEach((label,key)=>{const old=keywords.get(key);keywords.set(key,{label:old?.label||label,n:(old?.n||0)+1});});
-      const classification=thematicClassification(record);
-      coveredThemes++;
-      topics.set(classification.primary,(topics.get(classification.primary)||0)+1);
     });
     const sorted=map=>[...map.values()].sort((a,b)=>b.n-a.n||a.label.localeCompare(b.label,'pt-BR')).map(x=>[x.label,x.n]);
-    displayRanking($('#panorama-topics-results'),[...topics].sort((a,b)=>b[1]-a[1]),coveredThemes,rows.length);
     displayRanking($('#panorama-authors-results'),sorted(authors),coveredAuthors,rows.length);
     displayRanking($('#panorama-keywords-results'),sorted(keywords),coveredKeywords,rows.length);
   };
