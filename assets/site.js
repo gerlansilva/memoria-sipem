@@ -23,6 +23,13 @@ let page = 1;
 
 const editionById = id => data.editions.find(edition => edition.id === Number(id));
 const recordsFor = id => data.records.filter(record => !id || Number(record.edition) === Number(id));
+const GT03_2006_LABELS = {
+  GT01: 'GT01 — Educação Matemática nas Séries Iniciais',
+  GT02: 'GT02 — Educação Matemática nas Séries Finais do Ensino Fundamental e no Ensino Médio',
+  GT03: 'GT03 — Educação Matemática no Ensino Médio',
+  GT04: 'GT04 — Educação Matemática no Ensino Superior',
+  GT05: 'GT05 — História da Matemática e Cultura'
+};
 const GT07_LABELS = {
   GT01: 'GT01 — Matemática na Educação Infantil e nos Anos Iniciais do Ensino Fundamental',
   GT02: 'GT02 — Educação Matemática nos Anos Finais do Ensino Fundamental e Ensino Médio',
@@ -309,7 +316,7 @@ const authorHTML = (author, index, authors, institutions) => {
   const sigla = explicit || matched;
   return escapeHTML(authorName(author)) + (sigla ? ' (' + escapeHTML(sigla) + ')' : '');
 };
-const groupLabel = record => Number(record.edition) === 7 ? (GT07_LABELS[record.gt] || record.gt) : (record.section || record.gt || '');
+const groupLabel = record => Number(record.edition) === 3 ? (GT03_2006_LABELS[record.gt] || record.gt) : Number(record.edition) === 7 ? (GT07_LABELS[record.gt] || record.gt) : (record.section || record.gt || '');
 const route = (target, id) => '#' + ({ history: 'historia', archives: 'anais' }[target] || 'inicio') + (id ? '?edicao=' + id : '');
 const themeOf = edition => edition.theme && !edition.theme.startsWith('Tema geral não') ? edition.theme : '';
 const editionLabel = edition => `${edition.roman} SIPEM · ${edition.year}`;
@@ -321,7 +328,7 @@ const III_FILES = ['iii-2006.json'];
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iii-theme-separated-20261102';
+const catalogVersion = 'iii-gt-historical-names-20261102';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
