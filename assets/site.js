@@ -335,7 +335,7 @@ const III_FILES = ['iii-2006.json', 'iii-2006-gt07-gt12-catalogo-provisorio.json
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iii-2006-93-registros-20261103-revisao2';
+const catalogVersion = 'iii-2006-94-registros-20261103-auditoria';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -492,7 +492,7 @@ function archives() {
     ${edition ? `<img class="archive-logo" src="${escapeHTML(edition.logo)}" alt="Marca do ${edition.roman} SIPEM" width="110" height="64">` : ''}
   </header>
 
-  ${selected === 3 ? `<aside class="review-notice" aria-label="Situação do acervo do III SIPEM"><strong>III SIPEM (2006): GT07 a GT12 disponíveis para consulta documental.</strong> Os 94 registros desses grupos são provisórios: 79 possuem PDFs no Drive e 15 apontam para a imagem original enquanto o envio de seus PDFs permanece pendente. Títulos, autorias, instituições, resumos e palavras-chave ainda estão em conferência para parte do acervo. Consulte o documento original antes de citar os metadados.</aside>` : ''}
+  ${selected === 3 ? `<aside class="review-notice" aria-label="Situação do acervo do III SIPEM"><strong>III SIPEM (2006): GT07 a GT12 disponíveis para consulta documental.</strong> Os 94 registros desses grupos incluem 80 PDFs individuais no Drive e 14 registros que apontam para a imagem original enquanto seus PDFs individuais aguardam envio. Um resumo adicional do GT11 foi recuperado de página compartilhada. Títulos, autorias, instituições, resumos e palavras-chave ainda estão em conferência para parte do acervo. Consulte o documento original antes de citar os metadados.</aside>` : ''}
   ${selected === 2 ? `<aside class="review-notice" aria-label="Aviso sobre a conferência documental"><strong>II SIPEM (2003): revisão documental em andamento.</strong> Títulos, autorias, instituições, resumos e palavras-chave ainda estão sendo confrontados com os PDFs originais. A ausência de metadados no catálogo não significa ausência no documento. <a href="https://github.com/gerlansilva/memoria-sipem/blob/main/auditoria/protocolo-ii-sipem.md" target="_blank" rel="noopener">Consultar o protocolo de revisão</a>.</aside>` : ''}
   <div class="search-panel">
     <form class="search-form" role="search">
@@ -569,7 +569,7 @@ function article(record) {
           <h4>${record.abstractProvenance === 'Síntese editorial, não transcrição literal' || /síntese/i.test(record.abstractType || '') ? 'Resumo — síntese editorial' : 'Resumo'}</h4>
           ${hasAbstract ? `<p class="abstract">${escapeHTML(record.abstract)}</p>` : '<p class="abstract">Resumo em conferência no documento original.</p>'}
           ${institutions.length ? `<div class="record-institutions"><h4>Instituições e vínculos informados</h4><div class="chips">${institutions.map(name => `<span class="chip inst">${iesTag(name)}</span>`).join('')}</div>${isIV ? '' : ''}</div>` : ''}
-          ${showKeywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${showKeywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : (record.keywordsStatus === 'AUSENTES_NO_ORIGINAL_VERIFICADO' ? '<p class="keywords"><strong>Palavras-chave</strong> · Não constam no documento original (conferência visual).</p>' : ([2, 3].includes(Number(record.edition)) ? '<p class="keywords"><strong>Palavras-chave</strong> · Não cadastradas; verificar no PDF original antes de afirmar que estão ausentes.</p>' : ''))}
+          ${showKeywords.length ? `<div class="chips keyword-chips"><span class="chips-label">Palavras-chave</span>${showKeywords.map(keyword => `<span class="chip kw">${escapeHTML(keyword)}</span>`).join('')}</div>` : ((record.keywordsStatus === 'AUSENTES_NO_ORIGINAL_VERIFICADO' || record.keywordStatus === 'AUSENTES_NO_ORIGINAL_VERIFICADO') ? '<p class="keywords"><strong>Palavras-chave</strong> · Não constam no documento original (conferência visual).</p>' : ([2, 3].includes(Number(record.edition)) ? '<p class="keywords"><strong>Palavras-chave</strong> · Não cadastradas; verificar no PDF original antes de afirmar que estão ausentes.</p>' : ''))}
 
         </div>
       </details>
