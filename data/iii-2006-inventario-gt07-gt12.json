@@ -1557,8 +1557,8 @@
           "status": "AGUARDANDO_CONFERENCIA_DOCUMENTAL"
         }
       ],
-      "expectedWorks": 7,
-      "expectedIndividualPdfs": 7,
+      "expectedWorks": 8,
+      "expectedIndividualPdfs": 8,
       "works": [
         {
           "id": "III-2006-GT11-001",
@@ -1622,15 +1622,26 @@
           "pdfUrl": null,
           "pdfStatus": "PENDENTE_DE_ENVIO",
           "metadataStatus": "CONFERENCIA_INTEGRAL_PENDENTE"
+        },
+        {
+          "id": "III-2006-GT11-009",
+          "imageName": null,
+          "imageUrl": null,
+          "pdfName": "III-2006-GT11-009.pdf",
+          "pdfUrl": "https://drive.google.com/file/d/1EybH6H3HJGhSTO9tFs9tgRhYXbHfz9_z/view?usp=drivesdk",
+          "sourcePdfUrl": "https://drive.google.com/file/d/1f6U_3MatkhemhdJb_S-fI_EHuvRLK9Wz/view?usp=drivesdk",
+          "pdfStatus": "NO_DRIVE",
+          "metadataStatus": "TRANSCRICAO_CONFERIDA_NO_PDF_ORIGINAL",
+          "sourcePage": 167
         }
       ],
-      "existingIndividualPdfCount": 5,
+      "existingIndividualPdfCount": 6,
       "remainingIndividualPdfs": 2,
       "expectedMissingFilenames": [
         "III-2006-GT11-002.pdf",
         "III-2006-GT11-008.pdf"
       ],
-      "note": "8 imagens recebidas, das quais 2 são cópias idênticas do mesmo resumo (003/004); há 7 trabalhos distintos. Documento duplicado preservado no inventário, não listado no site.",
+      "note": "8 imagens (uma duplicada: 003/004) e um segundo trabalho na página 167 do PDF não padronizado; resultam 8 trabalhos distintos. O trabalho extra, de Denise Vilela, tem PDF individual GT11-009; imagem original duplicada preservada.",
       "duplicateImages": [
         {
           "id": "III-2006-GT11-004",
@@ -1837,5 +1848,5 @@
       "note": "Correspondência provisória pela ordem cronológica das imagens. Conferência de metadados necessária antes da inclusão no catálogo público."
     }
   ],
-  "note": "GT07–GT12: 94 imagens digitalizadas, 93 trabalhos distintos após deduplicação documental do GT11. Metadados transcritos por OCR ainda sujeitos a cotejo visual."
+  "note": "GT07–GT12: 94 imagens, uma duplicada, e um trabalho adicional localizado em página compartilhada com o resumo anterior. Total correto: 94 trabalhos distintos, 80 PDFs individuais no Drive e 14 pendentes de envio."
 }
