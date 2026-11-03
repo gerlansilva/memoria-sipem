@@ -321,7 +321,7 @@ const III_FILES = ['iii-2006.json'];
 const extraFiles = [...VII_FILES, ...II_FILES, ...IV_FILES, ...III_FILES];
 
 // A versão do catálogo acompanha a atualização dos índices; o parâmetro evita cache antigo no GitHub Pages.
-const catalogVersion = 'iii-theme-on-cards-20261102';
+const catalogVersion = 'iii-theme-separated-20261102';
 const loadJSON = async file => {
   const response = await fetch('data/' + file + '?v=' + catalogVersion, { cache: 'no-store' });
   if (!response.ok) throw Error('Não foi possível carregar ' + file + ' (' + response.status + ')');
@@ -536,9 +536,10 @@ function article(record) {
   return `<article class="record">
     <div class="record-body">
       <div class="record-meta">
-        <span class="tag">${escapeHTML(record.gt || 'SIPEM')}</span><span class="record-theme-tag">${escapeHTML(thematicClassification(record).primary)}</span>${record.publicationStatus === 'PRELIMINAR_EM_REVISAO' ? '<span class="tag">Registro em revisão</span>' : ''}
+        <span class="tag">${escapeHTML(record.gt || 'SIPEM')}</span>${record.publicationStatus === 'PRELIMINAR_EM_REVISAO' ? '<span class="tag">Registro em revisão</span>' : ''}
         <span>${edition ? `${edition.roman} SIPEM · ${record.year}` : record.year}</span>
       </div>
+      <p class="record-theme-inline"><span class="record-theme-label">Temática:</span> ${escapeHTML(thematicClassification(record).primary)}</p>
       <h3>${url ? `<a href="${url}" target="_blank" rel="noopener">${escapeHTML(record.title)}</a>` : escapeHTML(record.title)}</h3>
       <div class="record-attribution">
         ${(record.authors || []).length ? `<p class="authors">${record.authors.map((author, index) => authorHTML(author, index, record.authors, institutions)).join(' · ')}</p>` : '<p class="authors">Autoria não informada no registro.</p>'}
