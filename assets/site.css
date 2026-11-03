@@ -1720,3 +1720,26 @@ h1, h2, h3, p { text-wrap: pretty; }
 .record-ies-inline{font-size:.76rem;line-height:1.55;color:var(--muted,#65717b);margin:.25rem 0 .45rem;overflow-wrap:anywhere}
 .record-ies-label{font-weight:650;color:var(--ink,#293b4c)}
 .record-ies-inline abbr{text-decoration:none;cursor:help}
+
+/* Card de trabalho — hierarquia cromática discreta */
+.record .record-meta > .tag:first-child {
+  background: #dcece8;
+  color: #145d56;
+  border: 1px solid #bfdcd5;
+}
+.record .record-meta > span:not(.tag) { color: #52677e; font-weight: 500; }
+.record .record-theme-inline {
+  color: #276d78;
+  background: #f0f7f7;
+  border-left: 3px solid #3a958d;
+  border-radius: 0 5px 5px 0;
+  padding: 5px 9px;
+  margin: 1px 0 11px;
+  font-size: var(--fs-micro);
+  line-height: 1.45;
+}
+.record .record-theme-label { color: #185951; font-weight: 700; }
+.record h3, .record h3 a { color: #20374d; }
+.record .authors { color: #41586e; }
+.record-actions .download { color: #155b78; font-weight: 650; }
+.record-actions .download:hover { color: #0b745f; }
